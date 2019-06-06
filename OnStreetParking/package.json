@@ -1,0 +1,17 @@
+{
+  "name": "santander-setup",
+  "version": "0.1.1",
+  "description": "Set up onstreetparking Santander for demo purposes",
+  "main": "setup-santander.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jose Manuel Cantera",
+  "license": "MIT",
+  "dependencies": {
+    "ya-csv": "^0.10.1"
+  }
+}
