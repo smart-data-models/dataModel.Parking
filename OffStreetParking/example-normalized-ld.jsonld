@@ -1,0 +1,81 @@
+{
+    "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",
+    "type": "OffStreetParking",
+    "modifiedAt": "2016-06-02T09:25:55.00Z",
+    "category": {
+        "type": "Property",
+        "value": [
+            "underground",
+            "public",
+            "feeCharged",
+            "mediumTerm",
+            "barrierAccess"
+        ]
+    },
+    "layout": {
+        "type": "Property",
+        "value": [
+            "multiLevel"
+        ]
+    },
+    "name": {
+        "type": "Property",
+        "value": "Parque de estacionamento Trindade"
+    },
+    "requiredPermit": {
+        "type": "Property",
+        "value": []
+    },
+    "allowedVehicleType": {
+        "type": "Property",
+        "value": [
+            "car"
+        ]
+    },
+    "availableSpotNumber": {
+        "type": "Property",
+        "value": 132,
+        "observedAt": "2018-09-21T12:00:00Z"
+    },
+    "totalSpotNumber": {
+        "type": "Property",
+        "value": 414
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -8.60961198807,
+                41.150691773
+            ]
+        }
+    },
+    "chargeType": {
+        "type": "Property",
+        "value": [
+            "temporaryPrice"
+        ]
+    },
+    "address": {
+        "type": "Property",
+        "value": {
+            "addressLocality": "Porto",
+            "addressCountry": "Portugal",
+            "streetAddress": "Rua de Fernandes Tom\u00e1s",
+            "type": "PostalAddress"
+        }
+    },
+    "maximumParkingDuration": {
+        "type": "Property",
+        "value": "PT8H"
+    },
+    "description": {
+        "type": "Property",
+        "value": "Municipal car park located near the Trindade metro station and the Town Hall"
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
+}

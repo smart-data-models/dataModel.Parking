@@ -1,0 +1,98 @@
+{
+    "id": "urn:ngsi-ld:OnStreetParking:santander:daoiz_velarde_1_5",
+    "type": "OnStreetParking",
+    "modifiedAt": "2016-06-02T09:25:55.00Z",
+    "category": {
+        "type": "Property",
+        "value": [
+            "blueZone",
+            "shortTerm",
+            "forDisabled"
+        ]
+    },
+    "permitActiveHours": {
+        "type": "Property",
+        "value": {
+            "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"
+        }
+    },
+    "requiredPermit": {
+        "type": "Property",
+        "value": [
+            "blueZonePermit",
+            "disabledPermit"
+        ]
+    },
+    "allowedVehicleType": {
+        "type": "Property",
+        "value": "car"
+    },
+    "chargeType": {
+        "type": "Property",
+        "value": [
+            "temporaryFee"
+        ]
+    },
+    "refParkingGroup": {
+        "type": "Relationship",
+        "object": [
+            "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-main",
+            "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled"
+        ]
+    },
+    "totalSpotNumber": {
+        "type": "Property",
+        "value": 6
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [
+                        -3.80356167695194,
+                        43.46296641666926
+                    ],
+                    [
+                        -3.803161973253841,
+                        43.46301091092682
+                    ],
+                    [
+                        -3.803147082548618,
+                        43.462879859445884
+                    ],
+                    [
+                        -3.803536474744068,
+                        43.462838666196674
+                    ],
+                    [
+                        -3.80356167695194,
+                        43.46296641666926
+                    ]
+                ]
+            ]
+        }
+    },
+    "areaServed": {
+        "type": "Property",
+        "value": "Zona Centro"
+    },
+    "maximumAllowedStay": {
+        "type": "Property",
+        "value": "PT2H"
+    },
+    "extraSpotNumber": {
+        "type": "Property",
+        "value": 2
+    },
+    "availableSpotNumber": {
+        "type": "Property",
+        "value": 3,
+        "observedAt": "2018-09-12T12:00:00Z"
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
+}

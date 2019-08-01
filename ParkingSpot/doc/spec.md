@@ -18,35 +18,35 @@ The data model is defined as shown below:
 
 -   `source` : A sequence of characters giving the source of the entity data.
 
-    -   Attribute type: Text or URL
+    -   Attribute type: Property. Text or URL
     -   Optional
 
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: URL
+    -   Attribute type: Property. URL
     -   Optional
 
 -   `dateCreated` : Entity creation date.
 
-    -   Attribute type: [Text](https://schema.org/Text) or
+    -   Attribute type: Property. [Text](https://schema.org/Text) or
         [URL](https://schema.org/URL)
     -   Optional
 
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: URL
+    -   Attribute type: Property. URL
     -   Optional
 
 -   `dateCreated` : Entity creation date.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
 -   `dateModified` : Last update timestamp of this entity.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
 -   `name` : Name of this parking spot. It can denote the number or label used
@@ -64,20 +64,20 @@ The data model is defined as shown below:
 -   `location` : Geolocation of the parking spot, represented by a GeoJSON
     Point.
 
-    -   Attribute type: `geo:json`.
+    -   Attribute type: Property. `geo:json`.
     -   Normative References:
         [https://tools.ietf.org/html/rfc7946](https://tools.ietf.org/html/rfc7946)
-    -   Mandatory. Not nullable (if `address` is not defined).
+    -   Mandatory. (if `address` is not defined).
 
 -   `address` : Registered parking spot civic address.
 
     -   Normative References:
         [https://schema.org/address](https://schema.org/address)
-    -   Mandatory. Not nullable (if `location` is not defined).
+    -   Mandatory. (if `location` is not defined).
 
 -   `status` : Status of the parking spot from the point of view of occupancy.
 
-    -   Attribute type: [Text](https://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Allowed Values: one Of (`occupied`, `free`, `closed`, `unknown`)
     -   Metadata:
         -   `timestamp` : Timestamp which reflects the date when the attribute
@@ -98,29 +98,29 @@ The data model is defined as shown below:
 
 -   `width` : Width of the parking spot.
 
-    -   Attribute type: [Number](https://schema.org/Number)
+    -   Attribute type: Property. [Number](https://schema.org/Number)
     -   Optional
 
 -   `length` : Length of the parking spot.
 
-    -   Attribute type: [Number](https://schema.org/Number)
+    -   Attribute type: Property. [Number](https://schema.org/Number)
     -   Optional
 
 -   `refParkingGroup` : Group to which the parking spot belongs to. For model
     simplification purposes only one group is allowed per parking spot.
 
-    -   Attribute type: Reference to an entity of type `ParkingGroup`.
+    -   Attribute type: Relationship. Reference to an entity of type `ParkingGroup`.
     -   Optional
 
 -   `refParkingSite` : Parking site to which the parking spot belongs to.
 
-    -   Attribute type: Reference to an entity of type `OnStreetParking` or type
+    -   Attribute type: Relationship. Reference to an entity of type `OnStreetParking` or type
         `OffStreetParking`, depending on the value of the `category` attribute.
     -   Mandatory
 
 -   `category` : Category(ies) of the parking spot.
 
-    -   Attribute type: [Text](https://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Allowed values:
         -   `onstreet` : The parking spot belongs to an onstreet parking site.
         -   `offstreet` : The parking spot belongs to an onstreet parking site.
@@ -132,7 +132,7 @@ The data model is defined as shown below:
     saved by FIWARE's IoT Agent. Note: This attribute has not been harmonized to
     keep backwards compatibility with current FIWARE reference implementations.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime). There can be
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime). There can be
         production environmments where the attribute type is equal to the
         `ISO8601` string. If so, it must be considered as a synonym of
         `DateTime`.
@@ -140,14 +140,13 @@ The data model is defined as shown below:
 
 -   `refDevice` : The device representing the physical sensor used to monitor
     this parking spot.
-    -   Attribute type: Reference to entity of type
+    -   Attribute type: Relationship. Reference to entity of type
         [Device](../../../Device/Device/doc/spec.md)
     -   Optional
 
-**Note**: JSON Schemas only capture the NGSI simplified representation, this
-means that to test the JSON schema examples with a
-[FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
-API implementation, you need to use the `keyValues` mode (`options=keyValues`).
+**Note**: JSON Schemas are intended to capture the data type and associated
+constraints of the different Attributes, regardless their final representation
+format in NGSI(v2, LD).
 
 ## Examples
 
@@ -204,6 +203,45 @@ Sample uses simplified representation for data consumers `?options=keyValues`
     "status": "free",
     "category": ["onstreet"],
     "refParkingSite": "santander:daoiz_velarde_1_5"
+}
+```
+
+### LD Example
+
+Sample uses the NGSI-LD representation
+
+```json
+{
+    "id": "urn:ngsi-ld:ParkingSpot:santander:daoiz_velarde_1_5:3",
+    "type": "ParkingSpot",
+    "status": {
+        "type": "Property",
+        "value": "free",
+        "observedAt": "2018-09-21T12:00:00Z"
+    },
+    "category": {
+        "type": "Property",
+        "value": ["onstreet"]
+    },
+    "refParkingSite": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:ParkingSite:santander:daoiz_velarde_1_5"
+    },
+    "name": {
+        "type": "Property",
+        "value": "A-13"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [-3.80356167695194, 43.46296641666926]
+        }
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
 }
 ```
 

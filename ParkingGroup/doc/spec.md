@@ -19,18 +19,18 @@ The data model is defined as shown below:
 
 -   `source` : A sequence of characters giving the source of the entity data.
 
-    -   Attribute type: Text or URL
+    -   Attribute type: Property. Text or URL
     -   Optional
 
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: URL
+    -   Attribute type: Property. URL
     -   Optional
 
 -   `category` : Parking Group's category.
 
-    -   Attribute type: List of [Text](http://schema.org/Text)
+    -   Attribute type: Property. List of [Text](http://schema.org/Text)
     -   Allowed values:
         -   `onstreet` if the parking group belongs to an `OnStreetParking`.
         -   `offstreet` if the parking group belongs to an `OffStreetParking`.
@@ -48,7 +48,7 @@ The data model is defined as shown below:
 -   `refParkingSite` : Parking site to which this zone belongs to. A group
     cannot be orphan. A group cannot have subgroups.
 
-    -   Attribute type: Reference to an
+    -   Attribute type: Relationship. Reference to an
         [OffStreetParking](../../OffStreetParking/doc/spec.md) or to an
         [OnStreetParking](../../OnStreetParking/doc/spec.md) entity.
     -   Mandatory
@@ -56,7 +56,7 @@ The data model is defined as shown below:
 -   `allowedVehicleType` : Vehicle type allowed (a parking group only allows one
     vehicle type).
 
-    -   Attribute type: [Text](http://schema.org/Text)
+    -   Attribute type: Property. [Text](http://schema.org/Text)
     -   Allowed Values: The following values defined by _VehicleTypeEnum_
         [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/downloads/modelv23.html)
         :
@@ -70,7 +70,7 @@ The data model is defined as shown below:
 -   `location` : Geolocation of the parking group represented by a GeoJSON
     (Multi)Polygon or Point.
 
-    -   Attribute type: `geo:json`.
+    -   Attribute type: GeoProperty. `geo:json`.
     -   Normative References:
         [https://tools.ietf.org/html/rfc7946](https://tools.ietf.org/html/rfc7946)
     -   Optional
@@ -93,16 +93,17 @@ The data model is defined as shown below:
     -   Optional
 
 -   `maximumParkingDuration` : Maximum allowed stay encoded as a ISO8601
-    duration (`null` if indefinite). Applications _SHOULD_ inspect the value of
-    this property at parent's level if it is not defined.
+    duration. When non present or equals to the empty string it means
+    indefinite. Applications _SHOULD_ inspect the value of this property at
+    parent's level if it is not defined.
 
-    -   Attribute type: [Text](http://schema.org/Text)
+    -   Attribute type: Property. [Text](http://schema.org/Text)
     -   Optional
 
 -   `chargeType` : Type of charge performed when parking on any of the spots
     pertaining to this group.
 
-    -   Attribute type: List of [Text](http://schema.org/Text)
+    -   Attribute type: Property. List of [Text](http://schema.org/Text)
     -   Allowed values: Some of those defined by the DATEX II version 2.3
         _ChargeTypeEnum_ enumeration:
         -   (`flat`, `minimum`, `maximum`, `additionalIntervalPrice`
@@ -116,9 +117,9 @@ The data model is defined as shown below:
     can be associated to a parking group. When a permit is composed by more than
     one item they can be combined by separating them with a ",". For instance
     "residentPermit,disabledPermit" stays that both a resident and a disabled
-    permit are needed to park. If empty or `null`, no permit is needed.
+    permit are needed to park. If empty string, no permit is needed.
 
-    -   Attribute type: [Text](http://schema.org/Text)
+    -   Attribute type: Property. [Text](http://schema.org/Text)
     -   Allowed values: The following, defined by the _PermitTypeEnum_
         enumeration of DATEX II version 2.3.
         -   oneOf (`employeePermit`, `studentPermit`, `fairPermit`,
@@ -134,21 +135,21 @@ The data model is defined as shown below:
 -   `permitActiveHours` : This attribute allows to capture situations when a
     permit is only needed at specific hours or days of week. It is an structured
     value which must contain a subproperty per each required permit, indicating
-    when the permit is active. If nothing specified (or `null`) for a permit it
-    will mean that a permit is always required. `null`or empty object means
-    always active. The syntax must be conformant with schema.org
+    when the permit is active. If nothing specified for a permit it will mean
+    that a permit is always required. Empty object means always active. The
+    syntax must be conformant with schema.org
     [opening hours specification](https://schema.org/openingHours). For
     instance, a blue zone which is only active on dayweeks will be encoded as
     "blueZonePermit": "Mo,Tu,We,Th,Fr,Sa 09:00-20:00". Applications _SHOULD_
     inspect the value of this property at parent's level if it is not defined.
 
-    -   Attribute type: [StructuredValue](http://schema.org/StructuredValue)
-    -   Mandatory. It can be `null`.
+    -   Attribute type: Property. [StructuredValue](http://schema.org/StructuredValue)
+    -   Mandatory.
 
 -   `reservationType` : Conditions for reservation. Applications _SHOULD_
     inspect the value of this property at parent's level if it is not defined.
 
-    -   Attribute type: [Text](http://schema.org/Text)
+    -   Attribute type: Property. [Text](http://schema.org/Text)
     -   Allowed values: The following specified by _ReservationTypeEnum_ of
         DATEX II version 2.3:
         -   one Of (`optional`, `mandatory`, `notAvailable`, `partly`).
@@ -158,12 +159,12 @@ The data model is defined as shown below:
     lines or similar) or not. Applications _SHOULD_ inspect the value of this
     property at parent's level if it is not defined.
 
-    -   Attribute type: [Boolean](https://schema.org/Boolean)
+    -   Attribute type: Property. [Boolean](https://schema.org/Boolean)
     -   Optional
 
 -   `totalSpotNumber` : The total number of spots pertaining to this group.
 
-    -   Attribute type: [Number](http://schema.org/Number)
+    -   Attribute type: Property. [Number](http://schema.org/Number)
     -   Allowed values: Any positive integer number or 0.
     -   Normative references: DATEX 2 version 2.3 attribute
         _parkingNumberOfSpaces_ of the _ParkingRecord_ class.
@@ -171,7 +172,7 @@ The data model is defined as shown below:
 
 -   `availableSpotNumber` : The number of spots available in this group.
 
-    -   Attribute type: [Number](http://schema.org/Number)
+    -   Attribute type: Property. [Number](http://schema.org/Number)
     -   Allowed values: A positive integer number, including 0. It must lower or
         equal than `totalSpotNumber`.
     -   Metadata:
@@ -181,7 +182,7 @@ The data model is defined as shown below:
 
 -   `occupancyDetectionType` : Occupancy detection method.
 
-    -   Attribute type: [Text](http://schema.org/Text)
+    -   Attribute type: Property. [Text](http://schema.org/Text)
     -   Allowed values: The following from DATEX II version 2.3
         _OccupancyDetectionTypeEnum_:
         -   (`none`, `balancing`, `singleSpaceDetection`, `modelBased`,
@@ -192,7 +193,7 @@ The data model is defined as shown below:
 -   `parkingMode` : Parking mode(s). Applications _SHOULD_ inspect the value of
     this property at parent's level if it is not defined.
 
-    -   Attribute type: List of [Text](http://schema.org/Text)
+    -   Attribute type: Property. List of [Text](http://schema.org/Text)
     -   Allowed values: Those defined by the DATEX II version 2.3
         _ParkingModeEnum_ enumeration:
         -   (`perpendicularParking`, `parallelParking`, `echelonParking`)
@@ -202,7 +203,7 @@ The data model is defined as shown below:
     _SHOULD_ inspect the value of this property at parent's level if it is not
     defined.
 
-    -   Attribute type: [Number](http://schema.org/Number)
+    -   Attribute type: Property. [Number](http://schema.org/Number)
     -   Default unit: Meters
     -   Optional
 
@@ -210,7 +211,7 @@ The data model is defined as shown below:
     _SHOULD_ inspect the value of this property at parent's level if it is not
     defined.
 
-    -   Attribute type: [Number](http://schema.org/Number)
+    -   Attribute type: Property. [Number](http://schema.org/Number)
     -   Default unit: Meters
     -   Optional
 
@@ -218,7 +219,7 @@ The data model is defined as shown below:
     _SHOULD_ inspect the value of this property at parent's level if it is not
     defined.
 
-    -   Attribute type: [Number](http://schema.org/Number)
+    -   Attribute type: Property. [Number](http://schema.org/Number)
     -   Default unit: Meters
     -   Optional
 
@@ -226,7 +227,7 @@ The data model is defined as shown below:
     _SHOULD_ inspect the value of this property at parent's level if it is not
     defined.
 
-    -   Attribute type: [Number](http://schema.org/Number)
+    -   Attribute type: Property. [Number](http://schema.org/Number)
     -   Default unit: Meters
     -   Optional
 
@@ -237,14 +238,13 @@ The data model is defined as shown below:
     -   Optional
 
 -   `refParkingSpot` : Parking spots belonging to this group.
-    -   Attribute type: List of references to
+    -   Attribute type: Property. List of references to
         [ParkingSpot](../../ParkingSpot/doc/spec.md)
     -   Optional
 
-**Note**: JSON Schemas only capture the NGSI simplified representation, this
-means that to test the JSON schema examples with a
-[FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
-API implementation, you need to use the `keyValues` mode (`options=keyValues`).
+**Note**: JSON Schemas are intended to capture the data type and associated
+constraints of the different Attributes, regardless their final representation
+format in NGSI(v2, LD).
 
 ## Examples
 
@@ -264,7 +264,7 @@ Normalized NGSI response
         "value": "daoiz-velarde-1-5"
     },
     "permitActiveHours": {
-        "value": "null"
+        "value": ""
     },
     "requiredPermit": {
         "value": "disabledPermit"
@@ -338,7 +338,74 @@ A group of parking spots especially for disabled people.
         ]
     },
     "requiredPermit": "disabledPermit",
-    "permitActiveHours": null /* Always permit is needed */
+    "permitActiveHours": "" /* Always permit is needed */
+}
+```
+
+### LD Example
+
+Sample uses the NGSI-LD representation
+
+```json
+{
+    "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",
+    "type": "ParkingGroup",
+    "category": {
+        "type": "Property",
+        "value": ["onstreet", "adjacentSpaces", "onlyDisabled"]
+    },
+    "refParkingSite": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5"
+    },
+    "permitActiveHours": {
+        "type": "Property",
+        "value": ""
+    },
+    "requiredPermit": {
+        "type": "Property",
+        "value": "disabledPermit"
+    },
+    "allowedVehicleType": {
+        "type": "Property",
+        "value": "car"
+    },
+    "availableSpotNumber": {
+        "type": "Property",
+        "value": 1,
+        "observedAt": "2018-09-12T12:00:00Z"
+    },
+    "totalSpotNumber": {
+        "type": "Property",
+        "value": 2
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-3.80356167695194, 43.46296641666926],
+                    [-3.803161973253841, 43.46301091092682],
+                    [-3.803147082548618, 43.462879859445884],
+                    [-3.803536474744068, 43.462838666196674],
+                    [-3.80356167695194, 43.46296641666926]
+                ]
+            ]
+        }
+    },
+    "chargeType": {
+        "type": "Property",
+        "value": ["free"]
+    },
+    "description": {
+        "type": "Property",
+        "value": "Two parking spots reserved for disabled people"
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
 }
 ```
 
