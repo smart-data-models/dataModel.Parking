@@ -17,7 +17,7 @@ The main entity types identified are:
 
 -   [OffStreetParking](./OffStreetParking/doc/spec.md). An offstreet parking
     site with explicit entries and exits.
--   [ParkingAccess](../ParkingAccess/doc/spec.md). An access point to an off
+-   [ParkingAccess](./ParkingAccess/doc/spec.md). An access point to an off
     street parking site.
 -   [OnStreetParking](./OnStreetParking/doc/spec.md). An on street, free entry
     (but might be metered) parking zone which contains at least one ore more
