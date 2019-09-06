@@ -1,15 +1,15 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/dataModels/specs/Parking/OnStreetParking/schema.json",
-  "title": "FIWARE - Parking / On Street Parking - TODO: Provide a complete schema",
+  "$id": "https://smart-data-models.github.io/dataModels/specs/Parking/OnStreetParking/schema.json",
+  "title": " - Parking / On Street Parking - TODO: Provide a complete schema",
   "description": "On street parking",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://fiware.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/dataModels/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/Location-Commons"
     },
     {
       "properties": {
