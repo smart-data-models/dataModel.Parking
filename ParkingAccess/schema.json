@@ -1,15 +1,15 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/dataModels/specs/Parking/ParkingAcccess/schema.json",
+  "$id": "https://smart-data-models.github.io/data-models/specs/Parking/ParkingAcccess/schema.json",
   "title": " - Parking / Parking Access",
   "description": "Parking Access - TODO: Provide a complete Schema",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
       "properties": {

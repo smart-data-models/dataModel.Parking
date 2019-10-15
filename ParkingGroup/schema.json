@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/dataModels/specs/Parking/ParkingGroup/schema.json",
+  "$id": "https://smart-data-models.github.io/data-models/specs/Parking/ParkingGroup/schema.json",
   "title": " - Parking / Parking Group",
   "description": "Parking Group - TODO: Provide a complete Schema",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
       "properties": {

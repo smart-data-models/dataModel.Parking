@@ -1,18 +1,18 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/Fiware/dataModels/tree/master/Parking/ParkingSpot/schema.json",
+  "$id": "https://github.com/Fiware/data-models/tree/master/Parking/ParkingSpot/schema.json",
   "title": " - Parking / Parking Spot",
   "description": "A parking spot is an area well delimited where one vehicle can be parked. The aim of this entity type is to monitor the status of parking spots individually. Thus, an entity of type ParkingSpot cannot exist without a containing entity of type (OnStreetParking, OffStreetParking). A parking spot might belong to one group.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/PhysicalObject-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/PhysicalObject-Commons"
     },
     {
       "properties": {
@@ -34,10 +34,10 @@
           "minimum": 0
         },
         "refParkingGroup": {
-          "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/EntityIdentifierType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
         },
         "refParkingSite": {
-          "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/EntityIdentifierType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
         },
         "category": {
           "type": "array",
@@ -51,7 +51,7 @@
         "refDevice": {
           "type": "array",
           "items": {
-            "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/EntityIdentifierType"
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
           },
           "minItems": 1,
           "uniqueItems": true
