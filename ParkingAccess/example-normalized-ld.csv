@@ -1,0 +1,2 @@
+"id", "type", "category__value", "name__value", "location__value__coordinates", "refOffStreetParking__object", "features__value", "@context"
+"urn:ngsi-ld:ParkingAccess:accesspoint-trinidade-1", "ParkingAccess", "['vehicleEntrance']", "Trinidade main entrance", "[-8.60961198807, 41.150691773]", "urn:ngsi-ld:OffStreetParking:porto-OffStreetParking-23889", "['barrier']", "['https://schema.lab.fiware.org/ld/context', 'https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld']"

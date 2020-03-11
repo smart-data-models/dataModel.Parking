@@ -1,0 +1,2 @@
+"id", "type", "name", "location__coordinates", "category", "refOffStreetParking", "features"
+"accesspoint-trinidade-1", "ParkingAccess", "Trinidade main entrance", "[-8.60961198807, 41.150691773]", "['vehicleEntrance']", "porto-OffStreetParking-23889", "['barrier']"
