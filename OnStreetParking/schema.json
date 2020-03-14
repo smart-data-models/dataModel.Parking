@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/data-models/specs/Parking/OnStreetParking/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.Parking/OnStreetParking/schema.json",
   "title": " - Parking / On Street Parking - TODO: Provide a complete schema",
   "description": "On street parking",
   "type": "object",
