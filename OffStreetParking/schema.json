@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/data-models/specs/Parking/OffStreetParking/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/schema.json",
   "title": " - Parking / Off Street Parking",
   "description": "Off street parking",
   "type": "object",
@@ -427,3 +427,4 @@
   ],
   "required": ["id", "type", "location"]
 }
+    

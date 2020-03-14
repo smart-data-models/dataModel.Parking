@@ -6,7 +6,7 @@ A site, off street, intended to park vehicles, managed independently and with
 suitable and clearly marked access points (entrances and exits). If necessary,
 and for management purposes or to deal with multi-location parking sites, it can
 be divided into different zones modelled by the entity type
-[ParkingGroup](../../ParkingGroup/doc/spec.md) . In DATEX 2 version 2.3
+[ParkingGroup](../ParkingGroup/README.md) . In DATEX 2 version 2.3
 terminology it corresponds to a _UrbanParkingSite_ of type _offStreetParking_.
 
 A data dictionary for DATEX II terms can be found at
