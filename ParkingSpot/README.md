@@ -127,7 +127,7 @@ The data model is defined as shown below:
     -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Allowed values:
         -   `onstreet` : The parking spot belongs to an onstreet parking site.
-        -   `offstreet` : The parking spot belongs to an onstreet parking site.
+        -   `offstreet` : The parking spot belongs to an offstreet parking site.
         -   Other values as per application needs
     -   Mandatory
 
@@ -248,7 +248,3 @@ Sample uses the NGSI-LD representation
     ]
 }
 ```
-
-## Test it with a real service
-
-## Open issues
