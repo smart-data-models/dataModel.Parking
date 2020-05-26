@@ -302,7 +302,7 @@
         "lowestFloor": {
           "type": "integer"
         },
-        "maximumAllowedDuration": {
+        "maximumParkingDuration": {
           "type": "string"
         },
         "totalSpotNumber": {
