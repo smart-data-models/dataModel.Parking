@@ -13,7 +13,7 @@
   "chargeType": ["temporaryPrice"],
   "requiredPermit": [],
   "layout": ["multiLevel"],
-  "maximumParkingDuration": "PT8H",
+  "maximumAllowedDuration": "PT8H",
   "location": {
     "coordinates": [-8.60961198807, 41.150691773],
     "type": "Point"

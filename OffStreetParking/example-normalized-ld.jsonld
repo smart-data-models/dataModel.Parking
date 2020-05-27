@@ -67,7 +67,7 @@
             "type": "PostalAddress"
         }
     },
-    "maximumParkingDuration": {
+    "maximumAllowedDuration": {
         "type": "Property",
         "value": "PT8H"
     },

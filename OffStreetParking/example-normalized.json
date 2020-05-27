@@ -53,7 +53,7 @@
       "streetAddress": "Rua de Fernandes Tom\u00e1s"
     }
   },
-  "maximumParkingDuration": {
+  "maximumAllowedDuration": {
     "value": "PT8H"
   },
   "dateModified": {

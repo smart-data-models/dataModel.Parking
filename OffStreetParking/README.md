@@ -154,9 +154,9 @@ The data model is defined as shown below:
         [http://schema.org/openingHours](http://schema.org/openingHours)
     -   Optional
 
--   `maximumParkingDuration` : Maximum allowed stay at site, on a general basis,
-    encoded as a ISO8601 duration. An empty value or when non present indicates
-    an indefinite duration.
+-   `maximumAllowedDuration` : Maximum allowed stay at site, on a general basis,
+    encoded as a ISO8601 duration or with any other string relevant for parking. 
+    An empty value or when non present indicates an indefinite duration.
 
     -   Attribute type: Property. [Text](http://schema.org/Text)
     -   Optional
@@ -499,7 +499,7 @@ Normalized NGSI response
             "streetAddress": "Rua de Fernandes Tom\u00e1s"
         }
     },
-    "maximumParkingDuration": {
+    "maximumAllowedDuration": {
         "value": "PT8H"
     },
     "dateModified": {
@@ -533,7 +533,7 @@ A public off street parking underground controlled by a barrier.
     "chargeType": ["temporaryPrice"],
     "requiredPermit": [],
     "layout": ["multiLevel"],
-    "maximumParkingDuration": "PT8H",
+    "maximumAllowedDuration": "PT8H",
     "location": {
         "coordinates": [-8.60961198807, 41.150691773],
         "type": "Point"
@@ -615,7 +615,7 @@ Sample uses the NGSI-LD representation
             "type": "PostalAddress"
         }
     },
-    "maximumParkingDuration": {
+    "maximumAllowedDuration": {
         "type": "Property",
         "value": "PT8H"
     },
@@ -648,7 +648,7 @@ Urban Deterrent (xxxx and ride) parking. Free. 2 hours at a maximum.
     "layout": ["openSpace"],
     "chargeType": ["freeParking"],
     "allowedVehicleType": ["car"],
-    "maximumParkingDuration": "PT2H",
+    "maximumAllowedDuration": "PT2H",
     "requiredPermit": [],
     "areaServed": "Centro",
     "address": {
@@ -671,7 +671,7 @@ Long stay parking. Maximum 4 days. Charging depends on time spent.
     "layout": ["singleLevel"],
     "chargeType": ["temporaryPrice"],
     "allowedVehicleType": ["car"],
-    "maximumParkingDuration": "P4D",
+    "maximumAllowedDuration": "P4D",
     "requiredPermit": [],
     "address": {
         "streetAddress": "Paseo de Zorrilla, 96",
@@ -718,7 +718,7 @@ Two different groups are needed:
     "requiredPermit": [],
     "refParkingSite": "parking-example-234",
     "allowedVehicleType": "car",
-    "maximumParkingDuration": "PT2H"
+    "maximumAllowedDuration": "PT2H"
     /* Other required fields (Check model) */
 }
 ```
@@ -741,7 +741,7 @@ Two different groups are needed:
     "requiredPermit": "residentPermit",
     "refParkingSite": "parking-example-234",
     "allowedVehicleType": "car",
-    "maximumParkingDuration": ""
+    "maximumAllowedDuration": ""
     /* Other required fields (Check model) */
 }
 ```
@@ -764,7 +764,7 @@ Private parking only for employees. A devoted visitor zone.
     "requiredPermit": ["employeePermit", "visitorPermit"],
     "chargeType": ["free"],
     "allowedVehicleType": ["car"],
-    "maximumParkingDuration": "PT12H",
+    "maximumAllowedDuration": "PT12H",
     "totalSpotNumber": 250,
     "availableSpotNumber": 100,
     "extraSpotNumber": 10,
