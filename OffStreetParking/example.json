@@ -9,6 +9,7 @@
     "mediumTerm",
     "barrierAccess"
   ],
+  "extCategory": ["A"],
   "chargeType": ["temporaryPrice"],
   "requiredPermit": [],
   "layout": ["multiLevel"],

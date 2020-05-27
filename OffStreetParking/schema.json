@@ -24,34 +24,34 @@
           "items": {
             "type": "string",
             "enum": [
-              "public",
-              "private",
-              "publicPrivate",
-              "urbanDeterrentParking",
-              "parkingGarage",
-              "parkingLot",
-              "shortTerm",
-              "mediumTerm",
-              "longTerm",
-              "free",
-              "feeCharged",
-              "staffed",
-              "guarded",
               "barrierAccess",
-              "gateAccess",
+              "feeCharged",
+              "forCustomers",
+              "forDisabled",
+              "forElectricalCharging",
+              "forEmployees",
+              "forMembers",
+              "forResidents",
+              "forStudents",
+              "forVisitors",
+              "free",
               "freeAccess",
+              "gateAccess",
+              "guarded",
+              "ground",
+              "longTerm",
+              "mediumTerm",
               "onlyResidents",
               "onlyWithPermit",
-              "forEmployees",
-              "forVisitors",
-              "forCustomers",
-              "forStudents",
-              "forMembers",
-              "forDisabled",
-              "forResidents",
-              "forElectricalCharging",
+              "parkingGarage",
+              "parkingLot",
+              "private",
+              "public",
+              "publicPrivate",
+              "shortTerm",
+              "staffed",
               "underground",
-              "ground",
+              "urbanDeterrentParking",
               "other"
             ]
           },
@@ -72,6 +72,7 @@
             "type": "string",
             "enum": [
               "agriculturalVehicle",
+              "anyVehicle",
               "bicycle",
               "bus",
               "car",
@@ -86,8 +87,7 @@
               "motorscooter",
               "tanker",
               "trailer",
-              "van",
-              "anyVehicle"
+              "van"
             ]
           },
           "minItems": 1,
@@ -98,17 +98,17 @@
           "items": {
             "type": "string",
             "enum": [
+              "additionalIntervalPrice",
+              "annualPayment",
+              "firstIntervalPrice",
               "flat",
+              "free",
               "minimum",
               "maximum",
-              "additionalIntervalPrice",
-              "seasonTicket",
-              "temporaryPrice",
-              "firstIntervalPrice",
-              "annualPayment",
               "monthlyPayment",
-              "free",
-              "other"
+              "other",
+              "seasonTicket",
+              "temporaryPrice"
             ]
           },
           "minItems": 1,
@@ -120,13 +120,13 @@
             "type": "string",
             "enum": [
               "employeePermit",
-              "studentPermit",
               "fairPermit",
               "governmentPermit",
+              "noPermitNeeded",
               "residentPermit",
               "specificIdentifiedVehiclePermit",
-              "visitorPermit",
-              "noPermitNeeded"
+              "studentPermit",
+              "visitorPermit"
             ]
           },
           "minItems": 0,
@@ -137,11 +137,11 @@
           "items": {
             "type": "string",
             "enum": [
-              "none",
               "balancing",
-              "singleSpaceDetection",
+              "manual",
               "modelBased",
-              "manual"
+              "none",
+              "singleSpaceDetection"
             ]
           },
           "minItems": 1,

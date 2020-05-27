@@ -10,6 +10,7 @@
       "barrierAccess"
     ]
   },
+  "extCategory": ["A"],
   "layout": {
     "value": ["multiLevel"]
   },
