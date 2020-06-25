@@ -28,24 +28,15 @@ ParkingSpot:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
     alternateName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
     annotations:
-      x-ngsi:
-        type: Property
-      type: array
-      description: ''
-      items:
-        type: string
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/annotations
+
     areaServed:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
     category:
       x-ngsi:
         type: Property
@@ -57,11 +48,9 @@ ParkingSpot:
           - onstreet
           - offstreet
     color:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/color
+
     dataProvider:
       x-ngsi:
         type: Property
@@ -90,19 +79,7 @@ ParkingSpot:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
-      items: &ref_0
-        anyOf:
-          - type: string
-            minLength: 1
-            maxLength: 256
-            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-          - type: string
-            format: uri
+      $ref: https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/owner
     refDevice:
       x-ngsi:
         type: Property
@@ -110,11 +87,8 @@ ParkingSpot:
       description: ''
       items: *ref_0
     source:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
     status:
       x-ngsi:
         type: Property

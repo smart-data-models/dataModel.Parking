@@ -60,17 +60,11 @@ OffStreetParking:
           - trailer
           - van
     alternateName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
     areaServed:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
     availableSpotNumber:
       x-ngsi:
         type: Property
@@ -298,11 +292,9 @@ OffStreetParking:
           - none
           - singleSpaceDetection
     openingHours:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/openingHours
+
     owner:
       x-ngsi:
         type: Relationship
@@ -391,11 +383,8 @@ OffStreetParking:
           - fences
           - areaSeperatedFromSurroundings
     source:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
     specialLocation:
       x-ngsi:
         type: Property
