@@ -14,9 +14,11 @@ paths:
   /ngsi-ld/v1/entities: 
     get: 
       description: >-
-         This entity contains a harmonised description of a generic crop. This entity
-         is primarily associated with the agricultural vertical and related IoT
-          applications.
+        A parking spot is an area well delimited where one vehicle can be parked.
+        The aim of this entity type is to monitor the status of parking spots
+        individually. Thus, an entity of type ParkingSpot cannot exist without a
+        containing entity of type (OnStreetParking, OffStreetParking). A parking
+        spot might belong to one group.
       parameters: 
         - 
           in: query
