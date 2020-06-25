@@ -1,102 +1,110 @@
-ParkingSpot:
-  required:
-    - id
-    - location
-    - type
-    - status
-    - category
-    - refParkingSite
-  allOf:
-    - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
-  type: object
-  description: >-
-    A parking spot is an area well delimited where one vehicle can be parked.
-    The aim of this entity type is to monitor the status of parking spots
-    individually. Thus, an entity of type ParkingSpot cannot exist without a
-    containing entity of type (OnStreetParking, OffStreetParking). A parking
-    spot might belong to one group.
-  properties:
-    TimeInstant:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/DateTime'
-      type: string
-      description: ''
-      format: date-time
-    address:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
-    alternateName:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
-    annotations:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/annotations
-
-    areaServed:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
-    category:
-      x-ngsi:
-        type: Property
-      type: array
-      description: ''
-      items:
-        type: string
-        enum:
-          - onstreet
-          - offstreet
-    color:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/color
-
-    dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
-    description:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
-    image:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/URL'
-      type: string
-      description: ''
-      format: uri
-    length:
-      x-ngsi:
-        type: Property
-      type: number
-      description: ''
-    location:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
-    name:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
-    owner:
-      $ref: https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/owner
-    refDevice:
-      x-ngsi:
-        type: Property
-      type: array
-      description: ''
-      items: *ref_0
-    source:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
-    status:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
-    width:
-      x-ngsi:
-        type: Property
-      type: number
-      description: ''
+    ParkingSpot:
+      required:
+        - id
+        - location
+        - type
+        - status
+        - category
+        - refParkingSite
+      allOf:
+        - $ref: >-
+            https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+      type: object
+      description: >-
+        A parking spot is an area well delimited where one vehicle can be parked.
+        The aim of this entity type is to monitor the status of parking spots
+        individually. Thus, an entity of type ParkingSpot cannot exist without a
+        containing entity of type (OnStreetParking, OffStreetParking). A parking
+        spot might belong to one group.
+      properties:
+        TimeInstant:
+          x-ngsi:
+            type: Property
+            model: 'https://schema.org/DateTime'
+          type: string
+          description: ''
+          format: date-time
+        address:
+          $ref: >-
+            https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+        alternateName:
+          $ref: >-
+            https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        annotations:
+          $ref: >-
+            https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/annotations
+    
+        areaServed:
+          $ref: >-
+            https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
+        category:
+          x-ngsi:
+            type: Property
+          type: array
+          description: ''
+          items:
+            type: string
+            enum:
+              - onstreet
+              - offstreet
+        color:
+          $ref: >-
+            https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/color
+    
+        dataProvider:
+          x-ngsi:
+            type: Property
+            model: 'https://schema.org/Text'
+          type: string
+          description: ''
+        description:
+          $ref: >-
+            https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        image:
+          x-ngsi:
+            type: Property
+            model: 'https://schema.org/URL'
+          type: string
+          description: ''
+          format: uri
+        length:
+          x-ngsi:
+            type: Property
+          type: number
+          description: ''
+        location:
+          $ref: >-
+            https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+        name:
+          $ref: >-
+            https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        owner:
+          $ref: https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/owner
+        refDevice:
+          x-ngsi:
+            type: Relationship
+            model: 'https://schema.org/URL'
+          type: array
+          description: ''
+          items:
+            anyOf:
+              - type: string
+                minLength: 1
+                maxLength: 256
+                pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+              - type: string
+                format: uri
+        source:
+          $ref: >-
+            https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        status:
+          x-ngsi:
+            type: Property
+            model: 'https://schema.org/Text'
+          type: string
+          description: ''
+        width:
+          x-ngsi:
+            type: Property
+          type: number
+          description: ''
