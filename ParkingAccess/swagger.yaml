@@ -13,10 +13,7 @@ openapi: "3.0.0"
 paths: 
   /ngsi-ld/v1/entities: 
     get: 
-      description: >-
-         This entity contains a harmonised description of a generic crop. This entity
-         is primarily associated with the agricultural vertical and related IoT
-          applications.
+      description: "'Parking Access - TODO: Provide a complete Schema'"
       parameters: 
         - 
           in: query
