@@ -1,49 +1,49 @@
 --- 
-components: 
-  schemas: 
-    ParkingGroup: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/ParkingGroup/schema.yaml#/ParkingGroup"
-info: 
-  description: "'Parking Group - TODO: Provide a complete Schema'"
-  title: ParkingGroup
-  version: "1.0.0"
-openapi: "3.0.0"
-
-# These paths are merely representative.
-paths: 
-  /ngsi-ld/v1/entities: 
-    get: 
-      description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
-      parameters: 
-        - 
-          in: query
-          name: type
-          required: true
-          schema: 
-            enum: 
-              - ParkingGroup
-            type: string
-      responses: 
-        ? "200"
-        : 
-          content: 
-            application/ld+json: 
-              examples: 
-                keyvalues: 
-                  summary: "Key-Values Pairs"
-                  value: 
-                    - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/ParkingGroup/example.json"
-                normalized: 
-                  summary: "Normalized NGSI-LD"
-                  value: 
-                    - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/ParkingGroup/example-normalized-ld.jsonld"
-          description: OK
-      tags: 
-        - ngsi-ld
-tags: 
-  - 
+  components: 
+    schemas: 
+      ParkingAccess: 
+        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/ParkingAccess/model.yaml#/ParkingAccess"
+  info: 
+    description: "'Parking Access - TODO: Provide a complete Schema'"
+    title: ParkingAccess
+    version: "1.0.0"
+  openapi: "3.0.0"
   
-    description: "NGSI-LD Linked-data Format"
-    name: ngsi-ld
+  # These paths are merely representative.
+  paths: 
+    /ngsi-ld/v1/entities: 
+      get: 
+        description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
+        parameters: 
+          - 
+            in: query
+            name: type
+            required: true
+            schema: 
+              enum: 
+                - ParkingAccess
+              type: string
+        responses: 
+          ? "200"
+          : 
+            content: 
+              application/ld+json: 
+                examples: 
+                  keyvalues: 
+                    summary: "Key-Values Pairs"
+                    value: 
+                      - 
+                        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/ParkingAccess/examples/example-normalized.json"
+                  normalized: 
+                    summary: "Normalized NGSI-LD"
+                    value: 
+                      - 
+                        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/ParkingAccess/examples/example-normalized-ld.jsonld"
+            description: OK
+        tags: 
+          - ngsi-ld
+  tags: 
+    - 
+    
+      description: "NGSI-LD Linked-data Format"
+      name: ngsi-ld
