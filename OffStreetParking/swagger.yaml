@@ -2,9 +2,13 @@
   components: 
     schemas: 
       OffStreetParking: 
-        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/OffStreetParking/model.yaml#/OffStreetParking"
+        $ref: "https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/model.yaml#/OffStreetParking"
   info: 
-    description: "Off street parking"
+    description: >-
+      A site, off street, intended to park vehicles, managed independently and with suitable and clearly marked access points (entrances and exits).
+      If necessary, and for management purposes or to deal with multi-location parking sites, 
+      it can be divided into different zones modelled by the entity type ParkingGroup .
+      In DATEX 2 version 2.3 terminology it corresponds to a UrbanParkingSite of type offStreetParking.
     title: OffStreetParking
     version: "1.0.0"
   openapi: "3.0.0"
@@ -33,12 +37,12 @@
                     summary: "Key-Values Pairs"
                     value: 
                       - 
-                        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/OffStreetParking/examples/example-normalized.json"
+                        $ref: "https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/examples/example-normalized.json"
                   normalized: 
                     summary: "Normalized NGSI-LD"
                     value: 
                       - 
-                        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/OffStreetParking/examples/example-normalized-ld.jsonld"
+                        $ref: "https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/examples/example-normalized-ld.jsonld"
             description: OK
         tags: 
           - ngsi-ld
