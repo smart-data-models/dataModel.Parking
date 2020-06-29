@@ -1,0 +1,54 @@
+--- 
+  components: 
+    schemas: 
+      ParkingAccess: 
+        $ref: "https://smart-data-models.github.io/dataModel.Parking/ParkingAccess/model.yaml#/ParkingAccess"
+  info: 
+    description: >-
+      A group of parking spots. Granularity level can vary. It can be an storey on a parking garage, 
+      an specific zone belonging to a big parking lot, or just a group of spots intended for parking a certain vehicle type or
+      subject to certain restrictions (disabled, residents, ...).
+      For the sake of simplicity only one vehicle type per parking group is allowed. Similarly,
+      one required permit is only allowed per group type.
+    title: ParkingAccess
+    version: "1.0.0"
+  openapi: "3.0.0"
+  
+  # These paths are merely representative.
+  paths: 
+    /ngsi-ld/v1/entities: 
+      get: 
+        description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
+        parameters: 
+          - 
+            in: query
+            name: type
+            required: true
+            schema: 
+              enum: 
+                - ParkingAccess
+              type: string
+        responses: 
+          ? "200"
+          : 
+            content: 
+              application/ld+json: 
+                examples: 
+                  keyvalues: 
+                    summary: "Key-Values Pairs"
+                    value: 
+                      - 
+                        $ref: "https://smart-data-models.github.io/dataModel.Parking/ParkingAccess/examples/example-normalized.json"
+                  normalized: 
+                    summary: "Normalized NGSI-LD"
+                    value: 
+                      - 
+                        $ref: "https://smart-data-models.github.io/dataModel.Parking/ParkingAccess/examples/example-normalized-ld.jsonld"
+            description: OK
+        tags: 
+          - ngsi-ld
+  tags: 
+    - 
+    
+      description: "NGSI-LD Linked-data Format"
+      name: ngsi-ld

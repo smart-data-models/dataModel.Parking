@@ -10,7 +10,12 @@ ParkingGroup:
     - $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: 'Parking Group - TODO: Provide a complete Schema'
+  description: >-
+      A group of parking spots. Granularity level can vary. It can be an storey on a parking garage, 
+      an specific zone belonging to a big parking lot, or just a group of spots intended for parking a certain vehicle type or 
+      subject to certain restrictions (disabled, residents, ...).
+      For the sake of simplicity only one vehicle type per parking group is allowed. Similarly,
+      one required permit is only allowed per group type.
   properties:
     alternateName:
       $ref: >-

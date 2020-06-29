@@ -11,7 +11,8 @@ ParkingAccess:
     - $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: 'Parking Access - TODO: Provide a complete Schema'
+  description: >-
+      Represents an access point to a parking site, normally an offstreet parking.
   properties:
     address:
       $ref: >-
