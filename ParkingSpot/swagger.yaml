@@ -2,9 +2,13 @@
   components: 
     schemas: 
       ParkingSpot: 
-        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/ParkingSpot/model.yaml#/ParkingSpot"
+        $ref: "https://smart-data-models.github.io/dataModel.Parking/ParkingSpot/model.yaml#/ParkingSpot"
   info: 
-    description: "'Parking Access - TODO: Provide a complete Schema'"
+    description: >-
+      A parking spot is an area well delimited where one vehicle can be parked. 
+      The aim of this entity type is to monitor the status of parking spots individually. 
+      Thus,  an entity of type ParkingSpot cannot exist without a containing entity of type (OnStreetParking, OffStreetParking).
+      A parking spot might belong to one group.
     title: ParkingSpot
     version: "1.0.0"
   openapi: "3.0.0"
@@ -33,12 +37,12 @@
                     summary: "Key-Values Pairs"
                     value: 
                       - 
-                        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/ParkingSpot/examples/example-normalized.json"
+                        $ref: "https://smart-data-models.github.io/dataModel.Parking/ParkingSpot/examples/example-normalized.json"
                   normalized: 
                     summary: "Normalized NGSI-LD"
                     value: 
                       - 
-                        $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/ParkingSpot/examples/example-normalized-ld.jsonld"
+                        $ref: "https://smart-data-models.github.io/dataModel.Parking/ParkingSpot/examples/example-normalized-ld.jsonld"
             description: OK
         tags: 
           - ngsi-ld
