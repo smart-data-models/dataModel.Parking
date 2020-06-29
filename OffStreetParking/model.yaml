@@ -5,7 +5,7 @@ OffStreetParking:
     - location
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: Off street parking
   properties:
@@ -28,7 +28,7 @@ OffStreetParking:
           - PaySwarm
     address:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
     aggregateRating:
       x-ngsi:
         type: Property
@@ -61,10 +61,10 @@ OffStreetParking:
           - van
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     areaServed:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
     availableSpotNumber:
       x-ngsi:
         type: Property
@@ -151,7 +151,7 @@ OffStreetParking:
       description: ''
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     extCategory:
       x-ngsi:
         type: Property
@@ -240,7 +240,7 @@ OffStreetParking:
           - other
     location:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
     lowestFloor:
       x-ngsi:
         type: Property
@@ -277,7 +277,7 @@ OffStreetParking:
       description: ''
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     occupancyDetectionType:
       x-ngsi:
         type: Property
@@ -293,7 +293,7 @@ OffStreetParking:
           - singleSpaceDetection
     openingHours:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/openingHours
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/openingHours
 
     owner:
       x-ngsi:
@@ -384,7 +384,7 @@ OffStreetParking:
           - areaSeperatedFromSurroundings
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
     specialLocation:
       x-ngsi:
         type: Property

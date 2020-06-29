@@ -4,13 +4,13 @@ ParkingGroup:
     - type
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: 'Parking Group - TODO: Provide a complete Schema'
   properties:
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     dataProvider:
       x-ngsi:
         type: Property
@@ -19,10 +19,10 @@ ParkingGroup:
       description: ''
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
       x-ngsi:
         type: Relationship
@@ -39,4 +39,4 @@ ParkingGroup:
             format: uri
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
