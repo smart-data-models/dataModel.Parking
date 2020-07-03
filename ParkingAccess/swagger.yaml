@@ -4,7 +4,7 @@
       ParkingAccess: 
         $ref: "https://smart-data-models.github.io/dataModel.Parking/ParkingAccess/model.yaml#/ParkingAccess"
   info: 
-    description: >-
+    description: |
       Represents an access point to a parking site, normally an offstreet parking.
     title: ParkingAccess
     version: "1.0.0"
