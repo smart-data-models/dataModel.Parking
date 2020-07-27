@@ -44,7 +44,7 @@
           x-ngsi:
             type: Property
           type: array
-          description: ''
+          description: 'Category(ies) of the parking spot.'
           items:
             type: string
             enum:
@@ -59,7 +59,7 @@
             type: Property
             model: 'https://schema.org/Text'
           type: string
-          description: ''
+          description: 'Specifies the URL to information about the provider of this information'
         description:
           $ref: >-
             https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
@@ -68,13 +68,13 @@
             type: Property
             model: 'https://schema.org/URL'
           type: string
-          description: ''
+          description: ' Image of the parking spot.'
           format: uri
         length:
           x-ngsi:
             type: Property
           type: number
-          description: ''
+          description: ' Length of the parking spot.'
         location:
           $ref: >-
             https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
@@ -88,7 +88,7 @@
             type: Relationship
             model: 'https://schema.org/URL'
           type: array
-          description: ''
+          description: 'The device representing the physical sensor used to monitor this parking spot.'
           items:
             anyOf:
               - type: string
@@ -105,9 +105,9 @@
             type: Property
             model: 'https://schema.org/Text'
           type: string
-          description: ''
+          description: 'Status of the parking spot from the point of view of occupancy.'
         width:
           x-ngsi:
             type: Property
           type: number
-          description: ''
+          description: 'Width of the parking spot.'
