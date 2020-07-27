@@ -84,7 +84,7 @@ OffStreetParking:
       x-ngsi:
         type: Property
       type: number
-      description: 'he average length of parking spots.'
+      description: 'The average length of parking spots.'
     averageSpotWidth:
       x-ngsi:
         type: Property
