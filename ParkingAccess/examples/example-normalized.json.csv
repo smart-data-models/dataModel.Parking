@@ -1,0 +1,2 @@
+"id_", "type_", "category__value__0_", "name__value_", "location__type_", "location__value__type_", "location__value__coordinates__0_", "location__value__coordinates__1_", "refOffStreetParking__type_", "refOffStreetParking__value_", "features__value__0_"
+"accesspoint-trinidade-1", "ParkingAccess", "vehicleEntrance", "Trinidade main entrance", "geo:json", "Point", "-8.60961198807", "41.150691773", "Relationship", "porto-OffStreetParking-23889", "barrier"

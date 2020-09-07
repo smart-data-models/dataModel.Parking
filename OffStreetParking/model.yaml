@@ -1,0 +1,457 @@
+---
+# Copyright (c) 2020 Contributors to Smart-Data-Models
+# see https://github.com/smart-data-models/dataModel.Parking
+
+OffStreetParking:
+  required:
+    - id
+    - type
+    - location
+  allOf:
+    - $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
+  type: object
+  description: |
+      A site, off street, intended to park vehicles, managed independently and with suitable and clearly marked access points (entrances and exits). 
+      If necessary, and for management purposes or to deal with multi-location parking sites, 
+      it can be divided into different zones modelled by the entity type ParkingGroup .
+      In DATEX 2 version 2.3 terminology it corresponds to a UrbanParkingSite of type offStreetParking.
+  properties:
+    acceptedPaymentMethod:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - ByBankTransferInAdvance
+          - ByInvoice
+          - Cash
+          - CheckInAdvance
+          - COD
+          - DirectDebit
+          - GoogleCheckout
+          - PayPal
+          - PaySwarm
+    address:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
+    aggregateRating:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    allowedVehicleType:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - agriculturalVehicle
+          - anyVehicle
+          - bicycle
+          - bus
+          - car
+          - caravan
+          - carWithCaravan
+          - carWithTrailer
+          - constructionOrMaintenanceVehicle
+          - lorry
+          - moped
+          - motorcycle
+          - motorcycleWithSideCar
+          - motorscooter
+          - tanker
+          - trailer
+          - van
+    alternateName:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
+    areaServed:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
+    availableSpotNumber:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    averageSpotLength:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    averageSpotWidth:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    category:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - barrierAccess
+          - feeCharged
+          - forCustomers
+          - forDisabled
+          - forElectricalCharging
+          - forEmployees
+          - forMembers
+          - forResidents
+          - forStudents
+          - forVisitors
+          - free
+          - freeAccess
+          - gateAccess
+          - guarded
+          - ground
+          - longTerm
+          - mediumTerm
+          - onlyResidents
+          - onlyWithPermit
+          - parkingGarage
+          - parkingLot
+          - private
+          - public
+          - publicPrivate
+          - shortTerm
+          - staffed
+          - underground
+          - urbanDeterrentParking
+          - other
+    chargeType:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - additionalIntervalPrice
+          - annualPayment
+          - firstIntervalPrice
+          - flat
+          - free
+          - minimum
+          - maximum
+          - monthlyPayment
+          - other
+          - seasonTicket
+          - temporaryPrice
+    contactPoint:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    dataProvider:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
+    description:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    extCategory:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+    extraSpotNumber:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    facilities:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - toilet
+          - shower
+          - informationPoint
+          - internetWireless
+          - payDesk
+          - paymentMachine
+          - cashMachine
+          - vendingMachine
+          - faxMachineOrService
+          - copyMachineOrService
+          - safeDeposit
+          - luggageLocker
+          - publicPhone
+          - elevator
+          - dumpingStation
+          - freshWater
+          - wasteDisposal
+          - refuseBin
+          - iceFreeScaffold
+          - playground
+          - electricChargingStation
+          - bikeParking
+          - tollTerminal
+          - defibrillator
+          - firstAidEquipment
+          - fireHose
+          - fireExtinguisher
+          - fireHydrant
+    firstAvailableFloor:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    highestFloor:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    layout:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - automatedParkingGarage
+          - surface
+          - multiStorey
+          - singleLevel
+          - multiLevel
+          - openSpace
+          - covered
+          - nested
+          - field
+          - rooftop
+          - sheds
+          - carports
+          - garageBoxes
+          - other
+    location:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
+    lowestFloor:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    maximumAllowedHeight:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    maximumAllowedWidth:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    maximumParkingDuration:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    measuresPeriod:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    measuresPeriodUnit:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    name:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
+    occupancyDetectionType:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - balancing
+          - manual
+          - modelBased
+          - none
+          - singleSpaceDetection
+    openingHours:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/openingHours
+    owner:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
+    parkingMode:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - perpendicularParking
+          - parallelParking
+          - echelonParking
+    priceCurrency:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    priceRatePerMinute:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    provider:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    requiredPermit:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - employeePermit
+          - fairPermit
+          - governmentPermit
+          - noPermitNeeded
+          - residentPermit
+          - specificIdentifiedVehiclePermit
+          - studentPermit
+          - visitorPermit
+    reservationType:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - optional
+          - mandatory
+          - notAvailable
+          - partly
+    security:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - patrolled
+          - securityStaff
+          - externalSecurity
+          - cctv
+          - dog
+          - guard24hours
+          - lighting
+          - floodLight
+          - fences
+          - areaSeperatedFromSurroundings
+    source:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
+    specialLocation:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - airportTerminal
+          - exhibitonCentre
+          - shoppingCentre
+          - specificFacility
+          - trainStation
+          - campground
+          - themePark
+          - ferryTerminal
+          - vehicleOnRailTerminal
+          - coachStation
+          - cableCarStation
+          - publicTransportStation
+          - market
+          - religiousCentre
+          - conventionCentre
+          - cinema
+          - skilift
+          - hotel
+          - other
+    status:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - open
+          - closed
+          - closedAbnormal
+          - openingTimesInForce
+          - full
+          - fullAtEntrance
+          - spacesAvailable
+          - almostFull
+    totalSpotNumber:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: ''
+      format: int32
+    usageScenario:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+        enum:
+          - truckParking
+          - parkAndRide
+          - parkAndCycle
+          - parkAndWalk
+          - kissAndRide
+          - liftshare
+          - carSharing
+          - restArea
+          - serviceArea
+          - dropOffWithValet
+          - dropOffMechanical
+          - eventParking
+          - automaticParkingGuidance
+          - staffGuidesToSpace
+          - vehicleLift
+          - loadingBay
+          - dropOff
+          - overnightParking
+          - other
