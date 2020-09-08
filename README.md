@@ -2,6 +2,8 @@
 These data models are intended to model entities relevant for parking use cases in smart cities scenarios. When feasible these models reuse types, properties and enumerations from [DATEX II version 2.3](http://www.datex2.eu/content/parking-publications-extension-v10a). A data dictionary for DATEX II terms can be found at [http://datexbrowser.tamtamresearch.com/](http://datexbrowser.tamtamresearch.com/).
 Nonetheless, these data models are intended to NGSI-based systems and many simplifications has been made with respect to DATEX II version 2.3.
 
+### List of data models
+
 The following entity types are available:
 - [OffStreetParking](https://github.com/smart-data-models/dataModel.Parking/blob/master/OffStreetParking/README.md). A site, off street, intended to park vehicles, managed independently and with suitable and clearly marked access points (entrances and exits). 
 If necessary, and for management purposes or to deal with multi-location parking sites, 
@@ -32,8 +34,12 @@ spot might belong to one group.
 
 
 
+
+### Contributors
 [Link](https://github.com/smart-data-models/dataModel.Parking/blob/master/CONTRIBUTORS.yaml) to the 5 current contributors of the data models of this Subject.
 
+
+### Contribution
 You can raise an [issue](https://github.com/smart-data-models/dataModel.Parking/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.Parking/pulls) on existing data models
 
 
