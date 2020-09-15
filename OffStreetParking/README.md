@@ -11,7 +11,7 @@ In DATEX 2 version 2.3 terminology it corresponds to a UrbanParkingSite of type 
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.Parking/blob/master/OffStreetParking/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/examples/example.json) (keyvalues) for NGSI v2
