@@ -8,7 +8,7 @@ Represents an access point to a parking site, normally an offstreet parking.
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Parking/ParkingAccess/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.Parking/ParkingAccess/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.Parking/blob/master/ParkingAccess/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Parking/ParkingAccess/examples/example.json) (keyvalues) for NGSI v2
