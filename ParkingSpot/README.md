@@ -12,7 +12,7 @@ spot might belong to one group.
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Parking/ParkingSpot/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.Parking/ParkingSpot/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.Parking/blob/master/ParkingSpot/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Parking/ParkingSpot/examples/example.json) (keyvalues) for NGSI v2
