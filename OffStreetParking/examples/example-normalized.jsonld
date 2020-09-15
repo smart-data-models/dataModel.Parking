@@ -12,7 +12,10 @@
             "barrierAccess"
         ]
     },
-    "extCategory": ["A"],
+    "extCategory": {
+        "type": "Property",
+        "value": ["A"]
+    },
     "layout": {
         "type": "Property",
         "value": [

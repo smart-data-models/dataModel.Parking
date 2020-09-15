@@ -1,0 +1,10 @@
+{"@context": ["https://schema.lab.fiware.org/ld/context",
+              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
+ "category": ["onstreet"],
+ "id": "urn:ngsi-ld:ParkingSpot:santander:daoiz_velarde_1_5:3",
+ "location": {"coordinates": [-3.80356167695194, 43.46296641666926],
+              "type": "Point"},
+ "name": "A-13",
+ "refParkingSite": "urn:ngsi-ld:ParkingSite:santander:daoiz_velarde_1_5",
+ "status": "free",
+ "type": "ParkingSpot"}

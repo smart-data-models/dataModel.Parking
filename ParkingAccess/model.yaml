@@ -11,7 +11,7 @@ ParkingAccess:
     - $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: >-
+  description: |
       Represents an access point to a parking site, normally an offstreet parking.
   properties:
     address:
@@ -29,6 +29,8 @@ ParkingAccess:
         model: 'https://schema.org/Text'
       type: string
       description: 'Specifies the URL to information about the provider of this information'
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description

@@ -10,7 +10,7 @@ ParkingGroup:
     - $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: >-
+  description: |
       A group of parking spots. Granularity level can vary. It can be an storey on a parking garage, 
       an specific zone belonging to a big parking lot, or just a group of spots intended for parking a certain vehicle type or 
       subject to certain restrictions (disabled, residents, ...).
@@ -26,6 +26,8 @@ ParkingGroup:
         model: 'https://schema.org/Text'
       type: string
       description: 'Specifies the URL to information about the provider of this information'
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     description:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description

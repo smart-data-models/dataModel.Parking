@@ -1,2 +1,0 @@
-"id", "type", "status__value", "status__metadata__timestamp__value", "category__value", "refParkingSite__value", "name__value", "location__value__coordinates"
-"santander:daoiz_velarde_1_5:3", "ParkingSpot", "free", "2018-09-21T12:00:00", "['onstreet']", "santander:daoiz_velarde_1_5", "A-13", "[-3.80356167695194, 43.46296641666926]"

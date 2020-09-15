@@ -4,7 +4,7 @@
       OffStreetParking: 
         $ref: "https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/model.yaml#/OffStreetParking"
   info: 
-    description: >-
+    description: |
       A site, off street, intended to park vehicles, managed independently and with suitable and clearly marked access points (entrances and exits).
       If necessary, and for management purposes or to deal with multi-location parking sites, 
       it can be divided into different zones modelled by the entity type ParkingGroup .
@@ -42,7 +42,7 @@
                     summary: "Normalized NGSI-LD"
                     value: 
                       - 
-                        $ref: "https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/examples/example-normalized-ld.jsonld"
+                        $ref: "https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/examples/example-normalized.jsonld"
             description: OK
         tags: 
           - ngsi-ld
