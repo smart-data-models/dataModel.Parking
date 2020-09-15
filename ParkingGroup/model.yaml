@@ -21,6 +21,11 @@ ParkingGroup:
       $ref: >-
         https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: 'Specifies the URL to information about the provider of this information'
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     description:

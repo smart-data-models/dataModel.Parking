@@ -21,7 +21,7 @@ OffStreetParking:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Accepted payment method(s).'
       items:
         type: string
         enum:
@@ -41,12 +41,12 @@ OffStreetParking:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: 'Aggregated rating for this parking site.'
     allowedVehicleType:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Vehicle type(s) allowed. The first element of this array MUST be the principal vehicle type allowed. Free spot numbers of other allowed vehicle types might be reported under the attribute extraSpotNumber and through specific entities of type ParkingGroup.'
       items:
         type: string
         enum:
@@ -78,23 +78,23 @@ OffStreetParking:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'The number of spots available (including all vehicle types or reserved spaces, such as those for disabled people, long term parkers and so on). This might be harder to estimate at those parking locations on which spots borders are not clearly marked by lines.'
       format: int32
     averageSpotLength:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'The average length of parking spots.'
     averageSpotWidth:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'The average width of parking spots.'
     category:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Parking site's category(ies). The purpose of this field is to allow to tag, generally speaking, off street parking entities. Particularities and detailed descriptions should be found under the corresponding specific attributes.'
       items:
         type: string
         enum:
@@ -131,7 +131,7 @@ OffStreetParking:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Type(s) of charge performed by the parking site.'
       items:
         type: string
         enum:
@@ -150,8 +150,13 @@ OffStreetParking:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: 'Parking site contact point.'
     dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: 'Specifies the URL to information about the provider of this information'
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     description:
@@ -169,13 +174,17 @@ OffStreetParking:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: |
+           The number of extra spots available, i.e. free. This value must aggregate free spots from all groups mentioned below: 
+           A/ Those reserved for special purposes and usually require a permit. Permit details will be found at parking group level (entity of type ParkingGroup).
+           B/ Those reserved for other vehicle types different than the principal allowed vehicle type. 
+           C/ Any other group of parking spots not subject to the general condition rules conveyed by this entity.
       format: int32
     facilities:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'provided by this parking site.'
       items:
         type: string
         enum:
@@ -212,20 +221,20 @@ OffStreetParking:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'Number of the floor closest to the ground which currently has available parking spots.'
       format: int32
     highestFloor:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'For parking sites with multiple floor levels, highest floor.'
       format: int32
     layout:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Parking layout. Gives more details to the category attribute.'
       items:
         type: string
         enum:
@@ -251,24 +260,24 @@ OffStreetParking:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'For parking sites with multiple floor levels, lowest floor.'
       format: int32
     maximumAllowedHeight:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Maximum allowed height for vehicles. If there are multiple zones, it will be the minimum height of all the zones.'
     maximumAllowedWidth:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Maximum allowed width for vehicles. If there are multiple zones, it will be the minimum width of all the zones.'
     maximumParkingDuration:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Maximum allowed stay at site, on a general basis, encoded as a ISO8601 duration or with any other string relevant for parking. An empty value or when non present indicates an indefinite duration.'
     measuresPeriod:
       x-ngsi:
         type: Property
@@ -279,7 +288,7 @@ OffStreetParking:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'The measures period unit related to availableSpotNumber and priceRatePerMinute.'
     name:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
@@ -287,7 +296,7 @@ OffStreetParking:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Occupancy detection method(s).'
       items:
         type: string
         enum:
@@ -306,7 +315,7 @@ OffStreetParking:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Parking mode(s).'
       items:
         type: string
         enum:
@@ -349,7 +358,7 @@ OffStreetParking:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Conditions for reservation.'
       items:
         type: string
         enum:
@@ -361,7 +370,7 @@ OffStreetParking:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'aspects provided by this parking site.'
       items:
         type: string
         enum:
@@ -382,7 +391,7 @@ OffStreetParking:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: ' If the parking site is at a special location (airport, depatment store, etc.) it conveys what is such special location.'
       items:
         type: string
         enum:
@@ -409,7 +418,7 @@ OffStreetParking:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Status of the parking site'
       items:
         type: string
         enum:
@@ -426,13 +435,13 @@ OffStreetParking:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'The total number of spots offered by this parking site. This number can be difficult to be obtained for those parking locations on which spots are not clearly marked by lines.'
       format: int32
     usageScenario:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: ' Usage scenario(s). Gives more details to the category attribute.'
       items:
         type: string
         enum:
