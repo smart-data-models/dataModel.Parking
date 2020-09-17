@@ -94,7 +94,7 @@ OffStreetParking:
       x-ngsi:
         type: Property
       type: array
-      description: 'Parking site's category(ies). The purpose of this field is to allow to tag, generally speaking, off street parking entities. Particularities and detailed descriptions should be found under the corresponding specific attributes.'
+      description: 'Parking sites category(ies). The purpose of this field is to allow to tag, generally speaking, off street parking entities. Particularities and detailed descriptions should be found under the corresponding specific attributes.'
       items:
         type: string
         enum:
@@ -441,7 +441,7 @@ OffStreetParking:
       x-ngsi:
         type: Property
       type: array
-      description: ' Usage scenario(s). Gives more details to the category attribute.'
+      description: 'Usage scenario(s). Gives more details to the category attribute.'
       items:
         type: string
         enum:
