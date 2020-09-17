@@ -26,12 +26,7 @@ For the sake of simplicity only one vehicle type per parking group is allowed. S
 one required permit is only allowed per group type.
 
 
-- [ParkingSpot](https://github.com/smart-data-models/dataModel.Parking/blob/master/ParkingSpot/README.md). A parking spot is an area well delimited where one vehicle can be parked.
-The aim of this entity type is to monitor the status of parking spots
-individually. Thus, an entity of type ParkingSpot cannot exist without a
-containing entity of type (OnStreetParking, OffStreetParking). A parking
-spot might belong to one group.
-
+- [ParkingSpot](https://github.com/smart-data-models/dataModel.Parking/blob/master/ParkingSpot/README.md). A parking spot is an area well delimited where one vehicle can be parked. The aim of this entity type is to monitor the status of parking spots individually. Thus, an entity of type ParkingSpot cannot exist without a containing entity of type (OnStreetParking, OffStreetParking). A parking spot might belong to one group.
 
 
 
