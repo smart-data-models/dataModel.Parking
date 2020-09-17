@@ -2,7 +2,11 @@
 
 ## Description 
 
-Visit model.yaml for further info on the description
+A site, off street, intended to park vehicles, managed independently and with suitable and clearly marked access points (entrances and exits). 
+If necessary, and for management purposes or to deal with multi-location parking sites, 
+it can be divided into different zones modelled by the entity type ParkingGroup .
+In DATEX 2 version 2.3 terminology it corresponds to a UrbanParkingSite of type offStreetParking.
+
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/swagger.yaml)
