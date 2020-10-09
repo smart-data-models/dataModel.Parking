@@ -267,7 +267,7 @@ The data model is defined as shown below:
 -   `occupiedSpotNumber` : Number of spots occupied.
 
     -   Attribute type: Property. Number
-    -   Allowed values: 0 - totalSpotNumber
+    -   Allowed values: 0 - `totalSpotNumber`
     -   Optional
 
 -   `occupancyModified` : Timestamp when the `occupiedSpotNumber` was updated. The format follows the ISO8601.
