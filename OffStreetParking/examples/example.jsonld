@@ -15,8 +15,7 @@
               "mediumTerm",
               "barrierAccess"],
  "chargeType": ["temporaryPrice"],
- "description": "Municipal car park located near the Trindade metro station "
-                "and the Town Hall",
+ "description": "Municipal car park located near the Trindade metro station and the Town Hall",
  "extCategory": ["A"],
  "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",
  "layout": ["multiLevel"],
