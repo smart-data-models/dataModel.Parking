@@ -23,7 +23,7 @@
   "availableSpotNumber": 132,
   "occupiedSpotNumber": 282,
   "occupancyModified": "2018-09-21T12:00:00",
-  "percentageOccupancy": 68.11,
+  "occupancy": 0.68,
   "address": {
     "streetAddress": "Rua de Fernandes Tomás",
     "addressLocality": "Porto",

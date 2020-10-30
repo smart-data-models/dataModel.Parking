@@ -276,10 +276,10 @@ The data model is defined as shown below:
     -   Allowed values: ISO8601
     -   Optional
 
--   `percentageOccupancy` : Percentage of occupied spots over the total.
+-   `occupancy` : Relative value of occupied spots out of the total spots.
 
     -   Attibute type: [Number](http://schema.org/Number)
-    -   Allowed values: 0 - 100
+    -   Allowed values: 0 - 1
     -   Optional
 
 -   `parkingMode` : Parking mode(s).

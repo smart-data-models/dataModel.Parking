@@ -154,10 +154,10 @@
           "type": "string",
           "minimum": 0
         },
-        "percentageOccupancy": {
-          "type": "integer",
+        "occupancy": {
+          "type": "number",
           "minimum": 0,
-          "maximum": 100
+          "maximum": 1
         },
         "acceptedPaymentMethod": {
           "type": "array",

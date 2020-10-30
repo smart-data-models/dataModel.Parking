@@ -43,9 +43,9 @@
     "type": "DateTime",
     "value": "2018-09-21T12:00:00"
   },
-  "percentageOccupancy": {
+  "occupancy": {
     "type": "number",
-    "value": 68.11
+    "value": 0.68
   },
   "location": {
     "type": "geo:json",
