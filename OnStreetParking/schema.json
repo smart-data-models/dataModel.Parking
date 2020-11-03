@@ -16,11 +16,177 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["OnStreetParking"],
+          "enum": [
+            "OnStreetParking"
+          ],
           "description": "NGSI Entity type"
+        },
+        "category": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "forDisabled",
+              "forResidents",
+              "forLoadUnload",
+              "onlyWithPermit",
+              "forELectricalCharging",
+              "free",
+              "feeCharged",
+              "blueZone",
+              "greenZone",
+              "taxiStop",
+              "shortTerm",
+              "mediumTerm"
+            ]
+          }
+        },
+        "allowedVehicleType": {
+          "type": "string",
+          "enum": [
+            "agriculturalVehicle",
+            "anyVehicle",
+            "articulatedVehicle",
+            "bicycle",
+            "bus",
+            "car",
+            "caravan",
+            " carOrLightVehicle",
+            "carWithCaravan",
+            "carWithTrailer",
+            "constructionOrMaintenanceVehicle",
+            "fourWheelDrive",
+            "highSidedVehicle",
+            "lorry",
+            "moped",
+            "motorcycle",
+            "motorcycleWithSideCar",
+            "motorscooter",
+            "tanker",
+            "threeWheeledVehicle",
+            "trailer",
+            "tram",
+            "twoWheeledVehicle",
+            "van",
+            "vehicleWithCatalyticConverter",
+            "vehicleWithoutCatalyticConverter",
+            "vehicleWithCaravan",
+            "vehicleWithTrailer",
+            "withEvenNumberedRegistrationPlates",
+            "withOddNumberedRegistrationPlates",
+            "other"
+          ]
+        },
+        "requiredPermit": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "permitActiveHours": {
+          "type": "object"
+        },
+        "maximumParkingDuration": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "chargeType": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "additionalIntervalPrice",
+              "annualPayment",
+              "firstIntervalPrice",
+              "flat",
+              "free",
+              "minimum",
+              "maximum",
+              "monthlyPayment",
+              "seasonTicket",
+              "temporaryFee",
+              "temporaryPrice",
+              "unknown",
+              "other"
+            ]
+          }
+        },
+        "acceptedPaymentMethod": {
+          "type": "string"
+        },
+        "usageScenario": {
+          "type": "string",
+          "enum": [
+            "parkAndRide",
+            "parkAndCycle",
+            "parkAndWalk",
+            "kissAndRide",
+            "liftShare",
+            "carSharing",
+            "vehicleLift",
+            "loadingBay",
+            "dropOff",
+            "overnightParking",
+            "other"
+          ]
+        },
+        "totalSpotNumber": {
+          "type": "integer",
+          "minvalue": 0
+        },
+        "availableSpotNumber": {
+          "type": "integer",
+          "minvalue": 0
+        },
+        "extraSpotNumber": {
+          "type": "integer",
+          "minvalue": 0
+        },
+        "occupancyDetectionType": {
+          "type": "string",
+          "enum": [
+            "none",
+            "balancing",
+            "singleSpaceDetection",
+            "modelBased",
+            "manual"
+          ]
+        },
+        "parkingMode": {
+          "type": "string",
+          "enum": [
+            "perpendicularParking",
+            "parallelParking",
+            "echelonParking"
+          ]
+        },
+        "areBordersMarked": {
+          "type": "boolean"
+        },
+        "averageSpotWidth": {
+          "type": "number",
+          "minvalue": 0
+        },
+        "averageSpotLength": {
+          "type": "number",
+          "minvalue": 0
+        },
+        "refParkingSpot": {
+          "type": "string",
+          "format": "uri"
+        },
+        "refParkingGroup": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     }
   ],
-  "required": ["id", "type", "location"]
+  "required": [
+    "id",
+    "type",
+    "location"
+  ]
 }

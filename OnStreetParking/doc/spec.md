@@ -157,7 +157,7 @@ The data model is defined as shown below:
     -   Allowed values: Those defined by the enumeration
         _ParkingUsageScenarioEnum_ of DATEX II version 2.3:
         -   (`parkAndRide`, `parkAndCycle`, `parkAndWalk`, `kissAndRide`,
-            `liftshare`, `carSharing`, `vehicleLift`, `loadingBay`, `dropOff`,
+            `liftShare`, `carSharing`, `vehicleLift`, `loadingBay`, `dropOff`,
             `overnightParking`, `other`)
         -   Or any other value useful for the application and not covered above.
     -   Optional
