@@ -35,6 +35,18 @@
   "totalSpotNumber": {
     "value": 414
   },
+  "occupiedSpotNumber": {
+    "type": "number",
+    "value": 282
+  },
+  "occupancyModified": {
+    "type": "DateTime",
+    "value": "2018-09-21T12:00:00"
+  },
+  "occupancy": {
+    "type": "number",
+    "value": 0.68
+  },
   "location": {
     "type": "geo:json",
     "value": {

@@ -45,6 +45,18 @@
         "type": "Property",
         "value": 414
     },
+    "occupiedSpotNumber": {
+        "type": "Property",
+        "value": 282
+    },
+    "occupancyModified": {
+        "type": "Property",
+        "value": "2018-09-21T12:00:00"
+    },
+    "occupancy": {
+        "type": "Property",
+        "value": 0.68
+    },
     "location": {
         "type": "GeoProperty",
         "value": {

@@ -146,6 +146,18 @@
           },
           "minItems": 1,
           "uniqueItems": true
+        },"occupiedSpotNumber": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "occupancyModified": {
+          "type": "string",
+          "minimum": 0
+        },
+        "occupancy": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
         },
         "acceptedPaymentMethod": {
           "type": "array",

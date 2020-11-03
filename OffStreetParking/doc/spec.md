@@ -264,6 +264,24 @@ The data model is defined as shown below:
         -   Or any other application-specific
     -   Mandatory
 
+-   `occupiedSpotNumber` : Number of spots occupied.
+
+    -   Attribute type: Property. Number
+    -   Allowed values: 0 - `totalSpotNumber`
+    -   Optional
+
+-   `occupancyModified` : Timestamp when the `occupiedSpotNumber` was updated. The format follows the ISO8601.
+
+    -   Attibute type: [DateTime](https://schema.org/DateTime)
+    -   Allowed values: ISO8601
+    -   Optional
+
+-   `occupancy` : Relative value of occupied spots out of the total spots.
+
+    -   Attibute type: [Number](http://schema.org/Number)
+    -   Allowed values: 0 - 1
+    -   Optional
+
 -   `parkingMode` : Parking mode(s).
 
     -   Attribute type: Property. List of [Text](http://schema.org/Text)
