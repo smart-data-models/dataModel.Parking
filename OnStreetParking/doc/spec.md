@@ -89,10 +89,12 @@ The data model is defined as shown below:
     -   Attribute type: Property. [Text](http://schema.org/Text)
     -   Allowed Values: The following values defined by _VehicleTypeEnum_
         [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/downloads/modelv23.html)
-        : - (`bicycle`, `bus`, `car`, `caravan`, `carWithCaravan`,
-        `carWithTrailer`, `constructionOrMaintenanceVehicle`, `lorry`, `moped`,
-        `motorcycle`, `motorcycleWithSideCar`, `motorscooter`, `tanker`,
-        `trailer`, `van`, `anyVehicle`)
+        : - (`agriculturalVehicle`, `anyVehicle`, `articulatedVehicle`, `bicycle`, `bus`, `car`, 
+        `caravan`, ` carOrLightVehicle`, `carWithCaravan`,`carWithTrailer`, `constructionOrMaintenanceVehicle`, 
+        `fourWheelDrive`, `highSidedVehicle`, `lorry`, `moped`, `motorcycle`, `motorcycleWithSideCar`, 
+        `motorscooter`, `tanker`, `threeWheeledVehicle`, `trailer`, `tram`, `twoWheeledVehicle`, `van`, 
+        `vehicleWithCatalyticConverter`, `vehicleWithoutCatalyticConverter`, `vehicleWithCaravan`, 
+        `vehicleWithTrailer`, `withEvenNumberedRegistrationPlates`, `withOddNumberedRegistrationPlates`, `other`)
     -   Mandatory
 
 -   `requiredPermit` : This attribute captures what permit(s) might be needed to
