@@ -152,7 +152,7 @@
         },
         "occupancyModified": {
           "type": "string",
-          "minimum": 0
+          "format": "date-time"
         },
         "occupancy": {
           "type": "number",
