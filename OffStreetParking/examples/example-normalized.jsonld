@@ -1,7 +1,7 @@
 {
     "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",
     "type": "OffStreetParking",
-    "modifiedAt": "2016-06-02T09:25:55.00Z",
+    "modifiedAt": "2018-09-21T12:00:05Z",
     "category": {
         "type": "Property",
         "value": [
@@ -51,7 +51,7 @@
     },
     "occupancyModified": {
         "type": "Property",
-        "value": "2018-09-21T12:00:00"
+        "value": "2018-09-21T12:00:00Z"
     },
     "occupancy": {
         "type": "Property",
@@ -89,6 +89,18 @@
     "description": {
         "type": "Property",
         "value": "Municipal car park located near the Trindade metro station and the Town Hall"
+    },
+    "vehicleEntranceCount": {
+        "type": "Property",
+        "value": 28
+    },
+      "vehicleExitCount": {
+        "type": "Property",
+        "value": 12
+    },
+      "accessModified": {
+        "type": "Property",
+        "value": "2018-09-21T12:00:00Z"
     },
     "@context": [
         "https://schema.lab.fiware.org/ld/context",

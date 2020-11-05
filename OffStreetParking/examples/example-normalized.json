@@ -28,7 +28,7 @@
     "metadata": {
       "timestamp": {
         "type": "DateTime",
-        "value": "2018-09-21T12:00:00"
+        "value": "2018-09-21T12:00:00Z"
       }
     }
   },
@@ -41,7 +41,7 @@
   },
   "occupancyModified": {
     "type": "DateTime",
-    "value": "2018-09-21T12:00:00"
+    "value": "2018-09-21T12:00:00Z"
   },
   "occupancy": {
     "type": "number",
@@ -70,9 +70,21 @@
   },
   "dateModified": {
     "type": "DateTime",
-    "value": "2016-06-02T09:25:55.00Z"
+    "value": "2018-09-21T12:00:05Z"
   },
   "description": {
     "value": "Municipal car park located near the Trindade metro station and the Town Hall"
+  },
+  "vehicleEntranceCount": {
+    "type": "number",
+    "value": 28
+  },
+  "vehicleExitCount": {
+    "type": "number",
+    "value": 12
+  },
+  "accessModified": {
+    "type": "DateTime",
+    "value": "2018-09-21T12:00:00Z"
   }
 }
