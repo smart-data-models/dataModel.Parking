@@ -452,6 +452,19 @@ The data model is defined as shown below:
         [https://schema.org/aggregateRating](https://schema.org/aggregateRating)
     -   Optional
 
+-   `vehicleEntranceCount` : Aggregated number of vehicle that enter the parking site in a period of time.
+    -   Attribute type: Property. [Number](http://schema.org/Number)
+    -   Optional
+
+-   `vehicleExitCount` : Aggregated number of vehicle that leave the parking site in a period of time.
+    -   Attribute type: Property. [Number](http://schema.org/Number)
+    -   Optional
+
+-   `accessModified` : Timestamp when `vehicleEntranceCount` and `vehicleExitCount` was updated.
+    -   Attibute type: Property. [DateTime](https://schema.org/DateTime)
+    -   Allowed values: ISO8601
+    -   Optional
+
 **Note**: JSON Schemas are intended to capture the data type and associated
 constraints of the different Attributes, regardless their final representation
 format in NGSI(v2, LD).
