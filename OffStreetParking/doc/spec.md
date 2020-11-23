@@ -6,7 +6,7 @@ A site, off street, intended to park vehicles, managed independently and with
 suitable and clearly marked access points (entrances and exits). If necessary,
 and for management purposes or to deal with multi-location parking sites, it can
 be divided into different zones modelled by the entity type
-[ParkingGroup](../ParkingGroup/README.md) . In DATEX 2 version 2.3
+[ParkingGroup](../../ParkingGroup/README.md) . In DATEX 2 version 2.3
 terminology it corresponds to a _UrbanParkingSite_ of type _offStreetParking_.
 
 A data dictionary for DATEX II terms can be found at
@@ -728,8 +728,8 @@ Off street parking with an specific area devoted to residents (100 spots).
     "requiredPermit": [
         "noPermit",
         "residentPermit"
-    ] /* Generally   speaking no permit */
-    /* Other required fields (Check model) */
+    ]
+    
 }
 ```
 
@@ -750,7 +750,7 @@ Two different groups are needed:
     "refParkingSite": "parking-example-234",
     "allowedVehicleType": "car",
     "maximumParkingDuration": "PT2H"
-    /* Other required fields (Check model) */
+    
 }
 ```
 
@@ -761,19 +761,19 @@ Two different groups are needed:
     "id": "example-234-g-residents",
     "type": "ParkingGroup",
     "name": "La Farola 1 - Residentes",
-    "chargeType": ["annualTax"] /* Annual payment for residents */,
+    "chargeType": ["annualTax"], 
     "category": [
         "offstreet",
         "longTerm",
         "onlyResidents"
-    ] /* Group    Category. Overwrites parent's */,
+    ], 
     "totalSpotNumber": 100,
     "availableSpotNumber": 60,
     "requiredPermit": "residentPermit",
     "refParkingSite": "parking-example-234",
     "allowedVehicleType": "car",
     "maximumParkingDuration": ""
-    /* Other required fields (Check model) */
+    
 }
 ```
 
@@ -800,7 +800,7 @@ Private parking only for employees. A devoted visitor zone.
     "availableSpotNumber": 100,
     "extraSpotNumber": 10,
     "refParkingGroup": ["dt-p1-employee-group", "dt-p1-visitor-group"]
-    /* Other required fields (Check model) */
+    
 }
 ```
 
@@ -819,7 +819,7 @@ Two different groups are needed:
     "chargeType": ["free"],
     "refParkingSite": "district-telefonica-parking-1",
     "allowedVehicleType": "car"
-    /* Other required fields (Check model) */
+    
 }
 ```
 
@@ -836,7 +836,7 @@ Two different groups are needed:
     "chargeType": ["free"],
     "refParkingSite": "district-telefonica-parking-1",
     "allowedVehicleType": "car"
-    /* Other required fields (Check model) */
+
 }
 ```
 
