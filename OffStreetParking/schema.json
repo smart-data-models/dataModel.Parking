@@ -362,8 +362,8 @@
           "description": "Property. Model:'http://schema.org/Number'. Number of the floor closest to the ground which currently has available parking spots. Allowed values: Stories are numbered between -n and n, being 0 ground floor."
         },
         "specialLocation": {
-          "description": "Property. Model:'http://schema.org/Text'. If the parking site is at a special location (airport, department store, etc.) it conveys what is such special location.  Allowed values: Those defined by _ParkingSpecialLocationEnum_ of   [DATEX II version 2.3](http://www.datex2.eu/content/parking-publications-extension-v10a): (`airportTerminal`, `exhibitonCentre`, `shoppingCentre`, `specificFacility`, `trainStation`, `campground`, `themePark`, `ferryTerminal`, `vehicleOnRailTerminal`, `coachStation`,   `cableCarStation`, `publicTransportStation`, `market`, `religiousCentre`, `conventionCentre`, `cinema`, `skilift`, `hotel`, `other`)",
           "type": "array",
+          "description": "Property. Model:'http://schema.org/Text'. If the parking site is at a special location (airport, department store, etc.) it conveys what is such special location.  Allowed values: Those defined by _ParkingSpecialLocationEnum_ of   [DATEX II version 2.3](http://www.datex2.eu/content/parking-publications-extension-v10a): (`airportTerminal`, `exhibitonCentre`, `shoppingCentre`, `specificFacility`, `trainStation`, `campground`, `themePark`, `ferryTerminal`, `vehicleOnRailTerminal`, `coachStation`,   `cableCarStation`, `publicTransportStation`, `market`, `religiousCentre`, `conventionCentre`, `cinema`, `skilift`, `hotel`, `other`)",
           "items": {
             "type": "string",
             "enum": [
