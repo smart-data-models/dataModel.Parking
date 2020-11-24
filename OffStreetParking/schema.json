@@ -223,8 +223,8 @@
           "uniqueItems": true
         },
         "usageScenario": {
-          "description": "Property. Model:'http://schema.org/Text'. Usage scenario(s). Gives more details to the `category` attribute. Allowed values: Those defined by the enumeration _ParkingUsageScenarioEnum_ of DATEX II version 2.3:(`truckParking`, `parkAndRide`, `parkAndCycle`, `parkAndWalk`, `kissAndRide`, `liftshare`, `carSharing`, `restArea`, `serviceArea`, `dropOffWithValet`, `dropOffMechanical`, `eventParking`, `automaticParkingGuidance`, `staffGuidesToSpace`, `vehicleLift`, `loadingBay`, `dropOff`, `overnightParking`, `other` Or any other value useful for the application and not covered above.",
           "type": "array",
+          "description": "Property. Model:'http://schema.org/Text'. Usage scenario(s). Gives more details to the `category` attribute. Allowed values: Those defined by the enumeration _ParkingUsageScenarioEnum_ of DATEX II version 2.3:(`truckParking`, `parkAndRide`, `parkAndCycle`, `parkAndWalk`, `kissAndRide`, `liftshare`, `carSharing`, `restArea`, `serviceArea`, `dropOffWithValet`, `dropOffMechanical`, `eventParking`, `automaticParkingGuidance`, `staffGuidesToSpace`, `vehicleLift`, `loadingBay`, `dropOff`, `overnightParking`, `other` Or any other value useful for the application and not covered above.",
           "items": {
             "type": "string",
             "enum": [
