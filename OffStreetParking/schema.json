@@ -411,8 +411,8 @@
           "uniqueItems": true
         },
         "reservationType": {
-          "description": "Property. Model:'http://schema.org/Text'. he following specified by _ReservationTypeEnum_ of DATEX II version 2.3: (`optional`, `mandatory`, `notAvailable`, `partly`).",
           "type": "array",
+          "description": "Property. Model:'http://schema.org/Text'. he following specified by _ReservationTypeEnum_ of DATEX II version 2.3: (`optional`, `mandatory`, `notAvailable`, `partly`).",
           "items": {
             "type": "string",
             "enum": [
@@ -465,50 +465,49 @@
           "description": "Property. Model:'http://schema.org/Number'. Units:'Meters'. Maximum allowed width for vehicles. If there are\n    multiple zones, it will be the minimum width of all the zones."
         },
         "refParkingAccess": {
-          "description": "Property. Model:'http://schema.org/Number'. Parking site's access point(s).",
           "anyOf": [
-        {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 256,
-          "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-
-        },
-        {
-          "type": "string",
-          "format": "uri"
-        }
-      ]
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ],
+          "description": "Property. Model:'http://schema.org/Number'. Parking site's access point(s)."
         },
         "refParkingGroup": {
-          "description": "Relationship. Model:'http://schema.org/Number'. Parking site identified group(s). A group can correspond to a zone, a complete storey, a group of spots, etc.",
           "anyOf": [
-        {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 256,
-          "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-        },
-        {
-          "type": "string",
-          "format": "uri"
-        }
-      ]
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ],
+          "description": "Relationship. Model:'http://schema.org/Number'. Parking site identified group(s). A group can correspond to a zone, a complete storey, a group of spots, etc."
         },
         "refParkingSpot": {
-          "description": "Relationship. Individual parking spots belonging to this offstreet parking site.",
           "anyOf": [
-        {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 256,
-          "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-        },
-        {
-          "type": "string",
-          "format": "uri"
-        }
-      ]
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ],
+          "description": "Relationship. Individual parking spots belonging to this offstreet parking site."
         },
         "aggregateRating": {
           "type": "object",
@@ -545,4 +544,3 @@
     "location"
   ]
 }
-    
