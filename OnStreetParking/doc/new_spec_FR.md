@@ -5,9 +5,10 @@ Entité : OnStreetParking
 
 ## Liste des biens  
 
-`acceptedPaymentMethod`:   `address`: L'adresse postale.  `allowedVehicleType`:   `alternateName`: Un autre nom pour cet article  `areBordersMarked`:   `areaServed`: La zone géographique où un service ou un article offert est fourni.  `availableSpotNumber`:   `averageSpotLength`:   `averageSpotWidth`:   `category`:   `chargeType`:   `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`: Une description de cet article  `extraSpotNumber`:   `id`:   `location`:   `maximumParkingDuration`:   `name`: Le nom de cet article.  `occupancyDetectionType`:   `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `parkingMode`:   `permitActiveHours`:   `refParkingGroup`:   `refParkingSpot`:   `requiredPermit`:   `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `totalSpotNumber`:   `type`: NGSI Type d'entité  `usageScenario`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `acceptedPaymentMethod`:   - `address`: L'adresse postale.  - `allowedVehicleType`:   - `alternateName`: Un autre nom pour cet article  - `areBordersMarked`:   - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `availableSpotNumber`:   - `averageSpotLength`:   - `averageSpotWidth`:   - `category`:   - `chargeType`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `extraSpotNumber`:   - `id`:   - `location`:   - `maximumParkingDuration`:   - `name`: Le nom de cet article.  - `occupancyDetectionType`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `parkingMode`:   - `permitActiveHours`:   - `refParkingGroup`:   - `refParkingSpot`:   - `requiredPermit`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `totalSpotNumber`:   - `type`: NGSI Type d'entité  - `usageScenario`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 OnStreetParking:    
   description: 'On street parking'    
   properties:    
@@ -369,6 +370,9 @@ OnStreetParking:
     - location    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### OnStreetParking NGSI V2 Exemple de valeurs clés  
 Voici un exemple de OnStreetParking au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsque l'on utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -402,6 +406,7 @@ OnStreetParking:
   "refParkingGroup": ["daoiz-velarde-1-5-main", "daoiz-velarde-1-5-disabled"]  
 }  
 ```  
+#### OnStreetParking NGSI V2 normalisé Exemple  
 Voici un exemple d'un OnStreetParking au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsque l'on utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -470,6 +475,7 @@ OnStreetParking:
   }  
 }  
 ```  
+#### OnStreetParking NGSI-LD valeurs clés Exemple  
 Voici un exemple de OnStreetParking au format JSON-LD comme valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -496,6 +502,7 @@ OnStreetParking:
  "totalSpotNumber": 6,  
  "type": "OnStreetParking"}  
 ```  
+#### OnStreetParking NGSI-LD normalisé Exemple  
 Voici un exemple de OnStreetParking au format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
