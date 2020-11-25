@@ -5,9 +5,10 @@ Entité : ParkingSpot
 
 ## Liste des biens  
 
-`TimeInstant`:   `address`: L'adresse postale.  `alternateName`: Un autre nom pour cet article  `annotations`:   `areaServed`: La zone géographique où un service ou un article offert est fourni.  `category`:   `color`: La couleur du produit.  `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`: Une description de cet article  `id`:   `image`: Une image de l'objet.  `length`:   `location`:   `name`: Le nom de cet article.  `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `refDevice`:   `refParkingGroup`:   `refParkingSite`:   `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `status`:   `type`: NGSI Type d'entité  `width`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `TimeInstant`:   - `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `annotations`:   - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `category`:   - `color`: La couleur du produit.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`:   - `image`: Une image de l'objet.  - `length`:   - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refDevice`:   - `refParkingGroup`:   - `refParkingSite`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `status`:   - `type`: NGSI Type d'entité  - `width`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 ParkingSpot:    
   description: 'A parking spot is an area well delimited where one vehicle can be parked. The aim of this entity type is to monitor the status of parking spots individually. Thus, an entity of type ParkingSpot cannot exist without a containing entity of type (OnStreetParking, OffStreetParking). A parking spot might belong to one group.'    
   properties:    
@@ -286,6 +287,9 @@ ParkingSpot:
     - refParkingSite    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### ParkingSpot NGSI V2 Exemple de valeurs clés  
 Voici un exemple d'une place de parking au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -301,6 +305,7 @@ ParkingSpot:
   "refParkingSite": "santander:daoiz_velarde_1_5"  
 }  
 ```  
+#### ParkingSpot NGSI V2 normalisé Exemple  
 Voici un exemple d'une place de parking au format JSON normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -334,6 +339,7 @@ ParkingSpot:
   }  
 }  
 ```  
+#### ParkingSpot NGSI-LD valeurs clés Exemple  
 Voici un exemple d'une place de parking au format JSON-LD comme valeurs clés. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -347,6 +353,7 @@ ParkingSpot:
  "status": "free",  
  "type": "ParkingSpot"}  
 ```  
+#### ParkingSpot NGSI-LD normalisé Exemple  
 Voici un exemple d'une place de parking au format JSON-LD normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
