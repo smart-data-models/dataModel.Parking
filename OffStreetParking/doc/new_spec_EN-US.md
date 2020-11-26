@@ -17,9 +17,11 @@ Entity: OffStreetParking
  -   (`open`, `closed`, `closedAbnormal`,`openingTimesInForce`, `full`,  
  `fullAtEntrance`, `spacesAvailable`, `almostFull`)  
  -   Or any other application-specific  - `totalSpotNumber`: The total number of spots offered by this parking site.  This number can be difficult to be obtained for those parking locations on which spots are not clearly marked by lines. Allowed values: Any positive integer number or 0. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class.  - `type`: It has to be OffStreetParking  - `usageScenario`: Usage scenario(s). Gives more details to the `category` attribute. Allowed values: Those defined by the enumeration _ParkingUsageScenarioEnum_ of DATEX II version 2.3:(`truckParking`, `parkAndRide`, `parkAndCycle`, `parkAndWalk`, `kissAndRide`, `liftshare`, `carSharing`, `restArea`, `serviceArea`, `dropOffWithValet`, `dropOffMechanical`, `eventParking`, `automaticParkingGuidance`, `staffGuidesToSpace`, `vehicleLift`, `loadingBay`, `dropOff`, `overnightParking`, `other` Or any other value useful for the application and not covered above.  - `vehicleEntranceCount`: Aggregated number of vehicle that enter the parking site in a period of time.  - `vehicleExitCount`: Aggregated number of vehicle that leave the parking site in a period of time.    
+Required properties  
+- `id`  - `location`  - `type`    
 A site, off street, intended to park vehicles, managed independently and with suitable and clearly marked access points (entrances and exits). If necessary, and for management purposes or to deal with multi-location parking sites, it can be divided into different zones modelled by the entity type [ParkingGroup](../ParkingGroup/README.md) . In DATEX 2 version 2.3 terminology it corresponds to a _UrbanParkingSite_ of type _offStreetParking_. A data dictionary for DATEX II terms can be found at [http://datexbrowser.tamtamresearch.com/](http://datexbrowser.tamtamresearch.com/).  
 ## Data Model description of properties  
-Sorted alphabetically  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 OffStreetParking:    
@@ -769,6 +771,7 @@ OffStreetParking:
   type: object    
 ```  
 </details>    
+## Example payloads    
 #### OffStreetParking NGSI V2 key-values Example    
 Here is an example of a OffStreetParking in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
@@ -811,7 +814,7 @@ OffStreetParking:
 }  
 ```  
 #### OffStreetParking NGSI V2 normalized Example    
-Here is an example of a OffStreetParking in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a OffStreetParking in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "porto-ParkingLot-23889",  
@@ -905,7 +908,7 @@ OffStreetParking:
 }  
 ```  
 #### OffStreetParking NGSI-LD key-values Example    
-Here is an example of a OffStreetParking in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a OffStreetParking in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
