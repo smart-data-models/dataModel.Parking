@@ -59,7 +59,8 @@
             ]
           },
           "minItems": 1,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "description": "Property. Parking site's category(ies). The purpose of this field is to allow to tag, generally speaking, off street parking entities"
         },
         "extCategory": {
           "type": "array",
@@ -67,7 +68,8 @@
             "type": "string"
           },
           "minItems": 1,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "description": "Property. "
         },
         "allowedVehicleType": {
           "type": "array",
@@ -167,7 +169,8 @@
         "occupancy": {
           "type": "number",
           "minimum": 0,
-          "maximum": 1
+          "maximum": 1,
+          "description": "Property. Relative value of occupied spots out of the total spots."
         },
         "acceptedPaymentMethod": {
           "type": "array",
