@@ -1,12 +1,53 @@
 Entidad: OnStreetParking  
-========================  
-Esta especificación es una **versión temporal**. Se genera automáticamente a partir de las propiedades documentadas descritas en el schema.json condensadas en el archivo `model.yaml`. Se ha creado un archivo temporal `nuevo_modelo.yaml` en cada modelo de datos para evitar el impacto en los scripts existentes. Por lo tanto, la especificación estará incompleta mientras el schema.json no se actualice al nuevo formato (documentando las propiedades). Una vez actualizado el `modelo.yaml` (`nuevo_modelo.yaml`) necesita ser actualizado también (automáticamente) . Más información en este [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Mientras sea un formato provisional cualquier [feedback es bienvenido en este formulario](https://smartdatamodels.org/index.php/submit-an-issue-2/) eligiendo la opción `Feedback on the new specification`.  
-Descripción global: **En el aparcamiento de la calle**  
+========================
+  
 
-## Lista de propiedades  
+Esta especificación es una **versión temporal**. Se genera automáticamente a partir de las propiedades documentadas descritas en el schema.json condensadas en el archivo `model.yaml`. Se ha creado un archivo temporal `nuevo_modelo.yaml` en cada modelo de datos para evitar el impacto en los scripts existentes. Por lo tanto, la especificación estará incompleta mientras el schema.json no se actualice al nuevo formato (documentando las propiedades). Una vez actualizado el `modelo.yaml` (`nuevo_modelo.yaml`) necesita ser actualizado también (automáticamente) . Más información en este [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Mientras sea un formato provisional cualquier [feedback es bienvenido en este formulario](https://smartdatamodels.org/index.php/submit-an-issue-2/) eligiendo la opción `Feedback on the new specification`.  
 
-`acceptedPaymentMethod`:   `address`: La dirección postal.  `allowedVehicleType`:   `alternateName`: Un nombre alternativo para este artículo  `areBordersMarked`:   `areaServed`: La zona geográfica donde se presta un servicio o se ofrece un artículo.  `availableSpotNumber`:   `averageSpotLength`:   `averageSpotWidth`:   `category`:   `chargeType`:   `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `description`: Una descripción de este artículo  `extraSpotNumber`:   `id`:   `location`:   `maximumParkingDuration`:   `name`: El nombre de este artículo.  `occupancyDetectionType`:   `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  `parkingMode`:   `permitActiveHours`:   `refParkingGroup`:   `refParkingSpot`:   `requiredPermit`:   `seeAlso`:   `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  `totalSpotNumber`:   `type`: NGSI Tipo de entidad  `usageScenario`:   ## Modelo de datos Descripción de las propiedades  
-Ordenados alfabéticamente  
+Descripción global: **En el aparcamiento de la calle**  
+
+
+## Lista de propiedades  
+
+
+`acceptedPaymentMethod`:   
+`address`: La dirección postal.  
+`allowedVehicleType`:   
+`alternateName`: Un nombre alternativo para este artículo  
+`areBordersMarked`:   
+`areaServed`: La zona geográfica donde se presta un servicio o se ofrece un artículo.  
+`availableSpotNumber`:   
+`averageSpotLength`:   
+`averageSpotWidth`:   
+`category`:   
+`chargeType`:   
+`dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  
+`dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  
+`dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  
+`description`: Una descripción de este artículo  
+`extraSpotNumber`:   
+`id`:   
+`location`:   
+`maximumParkingDuration`:   
+`name`: El nombre de este artículo.  
+`occupancyDetectionType`:   
+`occupiedSpotNumber`:
+`owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  
+`extraSpotNumber`:
+`parkingMode`:   
+`permitActiveHours`:   
+`refParkingGroup`:   
+`refParkingSpot`:   
+`requiredPermit`:   
+`seeAlso`:   
+`source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  
+`totalSpotNumber`:   
+`type`: NGSI Tipo de entidad  
+`usageScenario`:   
+
+## Modelo de datos Descripción de las propiedades  
+
+Ordenados alfabéticamente  
 ```yaml  
 OnStreetParking:    
   description: 'On street parking'    
@@ -304,7 +345,10 @@ OnStreetParking:
         - singleSpaceDetection    
         - modelBased    
         - manual    
-      type: string    
+      type: string
+    occupiedSpotNumber:    
+      minvalue: 0    
+      type: integer       
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
@@ -369,9 +413,12 @@ OnStreetParking:
     - location    
   type: object    
 ```  
-Aquí hay un ejemplo de un OnStreetParking en formato JSON como valores clave. Esto es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
+
+Aquí hay un ejemplo de un OnStreetParking en formato JSON como valores clave. Esto es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
+
+```json  
+
+{  
   "id": "santander:daoiz_velarde_1_5",  
   "type": "OnStreetParking",  
   "category": ["blueZone", "shortTerm", "forDisabled"],  
@@ -402,9 +449,12 @@ OnStreetParking:
   "refParkingGroup": ["daoiz-velarde-1-5-main", "daoiz-velarde-1-5-disabled"]  
 }  
 ```  
-Aquí hay un ejemplo de un OnStreetParking en formato JSON como normalizado. Esto es compatible con NGSI V2 cuando se utiliza "opciones=valores clave" y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
+
+Aquí hay un ejemplo de un OnStreetParking en formato JSON como normalizado. Esto es compatible con NGSI V2 cuando se utiliza "opciones=valores clave" y devuelve los datos de contexto de una entidad individual.  
+
+```json  
+
+{  
   "id": "santander:daoiz_velarde_1_5",  
   "type": "OnStreetParking",  
   "category": {  
@@ -470,9 +520,12 @@ OnStreetParking:
   }  
 }  
 ```  
-Aquí hay un ejemplo de un OnStreetParking en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
+
+Aquí hay un ejemplo de un OnStreetParking en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
+
+```json  
+
+{"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
  "allowedVehicleType": "car",  
  "areaServed": "Zona Centro",  
@@ -496,9 +549,12 @@ OnStreetParking:
  "totalSpotNumber": 6,  
  "type": "OnStreetParking"}  
 ```  
-Aquí hay un ejemplo de un OnStreetParking en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
+
+Aquí hay un ejemplo de un OnStreetParking en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
+
+```json  
+
+{  
     "id": "urn:ngsi-ld:OnStreetParking:santander:daoiz_velarde_1_5",  
     "type": "OnStreetParking",  
     "modifiedAt": "2016-06-02T09:25:55.00Z",  

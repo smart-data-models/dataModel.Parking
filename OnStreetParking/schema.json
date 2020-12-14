@@ -138,6 +138,10 @@
           "type": "integer",
           "minvalue": 0
         },
+        "occupiedSpotNumber": {
+          "type": "integer",
+          "minvalue": 0
+        },
         "extraSpotNumber": {
           "type": "integer",
           "minvalue": 0
