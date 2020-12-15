@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.0",
   "$id": "https://smart-data-models.github.io/dataModel.Parking/ParkingSpot/schema.json",
-  "title": " - Parking / Parking Spot",
-  "description": "A parking spot is an area well delimited where one vehicle can be parked. ",
+  "title": "Parking Spot",
+  "description": "A parking spot is an area well delimited where one vehicle can be parked.",
   "type": "object",
   "allOf": [
     {
@@ -45,6 +45,7 @@
           "description": "Property. Model:'https://schema.org/length'. Length of the parking spot."
         },
         "refParkingGroup": {
+          "description": "Relationship. Group to which the parking spot belongs to. For model simplification purposes only one group is allowed per parking spot.",
           "anyOf": [
             {
               "type": "string",
@@ -58,10 +59,10 @@
               "format": "uri",
               "description": "Property. Identifier format of any NGSI entity"
             }
-          ],
-          "description": "Relationship. Group to which the parking spot belongs to. For model simplification purposes only one group is allowed per parking spot."
+          ]
         },
         "refParkingSite": {
+          "description": "Relationship. Parking site to which the parking spot belongs to.",
           "anyOf": [
             {
               "type": "string",
@@ -75,21 +76,21 @@
               "format": "uri",
               "description": "Property. Identifier format of any NGSI entity"
             }
-          ],
-          "description": "Relationship. Parking site to which the parking spot belongs to."
+          ]
+
         },
         "category": {
+          "description": "Property. Category(ies) of the parking spot. `onStreet` : The parking spot belongs to an onStreet parking site. `offStreet` : The parking spot belongs to an offStreet parking site.",
           "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
           "items": {
             "type": "string",
             "enum": [
               "onStreet",
               "offStreet"
             ]
-          },
-          "minItems": 1,
-          "uniqueItems": true,
-          "description": "Property. Category(ies) of the parking spot. `onStreet` : The parking spot belongs to an onStreet parking site. `offStreet` : The parking spot belongs to an offStreet parking site."
+          }
         },
         "refDevice": {
           "type": "array",

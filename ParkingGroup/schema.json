@@ -211,20 +211,20 @@
         "description": "Property. Model:'http://schema.org/width'. Units:'Meters'. Maximum allowed width for vehicles. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined."
       },
       "refParkingSpot": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-            },
-            {
-              "type": "string",
-              "format": "uri"
-            }
-          ],
-          "description": "Relationship. Individual parking spots belonging to this parking group."
-        }
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256,
+            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ],
+        "description": "Relationship. Individual parking spots belonging to this parking group."
+      }
     }
   ],
   "required": [
