@@ -39,10 +39,12 @@
               "shortTerm",
               "mediumTerm"
             ]
-          }
+          },
+          "description": "Property. Street parking category."
         },
         "allowedVehicleType": {
           "type": "string",
+          "description": "Property. Vehicle type allowed (only one per on street parking)."
           "enum": [
             "agriculturalVehicle",
             "anyVehicle",
@@ -81,14 +83,17 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "Property. This attribute captures what permit(s) might be needed to park at this site."
         },
         "permitActiveHours": {
-          "type": "object"
+          "type": "object",
+          "description": "Property. This attribute allows to capture situations when a permit is only needed at specific hours or days of week."
         },
         "maximumParkingDuration": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. Maximum allowed stay at site encoded as a ISO8601 duration. An empty value indicates an indefinite duration."
         },
         "chargeType": {
           "type": "array",
@@ -109,10 +114,12 @@
               "unknown",
               "other"
             ]
-          }
+          },
+          "description": "Property. Type of charge(s) performed by the parking site."
         },
         "acceptedPaymentMethod": {
-          "type": "string"
+          "type": "string",
+          "description": "Property. Type of charge(s) performed by the parking site."
         },
         "usageScenario": {
           "type": "string",
@@ -128,19 +135,23 @@
             "dropOff",
             "overnightParking",
             "other"
-          ]
+          ],
+          "description": "Property. Type of charge(s) performed by the parking site."
         },
         "totalSpotNumber": {
           "type": "integer",
-          "minvalue": 0
+          "minvalue": 0,
+          "description": "Property. The total number of spots offered by this parking site."
         },
         "availableSpotNumber": {
           "type": "integer",
-          "minvalue": 0
+          "minvalue": 0,
+          "description": "Property. The number of spots available globally, including reserved spaces, such as those for disabled people, long term parkers and so on."
         },
         "extraSpotNumber": {
           "type": "integer",
-          "minvalue": 0
+          "minvalue": 0,
+          "description": "Property. The number of extra spots available, i.e. free. "
         },
         "occupancyDetectionType": {
           "type": "string",
@@ -150,7 +161,8 @@
             "singleSpaceDetection",
             "modelBased",
             "manual"
-          ]
+          ],
+          "description": "Property. Occupancy detection method(s)."
         },
         "parkingMode": {
           "type": "string",
@@ -158,28 +170,34 @@
             "perpendicularParking",
             "parallelParking",
             "echelonParking"
-          ]
+          ],
+          "description": "Property. Parking mode(s)."
         },
         "areBordersMarked": {
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Property. Denotes whether parking spots are delimited (with blank lines or similar) or not."
         },
         "averageSpotWidth": {
           "type": "number",
-          "minvalue": 0
+          "minvalue": 0,
+          "description": "Property. The average width of parking spots."
         },
         "averageSpotLength": {
           "type": "number",
-          "minvalue": 0
+          "minvalue": 0,
+          "description": "Property. The average length of parking spots."
         },
         "refParkingSpot": {
           "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "description": "Relationship. Individual parking spots belonging to this on street parking site."
         },
         "refParkingGroup": {
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "description": "Relationship. Reference to the parking group(s) (if any) belonging to this onstreet parking zone."
         }
       }
     }

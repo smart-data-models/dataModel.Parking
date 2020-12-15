@@ -24,21 +24,52 @@
         },
         "status": {
           "type": "string",
-          "enum": ["occupied", "free", "closed", "unknown"]
+          "enum": ["occupied", "free", "closed", "unknown"],
+          "description": "Property. Model:'https://schema.org/Text'. Status of the parking spot from the point of view of occupancy."
         },
         "width": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Width of the parking spot."
         },
         "length": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Length of the parking spot."
         },
         "refParkingGroup": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Group to which the parking spot belongs to. For model simplification purposes only one group is allowed per parking spot."
         },
         "refParkingSite": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Parking site to which the parking spot belongs to."
         },
         "category": {
           "type": "array",
@@ -47,19 +78,35 @@
             "enum": ["onstreet", "offstreet"]
           },
           "minItems": 1,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "description": "Property. Category(ies) of the parking spot."
         },
         "refDevice": {
           "type": "array",
           "items": {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
           },
           "minItems": 1,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "description": "Relationship. A reference to a point of interest associated to this observation."
         },
         "TimeInstant": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. Timestamp saved by FIWARE's IoT Agent"
         }
       }
     }
