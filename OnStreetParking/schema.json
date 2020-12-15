@@ -3,7 +3,7 @@
   "$schemaVersion": "0.0",
   "$id": "https://smart-data-models.github.io/dataModel.Parking/OnStreetParking/schema.json",
   "title": " - Parking / On Street Parking - TODO: Provide a complete schema",
-  "description": "On street parking",
+  "description": "A site, open space zone, on street, (metered or not) with direct access from a road, intended to park vehicles. In DATEX 2 version 2.3 terminology it corresponds to a _UrbanParkingSite_ of type _onStreetParking_. A data dictionary for DATEX II terms can be found at [http://datexbrowser.tamtamresearch.com/](http://datexbrowser.tamtamresearch.com/).",
   "type": "object",
   "allOf": [
     {
@@ -19,7 +19,7 @@
           "enum": [
             "OnStreetParking"
           ],
-          "description": "NGSI Entity type"
+          "description": "Property. Entity type. It must be equal to `OnStreetParking`"
         },
         "category": {
           "type": "array",
