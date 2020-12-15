@@ -157,73 +157,75 @@
           "description": "Property. Model:'http://schema.org/Number'. The number of spots available in this group. It must lower or equal than `totalSpotNumber`.",
           "minimum": 0
         },
-        "type": "array",
-        "description": "Property. Model:'http://schema.org/Text'. Allowed values: The following from DATEX II version 2.3 _OccupancyDetectionTypeEnum_. Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. Or any other application-specific",
-        "items": {
-          "type": "string",
-          "enum": [
-            "balancing",
-            "manual",
-            "modelBased",
-            "none",
-            "singleSpaceDetection"
-          ]
-        },
-        "minItems": 1,
-        "uniqueItems": true
-      },
-      "parkingMode": {
-        "type": "array",
-        "description": "Property. Model:'http://schema.org/Text'. Parking mode(s). Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined. Allowed values: Those defined by the DATEX II version 2.3 _ParkingModeEnum_ enumeration. Enum:'echelonParking, parallelParking, perpendicularParking'",
-        "items": {
-          "type": "string",
-          "enum": [
-            "echelonParking",
-            "parallelParking",
-            "perpendicularParking"
-          ]
-        },
-        "minItems": 1,
-        "uniqueItems": true
-      },
-      "averageSpotWidth": {
-        "type": "number",
-        "minimum": 0,
-        "exclusiveMinimum": 0,
-        "description": "Property. Model:'http://schema.org/width'. Units:'meters'. The average width of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined."
-      },
-      "averageSpotLength": {
-        "type": "number",
-        "minimum": 0,
-        "exclusiveMinimum": 0,
-        "description": "Property. Model:'http://schema.org/length'. Units:'meters'. The average length of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined."
-      },
-      "maximumAllowedHeight": {
-        "type": "number",
-        "minimum": 0,
-        "exclusiveMinimum": 0,
-        "description": "Property. Model:'http://schema.org/heigth'. Units:'meters'. Maximum allowed height for vehicles.  Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined."
-      },
-      "maximumAllowedWidth": {
-        "type": "number",
-        "minimum": 0,
-        "exclusiveMinimum": 0,
-        "description": "Property. Model:'http://schema.org/width'. Units:'Meters'. Maximum allowed width for vehicles. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined."
-      },
-      "refParkingSpot": {
-        "anyOf": [
-          {
+        "occupancyDetectionType": {
+          "type": "array",
+          "description": "Property. Model:'http://schema.org/Text'. Allowed values: The following from DATEX II version 2.3 _OccupancyDetectionTypeEnum_. Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. Or any other application-specific",
+          "items": {
             "type": "string",
-            "minLength": 1,
-            "maxLength": 256,
-            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+            "enum": [
+              "balancing",
+              "manual",
+              "modelBased",
+              "none",
+              "singleSpaceDetection"
+            ]
           },
-          {
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "parkingMode": {
+          "type": "array",
+          "description": "Property. Model:'http://schema.org/Text'. Parking mode(s). Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined. Allowed values: Those defined by the DATEX II version 2.3 _ParkingModeEnum_ enumeration. Enum:'echelonParking, parallelParking, perpendicularParking'",
+          "items": {
             "type": "string",
-            "format": "uri"
-          }
-        ],
-        "description": "Relationship. Individual parking spots belonging to this parking group."
+            "enum": [
+              "echelonParking",
+              "parallelParking",
+              "perpendicularParking"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "averageSpotWidth": {
+          "type": "number",
+          "minimum": 0,
+          "exclusiveMinimum": 0,
+          "description": "Property. Model:'http://schema.org/width'. Units:'meters'. The average width of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined."
+        },
+        "averageSpotLength": {
+          "type": "number",
+          "minimum": 0,
+          "exclusiveMinimum": 0,
+          "description": "Property. Model:'http://schema.org/length'. Units:'meters'. The average length of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined."
+        },
+        "maximumAllowedHeight": {
+          "type": "number",
+          "minimum": 0,
+          "exclusiveMinimum": 0,
+          "description": "Property. Model:'http://schema.org/heigth'. Units:'meters'. Maximum allowed height for vehicles.  Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined."
+        },
+        "maximumAllowedWidth": {
+          "type": "number",
+          "minimum": 0,
+          "exclusiveMinimum": 0,
+          "description": "Property. Model:'http://schema.org/width'. Units:'Meters'. Maximum allowed width for vehicles. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined."
+        },
+        "refParkingSpot": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ],
+          "description": "Relationship. Individual parking spots belonging to this parking group."
+        }
       }
     }
   ],
