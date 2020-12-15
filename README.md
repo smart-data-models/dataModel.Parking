@@ -31,7 +31,7 @@ one required permit is only allowed per group type.
 
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.Parking/blob/master/CONTRIBUTORS.yaml) to the 5 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.Parking/blob/master/CONTRIBUTORS.yaml) to the 6 current contributors of the data models of this Subject.
 
 
 ### Contribution
