@@ -3,7 +3,7 @@
   "$schemaVersion": "0.0",
   "$id": "https://smart-data-models.github.io/dataModel.Parking/ParkingSpot/schema.json",
   "title": " - Parking / Parking Spot",
-  "description": "A parking spot is an area well delimited where one vehicle can be parked. The aim of this entity type is to monitor the status of parking spots individually. Thus, an entity of type ParkingSpot cannot exist without a containing entity of type (OnStreetParking, OffStreetParking). A parking spot might belong to one group.",
+  "description": "A parking spot is an area well delimited where one vehicle can be parked. ",
   "type": "object",
   "allOf": [
     {
@@ -19,23 +19,30 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ParkingSpot"],
-          "description": "NGSI Entity type"
+          "enum": [
+            "ParkingSpot"
+          ],
+          "description": "Property. NGSI Entity type. It has to be ParkingSpot"
         },
         "status": {
           "type": "string",
-          "enum": ["occupied", "free", "closed", "unknown"],
-          "description": "Property. Model:'https://schema.org/Text'. Status of the parking spot from the point of view of occupancy."
+          "enum": [
+            "closed",
+            "free",
+            "occupied",
+            "unknown"
+          ],
+          "description": "Property. Model:'https://schema.org/Text'. Status of the parking spot from the point of view of occupancy. Enum:'closed, free, occupied, unknown'"
         },
         "width": {
           "type": "number",
           "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Width of the parking spot."
+          "description": "Property. Model:'https://schema.org/width'. Width of the parking spot."
         },
         "length": {
           "type": "number",
           "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Length of the parking spot."
+          "description": "Property. Model:'https://schema.org/length'. Length of the parking spot."
         },
         "refParkingGroup": {
           "anyOf": [
@@ -75,11 +82,14 @@
           "type": "array",
           "items": {
             "type": "string",
-            "enum": ["onstreet", "offstreet"]
+            "enum": [
+              "onStreet",
+              "offStreet"
+            ]
           },
           "minItems": 1,
           "uniqueItems": true,
-          "description": "Property. Category(ies) of the parking spot."
+          "description": "Property. Category(ies) of the parking spot. `onStreet` : The parking spot belongs to an onStreet parking site. `offStreet` : The parking spot belongs to an offStreet parking site."
         },
         "refDevice": {
           "type": "array",
@@ -101,15 +111,22 @@
           },
           "minItems": 1,
           "uniqueItems": true,
-          "description": "Relationship. A reference to a point of interest associated to this observation."
+          "description": "Relationship. The device representing the physical sensor used to monitor this parking spot."
         },
         "TimeInstant": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Timestamp saved by FIWARE's IoT Agent"
+          "description": "Property. Timestamp saved by FIWARE's IoT Agent. There can be production environments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`. Note: This attribute has not been harmonized to keep backwards compatibility with current FIWARE reference implementations."
         }
       }
     }
   ],
-  "required": ["id", "location", "type", "status", "category", "refParkingSite"]
+  "required": [
+    "id",
+    "location",
+    "type",
+    "status",
+    "category",
+    "refParkingSite"
+  ]
 }

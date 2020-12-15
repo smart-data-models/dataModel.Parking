@@ -1,5 +1,5 @@
 notesHeader:
-
+  The aim of this entity type is to monitor the status of parking spots individually. Thus, an entity of type ParkingSpot cannot exist without a containing entity of type (OnStreetParking, OffStreetParking). A parking spot might belong to one group.
 notesMiddle:
 
 notesFooter:
