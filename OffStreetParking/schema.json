@@ -142,7 +142,7 @@
         },
         "occupancyDetectionType": {
           "type": "array",
-          "description": "Property. Model:''. Occupancy detection method(s).  Allowed values: The following from DATEX II version 2.3 _OccupancyDetectionTypeEnum_. Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. Or any other application-specific",
+          "description": "Property. Model:'http://schema.org/Text'. Occupancy detection method(s).  Allowed values: The following from DATEX II version 2.3 _OccupancyDetectionTypeEnum_. Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. Or any other application-specific",
           "items": {
             "type": "string",
             "enum": [
