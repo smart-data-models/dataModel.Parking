@@ -80,8 +80,8 @@
 
         },
         "category": {
-          "description": "Property. Category(ies) of the parking spot. `onStreet` : The parking spot belongs to an onStreet parking site. `offStreet` : The parking spot belongs to an offStreet parking site.",
           "type": "array",
+          "description": "Property. Category(ies) of the parking spot. `onStreet` : The parking spot belongs to an onStreet parking site. `offStreet` : The parking spot belongs to an offStreet parking site.",
           "minItems": 1,
           "uniqueItems": true,
           "items": {

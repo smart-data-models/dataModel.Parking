@@ -130,12 +130,12 @@
           }
         },
         "permitActiveHours": {
-          "description": "This attribute allows to capture situations when a permit is only needed at specific hours or days of week. It is an structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. Empty object means always active. The syntax must be conformant with schema.org [opening hours specification](https://schema.org/openingHours). For instance, a blue zone which is only active on dayweeks will be encoded as 'blueZonePermit': 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined. Model:'https://schema.org/openingHours'",
-          "type": "object"
+          "type": "object",
+          "description": "Property. This attribute allows to capture situations when a permit is only needed at specific hours or days of week. It is an structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. Empty object means always active. The syntax must be conformant with schema.org [opening hours specification](https://schema.org/openingHours). For instance, a blue zone which is only active on dayweeks will be encoded as 'blueZonePermit': 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined. Model:'https://schema.org/openingHours'"
         },
         "reservationType": {
-          "description": "Property. Conditions for reservation. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined. Enum:'mandatory, notAvailable, optional, partly'.",
           "type": "string",
+          "description": "Property. Conditions for reservation. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined. Enum:'mandatory, notAvailable, optional, partly'.",
           "enum": [
             "mandatory",
             "notAvailable",
@@ -144,8 +144,9 @@
           ]
         },
         "areBordersMarked": {
-          "description": "Property. Denotes whether parking spots are delimited (with blank lines or similar) or not. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined. Model:'https://schema.org/Boolean'",
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Property. Denotes whether parking spots are delimited (with blank lines or similar) or not. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined. Model:'https://schema.org/Boolean'"
+
         },
         "totalSpotNumber": {
           "type": "integer",
