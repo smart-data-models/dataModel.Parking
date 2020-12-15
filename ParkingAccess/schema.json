@@ -16,11 +16,60 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["ParkingAccess"],
-          "description": "NGSI Entity type"
+          "enum": [
+            "ParkingAccess"
+          ],
+          "description": "Property. NGSI Entity type. It has to be ParkingAccess"
+        },
+        "category": {
+          "type": "array",
+          "description": "Property. Category of the access point (entrance, exit, etc.). Allowed values: Those specified by the DATEX II _AccessCategoryEnum_ or other values meaningful to the application.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "refOffStreetParking": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. The offstreet parking site this access point gives access to."
+        },
+        "features": {
+          "type": "array",
+          "description": "Property. Those specified by the DATEX II _essEquipmentEnum_ and by _AccessibilityEnum_ or other values meaningful to the application.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "width": {
+          "type": "Number",
+          "description": "Property. Width of the access point. Model:'https://schema.org/width'"
+        },
+        "height": {
+          "type": "Number",
+          "description": "Property. Height of the access point. Model:'https://schema.org/height'"
+        },
+        "slope": {
+          "type": "Number",
+          "description": "Property. Slope of the access point (in relative terms). Model:'https://schema.org/Number'"
         }
       }
     }
   ],
-  "required": ["id", "type", "location"]
+  "required": [
+    "id",
+    "type",
+    "location"
+  ]
 }
