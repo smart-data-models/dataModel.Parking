@@ -295,9 +295,6 @@ OnStreetParking:
         - modelBased
         - manual
       type: string
-    occupiedSpotNumber:
-      minvalue: 0
-      type: integer
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:

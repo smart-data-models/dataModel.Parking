@@ -1,61 +1,16 @@
 Entity: OnStreetParking  
-=======================
-  
+=======================  
+This specification is a **temporal version**. It is automatically generated from the  documented properties described in the schema.json condensed into the file `model.yaml`. A temporary `new_model.yaml` file has been created in every data model to avoid impacting into existing scripts. Thus, the specification will be incomplete as long as the schema.json is not updated to the new format (documenting properties). Once updated the `model.yaml` (`new_model.yaml`) needs to be updated as well (automatically) . Further info in this [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). As long as it is a provisional format any [feedback is welcomed in this form](https://smartdatamodels.org/index.php/submit-an-issue-2/) choosing option `Feedback on the new specification`  
+Global description: **On street parking**  
 
-This specification is a **temporal version**. It is automatically generated from the  documented properties described in the schema.json condensed into the file `model.yaml`. A temporary `new_model.yaml` file has been created in every data model to avoid impacting into existing scripts. Thus, the specification will be incomplete as long as the schema.json is not updated to the new format (documenting properties). Once updated the `model.yaml` (`new_model.yaml`) needs to be updated as well (automatically) . Further info in this [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). As long as it is a provisional format any [feedback is welcomed in this form](https://smartdatamodels.org/index.php/submit-an-issue-2/) choosing option `Feedback on the new specification`  
+## List of properties  
 
-Global description: **On street parking**  
-
-
-## List of properties  
-
-
-- `acceptedPaymentMethod`:   
-- `address`: The mailing address.  
-- `allowedVehicleType`:   
-- `alternateName`: An alternative name for this item  
-- `areBordersMarked`:   
-- `areaServed`: The geographic area where a service or offered item is provided.  
-- `availableSpotNumber`:   
-- `averageSpotLength`:   
-- `averageSpotWidth`:   
-- `category`:   
-- `chargeType`:   
-- `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  
-- `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  
-- `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  
-- `description`: A description of this item  
-- `extraSpotNumber`:   
-- `id`:   
-- `location`:   
-- `maximumParkingDuration`:   
-- `name`: The name of this item.  
-- `occupancyDetectionType`:   
-- `occupiedSpotNumber`:   
-- `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  
-- `parkingMode`:   
-- `permitActiveHours`:   
-- `refParkingGroup`:   
-- `refParkingSpot`:   
-- `requiredPermit`:   
-- `seeAlso`:   
-- `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  
-- `totalSpotNumber`:   
-- `type`: NGSI Entity type  
-- `usageScenario`:   
-  
-
-Required properties  
-- `id`  
-- `location`  
-- `type`  
-
-## Data Model description of properties  
-
-Sorted alphabetically (click for details)  
+- `acceptedPaymentMethod`:   - `address`: The mailing address.  - `allowedVehicleType`:   - `alternateName`: An alternative name for this item  - `areBordersMarked`:   - `areaServed`: The geographic area where a service or offered item is provided.  - `availableSpotNumber`:   - `averageSpotLength`:   - `averageSpotWidth`:   - `category`:   - `chargeType`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `extraSpotNumber`:   - `id`:   - `location`:   - `maximumParkingDuration`:   - `name`: The name of this item.  - `occupancyDetectionType`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `parkingMode`:   - `permitActiveHours`:   - `refParkingGroup`:   - `refParkingSpot`:   - `requiredPermit`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `totalSpotNumber`:   - `type`: NGSI Entity type  - `usageScenario`:     
+Required properties  
+- `id`  - `location`  - `type`  ## Data Model description of properties  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
-
-```yaml  
+```yaml  
 OnStreetParking:    
   description: 'On street parking'    
   properties:    
@@ -352,10 +307,7 @@ OnStreetParking:
         - singleSpaceDetection    
         - modelBased    
         - manual    
-      type: string
-    occupiedSpotNumber:    
-      minvalue: 0    
-      type: integer       
+      type: string    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
@@ -421,16 +373,11 @@ OnStreetParking:
   type: object    
 ```  
 </details>    
-
-## Example payloads    
-
-#### OnStreetParking NGSI V2 key-values Example    
-
-Here is an example of a OnStreetParking in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
-
-```json  
-
-{  
+## Example payloads    
+#### OnStreetParking NGSI V2 key-values Example    
+Here is an example of a OnStreetParking in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+```json  
+{  
   "id": "santander:daoiz_velarde_1_5",  
   "type": "OnStreetParking",  
   "category": ["blueZone", "shortTerm", "forDisabled"],  
@@ -461,14 +408,10 @@ Here is an example of a OnStreetParking in JSON format as key-values. This is co
   "refParkingGroup": ["daoiz-velarde-1-5-main", "daoiz-velarde-1-5-disabled"]  
 }  
 ```  
-
-#### OnStreetParking NGSI V2 normalized Example    
-
-Here is an example of a OnStreetParking in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
-
-```json  
-
-{  
+#### OnStreetParking NGSI V2 normalized Example    
+Here is an example of a OnStreetParking in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+```json  
+{  
   "id": "santander:daoiz_velarde_1_5",  
   "type": "OnStreetParking",  
   "category": {  
@@ -534,14 +477,10 @@ Here is an example of a OnStreetParking in JSON format as normalized. This is co
   }  
 }  
 ```  
-
-#### OnStreetParking NGSI-LD key-values Example    
-
-Here is an example of a OnStreetParking in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
-
-```json  
-
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
+#### OnStreetParking NGSI-LD key-values Example    
+Here is an example of a OnStreetParking in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+```json  
+{"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
  "allowedVehicleType": "car",  
  "areaServed": "Zona Centro",  
@@ -565,14 +504,10 @@ Here is an example of a OnStreetParking in JSON-LD format as key-values. This is
  "totalSpotNumber": 6,  
  "type": "OnStreetParking"}  
 ```  
-
-#### OnStreetParking NGSI-LD normalized Example    
-
-Here is an example of a OnStreetParking in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
-
-```json  
-
-{  
+#### OnStreetParking NGSI-LD normalized Example    
+Here is an example of a OnStreetParking in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+```json  
+{  
     "id": "urn:ngsi-ld:OnStreetParking:santander:daoiz_velarde_1_5",  
     "type": "OnStreetParking",  
     "modifiedAt": "2016-06-02T09:25:55.00Z",  

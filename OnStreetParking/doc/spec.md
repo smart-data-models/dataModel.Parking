@@ -184,18 +184,6 @@ The data model is defined as shown below:
         -   `timestamp` : Timestamp of the last attribute update
         -   Type: [DateTime](https://schema.org/DateTime)
     -   Optional
-    
--   `occupiedSpotNumber` : The number of spots occupied globally.
-    This might be harder to estimate at those parking locations on which
-    spots borders are not clearly marked by lines.
-
-    -   Attribute type: Property. [Number](http://schema.org/Number)
-    -   Allowed values: A positive integer number, including 0. It must lower or
-        equal to `totalSpotNumber`.
-    -   Metadata:
-        -   `timestamp` : Timestamp of the last attribute update
-        -   Type: [DateTime](https://schema.org/DateTime)
-    -   Optional
 
 -   `extraSpotNumber` : The number of extra spots _available_, i.e. free. Extra
     spots are those reserved for special purposes and usually require a permit.
