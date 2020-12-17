@@ -61,5 +61,14 @@
         "type": "DateTime"
       }
     }
+  },
+  "occupiedSpotNumber": {
+    "value": 3,
+    "metadata": {
+      "timestamp": {
+        "value": "2018-09-12T12:00:00",
+        "type": "DateTime"
+      }
+    }
   }
 }
