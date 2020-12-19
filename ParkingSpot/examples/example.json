@@ -7,6 +7,6 @@
     "coordinates": [-3.80356167695194, 43.46296641666926]
   },
   "status": "free",
-  "category": ["onstreet"],
+  "category": ["onStreet"],
   "refParkingSite": "santander:daoiz_velarde_1_5"
 }

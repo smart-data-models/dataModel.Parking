@@ -9,7 +9,7 @@
     "category": {
         "type": "Property",
         "value": [
-            "onstreet"
+            "onStreet"
         ]
     },
     "refParkingSite": {
