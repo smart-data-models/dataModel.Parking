@@ -1,40 +1,61 @@
 Entity: OnStreetParking  
 =======================  
-This specification is a **temporal version**. It is automatically generated from the  documented properties described in the schema.json condensed into the file `model.yaml`. A temporary `new_model.yaml` file has been created in every data model to avoid impacting into existing scripts. Thus, the specification will be incomplete as long as the schema.json is not updated to the new format (documenting properties). Once updated the `model.yaml` (`new_model.yaml`) needs to be updated as well (automatically) . Further info in this [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). As long as it is a provisional format any [feedback is welcomed in this form](https://smartdatamodels.org/index.php/submit-an-issue-2/) choosing option `Feedback on the new specification`  
-Global description: **On street parking**  
+[Open License](https://github.com/smart-data-models//dataModel.Parking/blob/master/OnStreetParking/LICENSE.md)  
+Global description: **A site, open space zone, on street, (metered or not) with direct access from a road, intended to park vehicles.**  
 
 ## List of properties  
 
-- `acceptedPaymentMethod`:   - `address`: The mailing address.  - `allowedVehicleType`:   - `alternateName`: An alternative name for this item  - `areBordersMarked`:   - `areaServed`: The geographic area where a service or offered item is provided.  - `availableSpotNumber`:   - `averageSpotLength`:   - `averageSpotWidth`:   - `category`:   - `chargeType`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `extraSpotNumber`:   - `id`:   - `location`:   - `maximumParkingDuration`:   - `name`: The name of this item.  - `occupancyDetectionType`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `parkingMode`:   - `permitActiveHours`:   - `refParkingGroup`:   - `refParkingSpot`:   - `requiredPermit`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `totalSpotNumber`:   - `type`: NGSI Entity type  - `usageScenario`:     
+- `acceptedPaymentMethod`: Type of charge(s) performed by the parking site. Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'  - `address`: The mailing address.  - `allowedVehicleType`: Vehicle type allowed (only one per on street parking). Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, van, vehicleWithCatalyticConverter, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'  - `alternateName`: An alternative name for this item  - `areBordersMarked`: Denotes whether parking spots are delimited (with blank lines or similar) or not  - `areaServed`: The geographic area where a service or offered item is provided  - `availableSpotNumber`: The number of spots available globally, including reserved spaces, such as those for disabled people, long term parkers and so on. This might be harder to estimate at those parking locations on which spots borders are not clearly marked by lines  - `averageSpotLength`: The average length of parking spots  - `averageSpotWidth`: The average width of parking spots  - `category`: Street parking category. Enum:'blueZone, feeCharged, forDisabled, forElectricalCharging, forLoadUnload, forResidents, free, greenZone, mediumTerm, onlyWithPermit, shortTerm, taxiStop'  - `chargeType`: Type of charge(s) performed by the parking site. Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `extraSpotNumber`: The number of extra spots available, i.e. free. Extra    spots are those reserved for special purposes and usually require a permit. Permit details will be found at parking group level (entity of type `ParkingGroup`). This value must aggregate free spots from all groups devoted to special parking conditions. Allowed values: A positive integer number, including 0. `extraSpotNumber` plus `availableSpotNumber` must be lower than or equal to `totalSpotNumber  - `id`: Unique identifier of the entity  - `location`:   - `maximumParkingDuration`: Maximum allowed stay at site encoded as a ISO8601 duration. An empty value indicates an indefinite duration.  - `name`: The name of this item.  - `occupancyDetectionType`: Occupancy detection method(s). Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. The following from DATEX II version 2.3 _OccupancyDetectionTypeEnum_  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `parkingMode`: Parking mode(s). Enum:'echelonParking, parallelParking, perpendicularParking'  - `permitActiveHours`: This attribute allows to capture situations when a permit is only needed at specific hours or days of week.  It is an structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. An empty JSON Object means always active. The syntax must be conformant with schema.org  - `refParkingGroup`: Reference to the parking group(s) (if any) belonging to this onstreet parking zone.  - `refParkingSpot`: Individual parking spots belonging to this on street parking site.  - `requiredPermit`: This attribute captures what permit(s) might be needed to park at this site. Semantics is that at least _one of_ these permits is needed to park. When a permit is composed by more than one item (and) they can be combined with a ','. For instance 'residentPermit,disabledPermit' stays that both, at the same time, a resident and a disabled permit are needed to park. If list is empty, no permit is needed.  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `totalSpotNumber`: The total number of spots offered by this parking site. This number can be difficult to be obtained for those parking locations on which spots are not clearly marked by lines. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class.  - `type`: Entity type. It must be equal to OnStreetParking  - `usageScenario`: Type of charge(s) performed by the parking site. Enum:'carSharing, dropOff, kissAndRide, liftShare, loadingBay, overnightParking, parkAndRide, parkAndCycle, parkAndWalk, vehicleLift,'    
 Required properties  
-- `id`  - `location`  - `type`  ## Data Model description of properties  
+- `id`  - `location`  - `type`    
+In DATEX 2 version 2.3 terminology it corresponds to a _UrbanParkingSite_ of type _onStreetParking_. A data dictionary for DATEX II terms can be found at [http://datexbrowser.tamtamresearch.com/](http://datexbrowser.tamtamresearch.com/).  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 OnStreetParking:    
-  description: 'On street parking'    
+  description: 'A site, open space zone, on street, (metered or not) with direct access from a road, intended to park vehicles.'    
   properties:    
     acceptedPaymentMethod:    
-      type: string    
+      description: 'Type of charge(s) performed by the parking site. Enum:''ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'''    
+      enum:    
+        - ByBankTransferInAdvance    
+        - ByInvoice    
+        - Cash    
+        - CheckInAdvance    
+        - COD    
+        - DirectDebit    
+        - GoogleCheckout    
+        - PayPal    
+        - PaySwarm    
+      type: Property    
     address:    
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     allowedVehicleType:    
+      description: 'Vehicle type allowed (only one per on street parking). Enum:''agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, van, vehicleWithCatalyticConverter, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'''    
       enum:    
         - agriculturalVehicle    
         - anyVehicle    
@@ -43,7 +64,7 @@ OnStreetParking:
         - bus    
         - car    
         - caravan    
-        - ' carOrLightVehicle'    
+        - carOrLightVehicle    
         - carWithCaravan    
         - carWithTrailer    
         - constructionOrMaintenanceVehicle    
@@ -67,42 +88,58 @@ OnStreetParking:
         - withEvenNumberedRegistrationPlates    
         - withOddNumberedRegistrationPlates    
         - other    
-      type: string    
+      type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areBordersMarked:    
-      type: boolean    
-    areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'Denotes whether parking spots are delimited (with blank lines or similar) or not'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Boolean    
+    areaServed:    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     availableSpotNumber:    
+      description: 'The number of spots available globally, including reserved spaces, such as those for disabled people, long term parkers and so on. This might be harder to estimate at those parking locations on which spots borders are not clearly marked by lines'    
       minvalue: 0    
-      type: integer    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
     averageSpotLength:    
+      description: 'The average length of parking spots'    
       minvalue: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/length    
     averageSpotWidth:    
+      description: 'The average width of parking spots'    
       minvalue: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/width    
     category:    
+      description: 'Street parking category. Enum:''blueZone, feeCharged, forDisabled, forElectricalCharging, forLoadUnload, forResidents, free, greenZone, mediumTerm, onlyWithPermit, shortTerm, taxiStop'''    
       items:    
         enum:    
-          - forDisabled    
-          - forResidents    
-          - forLoadUnload    
-          - onlyWithPermit    
-          - forELectricalCharging    
-          - free    
-          - feeCharged    
           - blueZone    
+          - feeCharged    
+          - forDisabled    
+          - forElectricalCharging    
+          - forLoadUnload    
+          - forResidents    
+          - free    
           - greenZone    
-          - taxiStop    
-          - shortTerm    
           - mediumTerm    
+          - onlyWithPermit    
+          - shortTerm    
+          - taxiStop    
         type: string    
-      type: array    
+      type: Property    
     chargeType:    
+      description: 'Type of charge(s) performed by the parking site. Enum:''additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'''    
       items:    
         enum:    
           - additionalIntervalPrice    
@@ -119,7 +156,7 @@ OnStreetParking:
           - unknown    
           - other    
         type: string    
-      type: array    
+      type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -135,8 +172,11 @@ OnStreetParking:
       description: 'A description of this item'    
       type: Property    
     extraSpotNumber:    
+      description: 'The number of extra spots available, i.e. free. Extra    spots are those reserved for special purposes and usually require a permit. Permit details will be found at parking group level (entity of type `ParkingGroup`). This value must aggregate free spots from all groups devoted to special parking conditions. Allowed values: A positive integer number, including 0. `extraSpotNumber` plus `availableSpotNumber` must be lower than or equal to `totalSpotNumber'    
       minvalue: 0    
-      type: integer    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
     id:    
       anyOf: &onstreetparking_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -147,6 +187,8 @@ OnStreetParking:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -295,44 +337,57 @@ OnStreetParking:
           type: object    
       title: 'GeoJSON Geometry'    
     maximumParkingDuration:    
+      description: 'Maximum allowed stay at site encoded as a ISO8601 duration. An empty value indicates an indefinite duration.'    
       format: date-time    
-      type: string    
+      type: Property    
     name:    
       description: 'The name of this item.'    
       type: Property    
     occupancyDetectionType:    
-      enum:    
-        - none    
-        - balancing    
-        - singleSpaceDetection    
-        - modelBased    
-        - manual    
-      type: string    
+      description: 'Occupancy detection method(s). Enum:''balancing, manual, modelBased, none, singleSpaceDetection''. The following from DATEX II version 2.3 _OccupancyDetectionTypeEnum_'    
+      items:    
+        enum:    
+          - balancing    
+          - manual    
+          - modelBased    
+          - none    
+          - singleSpaceDetection    
+        type: string    
+      type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *onstreetparking_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     parkingMode:    
+      description: 'Parking mode(s). Enum:''echelonParking, parallelParking, perpendicularParking'''    
       enum:    
-        - perpendicularParking    
-        - parallelParking    
         - echelonParking    
-      type: string    
+        - parallelParking    
+        - perpendicularParking    
+      type: Property    
     permitActiveHours:    
-      type: object    
+      description: 'This attribute allows to capture situations when a permit is only needed at specific hours or days of week.  It is an structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. An empty JSON Object means always active. The syntax must be conformant with schema.org'    
+      type: Property    
     refParkingGroup:    
+      description: 'Reference to the parking group(s) (if any) belonging to this onstreet parking zone.'    
       items:    
         type: string    
-      type: array    
+      type: Relationship    
     refParkingSpot:    
-      format: uri    
-      type: string    
+      description: 'Individual parking spots belonging to this on street parking site.'    
+      items:    
+        format: uri    
+        type: string    
+      type: Relationship    
     requiredPermit:    
+      description: 'This attribute captures what permit(s) might be needed to park at this site. Semantics is that at least _one of_ these permits is needed to park. When a permit is composed by more than one item (and) they can be combined with a '',''. For instance ''residentPermit,disabledPermit'' stays that both, at the same time, a resident and a disabled permit are needed to park. If list is empty, no permit is needed.'    
       items:    
         type: string    
-      type: array    
+      type: Property    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -341,31 +396,36 @@ OnStreetParking:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     totalSpotNumber:    
+      description: 'The total number of spots offered by this parking site. This number can be difficult to be obtained for those parking locations on which spots are not clearly marked by lines. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class.'    
       minvalue: 0    
-      type: integer    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'Entity type. It must be equal to OnStreetParking'    
       enum:    
         - OnStreetParking    
-      type: string    
+      type: Property    
     usageScenario:    
+      description: 'Type of charge(s) performed by the parking site. Enum:''carSharing, dropOff, kissAndRide, liftShare, loadingBay, overnightParking, parkAndRide, parkAndCycle, parkAndWalk, vehicleLift,'''    
       enum:    
+        - carSharing    
+        - dropOff    
+        - kissAndRide    
+        - liftShare    
+        - loadingBay    
+        - overnightParking    
         - parkAndRide    
         - parkAndCycle    
         - parkAndWalk    
-        - kissAndRide    
-        - liftShare    
-        - carSharing    
         - vehicleLift    
-        - loadingBay    
-        - dropOff    
-        - overnightParking    
         - other    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    

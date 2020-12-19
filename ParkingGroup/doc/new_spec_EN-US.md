@@ -1,21 +1,108 @@
 Entity: ParkingGroup  
 ====================  
-This specification is a **temporal version**. It is automatically generated from the  documented properties described in the schema.json condensed into the file `model.yaml`. A temporary `new_model.yaml` file has been created in every data model to avoid impacting into existing scripts. Thus, the specification will be incomplete as long as the schema.json is not updated to the new format (documenting properties). Once updated the `model.yaml` (`new_model.yaml`) needs to be updated as well (automatically) . Further info in this [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). As long as it is a provisional format any [feedback is welcomed in this form](https://smartdatamodels.org/index.php/submit-an-issue-2/) choosing option `Feedback on the new specification`  
-Global description: **Parking Group - TODO: Provide a complete Schema**  
+[Open License](https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingGroup/LICENSE.md)  
+Global description: **Parking Group **  
 
 ## List of properties  
 
-- `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type    
+- `allowedVehicleType`: Vehicle type allowed (a parking group only allows one vehicle type). Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck'   - `alternateName`: An alternative name for this item  - `areBordersMarked`: Denotes whether parking spots are delimited (with blank lines or similar) or not. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined  - `availableSpotNumber`: The number of spots available in this group. It must lower or equal than `totalSpotNumber`.  - `averageSpotLength`: The average length of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.  - `averageSpotWidth`: The average width of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.  - `category`: Parking Group's category. Enum:'adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'  - `chargeType`: Type of charge(s) performed by the parking site. Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `maximumAllowedHeight`: Maximum allowed height for vehicles.  Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.  - `maximumAllowedWidth`: Maximum allowed width for vehicles. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.  - `maximumParkingDuration`: Maximum allowed stay encoded as a ISO8601 duration. When non present or equals to the empty string it means indefinite. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.  - `name`: The name of this item.  - `occupancyDetectionType`: Allowed values: The following from DATEX II version 2.3 _OccupancyDetectionTypeEnum_. Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. Or any other application-specific  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `parkingMode`: Parking mode(s). Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined. Allowed values: Those defined by the DATEX II version 2.3 _ParkingModeEnum_ enumeration. Enum:'echelonParking, parallelParking, perpendicularParking'  - `permitActiveHours`: This attribute allows to capture situations when a permit is only needed at specific hours or days of week. It is an structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. Empty object means always active. The syntax must be conformant with schema.org [opening hours specification](https://schema.org/openingHours). For instance, a blue zone which is only active on dayweeks will be encoded as 'blueZonePermit': 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined  - `refParkingSite`: Parking site to which this zone belongs to. A group cannot be orphan. A group cannot have subgroups. Reference to an OffStreetParking or to an OnStreetParking  - `refParkingSpot`: Individual parking spots belonging to this parking group.  - `requiredPermit`: This attribute captures what permit(s) might be needed to park at this site. Semantics is that at least _one of_ these permits is needed to park. When a permit is composed by more than one item (and) they can be combined with a ','. For instance 'residentPermit,disabledPermit' stays that both, at the same time, a resident and a disabled permit are needed to park. If list is empty, no permit is needed  - `reservationType`: Conditions for reservation. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined. Enum:'mandatory, notAvailable, optional, partly'.  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `totalSpotNumber`: The total number of spots pertaining to this group. Allowed values: Any positive integer number or 0. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class.  - `type`: NGSI Entity type. It has to be ParkingGroup    
 Required properties  
-- `id`  - `type`  ## Data Model description of properties  
+- `id`  - `refParkingSite`  - `type`    
+A group of parking spots. Granularity level can vary. It can be an storey on a parking garage, an specific zone belonging to a big parking lot, or just a group of spots intended for parking a certain vehicle type or subject to certain restrictions (disabled, residents, ...). For the sake of simplicity only one vehicle type per parking group is allowed. Similarly, one required permit is only allowed per group type.  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 ParkingGroup:    
-  description: 'Parking Group - TODO: Provide a complete Schema'    
+  description: 'Parking Group '    
   properties:    
+    allowedVehicleType:    
+      description: 'Vehicle type allowed (a parking group only allows one vehicle type). Enum:''bicycle, bus, car, caravan, motorcycle, motorscooter, truck'' '    
+      enum:    
+        - bicycle    
+        - bus    
+        - car    
+        - caravan    
+        - motorcycle    
+        - motorscooter    
+        - truck    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Text    
     alternateName:    
       description: 'An alternative name for this item'    
+      type: Property    
+    areBordersMarked:    
+      description: 'Denotes whether parking spots are delimited (with blank lines or similar) or not. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Boolean    
+    availableSpotNumber:    
+      description: 'The number of spots available in this group. It must lower or equal than `totalSpotNumber`.'    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
+    averageSpotLength:    
+      description: 'The average length of parking spots. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined.'    
+      exclusiveMinimum: 0    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/length    
+        units: meters    
+    averageSpotWidth:    
+      description: 'The average width of parking spots. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined.'    
+      exclusiveMinimum: 0    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/width    
+        units: meters    
+    category:    
+      description: 'Parking Group''s category. Enum:''adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'''    
+      items:    
+        enum:    
+          - adjacentSpaces    
+          - blueZone    
+          - completeFloor    
+          - free    
+          - feeCharged    
+          - greenZone    
+          - loadUnloadZone    
+          - nonAdjacentSpaces    
+          - offStreet    
+          - onlyDisabled    
+          - onlyElectricalCharging    
+          - onlyResidents    
+          - onlyWithPermit    
+          - onStreet    
+          - particularConditionsSpaces    
+          - shortTermMediumTermLongTerm    
+          - statisticsOnly    
+          - vehicleTypeSpaces    
+        type: string    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Text    
+    chargeType:    
+      description: 'Type of charge(s) performed by the parking site. Enum:''additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'''    
+      items:    
+        enum:    
+          - additionalIntervalPrice    
+          - annualPayment    
+          - firstIntervalPrice    
+          - flat    
+          - free    
+          - minimum    
+          - maximum    
+          - monthlyPayment    
+          - seasonTicket    
+          - temporaryFee    
+          - temporaryPrice    
+          - unknown    
+          - other    
+        type: string    
       type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
@@ -41,15 +128,128 @@ ParkingGroup:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
+    maximumAllowedHeight:    
+      description: 'Maximum allowed height for vehicles.  Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined.'    
+      exclusiveMinimum: 0    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/heigth    
+        units: meters    
+    maximumAllowedWidth:    
+      description: 'Maximum allowed width for vehicles. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined.'    
+      exclusiveMinimum: 0    
+      minimum: 0    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/width    
+        units: Meters    
+    maximumParkingDuration:    
+      description: 'Maximum allowed stay encoded as a ISO8601 duration. When non present or equals to the empty string it means indefinite. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined.'    
+      format: date-time    
+      type: Property    
     name:    
       description: 'The name of this item.'    
       type: Property    
+    occupancyDetectionType:    
+      description: 'Allowed values: The following from DATEX II version 2.3 _OccupancyDetectionTypeEnum_. Enum:''balancing, manual, modelBased, none, singleSpaceDetection''. Or any other application-specific'    
+      items:    
+        enum:    
+          - balancing    
+          - manual    
+          - modelBased    
+          - none    
+          - singleSpaceDetection    
+        type: string    
+      minItems: 1    
+      type: Property    
+      uniqueItems: true    
+      x-ngsi:    
+        model: http://schema.org/Text    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *parkinggroup_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
+      type: Property    
+    parkingMode:    
+      description: 'Parking mode(s). Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined. Allowed values: Those defined by the DATEX II version 2.3 _ParkingModeEnum_ enumeration. Enum:''echelonParking, parallelParking, perpendicularParking'''    
+      items:    
+        enum:    
+          - echelonParking    
+          - parallelParking    
+          - perpendicularParking    
+        type: string    
+      minItems: 1    
+      type: Property    
+      uniqueItems: true    
+      x-ngsi:    
+        model: http://schema.org/Text    
+    permitActiveHours:    
+      description: 'This attribute allows to capture situations when a permit is only needed at specific hours or days of week. It is an structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. Empty object means always active. The syntax must be conformant with schema.org [opening hours specification](https://schema.org/openingHours). For instance, a blue zone which is only active on dayweeks will be encoded as ''blueZonePermit'': ''Mo,Tu,We,Th,Fr,Sa 09:00-20:00''. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/openingHours    
+    refParkingSite:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Parking site to which this zone belongs to. A group cannot be orphan. A group cannot have subgroups. Reference to an OffStreetParking or to an OnStreetParking'    
+      type: Relationship    
+    refParkingSpot:    
+      anyOf:    
+        - maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - format: uri    
+          type: string    
+      description: 'Individual parking spots belonging to this parking group.'    
+      type: Relationship    
+    requiredPermit:    
+      description: 'This attribute captures what permit(s) might be needed to park at this site. Semantics is that at least _one of_ these permits is needed to park. When a permit is composed by more than one item (and) they can be combined with a '',''. For instance ''residentPermit,disabledPermit'' stays that both, at the same time, a resident and a disabled permit are needed to park. If list is empty, no permit is needed'    
+      items:    
+        enum:    
+          - employeePermit    
+          - studentPermit    
+          - fairPermit    
+          - governmentPermit    
+          - residentPermit    
+          - specificIdentifiedVehiclePermit    
+          - disabledPermit    
+          - visitorPermit    
+          - blueZonePermit    
+          - careTakingPermit    
+          - carpoolingPermit    
+          - carSharingPermit    
+          - emergencyVehiclePermit    
+          - maintenanceVehiclePermit    
+          - roadWorksPermit    
+          - taxiPermit    
+          - transportationPermit    
+          - noPermitNeeded    
+        type: string    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Text    
+    reservationType:    
+      description: 'Conditions for reservation. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined. Enum:''mandatory, notAvailable, optional, partly''.'    
+      enum:    
+        - mandatory    
+        - notAvailable    
+        - optional    
+        - partly    
       type: Property    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -58,17 +258,25 @@ ParkingGroup:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
+    totalSpotNumber:    
+      description: 'The total number of spots pertaining to this group. Allowed values: Any positive integer number or 0. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class.'    
+      minimum: 1    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity type. It has to be ParkingGroup'    
       enum:    
         - ParkingGroup    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
+    - refParkingSite    
   type: object    
 ```  
 </details>    
