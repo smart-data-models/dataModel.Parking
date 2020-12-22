@@ -13,6 +13,10 @@ one required permit is only allowed per group type.
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Parking/ParkingGroup/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Parking/blob/master/ParkingGroup/doc/spec.md)
+
+Link to the [specification in Spanish](https://github.com/smart-data-models/dataModel.Parking/blob/master/ParkingGroup/doc/spec_ES.md)
+
+Link to the [specification in French](https://github.com/smart-data-models/dataModel.Parking/blob/master/ParkingGroup/doc/spec_FR.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Parking/ParkingGroup/examples/example.json) (keyvalues) for NGSI v2
