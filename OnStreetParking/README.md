@@ -11,6 +11,10 @@ it corresponds to a UrbanParkingSite of type onStreetParking.
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Parking/OnStreetParking/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Parking/blob/master/OnStreetParking/doc/spec.md)
+
+Link to the [specification in Spanish](https://github.com/smart-data-models/dataModel.Parking/blob/master/OnStreetParking/doc/spec_ES.md)
+
+Link to the [specification in French](https://github.com/smart-data-models/dataModel.Parking/blob/master/OnStreetParking/doc/spec_FR.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Parking/OnStreetParking/examples/example.json) (keyvalues) for NGSI v2
