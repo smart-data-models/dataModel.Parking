@@ -3,6 +3,7 @@
  "allowedVehicleType": "car",
  "areaServed": "Zona Centro",
  "availableSpotNumber": 3,
+ "occupiedSpotNumber": 3,
  "category": ["blueZone", "shortTerm", "forDisabled"],
  "chargeType": ["temporaryFee"],
  "extraSpotNumber": 2,

@@ -10,6 +10,7 @@
   },
   "maximumAllowedStay": "PT2H",
   "availableSpotNumber": 3,
+  "occupiedSpotNumber": 3,
   "totalSpotNumber": 6,
   "extraSpotNumber": 2,
   "dateModified": "2016-06-02T09:25:55.00Z",
