@@ -7,6 +7,10 @@
       "timestamp": {
         "type": "DateTime",
         "value": "2018-09-21T12:00:00"
+      },
+      "parkingPermit": {
+        "type": "text",
+        "value": "yes"
       }
     }
   },
