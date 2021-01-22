@@ -2,12 +2,7 @@
 
 ## Description 
 
-A group of parking spots. Granularity level can vary. It can be an storey on a parking garage, 
-an specific zone belonging to a big parking lot, or just a group of spots intended for parking a certain vehicle type or 
-subject to certain restrictions (disabled, residents, ...).
-For the sake of simplicity only one vehicle type per parking group is allowed. Similarly,
-one required permit is only allowed per group type.
-
+Parking Group 
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Parking/ParkingGroup/swagger.yaml)
