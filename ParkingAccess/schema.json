@@ -53,15 +53,15 @@
           }
         },
         "width": {
-          "type": "Number",
+          "type": "number",
           "description": "Property. Width of the access point. Model:'https://schema.org/width'"
         },
         "height": {
-          "type": "Number",
+          "type": "number",
           "description": "Property. Height of the access point. Model:'https://schema.org/height'"
         },
         "slope": {
-          "type": "Number",
+          "type": "number",
           "description": "Property. Slope of the access point (in relative terms). Model:'https://schema.org/Number'"
         }
       }
