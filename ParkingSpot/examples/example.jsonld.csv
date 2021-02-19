@@ -1,0 +1,2 @@
+"@context__0_", "@context__1_", "category__0_", "id_", "location__coordinates__0_", "location__coordinates__1_", "location__type_", "name_", "refParkingSite_", "status_", "type_"
+"https://schema.lab.fiware.org/ld/context", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "onStreet", "urn:ngsi-ld:ParkingSpot:santander:daoiz_velarde_1_5:3", "-3.80356167695194", "43.46296641666926", "Point", "A-13", "urn:ngsi-ld:ParkingSite:santander:daoiz_velarde_1_5", "free", "ParkingSpot"
