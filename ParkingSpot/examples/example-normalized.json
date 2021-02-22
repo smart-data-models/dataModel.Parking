@@ -9,17 +9,17 @@
         "value": "2018-09-21T12:00:00"
       },
       "parkingPermit": {
-        "type": "text",
+        "type": "Property",
         "value": "yes"
       }
     }
   },
   "category": {
-    "value": ["onstreet"]
+    "value": ["onStreet"]
   },
   "refParkingSite": {
     "type": "Relationship",
-    "value": "santander:daoiz_velarde_1_5"
+    "object": "santander:daoiz_velarde_1_5"
   },
   "name": {
     "value": "A-13"
