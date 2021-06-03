@@ -1,16 +1,17 @@
 Entité : ParkingGroup  
 =====================  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingGroup/LICENSE.md)  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingGroup/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Groupe de stationnement **  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `allowedVehicleType`: Type de véhicule autorisé (un groupe de stationnement n'autorise qu'un seul type de véhicule). Enum : "bicyclette, bus, voiture, caravane, moto, scooter, camion".  - `alternateName`: Un autre nom pour cet article  - `areBordersMarked`: Indique si les places de stationnement sont délimitées (avec des lignes blanches ou similaires) ou non. Les applications _DEVRAIENT_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie  - `availableSpotNumber`: Le nombre de places disponibles dans ce groupe. Il doit être inférieur ou égal à "totalSpotNumber".  - `averageSpotLength`: La longueur moyenne des places de stationnement. Les applications _DEVRAIENT_ inspecter la valeur de cette propriété au niveau des parents si elle n'est pas définie.  - `averageSpotWidth`: La largeur moyenne des places de stationnement. Les applications _DEVRAIENT_ inspecter la valeur de cette propriété au niveau des parents si elle n'est pas définie.  - `category`: Catégorie du groupe de stationnement. Enum : "adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces".  - `chargeType`: Type d'accusation(s) effectuée(s) par le site de stationnement. Enumération : "additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other".  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `maximumAllowedHeight`: Hauteur maximale autorisée pour les véhicules.  Les applications _DEVRAIENT_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie.  - `maximumAllowedWidth`: Largeur maximale autorisée pour les véhicules. Les applications _DEVRAIENT_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie.  - `maximumParkingDuration`: Durée maximale de séjour autorisée encodée comme une durée ISO8601. Lorsque non présent ou égal à la chaîne vide, cela signifie indéfini. Les applications _DEVRAIENT_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie.  - `name`: Le nom de cet article.  - `occupancyDetectionType`: Valeurs autorisées : Les valeurs suivantes de la version 2.3 de DATEX II _OccupancyDetectionTypeEnum_. Enum : "balancing, manual, modelBased, none, singleSpaceDetection". Ou toute autre application spécifique  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `parkingMode`: Mode(s) de stationnement. Les applications _DEVRAIENT_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie. Valeurs autorisées : Celles définies par l'énumération _ParkingModeEnum_ de DATEX II version 2.3. Enum : "echelonParking, parallelParking, perpendicularParking".  - `permitActiveHours`: Cet attribut permet de saisir les situations où un permis n'est nécessaire qu'à des heures ou des jours précis de la semaine. Il s'agit d'une valeur structurée qui doit contenir un sous-propriété pour chaque permis requis, indiquant quand le permis est actif. Si rien n'est spécifié pour un permis, cela signifie qu'un permis est toujours nécessaire. Un objet vide signifie qu'il est toujours actif. La syntaxe doit être conforme à schema.org [spécification des heures d'ouverture] (https://schema.org/openingHours). Par exemple, une zone bleue qui n'est active que pendant les semaines de la journée sera codée comme "blueZonePermit" : "Mo,Tu,We,Th,Fr,Sa 09:00-20:00". Les applications _DEVRAIENT_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie  - `refParkingSite`: Site de stationnement auquel cette zone appartient. Un groupe ne peut pas être orphelin. Un groupe ne peut pas avoir de sous-groupes. Référence à un OffStreetParking ou à un OnStreetParking  - `refParkingSpot`: Les places de stationnement individuelles appartenant à ce groupe de stationnement.  - `requiredPermit`: Cet attribut indique le ou les permis qui pourraient être nécessaires pour se garer sur ce site. La sémantique est qu'au moins _un de_ ces permis est nécessaire pour se garer. Lorsqu'un permis est composé de plusieurs éléments (et) ils peuvent être combinés avec un ",". Par exemple, le "permis de séjour, permis pour handicapés" indique que le stationnement nécessite à la fois un permis de séjour et un permis pour handicapés. Si la liste est vide, aucun permis n'est nécessaire.  - `reservationType`: Conditions de réservation. Les demandes _DEVRAIENT_ inspecter la valeur de cette propriété au niveau des parents si elle n'est pas définie. Enumération : "obligatoire, non disponible, optionnel, partiellement".  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `totalSpotNumber`: Le nombre total de spots relatifs à ce groupe. Valeurs autorisées : Tout nombre entier positif ou 0. Références normatives : DATEX 2 version 2.3 attribut _parkingNumberOfSpaces_ de la classe _ParkingRecord_.  - `type`: Type d'entité NGSI. Il doit s'agir de ParkingGroup    
+- `allowedVehicleType`: Type de véhicule autorisé (un groupe de stationnement n'autorise qu'un seul type de véhicule). Enum : 'vélo, bus, voiture, caravane, moto, scooter, camion'.  - `alternateName`: Un nom alternatif pour cet élément  - `areBordersMarked`: Indique si les places de stationnement sont délimitées (par des lignes blanches ou autres) ou non. Les applications _Devraient_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie.  - `availableSpotNumber`: Le nombre de places disponibles dans ce groupe. Il doit être inférieur ou égal à `totalSpotNumber`.  - `averageSpotLength`: La longueur moyenne des places de stationnement. Les applications _Devraient_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie.  - `averageSpotWidth`: La largeur moyenne des places de stationnement. Les applications _Devraient_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie.  - `category`: Catégorie du groupe de stationnement. Enum:'adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'  - `chargeType`: Type de redevance(s) appliquée(s) par le site de stationnement. Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `maximumAllowedHeight`: Hauteur maximale autorisée pour les véhicules.  Les applications _Devraient_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie.  - `maximumAllowedWidth`: Largeur maximale autorisée pour les véhicules. Les applications _Devraient_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie.  - `maximumParkingDuration`: Séjour maximum autorisé encodé comme une durée ISO8601. Lorsqu'elle est inexistante ou égale à la chaîne vide, elle signifie indéfinie. Les applications _Devraient_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie.  - `name`: Le nom de cet élément.  - `occupancyDetectionType`: Valeurs autorisées : Les valeurs suivantes de DATEX II version 2.3 _OccupancyDetectionTypeEnum_. Enum : 'balancing, manual, modelBased, none, singleSpaceDetection'. Ou toute autre application spécifique  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `parkingMode`: Mode(s) de stationnement. Les applications _Devraient_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie. Valeurs autorisées : Celles définies par l'énumération _ParkingModeEnum_ de DATEX II version 2.3. Enum : 'echelonParking, parallelParking, perpendicularParking'.  - `permitActiveHours`: Cet attribut permet de saisir les situations dans lesquelles un permis n'est nécessaire qu'à certaines heures ou certains jours de la semaine. Il s'agit d'une valeur structurée qui doit contenir une sous-propriété pour chaque permis requis, indiquant quand le permis est actif. Si rien n'est spécifié pour un permis, cela signifie qu'un permis est toujours nécessaire. Un objet vide signifie qu'il est toujours actif. La syntaxe doit être conforme à schema.org [opening hours specification] (https://schema.org/openingHours). Par exemple, une zone bleue qui n'est active que les jours de la semaine sera codée comme 'blueZonePermit' : 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'. Les applications _DISENT_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie.  - `refParkingSite`: Parking auquel appartient cette zone. Un groupe ne peut pas être orphelin. Un groupe ne peut pas avoir de sous-groupes. Référence à un OffStreetParking ou à un OnStreetParking.  - `refParkingSpot`: Les places de stationnement individuelles appartenant à ce groupe de stationnement.  - `requiredPermit`: Cet attribut indique le ou les permis qui peuvent être nécessaires pour se garer sur ce site. La sémantique est qu'au moins _un_ de ces permis est nécessaire pour se garer. Lorsqu'un permis est composé de plus d'un élément (et), il peut être combiné avec un ','. Par exemple, 'residentPermit,disabledPermit' signifie qu'il faut à la fois un permis de résident et un permis d'invalide pour stationner. Si la liste est vide, aucun permis n'est nécessaire.  - `reservationType`: Conditions de réservation. Les applications _Devraient_ inspecter la valeur de cette propriété au niveau du parent si elle n'est pas définie. Enum : 'mandatory, notAvailable, optional, partly'.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `totalSpotNumber`: Le nombre total de spots appartenant à ce groupe. Valeurs autorisées : Tout nombre entier positif ou 0. Références normatives : DATEX 2 version 2.3 attribut _parkingNumberOfSpaces_ de la classe _ParkingRecord_.  - `type`: Type d'entité NGSI. Il doit s'agir de ParkingGroup    
 Propriétés requises  
 - `id`  - `refParkingSite`  - `type`    
-Un groupe de places de parking. Le niveau de granularité peut varier. Il peut s'agir d'un étage sur un parking, d'une zone spécifique appartenant à un grand parking, ou simplement d'un groupe de places destinées au stationnement d'un certain type de véhicule ou soumises à certaines restrictions (handicapés, résidents, ...). Par souci de simplicité, un seul type de véhicule par groupe de stationnement est autorisé. De même, une seule autorisation est requise par type de groupe.  
-## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+Un groupe de places de stationnement. Le niveau de granularité peut varier. Il peut s'agir d'un étage d'un parking, d'une zone spécifique appartenant à un grand parking, ou simplement d'un groupe de places destinées au stationnement d'un certain type de véhicule ou soumises à certaines restrictions (handicapés, résidents, ...). Par souci de simplicité, un seul type de véhicule est autorisé par groupe de stationnement. De même, un seul permis obligatoire est autorisé par type de groupe.  
+## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 ParkingGroup:    
@@ -252,8 +253,8 @@ ParkingGroup:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -281,13 +282,13 @@ ParkingGroup:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### ParkingGroup NGSI V2 valeurs clés Exemple  
-Voici un exemple de ParkingGroup au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### ParkingGroup Valeurs-clés NGSI-v2 Exemple  
+Voici un exemple d'un ParkingGroup au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque vous utilisez `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "daoiz-velarde-1-5-disabled",  
   "type": "ParkingGroup",  
-  "category": ["onstreet", "adjacentSpaces", "onlyDisabled"],  
+  "category": ["onStreet", "adjacentSpaces", "onlyDisabled"],  
   "allowedVehicleType": "car",  
   "chargeType": ["free"],  
   "refParkingSite": "daoiz-velarde-1-5",  
@@ -306,12 +307,12 @@ ParkingGroup:
       ]  
     ]  
   },  
-  "requiredPermit": "disabledPermit",  
-  "permitActiveHours": "null"  
+  "requiredPermit": ["disabledPermit"],  
+  "permitActiveHours": {"Monday":"null"}  
 }  
 ```  
-#### ParkingGroup NGSI V2 normalisé Exemple  
-Voici un exemple de ParkingGroup au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### Groupe de stationnement NGSI-v2 normalisé Exemple  
+Voici un exemple d'un ParkingGroup au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "daoiz-velarde-1-5-disabled",  
@@ -367,111 +368,146 @@ ParkingGroup:
   }  
 }  
 ```  
-#### ParkingGroup NGSI-LD valeurs clés Exemple  
-Voici un exemple de ParkingGroup au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "allowedVehicleType": "car",  
- "availableSpotNumber": 1,  
- "category": ["onstreet", "adjacentSpaces", "onlyDisabled"],  
- "chargeType": ["free"],  
- "description": "Two parking spots reserved for disabled people",  
- "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
- "location": {"coordinates": [[[-3.80356167695194, 43.46296641666926],  
-                               [-3.803161973253841, 43.46301091092682],  
-                               [-3.803147082548618, 43.462879859445884],  
-                               [-3.803536474744068, 43.462838666196674],  
-                               [-3.80356167695194, 43.46296641666926]]],  
-              "type": "Polygon"},  
- "permitActiveHours": "null",  
- "refParkingSite": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5",  
- "requiredPermit": "disabledPermit",  
- "totalSpotNumber": 2,  
- "type": "ParkingGroup"}  
-```  
-#### ParkingGroup NGSI-LD normalisé Exemple  
-Voici un exemple de ParkingGroup au format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### Valeurs-clés NGSI-LD du groupe de stationnement Exemple  
+Voici un exemple d'un ParkingGroup au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque vous utilisez `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
-    "type": "ParkingGroup",  
-    "category": {  
-        "type": "Property",  
-        "value": [  
-            "onstreet",  
-            "adjacentSpaces",  
-            "onlyDisabled"  
-        ]  
-    },  
-    "refParkingSite": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5"  
-    },  
-    "permitActiveHours": {  
-        "type": "Property",  
-        "value": "null"  
-    },  
-    "requiredPermit": {  
-        "type": "Property",  
-        "value": "disabledPermit"  
-    },  
-    "allowedVehicleType": {  
-        "type": "Property",  
-        "value": "car"  
-    },  
-    "availableSpotNumber": {  
-        "type": "Property",  
-        "value": 1,  
-        "observedAt": "2018-09-12T12:00:00Z"  
-    },  
-    "totalSpotNumber": {  
-        "type": "Property",  
-        "value": 2  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Polygon",  
-            "coordinates": [  
-                [  
-                    [  
-                        -3.80356167695194,  
-                        43.46296641666926  
-                    ],  
-                    [  
-                        -3.803161973253841,  
-                        43.46301091092682  
-                    ],  
-                    [  
-                        -3.803147082548618,  
-                        43.462879859445884  
-                    ],  
-                    [  
-                        -3.803536474744068,  
-                        43.462838666196674  
-                    ],  
-                    [  
-                        -3.80356167695194,  
-                        43.46296641666926  
-                    ]  
-                ]  
-            ]  
-        }  
-    },  
-    "chargeType": {  
-        "type": "Property",  
-        "value": [  
-            "free"  
-        ]  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "Two parking spots reserved for disabled people"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
+  "type": "ParkingGroup",  
+  "category": {  
+    "type": "Property",  
+    "value": [  
+      "onstreet",  
+      "adjacentSpaces",  
+      "onlyDisabled"  
     ]  
+  },  
+  "refParkingSite": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5"  
+  },  
+  "permitActiveHours": {  
+    "type": "Property",  
+    "value": "null"  
+  },  
+  "requiredPermit": {  
+    "type": "Property",  
+    "value": "disabledPermit"  
+  },  
+  "allowedVehicleType": {  
+    "type": "Property",  
+    "value": "car"  
+  },  
+  "availableSpotNumber": {  
+    "type": "Property",  
+    "value": 1,  
+    "observedAt": "2018-09-12T12:00:00Z"  
+  },  
+  "totalSpotNumber": {  
+    "type": "Property",  
+    "value": 2  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Polygon",  
+      "coordinates": [  
+        [  
+          [  
+            -3.80356167695194,  
+            43.46296641666926  
+          ],  
+          [  
+            -3.803161973253841,  
+            43.46301091092682  
+          ],  
+          [  
+            -3.803147082548618,  
+            43.462879859445884  
+          ],  
+          [  
+            -3.803536474744068,  
+            43.462838666196674  
+          ],  
+          [  
+            -3.80356167695194,  
+            43.46296641666926  
+          ]  
+        ]  
+      ]  
+    }  
+  },  
+  "chargeType": {  
+    "type": "Property",  
+    "value": [  
+      "free"  
+    ]  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Two parking spots reserved for disabled people"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### Groupe de stationnement NGSI-LD normalisé Exemple  
+Voici un exemple de ParkingGroup au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "allowedVehicleType": "car",  
+  "availableSpotNumber": 1,  
+  "category": [  
+    "onStreet",  
+    "adjacentSpaces",  
+    "onlyDisabled"  
+  ],  
+  "chargeType": [  
+    "free"  
+  ],  
+  "description": "Two parking spots reserved for disabled people",  
+  "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
+  "location": {  
+    "coordinates": [  
+      [  
+        [  
+          -3.80356167695194,  
+          43.46296641666926  
+        ],  
+        [  
+          -3.803161973253841,  
+          43.46301091092682  
+        ],  
+        [  
+          -3.803147082548618,  
+          43.462879859445884  
+        ],  
+        [  
+          -3.803536474744068,  
+          43.462838666196674  
+        ],  
+        [  
+          -3.80356167695194,  
+          43.46296641666926  
+        ]  
+      ]  
+    ],  
+    "type": "Polygon"  
+  },  
+  "permitActiveHours": {  
+    "Monday": "null"  
+  },  
+  "refParkingSite": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5",  
+  "requiredPermit": [  
+    "disabledPermit"  
+  ],  
+  "totalSpotNumber": 2,  
+  "type": "ParkingGroup"  
 }  
 ```  
