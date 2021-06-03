@@ -1,11 +1,12 @@
 Entität: ParkingSpot  
 ====================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingSpot/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Ein Parkplatz ist ein gut abgegrenzter Bereich, in dem ein Fahrzeug abgestellt werden kann.**  
 
 ## Liste der Eigenschaften  
 
-- `TimeInstant`: Zeitstempel, der von FIWAREs IoT-Agent gespeichert wird. Es kann Produktionsumgebungen geben, in denen der Attributtyp gleich der Zeichenkette `ISO8601` ist. Wenn dies der Fall ist, muss es als Synonym von `DateTime` betrachtet werden. Hinweis: Dieses Attribut wurde nicht harmonisiert, um die Abwärtskompatibilität mit aktuellen FIWARE-Referenzimplementierungen zu wahren.  - `address`: Die Postanschrift.  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Kategorie(n) des Parkplatzes. onStreet` : Der Parkplatz gehört zu einem onStreet-Parkplatz. OffStreet": Der Parkplatz gehört zu einem OffStreet-Parkplatz.  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `length`: Länge des Stellplatzes.  - `location`:   - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `refDevice`: Das Gerät, das den physischen Sensor darstellt, der zur Überwachung dieses Parkplatzes verwendet wird.  - `refParkingGroup`: Gruppe, zu der der Stellplatz gehört. Aus Gründen der Modellvereinfachung ist nur eine Gruppe pro Parkplatz zulässig.  - `refParkingSite`: Parkplatz, zu dem der Stellplatz gehört.  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `status`: Status des Parkplatzes unter dem Gesichtspunkt der Belegung. Enum:'geschlossen, frei, belegt, unbekannt'  - `type`: NGSI Entity-Typ. Es muss ParkingSpot sein  - `width`: Breite des Stellplatzes.    
+- `TimeInstant`: Zeitstempel, der von FIWAREs IoT-Agent gespeichert wird. Es kann Produktionsumgebungen geben, in denen der Attributtyp gleich der Zeichenkette `ISO8601` ist. Wenn dies der Fall ist, muss es als Synonym von `DateTime` betrachtet werden. Hinweis: Dieses Attribut wurde nicht harmonisiert, um die Abwärtskompatibilität mit aktuellen FIWARE-Referenzimplementierungen zu wahren.  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Kategorie(n) des Parkplatzes. onStreet` : Der Parkplatz gehört zu einem onStreet-Parkplatz. OffStreet": Der Parkplatz gehört zu einem OffStreet-Parkplatz.  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `length`: Länge des Stellplatzes.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `refDevice`: Das Gerät, das den physischen Sensor darstellt, der zur Überwachung dieses Parkplatzes verwendet wird.  - `refParkingGroup`: Gruppe, zu der der Stellplatz gehört. Aus Gründen der Modellvereinfachung ist nur eine Gruppe pro Parkplatz zulässig.  - `refParkingSite`: Parkplatz, zu dem der Stellplatz gehört.  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `status`: Status des Parkplatzes unter dem Gesichtspunkt der Belegung. Enum:'geschlossen, frei, belegt, unbekannt'  - `type`: NGSI Entity-Typ. Es muss ParkingSpot sein  - `width`: Breite des Stellplatzes.    
 Erforderliche Eigenschaften  
 - `category`  - `id`  - `location`  - `refParkingSite`  - `status`  - `type`    
 Das Ziel dieses Entitätstyps ist es, den Status von Parkplätzen individuell zu überwachen. Daher kann eine Entität vom Typ ParkingSpot nicht ohne eine enthaltende Entität vom Typ (OnStreetParking, OffStreetParking) existieren. Ein ParkingSpot kann zu einer Gruppe gehören.  
@@ -21,30 +22,29 @@ ParkingSpot:
       format: date-time    
       type: Property    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -114,10 +114,10 @@ ParkingSpot:
       x-ngsi:    
         model: https://schema.org/length    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -137,7 +137,8 @@ ParkingSpot:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -160,7 +161,8 @@ ParkingSpot:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -185,7 +187,8 @@ ParkingSpot:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -207,7 +210,8 @@ ParkingSpot:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -232,7 +236,8 @@ ParkingSpot:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -259,7 +264,7 @@ ParkingSpot:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -312,8 +317,8 @@ ParkingSpot:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
