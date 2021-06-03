@@ -1,6 +1,7 @@
 Entity: ParkingGroup  
 ====================  
 [Open License](https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingGroup/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **Parking Group **  
 
 ## List of properties  
@@ -252,8 +253,8 @@ ParkingGroup:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -281,13 +282,13 @@ ParkingGroup:
 ```  
 </details>    
 ## Example payloads    
-#### ParkingGroup NGSI V2 key-values Example    
-Here is an example of a ParkingGroup in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### ParkingGroup NGSI-v2 key-values Example    
+Here is an example of a ParkingGroup in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "daoiz-velarde-1-5-disabled",  
   "type": "ParkingGroup",  
-  "category": ["onstreet", "adjacentSpaces", "onlyDisabled"],  
+  "category": ["onStreet", "adjacentSpaces", "onlyDisabled"],  
   "allowedVehicleType": "car",  
   "chargeType": ["free"],  
   "refParkingSite": "daoiz-velarde-1-5",  
@@ -306,12 +307,12 @@ ParkingGroup:
       ]  
     ]  
   },  
-  "requiredPermit": "disabledPermit",  
-  "permitActiveHours": "null"  
+  "requiredPermit": ["disabledPermit"],  
+  "permitActiveHours": {"Monday":"null"}  
 }  
 ```  
-#### ParkingGroup NGSI V2 normalized Example    
-Here is an example of a ParkingGroup in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### ParkingGroup NGSI-v2 normalized Example    
+Here is an example of a ParkingGroup in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "daoiz-velarde-1-5-disabled",  
@@ -370,108 +371,143 @@ ParkingGroup:
 #### ParkingGroup NGSI-LD key-values Example    
 Here is an example of a ParkingGroup in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "allowedVehicleType": "car",  
- "availableSpotNumber": 1,  
- "category": ["onstreet", "adjacentSpaces", "onlyDisabled"],  
- "chargeType": ["free"],  
- "description": "Two parking spots reserved for disabled people",  
- "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
- "location": {"coordinates": [[[-3.80356167695194, 43.46296641666926],  
-                               [-3.803161973253841, 43.46301091092682],  
-                               [-3.803147082548618, 43.462879859445884],  
-                               [-3.803536474744068, 43.462838666196674],  
-                               [-3.80356167695194, 43.46296641666926]]],  
-              "type": "Polygon"},  
- "permitActiveHours": "null",  
- "refParkingSite": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5",  
- "requiredPermit": "disabledPermit",  
- "totalSpotNumber": 2,  
- "type": "ParkingGroup"}  
+{  
+  "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
+  "type": "ParkingGroup",  
+  "category": {  
+    "type": "Property",  
+    "value": [  
+      "onstreet",  
+      "adjacentSpaces",  
+      "onlyDisabled"  
+    ]  
+  },  
+  "refParkingSite": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5"  
+  },  
+  "permitActiveHours": {  
+    "type": "Property",  
+    "value": "null"  
+  },  
+  "requiredPermit": {  
+    "type": "Property",  
+    "value": "disabledPermit"  
+  },  
+  "allowedVehicleType": {  
+    "type": "Property",  
+    "value": "car"  
+  },  
+  "availableSpotNumber": {  
+    "type": "Property",  
+    "value": 1,  
+    "observedAt": "2018-09-12T12:00:00Z"  
+  },  
+  "totalSpotNumber": {  
+    "type": "Property",  
+    "value": 2  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Polygon",  
+      "coordinates": [  
+        [  
+          [  
+            -3.80356167695194,  
+            43.46296641666926  
+          ],  
+          [  
+            -3.803161973253841,  
+            43.46301091092682  
+          ],  
+          [  
+            -3.803147082548618,  
+            43.462879859445884  
+          ],  
+          [  
+            -3.803536474744068,  
+            43.462838666196674  
+          ],  
+          [  
+            -3.80356167695194,  
+            43.46296641666926  
+          ]  
+        ]  
+      ]  
+    }  
+  },  
+  "chargeType": {  
+    "type": "Property",  
+    "value": [  
+      "free"  
+    ]  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Two parking spots reserved for disabled people"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### ParkingGroup NGSI-LD normalized Example    
 Here is an example of a ParkingGroup in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
-    "type": "ParkingGroup",  
-    "category": {  
-        "type": "Property",  
-        "value": [  
-            "onstreet",  
-            "adjacentSpaces",  
-            "onlyDisabled"  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "allowedVehicleType": "car",  
+  "availableSpotNumber": 1,  
+  "category": [  
+    "onStreet",  
+    "adjacentSpaces",  
+    "onlyDisabled"  
+  ],  
+  "chargeType": [  
+    "free"  
+  ],  
+  "description": "Two parking spots reserved for disabled people",  
+  "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
+  "location": {  
+    "coordinates": [  
+      [  
+        [  
+          -3.80356167695194,  
+          43.46296641666926  
+        ],  
+        [  
+          -3.803161973253841,  
+          43.46301091092682  
+        ],  
+        [  
+          -3.803147082548618,  
+          43.462879859445884  
+        ],  
+        [  
+          -3.803536474744068,  
+          43.462838666196674  
+        ],  
+        [  
+          -3.80356167695194,  
+          43.46296641666926  
         ]  
-    },  
-    "refParkingSite": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5"  
-    },  
-    "permitActiveHours": {  
-        "type": "Property",  
-        "value": "null"  
-    },  
-    "requiredPermit": {  
-        "type": "Property",  
-        "value": "disabledPermit"  
-    },  
-    "allowedVehicleType": {  
-        "type": "Property",  
-        "value": "car"  
-    },  
-    "availableSpotNumber": {  
-        "type": "Property",  
-        "value": 1,  
-        "observedAt": "2018-09-12T12:00:00Z"  
-    },  
-    "totalSpotNumber": {  
-        "type": "Property",  
-        "value": 2  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Polygon",  
-            "coordinates": [  
-                [  
-                    [  
-                        -3.80356167695194,  
-                        43.46296641666926  
-                    ],  
-                    [  
-                        -3.803161973253841,  
-                        43.46301091092682  
-                    ],  
-                    [  
-                        -3.803147082548618,  
-                        43.462879859445884  
-                    ],  
-                    [  
-                        -3.803536474744068,  
-                        43.462838666196674  
-                    ],  
-                    [  
-                        -3.80356167695194,  
-                        43.46296641666926  
-                    ]  
-                ]  
-            ]  
-        }  
-    },  
-    "chargeType": {  
-        "type": "Property",  
-        "value": [  
-            "free"  
-        ]  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "Two parking spots reserved for disabled people"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+      ]  
+    ],  
+    "type": "Polygon"  
+  },  
+  "permitActiveHours": {  
+    "Monday": "null"  
+  },  
+  "refParkingSite": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5",  
+  "requiredPermit": [  
+    "disabledPermit"  
+  ],  
+  "totalSpotNumber": 2,  
+  "type": "ParkingGroup"  
 }  
 ```  
