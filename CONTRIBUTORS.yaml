@@ -8,6 +8,13 @@ contributors:
  project:
  comments:
 -
+ name: Joao
+ surname:  Bastos
+ mail: joao.bastos@portodigital.pt
+ organization: Porto Digital
+ project: 
+ comments: 
+-
  name: Dmitrii
  surname:  Demin
  mail: mail@demin.co
@@ -40,12 +47,5 @@ contributors:
  surname:  Suda
  mail:
  organization:
- project: 
- comments: 
- -
- name: Joao
- surname:  Bastos
- mail: joao.bastos@portodigital.pt
- organization: Porto Digital
  project: 
  comments: 
