@@ -826,3 +826,4 @@ OffStreetParking:
     - type
     - location
   type: object
+  version: 0.0.1
