@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Parking/ParkingGroup/schema.json",
     "title": " - Parking / Parking Group",
-    "description": "Parking Group "
+    "description": "Parking Group ",
+    "type": "object"
 }
