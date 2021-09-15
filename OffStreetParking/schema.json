@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/schema.json",
-    "title": " - Parking / Off Street Parking"
+    "title": " - Parking / Off Street Parking",
+    "description": "Off street parking"
 }
