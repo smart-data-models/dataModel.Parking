@@ -121,5 +121,13 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "location",
+        "type",
+        "status",
+        "category",
+        "refParkingSite"
     ]
 }
