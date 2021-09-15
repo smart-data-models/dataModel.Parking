@@ -67,5 +67,10 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "location"
     ]
 }
