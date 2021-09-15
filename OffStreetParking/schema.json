@@ -541,5 +541,10 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "location"
     ]
 }
