@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Parking/OnStreetParking/schema.json",
     "title": " - Parking / On Street Parking - TODO: Provide a complete schema",
-    "description": "A site, open space zone, on street, (metered or not) with direct access from a road, intended to park vehicles."
+    "description": "A site, open space zone, on street, (metered or not) with direct access from a road, intended to park vehicles.",
+    "type": "object"
 }
