@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Parking/ParkingAccess/schema.json",
     "title": " - Parking / Parking Access",
-    "description": "Parking Access - TODO: Provide a complete Schema"
+    "description": "Parking Access - TODO: Provide a complete Schema",
+    "type": "object"
 }
