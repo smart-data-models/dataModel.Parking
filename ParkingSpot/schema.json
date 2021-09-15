@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Parking/ParkingSpot/schema.json",
     "title": "Parking Spot",
-    "description": "A parking spot is an area well delimited where one vehicle can be parked."
+    "description": "A parking spot is an area well delimited where one vehicle can be parked.",
+    "type": "object"
 }
