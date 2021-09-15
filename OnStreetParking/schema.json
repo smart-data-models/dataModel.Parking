@@ -219,5 +219,10 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "location"
     ]
 }
