@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Parking/ParkingGroup/schema.json",
-    "title": " - Parking / Parking Group"
+    "title": " - Parking / Parking Group",
+    "description": "Parking Group "
 }
