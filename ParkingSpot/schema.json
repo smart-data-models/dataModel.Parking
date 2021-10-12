@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.1",
+    "$schemaVersion": "0.1.0",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Parking/ParkingSpot/schema.json",
     "title": "Parking Spot",
@@ -114,10 +114,8 @@
                     "uniqueItems": true,
                     "description": "Relationship. The device representing the physical sensor used to monitor this parking spot."
                 },
-                "TimeInstant": {
-                    "type": "string",
-                    "format": "date-time",
-                    "description": "Property. Timestamp saved by FIWARE's IoT Agent. There can be production environments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`. Note: This attribute has not been harmonized to keep backwards compatibility with current FIWARE reference implementations."
+                "timeInstant": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/timeInstant"
                 }
             }
         }
