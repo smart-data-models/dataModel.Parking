@@ -17,10 +17,6 @@ Entité : ParkingSpot
 ParkingSpot:    
   description: 'A parking spot is an area well delimited where one vehicle can be parked.'    
   properties:    
-    TimeInstant:    
-      description: 'Timestamp saved by FIWARE''s IoT Agent. There can be production environments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`. Note: This attribute has not been harmonized to keep backwards compatibility with current FIWARE reference implementations.'    
-      format: date-time    
-      type: Property    
     address:    
       description: 'The mailing address'    
       properties:    
@@ -42,24 +38,29 @@ ParkingSpot:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     annotations:    
       description: 'Annotations about the item'    
       items:    
         type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     category:    
       description: 'Category(ies) of the parking spot. `onStreet` : The parking spot belongs to an onStreet parking site. `offStreet` : The parking spot belongs to an offStreet parking site.'    
       items:    
@@ -68,27 +69,38 @@ ParkingSpot:
           - offStreet    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       uniqueItems: true    
+      x-ngsi:    
+        type: Property    
     color:    
       description: 'The color of the product'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/color    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &parkingspot_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -100,19 +112,22 @@ ParkingSpot:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     image:    
       description: 'An image of the item'    
       format: uri    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Property    
     length:    
       description: 'Length of the parking spot.'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/length    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -264,16 +279,21 @@ ParkingSpot:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *parkingspot_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     refDevice:    
       description: 'The device representing the physical sensor used to monitor this parking spot.'    
       items:    
@@ -287,8 +307,10 @@ ParkingSpot:
             format: uri    
             type: string    
       minItems: 1    
-      type: Relationship    
+      type: array    
       uniqueItems: true    
+      x-ngsi:    
+        type: Relationship    
     refParkingGroup:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -300,7 +322,8 @@ ParkingSpot:
           format: uri    
           type: string    
       description: 'Group to which the parking spot belongs to. For model simplification purposes only one group is allowed per parking spot.'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     refParkingSite:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -312,7 +335,8 @@ ParkingSpot:
           format: uri    
           type: string    
       description: 'Parking site to which the parking spot belongs to.'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -323,10 +347,13 @@ ParkingSpot:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     status:    
       description: 'Status of the parking spot from the point of view of occupancy. Enum:''closed, free, occupied, unknown'''    
       enum:    
@@ -334,20 +361,31 @@ ParkingSpot:
         - free    
         - occupied    
         - unknown    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
+    timeInstant:    
+      description: 'Timestamp of the payload . There can be production environments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`. This attribute is kept for backwards compatibility with old FIWARE reference implementations.'    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Datetime    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be ParkingSpot'    
       enum:    
         - ParkingSpot    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     width:    
       description: 'Width of the parking spot.'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/width    
+        type: Property    
   required:    
     - id    
     - location    
@@ -356,11 +394,12 @@ ParkingSpot:
     - category    
     - refParkingSite    
   type: object    
+  version: 0.1.0    
 ```  
 </details>    
 ## Exemples de charges utiles  
 #### ParkingSpot NGSI-v2 valeurs-clés Exemple  
-Voici un exemple d'un ParkingSpot au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'un ParkingSpot au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "santander:daoiz_velarde_1_5:3",  
