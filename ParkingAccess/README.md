@@ -6,7 +6,7 @@ Version: 0.0.1
 Parking Access - TODO: Provide a complete Schema
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Parking/blob/master/ParkingAccess/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/ParkingAccess/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Parking/blob/master/ParkingAccess/doc/spec.md)
 
