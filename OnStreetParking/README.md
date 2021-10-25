@@ -6,7 +6,7 @@ Version: 0.0.1
 A site, open space zone, on street, (metered or not) with direct access from a road, intended to park vehicles.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Parking/blob/master/OnStreetParking/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/OnStreetParking/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Parking/blob/master/OnStreetParking/doc/spec.md)
 
