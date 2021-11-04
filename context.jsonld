@@ -43,6 +43,7 @@
         "measuresPeriod": "https://smartdatamodels.org/dataModel.Parking/measuresPeriod",
         "measuresPeriodUnit": "https://smartdatamodels.org/dataModel.Parking/measuresPeriodUnit",
         "name": "https://smartdatamodels.org/name",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "occupancy": "https://smartdatamodels.org/dataModel.Parking/occupancy",
         "occupancyDetectionType": "https://smartdatamodels.org/dataModel.Parking/occupancyDetectionType",
         "occupancyModified": "https://smartdatamodels.org/dataModel.Parking/occupancyModified",
