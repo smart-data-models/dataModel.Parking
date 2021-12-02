@@ -450,3 +450,5 @@ ParkingAccess:
   "type": "ParkingAccess"  
 }  
 ```  
+
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
