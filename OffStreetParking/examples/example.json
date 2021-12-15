@@ -9,16 +9,27 @@
     "mediumTerm",
     "barrierAccess"
   ],
-  "extCategory": ["A"],
-  "chargeType": ["temporaryPrice"],
+  "extCategory": [
+    "A"
+  ],
+  "chargeType": [
+    "temporaryPrice"
+  ],
   "requiredPermit": [],
-  "layout": ["multiLevel"],
+  "layout": [
+    "multiLevel"
+  ],
   "maximumParkingDuration": "PT8H",
   "location": {
-    "coordinates": [-8.60961198807, 41.150691773],
+    "coordinates": [
+      -8.60961198807,
+      41.150691773
+    ],
     "type": "Point"
   },
-  "allowedVehicleType": ["car"],
+  "allowedVehicleType": [
+    "car"
+  ],
   "totalSpotNumber": 414,
   "availableSpotNumber": 132,
   "occupiedSpotNumber": 282,
@@ -33,5 +44,35 @@
   "dateModified": "2018-09-21T12:00:05Z",
   "vehicleEntranceCount": 28,
   "vehicleExitCount": 12,
-  "accessModified": "2018-09-21T12:00:00Z"
+  "accessModified": "2018-09-21T12:00:00Z",
+  "outOfServiceSlotNumber": 0,
+  "parkingSiteId": "P2",
+  "observationDateTime": "2021-03-11T15:51:02+05:30",
+  "fourWheelerSlots": {
+    "availableSpotNumber": 25,
+    "totalSpotNumber": 25,
+    "occupiedSpotNumber": 0
+  },
+  "unclassifiedSlots": {
+    "availableSpotNumber": 0,
+    "totalSpotNumber": 0,
+    "occupiedSpotNumber": 0
+  },
+  "twoWheelerSlots": {
+    "availableSpotNumber": 20,
+    "totalSpotNumber": 20,
+    "occupiedSpotNumber": 0
+  },
+  "municipalityInfo": {
+    "district": "Bangalore Urban",
+    "ulbName": "BMC",
+    "cityId": "23",
+    "wardId": "23",
+    "stateName": "Karnataka",
+    "cityName": "Bangalore",
+    "zoneName": "South",
+    "wardName": "Bangalore Urban",
+    "zoneId": "2",
+    "wardNum": 4
+  }
 }

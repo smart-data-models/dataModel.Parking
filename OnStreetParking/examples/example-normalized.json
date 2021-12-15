@@ -2,20 +2,25 @@
   "id": "santander:daoiz_velarde_1_5",
   "type": "OnStreetParking",
   "category": {
+    "type": "array",
     "value": ["blueZone", "shortTerm", "forDisabled"]
   },
   "permitActiveHours": {
+    "type": "array",
     "value": {
       "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"
     }
   },
   "requiredPermit": {
+    "type": "array",
     "value": ["blueZonePermit", "disabledPermit"]
   },
   "allowedVehicleType": {
+    "type": "Text",
     "value": "car"
   },
   "chargeType": {
+    "type": "array",
     "value": ["temporaryFee"]
   },
   "refParkingGroup": {
@@ -23,6 +28,7 @@
     "value": ["daoiz-velarde-1-5-main", "daoiz-velarde-1-5-disabled"]
   },
   "totalSpotNumber": {
+    "type": "Number",
     "value": 6
   },
   "location": {
@@ -41,9 +47,11 @@
     }
   },
   "areaServed": {
+    "type": "Text",
     "value": "Zona Centro"
   },
   "maximumAllowedStay": {
+    "type": "Text",
     "value": "PT2H"
   },
   "dateModified": {
@@ -51,9 +59,11 @@
     "value": "2016-06-02T09:25:55.00Z"
   },
   "extraSpotNumber": {
+    "type": "Number",
     "value": 2
   },
   "availableSpotNumber": {
+    "type": "Number",
     "value": 3,
     "metadata": {
       "timestamp": {
@@ -63,12 +73,56 @@
     }
   },
   "occupiedSpotNumber": {
+    "type": "Number",
     "value": 3,
     "metadata": {
       "timestamp": {
         "value": "2018-09-12T12:00:00",
         "type": "DateTime"
       }
+    }
+  },
+   "observationDateTime": {
+    "type": "DateTime",
+    "value": "2021-03-11T15:51:02+05:30"
+  },
+  "fourWheelerSlots": {
+    "type": "StructuredValue",
+    "value": {
+      "availableSpotNumber": 25,
+      "totalSpotNumber": 25,
+      "occupiedSpotNumber": 0
+    }
+  },
+  "unclassifiedSlots": {
+    "type": "StructuredValue",
+    "value": {
+      "availableSpotNumber": 0,
+      "totalSpotNumber": 0,
+      "occupiedSpotNumber": 0
+    }
+  },
+  "twoWheelerSlots": {
+    "type": "StructuredValue",
+    "value": {
+      "availableSpotNumber": 20,
+      "totalSpotNumber": 20,
+      "occupiedSpotNumber": 0
+    }
+  },
+  "municipalityInfo": {
+    "type": "StructuredValue",
+    "value": {
+      "district": "Bangalore Urban",
+      "ulbName": "BMC",
+      "cityId": "23",
+      "wardId": "23",
+      "stateName": "Karnataka",
+      "cityName": "Bangalore",
+      "zoneName": "South",
+      "wardName": "Bangalore Urban",
+      "zoneId": "2",
+      "wardNum": 4
     }
   }
 }

@@ -2,6 +2,7 @@
   "id": "porto-ParkingLot-23889",
   "type": "OffStreetParking",
   "category": {
+    "type": "array",
     "value": [
       "underground",
       "public",
@@ -10,20 +11,32 @@
       "barrierAccess"
     ]
   },
-  "extCategory": ["A"],
+  "extCategory": {
+    "type": "Text",
+    "value": "A"
+  },
   "layout": {
-    "value": ["multiLevel"]
+    "type": "array",
+    "value": [
+      "multiLevel"
+    ]
   },
   "name": {
+    "type": "Text",
     "value": "Parque de estacionamento Trindade"
   },
   "requiredPermit": {
+    "type": "array",
     "value": []
   },
   "allowedVehicleType": {
-    "value": ["car"]
+    "type": "array",
+    "value": [
+      "car"
+    ]
   },
   "availableSpotNumber": {
+    "type": "Number",
     "value": 132,
     "metadata": {
       "timestamp": {
@@ -33,10 +46,11 @@
     }
   },
   "totalSpotNumber": {
+    "type": "Number",
     "value": 414
   },
   "occupiedSpotNumber": {
-    "type": "number",
+    "type": "Number",
     "value": 282
   },
   "occupancyModified": {
@@ -44,18 +58,24 @@
     "value": "2018-09-21T12:00:00Z"
   },
   "occupancy": {
-    "type": "number",
+    "type": "Number",
     "value": 0.68
   },
   "location": {
     "type": "geo:json",
     "value": {
       "type": "Point",
-      "coordinates": [-8.60961198807, 41.150691773]
+      "coordinates": [
+        -8.60961198807,
+        41.150691773
+      ]
     }
   },
   "chargeType": {
-    "value": ["temporaryPrice"]
+    "type": "array",
+    "value": [
+      "temporaryPrice"
+    ]
   },
   "address": {
     "type": "PostalAddress",
@@ -66,6 +86,7 @@
     }
   },
   "maximumParkingDuration": {
+    "type": "Text",
     "value": "PT8H"
   },
   "dateModified": {
@@ -76,15 +97,58 @@
     "value": "Municipal car park located near the Trindade metro station and the Town Hall"
   },
   "vehicleEntranceCount": {
-    "type": "number",
+    "type": "Number",
     "value": 28
   },
   "vehicleExitCount": {
-    "type": "number",
+    "type": "Number",
     "value": 12
   },
   "accessModified": {
     "type": "DateTime",
     "value": "2018-09-21T12:00:00Z"
+  },
+  "observationDateTime": {
+    "type": "DateTime",
+    "value": "2021-03-11T15:51:02+05:30"
+  },
+  "fourWheelerSlots": {
+    "type": "StructuredValue",
+    "value": {
+      "availableSpotNumber": 25,
+      "totalSpotNumber": 25,
+      "occupiedSpotNumber": 0
+    }
+  },
+  "unclassifiedSlots": {
+    "type": "StructuredValue",
+    "value": {
+      "availableSpotNumber": 0,
+      "totalSpotNumber": 0,
+      "occupiedSpotNumber": 0
+    }
+  },
+  "twoWheelerSlots": {
+    "type": "StructuredValue",
+    "value": {
+      "availableSpotNumber": 20,
+      "totalSpotNumber": 20,
+      "occupiedSpotNumber": 0
+    }
+  },
+  "municipalityInfo": {
+    "type": "StructuredValue",
+    "value": {
+      "district": "Bangalore Urban",
+      "ulbName": "BMC",
+      "cityId": "23",
+      "wardId": "23",
+      "stateName": "Karnataka",
+      "cityName": "Bangalore",
+      "zoneName": "South",
+      "wardName": "Bangalore Urban",
+      "zoneId": "2",
+      "wardNum": 4
+    }
   }
 }
