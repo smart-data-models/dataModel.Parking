@@ -6,7 +6,7 @@ Entity: OnStreetParking
 
 ## List of properties  
 
-- `acceptedPaymentMethod`: Type of charge(s) performed by the parking site. Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'  - `address`: The mailing address  - `allowedVehicleType`: Vehicle type allowed (only one per on street parking). Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, van, vehicleWithCatalyticConverter, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'  - `alternateName`: An alternative name for this item  - `areBordersMarked`: Denotes whether parking spots are delimited (with blank lines or similar) or not  - `areaServed`: The geographic area where a service or offered item is provided  - `availableSpotNumber`: The number of spots available globally, including reserved spaces, such as those for disabled people, long term parkers and so on. This might be harder to estimate at those parking locations on which spots borders are not clearly marked by lines  - `averageSpotLength`: The average length of parking spots  - `averageSpotWidth`: The average width of parking spots  - `category`: Street parking category. Enum:'blueZone, feeCharged, forDisabled, forElectricalCharging, forLoadUnload, forResidents, free, greenZone, mediumTerm, onlyWithPermit, shortTerm, taxiStop'  - `chargeType`: Type of charge(s) performed by the parking site. Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `extraSpotNumber`: The number of extra spots available, i.e. free. Extra    spots are those reserved for special purposes and usually require a permit. Permit details will be found at parking group level (entity of type `ParkingGroup`). This value must aggregate free spots from all groups devoted to special parking conditions. Allowed values: A positive integer number, including 0. `extraSpotNumber` plus `availableSpotNumber` must be lower than or equal to `totalSpotNumber  - `id`: Unique identifier of the entity  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `maximumParkingDuration`: Maximum allowed stay at site encoded as a ISO8601 duration. An empty value indicates an indefinite duration.  - `name`: The name of this item.  - `occupancyDetectionType`: Occupancy detection method(s). Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. The following from DATEX II version 2.3 _OccupancyDetectionTypeEnum_  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `parkingMode`: Parking mode(s). Enum:'echelonParking, parallelParking, perpendicularParking'  - `permitActiveHours`: This attribute allows to capture situations when a permit is only needed at specific hours or days of week.  It is an structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. An empty JSON Object means always active. The syntax must be conformant with schema.org  - `refParkingGroup`: Reference to the parking group(s) (if any) belonging to this onstreet parking zone.  - `refParkingSpot`: Individual parking spots belonging to this on street parking site.  - `requiredPermit`: This attribute captures what permit(s) might be needed to park at this site. Semantics is that at least _one of_ these permits is needed to park. When a permit is composed by more than one item (and) they can be combined with a ','. For instance 'residentPermit,disabledPermit' stays that both, at the same time, a resident and a disabled permit are needed to park. If list is empty, no permit is needed.  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `totalSpotNumber`: The total number of spots offered by this parking site. This number can be difficult to be obtained for those parking locations on which spots are not clearly marked by lines. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class.  - `type`: Entity type. It must be equal to OnStreetParking  - `usageScenario`: Type of charge(s) performed by the parking site. Enum:'carSharing, dropOff, kissAndRide, liftShare, loadingBay, overnightParking, parkAndRide, parkAndCycle, parkAndWalk, vehicleLift,'    
+- `acceptedPaymentMethod`: Type of charge(s) performed by the parking site. Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'  - `address`: The mailing address  - `allowedVehicleType`: Vehicle type allowed (only one per on street parking). Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, van, vehicleWithCatalyticConverter, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'  - `alternateName`: An alternative name for this item  - `areBordersMarked`: Denotes whether parking spots are delimited (with blank lines or similar) or not  - `areaServed`: The geographic area where a service or offered item is provided  - `availableSpotNumber`: The number of spots available globally, including reserved spaces, such as those for disabled people, long term parkers and so on. This might be harder to estimate at those parking locations on which spots borders are not clearly marked by lines  - `averageSpotLength`: The average length of parking spots  - `averageSpotWidth`: The average width of parking spots  - `category`: Street parking category. Enum:'blueZone, feeCharged, forDisabled, forElectricalCharging, forLoadUnload, forResidents, free, greenZone, mediumTerm, onlyWithPermit, shortTerm, taxiStop'  - `chargeType`: Type of charge(s) performed by the parking site. Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `extraSpotNumber`: The number of extra spots available, i.e. free. Extra    spots are those reserved for special purposes and usually require a permit. Permit details will be found at parking group level (entity of type `ParkingGroup`). This value must aggregate free spots from all groups devoted to special parking conditions. Allowed values: A positive integer number, including 0. `extraSpotNumber` plus `availableSpotNumber` must be lower than or equal to `totalSpotNumber  - `fourWheelerSlots`: Four wheeler parking spot availability status in parking site corresponding to this observation.  - `id`: Unique identifier of the entity  - `layout`: Generic classification of the layout of the parking  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `maximumParkingDuration`: Maximum allowed stay at site encoded as a ISO8601 duration. An empty value indicates an indefinite duration.  - `municipalityInfo`: Municipality information corresponding to this observation.  - `name`: The name of this item.  - `observationDateTime`: Last reported time of observation.  - `occupancyDetectionType`: Occupancy detection method(s). Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. The following from DATEX II version 2.3 _OccupancyDetectionTypeEnum_  - `occupancyModified`: Date last time the occupancy of the parking has being modified  - `occupiedSpotNumber`: Number of total parking spots occupied in the smart parking site corresponding to this observation. This must a positive number lower than or equal to the totalSpotNumber.  - `outOfServiceSlotNumber`: The number of bike racks/bike-docking slots or parking slots that are out of order and cannot be used to hire or park a bike in the bike docking station or parking site corresponding to this observation.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `parkingMode`: Parking mode(s). Enum:'echelonParking, parallelParking, perpendicularParking'  - `parkingSiteId`: The unique ID of the parking site or parking lot corresponding to this observation.  - `permitActiveHours`: This attribute allows to capture situations when a permit is only needed at specific hours or days of week.  It is an structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. An empty JSON Object means always active. The syntax must be conformant with schema.org  - `refParkingGroup`: Reference to the parking group(s) (if any) belonging to this onstreet parking zone.  - `refParkingSpot`: Individual parking spots belonging to this on street parking site.  - `requiredPermit`: This attribute captures what permit(s) might be needed to park at this site. Semantics is that at least _one of_ these permits is needed to park. When a permit is composed by more than one item (and) they can be combined with a ','. For instance 'residentPermit,disabledPermit' stays that both, at the same time, a resident and a disabled permit are needed to park. If list is empty, no permit is needed.  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `totalSpotNumber`: The total number of spots offered by this parking site. This number can be difficult to be obtained for those parking locations on which spots are not clearly marked by lines. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class.  - `twoWheelerSlots`: Two wheeler parking spot availability status in parking site corresponding to this observation.  - `type`: Entity type. It must be equal to OnStreetParking  - `unclassifiedSlots`: Unclassified vehicles or other vehicles parking spot availability status in parking site corresponding to this observation.  - `usageScenario`: Type of charge(s) performed by the parking site. Enum:'carSharing, dropOff, kissAndRide, liftShare, loadingBay, overnightParking, parkAndRide, parkAndCycle, parkAndWalk, vehicleLift,'    
 Required properties  
 - `id`  - `location`  - `type`    
 In DATEX 2 version 2.3 terminology it corresponds to a _UrbanParkingSite_ of type _onStreetParking_. A data dictionary for DATEX II terms can be found at [http://datexbrowser.tamtamresearch.com/](http://datexbrowser.tamtamresearch.com/).  
@@ -59,39 +59,41 @@ OnStreetParking:
         type: Property    
     allowedVehicleType:    
       description: 'Vehicle type allowed (only one per on street parking). Enum:''agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, van, vehicleWithCatalyticConverter, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'''    
-      enum:    
-        - agriculturalVehicle    
-        - anyVehicle    
-        - articulatedVehicle    
-        - bicycle    
-        - bus    
-        - car    
-        - caravan    
-        - carOrLightVehicle    
-        - carWithCaravan    
-        - carWithTrailer    
-        - constructionOrMaintenanceVehicle    
-        - fourWheelDrive    
-        - highSidedVehicle    
-        - lorry    
-        - moped    
-        - motorcycle    
-        - motorcycleWithSideCar    
-        - motorscooter    
-        - tanker    
-        - threeWheeledVehicle    
-        - trailer    
-        - tram    
-        - twoWheeledVehicle    
-        - van    
-        - vehicleWithCatalyticConverter    
-        - vehicleWithoutCatalyticConverter    
-        - vehicleWithCaravan    
-        - vehicleWithTrailer    
-        - withEvenNumberedRegistrationPlates    
-        - withOddNumberedRegistrationPlates    
-        - other    
-      type: string    
+      items:    
+        enum:    
+          - agriculturalVehicle    
+          - anyVehicle    
+          - articulatedVehicle    
+          - bicycle    
+          - bus    
+          - car    
+          - caravan    
+          - carOrLightVehicle    
+          - carWithCaravan    
+          - carWithTrailer    
+          - constructionOrMaintenanceVehicle    
+          - fourWheelDrive    
+          - highSidedVehicle    
+          - lorry    
+          - moped    
+          - motorcycle    
+          - motorcycleWithSideCar    
+          - motorscooter    
+          - tanker    
+          - threeWheeledVehicle    
+          - trailer    
+          - tram    
+          - twoWheeledVehicle    
+          - van    
+          - vehicleWithCatalyticConverter    
+          - vehicleWithoutCatalyticConverter    
+          - vehicleWithCaravan    
+          - vehicleWithTrailer    
+          - withEvenNumberedRegistrationPlates    
+          - withOddNumberedRegistrationPlates    
+          - other    
+        type: string    
+      type: array    
       x-ngsi:    
         type: Property    
     alternateName:    
@@ -136,6 +138,7 @@ OnStreetParking:
       description: 'Street parking category. Enum:''blueZone, feeCharged, forDisabled, forElectricalCharging, forLoadUnload, forResidents, free, greenZone, mediumTerm, onlyWithPermit, shortTerm, taxiStop'''    
       items:    
         enum:    
+          - barrierAccess    
           - blueZone    
           - feeCharged    
           - forDisabled    
@@ -146,8 +149,10 @@ OnStreetParking:
           - greenZone    
           - mediumTerm    
           - onlyWithPermit    
+          - public    
           - shortTerm    
           - taxiStop    
+          - underground    
         type: string    
       type: array    
       x-ngsi:    
@@ -202,6 +207,22 @@ OnStreetParking:
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
+    fourWheelerSlots:    
+      description: 'Four wheeler parking spot availability status in parking site corresponding to this observation.'    
+      properties:    
+        availableSlotNumber:    
+          description: 'Property. Model:''https://schema.org/Number''. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'    
+          type: number    
+        occupiedSlotNumber:    
+          description: 'Property. Model:''https://schema.org/Number''. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'    
+          type: number    
+        totalSlotNumber:    
+          description: 'Property. Model:''https://schema.org/Number''. The total number of spots offered by the parking site corresponding to this observation.'    
+          type: number    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
     id:    
       anyOf: &onstreetparking_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -213,6 +234,13 @@ OnStreetParking:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
+      x-ngsi:    
+        type: Property    
+    layout:    
+      description: 'Generic classification of the layout of the parking'    
+      items:    
+        type: string    
+      type: array    
       x-ngsi:    
         type: Property    
     location:    
@@ -374,10 +402,54 @@ OnStreetParking:
       type: string    
       x-ngsi:    
         type: Property    
+    municipalityInfo:    
+      description: 'Municipality information corresponding to this observation.'    
+      properties:    
+        cityId:    
+          description: 'Property. Model:''https://schema.org/Text''. City ID corresponding to this observation.'    
+          type: string    
+        cityName:    
+          description: 'Property. Model:''https://schema.org/Text''. City name corresponding to this observation'    
+          type: string    
+        district:    
+          description: 'Property. Model:''https://schema.org/Text''. District name corresponding to this observation.'    
+          type: string    
+        stateName:    
+          description: 'Property. Model:''https://schema.org/Text''. Name of the state corresponding to this observation.'    
+          type: string    
+        ulbName:    
+          description: 'Property. Model:''https://schema.org/Text''. Name of the Urban Local Body corresponding to this observation.'    
+          type: string    
+        wardId:    
+          description: 'Property. Model:''https://schema.org/Text''. Ward ID corresponding to this observation.'    
+          type: string    
+        wardName:    
+          description: 'Property. Model:''https://schema.org/Text''. Ward name corresponding to this observation.'    
+          type: string    
+        wardNum:    
+          description: 'Property. Model:''https://schema.org/Number''. Ward number corresponding to this observation.'    
+          type: number    
+        zoneId:    
+          description: 'Property. Model:''https://schema.org/Text''. Zone ID corresponding to this observation.'    
+          type: string    
+        zoneName:    
+          description: 'Property. Model:''https://schema.org/Text''. Zone name corresponding to this observation.'    
+          type: string    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
     name:    
       description: 'The name of this item.'    
       type: string    
       x-ngsi:    
+        type: Property    
+    observationDateTime:    
+      description: 'Last reported time of observation.'    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
         type: Property    
     occupancyDetectionType:    
       description: 'Occupancy detection method(s). Enum:''balancing, manual, modelBased, none, singleSpaceDetection''. The following from DATEX II version 2.3 _OccupancyDetectionTypeEnum_'    
@@ -391,6 +463,25 @@ OnStreetParking:
         type: string    
       type: array    
       x-ngsi:    
+        type: Property    
+    occupancyModified:    
+      description: 'Date last time the occupancy of the parking has being modified'    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
+        type: Property    
+    occupiedSpotNumber:    
+      description: 'Number of total parking spots occupied in the smart parking site corresponding to this observation. This must a positive number lower than or equal to the totalSpotNumber.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    outOfServiceSlotNumber:    
+      description: 'The number of bike racks/bike-docking slots or parking slots that are out of order and cannot be used to hire or park a bike in the bike docking station or parking site corresponding to this observation.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
         type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
@@ -408,6 +499,12 @@ OnStreetParking:
         - perpendicularParking    
       type: string    
       x-ngsi:    
+        type: Property    
+    parkingSiteId:    
+      description: 'The unique ID of the parking site or parking lot corresponding to this observation.'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
         type: Property    
     permitActiveHours:    
       description: 'This attribute allows to capture situations when a permit is only needed at specific hours or days of week.  It is an structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. An empty JSON Object means always active. The syntax must be conformant with schema.org'    
@@ -460,12 +557,44 @@ OnStreetParking:
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
+    twoWheelerSlots:    
+      description: 'Two wheeler parking spot availability status in parking site corresponding to this observation.'    
+      properties:    
+        availableSpotNumber:    
+          description: 'Property. Model:''https://schema.org/Number''. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'    
+          type: number    
+        occupiedSpotNumber:    
+          description: 'Property. Model:''https://schema.org/Number''. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'    
+          type: number    
+        totalSpotNumber:    
+          description: 'Property. Model:''https://schema.org/Number''. The total number of spots offered by the parking site corresponding to this observation.'    
+          type: number    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
     type:    
       description: 'Entity type. It must be equal to OnStreetParking'    
       enum:    
         - OnStreetParking    
       type: string    
       x-ngsi:    
+        type: Property    
+    unclassifiedSlots:    
+      description: 'Unclassified vehicles or other vehicles parking spot availability status in parking site corresponding to this observation.'    
+      properties:    
+        availableSpotNumber:    
+          description: 'Property. Model:''https://schema.org/Number''. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'    
+          type: number    
+        occupiedSpotNumber:    
+          description: 'Property. Model:''https://schema.org/Number''. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'    
+          type: number    
+        totalSpotNumber:    
+          description: 'Property. Model:''https://schema.org/Number''. The total number of spots offered by the parking site corresponding to this observation.'    
+          type: number    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/Text    
         type: Property    
     usageScenario:    
       description: 'Type of charge(s) performed by the parking site. Enum:''carSharing, dropOff, kissAndRide, liftShare, loadingBay, overnightParking, parkAndRide, parkAndCycle, parkAndWalk, vehicleLift,'''    
@@ -489,6 +618,12 @@ OnStreetParking:
     - type    
     - location    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Parking/blob/master/OnStreetParking/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Parking/OnStreetParking/schema.json    
+  x-model-tags: IUDX    
+  x-version: 0.1.0    
 ```  
 </details>    
 ## Example payloads    
@@ -505,7 +640,7 @@ OnStreetParking:
   "permitActiveHours": {  
     "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"  
   },  
-  "maximumAllowedStay": "PT2H",  
+  "maximumParkingDuration": "PT2H",  
   "availableSpotNumber": 3,  
   "occupiedSpotNumber": 3,  
   "totalSpotNumber": 6,  
@@ -524,7 +659,37 @@ OnStreetParking:
     ]  
   },  
   "areaServed": "Zona Centro",  
-  "refParkingGroup": ["daoiz-velarde-1-5-main", "daoiz-velarde-1-5-disabled"]  
+  "refParkingGroup": ["daoiz-velarde-1-5-main", "daoiz-velarde-1-5-disabled"],  
+   "outOfServiceSlotNumber": 0,  
+  "parkingSiteId": "P2",  
+  "observationDateTime": "2021-03-11T15:51:02+05:30",  
+  "fourWheelerSlots": {  
+    "availableSpotNumber": 25,  
+    "totalSpotNumber": 25,  
+    "occupiedSpotNumber": 0  
+  },  
+  "unclassifiedSlots": {  
+    "availableSpotNumber": 0,  
+    "totalSpotNumber": 0,  
+    "occupiedSpotNumber": 0  
+  },  
+  "twoWheelerSlots": {  
+    "availableSpotNumber": 20,  
+    "totalSpotNumber": 20,  
+    "occupiedSpotNumber": 0  
+  },  
+  "municipalityInfo": {  
+    "district": "Bangalore Urban",  
+    "ulbName": "BMC",  
+    "cityId": "23",  
+    "wardId": "23",  
+    "stateName": "Karnataka",  
+    "cityName": "Bangalore",  
+    "zoneName": "South",  
+    "wardName": "Bangalore Urban",  
+    "zoneId": "2",  
+    "wardNum": 4  
+  }  
 }  
 ```  
 #### OnStreetParking NGSI-v2 normalized Example    
@@ -534,20 +699,25 @@ OnStreetParking:
   "id": "santander:daoiz_velarde_1_5",  
   "type": "OnStreetParking",  
   "category": {  
+    "type": "array",  
     "value": ["blueZone", "shortTerm", "forDisabled"]  
   },  
   "permitActiveHours": {  
+    "type": "array",  
     "value": {  
       "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"  
     }  
   },  
   "requiredPermit": {  
+    "type": "array",  
     "value": ["blueZonePermit", "disabledPermit"]  
   },  
   "allowedVehicleType": {  
+    "type": "Text",  
     "value": "car"  
   },  
   "chargeType": {  
+    "type": "array",  
     "value": ["temporaryFee"]  
   },  
   "refParkingGroup": {  
@@ -555,6 +725,7 @@ OnStreetParking:
     "value": ["daoiz-velarde-1-5-main", "daoiz-velarde-1-5-disabled"]  
   },  
   "totalSpotNumber": {  
+    "type": "Number",  
     "value": 6  
   },  
   "location": {  
@@ -573,9 +744,11 @@ OnStreetParking:
     }  
   },  
   "areaServed": {  
+    "type": "Text",  
     "value": "Zona Centro"  
   },  
   "maximumAllowedStay": {  
+    "type": "Text",  
     "value": "PT2H"  
   },  
   "dateModified": {  
@@ -583,9 +756,11 @@ OnStreetParking:
     "value": "2016-06-02T09:25:55.00Z"  
   },  
   "extraSpotNumber": {  
+    "type": "Number",  
     "value": 2  
   },  
   "availableSpotNumber": {  
+    "type": "Number",  
     "value": 3,  
     "metadata": {  
       "timestamp": {  
@@ -595,12 +770,56 @@ OnStreetParking:
     }  
   },  
   "occupiedSpotNumber": {  
+    "type": "Number",  
     "value": 3,  
     "metadata": {  
       "timestamp": {  
         "value": "2018-09-12T12:00:00",  
         "type": "DateTime"  
       }  
+    }  
+  },  
+   "observationDateTime": {  
+    "type": "DateTime",  
+    "value": "2021-03-11T15:51:02+05:30"  
+  },  
+  "fourWheelerSlots": {  
+    "type": "StructuredValue",  
+    "value": {  
+      "availableSpotNumber": 25,  
+      "totalSpotNumber": 25,  
+      "occupiedSpotNumber": 0  
+    }  
+  },  
+  "unclassifiedSlots": {  
+    "type": "StructuredValue",  
+    "value": {  
+      "availableSpotNumber": 0,  
+      "totalSpotNumber": 0,  
+      "occupiedSpotNumber": 0  
+    }  
+  },  
+  "twoWheelerSlots": {  
+    "type": "StructuredValue",  
+    "value": {  
+      "availableSpotNumber": 20,  
+      "totalSpotNumber": 20,  
+      "occupiedSpotNumber": 0  
+    }  
+  },  
+  "municipalityInfo": {  
+    "type": "StructuredValue",  
+    "value": {  
+      "district": "Bangalore Urban",  
+      "ulbName": "BMC",  
+      "cityId": "23",  
+      "wardId": "23",  
+      "stateName": "Karnataka",  
+      "cityName": "Bangalore",  
+      "zoneName": "South",  
+      "wardName": "Bangalore Urban",  
+      "zoneId": "2",  
+      "wardNum": 4  
     }  
   }  
 }  
@@ -609,116 +828,9 @@ OnStreetParking:
 Here is an example of a OnStreetParking in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:OnStreetParking:santander:daoiz_velarde_1_5",  
-  "type": "OnStreetParking",  
-  "modifiedAt": "2016-06-02T09:25:55.00Z",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "blueZone",  
-      "shortTerm",  
-      "forDisabled"  
-    ]  
-  },  
-  "permitActiveHours": {  
-    "type": "Property",  
-    "value": {  
-      "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"  
-    }  
-  },  
-  "requiredPermit": {  
-    "type": "Property",  
-    "value": [  
-      "blueZonePermit",  
-      "disabledPermit"  
-    ]  
-  },  
-  "allowedVehicleType": {  
-    "type": "Property",  
-    "value": "car"  
-  },  
-  "chargeType": {  
-    "type": "Property",  
-    "value": [  
-      "temporaryFee"  
-    ]  
-  },  
-  "refParkingGroup": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-main",  
-      "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled"  
-    ]  
-  },  
-  "totalSpotNumber": {  
-    "type": "Property",  
-    "value": 6  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Polygon",  
-      "coordinates": [  
-        [  
-          [  
-            -3.80356167695194,  
-            43.46296641666926  
-          ],  
-          [  
-            -3.803161973253841,  
-            43.46301091092682  
-          ],  
-          [  
-            -3.803147082548618,  
-            43.462879859445884  
-          ],  
-          [  
-            -3.803536474744068,  
-            43.462838666196674  
-          ],  
-          [  
-            -3.80356167695194,  
-            43.46296641666926  
-          ]  
-        ]  
-      ]  
-    }  
-  },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": "Zona Centro"  
-  },  
-  "maximumAllowedStay": {  
-    "type": "Property",  
-    "value": "PT2H"  
-  },  
-  "extraSpotNumber": {  
-    "type": "Property",  
-    "value": 2  
-  },  
-  "availableSpotNumber": {  
-    "type": "Property",  
-    "value": 3,  
-    "observedAt": "2018-09-12T12:00:00Z"  
-  },  
-  "occupiedSpotNumber": {  
-    "type": "Property",  
-    "value": 3,  
-    "observedAt": "2018-09-12T12:00:00Z"  
-  },  
   "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
-}  
-```  
-#### OnStreetParking NGSI-LD normalized Example    
-Here is an example of a OnStreetParking in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
-```json  
-{  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    "iudx:SmartParking"  
   ],  
   "allowedVehicleType": "car",  
   "areaServed": "Zona Centro",  
@@ -775,9 +887,142 @@ OnStreetParking:
     "disabledPermit"  
   ],  
   "totalSpotNumber": 6,  
-  "type": "OnStreetParking"  
+  "type": "OnStreetParking",  
+  "parkingSiteId": "P2",  
+  "observationDateTime": "2021-03-11T15:51:02+05:30",  
+  "fourWheelerSlots": {  
+    "availableSpotNumber": 25,  
+    "totalSpotNumber": 25,  
+    "occupiedSpotNumber": 0  
+  },  
+  "unclassifiedSlots": {  
+    "availableSpotNumber": 0,  
+    "totalSpotNumber": 0,  
+    "occupiedSpotNumber": 0  
+  },  
+  "twoWheelerSlots": {  
+    "availableSpotNumber": 20,  
+    "totalSpotNumber": 20,  
+    "occupiedSpotNumber": 0  
+  },  
+  "municipalityInfo": {  
+    "district": "Bangalore Urban",  
+    "ulbName": "BMC",  
+    "cityId": "23",  
+    "wardId": "23",  
+    "stateName": "Karnataka",  
+    "cityName": "Bangalore",  
+    "zoneName": "South",  
+    "wardName": "Bangalore Urban",  
+    "zoneId": "2",  
+    "wardNum": 4  
+  }  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+#### OnStreetParking NGSI-LD normalized Example    
+Here is an example of a OnStreetParking in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "urn:ngsi-ld:OnStreetParking:santander:daoiz_velarde_1_5",  
+  "type": "OnStreetParking",  
+  "category": {  
+    "type": "Property",  
+    "value": [  
+      "blueZone",  
+      "shortTerm",  
+      "forDisabled"  
+    ]  
+  },  
+  "permitActiveHours": {  
+    "type": "Property",  
+    "value": {  
+      "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"  
+    }  
+  },  
+  "requiredPermit": {  
+    "type": "Property",  
+    "value": [  
+      "blueZonePermit",  
+      "disabledPermit"  
+    ]  
+  },  
+  "allowedVehicleType": {  
+    "type": "Property",  
+    "value": "car"  
+  },  
+  "chargeType": {  
+    "type": "Property",  
+    "value": [  
+      "temporaryFee"  
+    ]  
+  },  
+  "refParkingGroup": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-main",  
+      "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled"  
+    ]  
+  },  
+  "totalSpotNumber": {  
+    "type": "Property",  
+    "value": 6  
+  },  
+  "location": {  
+    "type": "Geoproperty",  
+    "value": {  
+      "type": "Polygon",  
+      "coordinates": [  
+        [  
+          [  
+            -3.80356167695194,  
+            43.46296641666926  
+          ],  
+          [  
+            -3.803161973253841,  
+            43.46301091092682  
+          ],  
+          [  
+            -3.803147082548618,  
+            43.462879859445884  
+          ],  
+          [  
+            -3.803536474744068,  
+            43.462838666196674  
+          ],  
+          [  
+            -3.80356167695194,  
+            43.46296641666926  
+          ]  
+        ]  
+      ]  
+    }  
+  },  
+  "areaServed": {  
+    "type": "Property",  
+    "value": "Zona Centro"  
+  },  
+  "maximumAllowedStay": {  
+    "type": "Property",  
+    "value": "PT2H"  
+  },  
+  "extraSpotNumber": {  
+    "type": "Property",  
+    "value": 2  
+  },  
+  "availableSpotNumber": {  
+    "type": "Property",  
+    "value": 3,  
+    "observedAt": "2018-09-12T12:00:00Z"  
+  },  
+  "occupiedSpotNumber": {  
+    "type": "Property",  
+    "value": 3,  
+    "observedAt": "2018-09-12T12:00:00Z"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
