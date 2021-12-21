@@ -1,164 +1,163 @@
 {
-  "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",
-  "type": "OffStreetParking",
-  "modifiedAt": "2018-09-21T12:00:05Z",
-  "category": {
-    "type": "Property",
-    "value": [
-      "underground",
-      "public",
-      "feeCharged",
-      "mediumTerm",
-      "barrierAccess"
+    "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",
+    "type": "OffStreetParking",
+    "accessModified": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2018-09-21T12:00:00Z"
+        }
+    },
+    "address": {
+        "type": "Property",
+        "value": {
+            "addressLocality": "Porto",
+            "addressCountry": "Portugal",
+            "streetAddress": "Rua de Fernandes Tomas",
+            "type": "PostalAddress"
+        }
+    },
+    "allowedVehicleType": {
+        "type": "Property",
+        "value": [
+            "car"
+        ]
+    },
+    "availableSpotNumber": {
+        "type": "Property",
+        "value": 132,
+        "observedAt": "2018-09-21T12:00:00Z"
+    },
+    "category": {
+        "type": "Property",
+        "value": [
+            "underground",
+            "public",
+            "feeCharged",
+            "mediumTerm",
+            "barrierAccess"
+        ]
+    },
+    "chargeType": {
+        "type": "Property",
+        "value": [
+            "temporaryPrice"
+        ]
+    },
+    "description": {
+        "type": "Property",
+        "value": "Municipal car park located near the Trindade metro station and the Town Hall"
+    },
+    "extCategory": {
+        "type": "Property",
+        "value": [
+            "A"
+        ]
+    },
+    "fourWheelerSlots": {
+        "type": "Property",
+        "value": {
+            "availableSpotNumber": 25,
+            "totalSpotNumber": 25,
+            "occupiedSpotNumber": 0
+        }
+    },
+    "layout": {
+        "type": "Property",
+        "value": [
+            "multiLevel"
+        ]
+    },
+    "location": {
+        "type": "Geoproperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -8.60961198807,
+                41.150691773
+            ]
+        }
+    },
+    "maximumParkingDuration": {
+        "type": "Property",
+        "value": "PT8H"
+    },
+    "modifiedAt": "2018-09-21T12:00:05Z",
+    "municipalityInfo": {
+        "type": "Property",
+        "value": {
+            "district": "Bangalore Urban",
+            "ulbName": "BMC",
+            "cityId": "23",
+            "wardId": "23",
+            "stateName": "Karnataka",
+            "cityName": "Bangalore",
+            "zoneName": "South",
+            "wardName": "Bangalore Urban",
+            "zoneId": "2",
+            "wardNum": 4
+        }
+    },
+    "name": {
+        "type": "Property",
+        "value": "Parque de estacionamento Trindade"
+    },
+    "observationDateTime": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2021-03-11T15:51:02+05:30"
+        }
+    },
+    "occupancy": {
+        "type": "Property",
+        "value": 0.68
+    },
+    "occupancyModified": {
+        "type": "Property",
+        "value": "2018-09-21T12:00:00Z"
+    },
+    "occupiedSpotNumber": {
+        "type": "Property",
+        "value": 282
+    },
+    "parkingSiteID": {
+        "type": "Property",
+        "value": "P2"
+    },
+    "requiredPermit": {
+        "type": "Property",
+        "value": []
+    },
+    "totalSpotNumber": {
+        "type": "Property",
+        "value": 414
+    },
+    "twoWheelerSlots": {
+        "type": "Property",
+        "value": {
+            "availableSpotNumber": 20,
+            "totalSpotNumber": 20,
+            "occupiedSpotNumber": 0
+        }
+    },
+    "unclassifiedSlots": {
+        "type": "Property",
+        "value": {
+            "availableSpotNumber": 0,
+            "totalSpotNumber": 0,
+            "occupiedSpotNumber": 0
+        }
+    },
+    "vehicleEntranceCount": {
+        "type": "Property",
+        "value": 28
+    },
+    "vehicleExitCount": {
+        "type": "Property",
+        "value": 12
+    },
+    "@context": [
+        "iudx:SmartParking"
     ]
-  },
-  "extCategory": {
-    "type": "Property",
-    "value": [
-      "A"
-    ]
-  },
-  "layout": {
-    "type": "Property",
-    "value": [
-      "multiLevel"
-    ]
-  },
-  "name": {
-    "type": "Property",
-    "value": "Parque de estacionamento Trindade"
-  },
-  "requiredPermit": {
-    "type": "Property",
-    "value": []
-  },
-  "allowedVehicleType": {
-    "type": "Property",
-    "value": [
-      "car"
-    ]
-  },
-  "availableSpotNumber": {
-    "type": "Property",
-    "value": 132,
-    "observedAt": "2018-09-21T12:00:00Z"
-  },
-  "totalSpotNumber": {
-    "type": "Property",
-    "value": 414
-  },
-  "occupiedSpotNumber": {
-    "type": "Property",
-    "value": 282
-  },
-  "occupancyModified": {
-    "type": "Property",
-    "value": "2018-09-21T12:00:00Z"
-  },
-  "occupancy": {
-    "type": "Property",
-    "value": 0.68
-  },
-  "location": {
-    "type": "Geoproperty",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        -8.60961198807,
-        41.150691773
-      ]
-    }
-  },
-  "chargeType": {
-    "type": "Property",
-    "value": [
-      "temporaryPrice"
-    ]
-  },
-  "address": {
-    "type": "Property",
-    "value": {
-      "addressLocality": "Porto",
-      "addressCountry": "Portugal",
-      "streetAddress": "Rua de Fernandes Tomas",
-      "type": "PostalAddress"
-    }
-  },
-  "maximumParkingDuration": {
-    "type": "Property",
-    "value": "PT8H"
-  },
-  "description": {
-    "type": "Property",
-    "value": "Municipal car park located near the Trindade metro station and the Town Hall"
-  },
-  "vehicleEntranceCount": {
-    "type": "Property",
-    "value": 28
-  },
-  "vehicleExitCount": {
-    "type": "Property",
-    "value": 12
-  },
-  "accessModified": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2018-09-21T12:00:00Z"
-    }
-  },
-  "parkingSiteID": {
-    "type": "Property",
-    "value": "P2"
-  },
-  "observationDateTime": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2021-03-11T15:51:02+05:30"
-    }
-  },
-  "fourWheelerSlots": {
-    "type": "Property",
-    "value": {
-      "availableSpotNumber": 25,
-      "totalSpotNumber": 25,
-      "occupiedSpotNumber": 0
-    }
-  },
-  "unclassifiedSlots": {
-    "type": "Property",
-    "value": {
-      "availableSpotNumber": 0,
-      "totalSpotNumber": 0,
-      "occupiedSpotNumber": 0
-    }
-  },
-  "twoWheelerSlots": {
-    "type": "Property",
-    "value": {
-      "availableSpotNumber": 20,
-      "totalSpotNumber": 20,
-      "occupiedSpotNumber": 0
-    }
-  },
-  "municipalityInfo": {
-    "type": "Property",
-    "value": {
-      "district": "Bangalore Urban",
-      "ulbName": "BMC",
-      "cityId": "23",
-      "wardId": "23",
-      "stateName": "Karnataka",
-      "cityName": "Bangalore",
-      "zoneName": "South",
-      "wardName": "Bangalore Urban",
-      "zoneId": "2",
-      "wardNum": 4
-    }
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "iudx:SmartParking"
-  ]
 }
