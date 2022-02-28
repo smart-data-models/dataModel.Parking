@@ -57,7 +57,9 @@
     },
     "allowedVehicleType": {
       "type": "Property",
-      "value": "car"
+      "value": [
+        "car"
+      ]
     },
     "chargeType": {
       "type": "Property",

@@ -1,91 +1,93 @@
 {
-    "id": "urn:ngsi-ld:OnStreetParking:santander:daoiz_velarde_1_5",
-    "type": "OnStreetParking",
-    "allowedVehicleType": "car",
-    "areaServed": "Zona Centro",
-    "availableSpotNumber": 3,
-    "category": [
-        "blueZone",
-        "shortTerm",
-        "forDisabled"
-    ],
-    "chargeType": [
-        "temporaryFee"
-    ],
-    "extraSpotNumber": 2,
-    "fourWheelerSlots": {
-        "availableSpotNumber": 25,
-        "totalSpotNumber": 25,
-        "occupiedSpotNumber": 0
-    },
-    "location": {
-        "coordinates": [
-            [
-                [
-                    -3.80356167695194,
-                    43.46296641666926
-                ],
-                [
-                    -3.803161973253841,
-                    43.46301091092682
-                ],
-                [
-                    -3.803147082548618,
-                    43.462879859445884
-                ],
-                [
-                    -3.803536474744068,
-                    43.462838666196674
-                ],
-                [
-                    -3.80356167695194,
-                    43.46296641666926
-                ]
-            ]
+  "id": "urn:ngsi-ld:OnStreetParking:santander:daoiz_velarde_1_5",
+  "type": "OnStreetParking",
+  "allowedVehicleType": [
+    "car"
+  ],
+  "areaServed": "Zona Centro",
+  "availableSpotNumber": 3,
+  "category": [
+    "blueZone",
+    "shortTerm",
+    "forDisabled"
+  ],
+  "chargeType": [
+    "temporaryFee"
+  ],
+  "extraSpotNumber": 2,
+  "fourWheelerSlots": {
+    "availableSpotNumber": 25,
+    "totalSpotNumber": 25,
+    "occupiedSpotNumber": 0
+  },
+  "location": {
+    "coordinates": [
+      [
+        [
+          -3.80356167695194,
+          43.46296641666926
         ],
-        "type": "Polygon"
-    },
-    "maximumAllowedStay": "PT2H",
-    "modifiedAt": "2016-06-02T09:25:55.00Z",
-    "municipalityInfo": {
-        "district": "Bangalore Urban",
-        "ulbName": "BMC",
-        "cityId": "23",
-        "wardId": "23",
-        "stateName": "Karnataka",
-        "cityName": "Bangalore",
-        "zoneName": "South",
-        "wardName": "Bangalore Urban",
-        "zoneId": "2",
-        "wardNum": 4
-    },
-    "observationDateTime": "2021-03-11T15:51:02+05:30",
-    "occupiedSpotNumber": 3,
-    "parkingSiteId": "P2",
-    "permitActiveHours": {
-        "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"
-    },
-    "refParkingGroup": [
-        "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-main",
-        "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled"
+        [
+          -3.803161973253841,
+          43.46301091092682
+        ],
+        [
+          -3.803147082548618,
+          43.462879859445884
+        ],
+        [
+          -3.803536474744068,
+          43.462838666196674
+        ],
+        [
+          -3.80356167695194,
+          43.46296641666926
+        ]
+      ]
     ],
-    "requiredPermit": [
-        "blueZonePermit",
-        "disabledPermit"
-    ],
-    "totalSpotNumber": 6,
-    "twoWheelerSlots": {
-        "availableSpotNumber": 20,
-        "totalSpotNumber": 20,
-        "occupiedSpotNumber": 0
-    },
-    "unclassifiedSlots": {
-        "availableSpotNumber": 0,
-        "totalSpotNumber": 0,
-        "occupiedSpotNumber": 0
-    },
-    "@context": [
-        "iudx:SmartParking",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"
-    ]
+    "type": "Polygon"
+  },
+  "maximumAllowedStay": "PT2H",
+  "modifiedAt": "2016-06-02T09:25:55.00Z",
+  "municipalityInfo": {
+    "district": "Bangalore Urban",
+    "ulbName": "BMC",
+    "cityId": "23",
+    "wardId": "23",
+    "stateName": "Karnataka",
+    "cityName": "Bangalore",
+    "zoneName": "South",
+    "wardName": "Bangalore Urban",
+    "zoneId": "2",
+    "wardNum": 4
+  },
+  "observationDateTime": "2021-03-11T15:51:02+05:30",
+  "occupiedSpotNumber": 3,
+  "parkingSiteId": "P2",
+  "permitActiveHours": {
+    "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"
+  },
+  "refParkingGroup": [
+    "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-main",
+    "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled"
+  ],
+  "requiredPermit": [
+    "blueZonePermit",
+    "disabledPermit"
+  ],
+  "totalSpotNumber": 6,
+  "twoWheelerSlots": {
+    "availableSpotNumber": 20,
+    "totalSpotNumber": 20,
+    "occupiedSpotNumber": 0
+  },
+  "unclassifiedSlots": {
+    "availableSpotNumber": 0,
+    "totalSpotNumber": 0,
+    "occupiedSpotNumber": 0
+  },
+  "@context": [
+    "iudx:SmartParking",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"
+  ]
 }
