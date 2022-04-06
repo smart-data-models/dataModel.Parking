@@ -1,22 +1,49 @@
-エンティティパーキンググループ  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティパーキンググループ  
 ===============  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingGroup/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述です。**パーキンググループ **  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな説明**駐車場グループ  
+バージョン: 0.1.0  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `allowedVehicleType`: 許可される車両タイプ（駐車グループは1つの車両タイプしか許可しません）。Enum:'bike, bus, car, caravan, motorcycle, motorscooter, truck'.  - `alternateName`: このアイテムの別称  - `areBordersMarked`: 駐車場が（空欄などで）区切られているかどうかを示す。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する必要があります。  - `availableSpotNumber`: このグループで利用可能なスポットの数です。これは `totalSpotNumber` 以下の値でなければなりません。  - `averageSpotLength`: パーキングスポットの平均的な長さ。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する必要があります（SHOULD）。  - `averageSpotWidth`: パーキングスポットの平均的な幅。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する必要があります。  - `category`: 駐車場グループのカテゴリー。Enum:'adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'.  - `chargeType`: 駐車場で行われる料金の種類。Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'.  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `maximumAllowedHeight`: 車両の最大許容高さ。  アプリケーションは、このプロパティが定義されていない場合、親のレベルでこのプロパティの値を検査しなければならない（SHOULD）。  - `maximumAllowedWidth`: 車両の最大許容幅。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する必要があります（SHOULD）。  - `maximumParkingDuration`: 最大許容滞在時間は、ISO8601の期間としてエンコードされます。存在しない場合や空の文字列に等しい場合は、無期限を意味する。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査しなければならない（SHOULD）。  - `name`: このアイテムの名前です。  - `occupancyDetectionType`: 許可された値。DATEX II バージョン2.3 _OccupancyDetectionTypeEnum_からの以下のもの。Enum:'balancing, manual, modelBased, none, singleSpaceDetection'.またはその他のアプリケーション固有の  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `parkingMode`: 駐車場モードです。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査しなければならない（SHOULD）。許される値DATEX IIバージョン2.3の_ParkingModeEnum_列挙で定義されたもの。Enum:'echelonParking, parallelParking, perpendicularParking' (エシュロンパーキング、パラレルパーキング、パーペンディキュラーパーキング)  - `permitActiveHours`: この属性により、許可証が特定の時間帯や曜日にのみ必要とされる状況を把握することができます。これは構造化された値で、必要とされる各許可証ごとに、その許可証がいつ有効かを示すサブプロパティを含まなければなりません。パーミットに何も指定されていない場合は、常にパーミットが必要であることを意味します。空のオブジェクトは、常にアクティブであることを意味します。構文は、schema.org [opening hours specification](https://schema.org/openingHours)に準拠していなければならない。例えば、デイウィークにのみ有効なブルーゾーンは、'blueZonePermit': 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'とエンコードされます。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する必要があります（SHOULD）。  - `refParkingSite`: このゾーンが所属するパーキングサイトです。グループは孤児になることはできません。グループはサブグループを持つことはできない。OffStreetParkingまたはOnStreetParkingへの参照  - `refParkingSpot`: この駐車場グループに属する個々の駐車場。  - `requiredPermit`: この属性は、このサイトに駐車するためにどのような許可証が必要であるかを示す。意味としては、これらの許可証のうち少なくとも_1つが駐車に必要であるということです。許可証が複数の項目（and）で構成されている場合、それらは「,」で結合することができます。例えば、'residentPermit,disabledPermit'は、居住者と障害者の両方の許可証が同時に駐車に必要であることを示します。リストが空の場合、許可証は必要ありません。  - `reservationType`: 予約の条件。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査しなければならない（SHOULD）。Enum:'mandatory, notAvailable, optional, partly'.  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `totalSpotNumber`: このグループに関連するスポットの合計数。許容される値任意の正の整数値または0。DATEX 2 version 2.3 _ParkingRecord_クラスの_parkingNumberOfSpaces_属性。  - `type`: NGSI エンティティタイプ。ParkingGroupでなければなりません。    
-必須項目  
+- `address`: 郵送先住所  - `allowedVehicleType`: 許可された車両タイプ（駐車場グループは1つの車両タイプのみ許可する）。Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck' （自転車、バス、車、キャラバン、モータースクーター、トラック  - `alternateName`: この項目の別称  - `areBordersMarked`: 駐車場が区切られているかどうか（空白行などで）を示す。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する必要がある（SHOULD_）。  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `availableSpotNumber`: このグループ内で利用可能なスポットの数。totalSpotNumber` よりも小さいか等しくなければならない。  - `averageSpotLength`: 駐車場の平均的な長さ。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ 。  - `averageSpotWidth`: 駐車場の平均幅。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ 。  - `category`: 駐車場グループのカテゴリーです。Enum:'adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'.  - `chargeType`: 駐車場が行う料金の種類。Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other' （追加インターバル価格、年間支払い、最初のインターバル価格、フラット、無料、最小、最大、月間支払い、シーズンチケット、一時料金、一時価格、不明、その他  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへのGeojsonリファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `maximumAllowedHeight`: 車両の最大許容高さ。  このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ があります。  - `maximumAllowedWidth`: 車両の最大許容幅。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ があります。  - `maximumParkingDuration`: ISO8601の期間としてエンコードされた、滞在可能な最大値。存在しないか空文字列と等しい場合、無期限を意味する。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する必要があります（SHOULD_）。  - `name`: このアイテムの名称です。  - `occupancyDetectionType`: 許容される値。DATEX II version 2.3 _OcupancyDetectionTypeEnum_の以下の通り。Enum:'balancing, manual, modelBased, none, singleSpaceDetection'.または、その他のアプリケーション固有の  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `parkingMode`: 駐車モード(s)。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ があります。許可された値。DATEX II version 2.3 _ParkingModeEnum_ enumerationで定義されているもの。Enum:'echelonParking, parallelParking, perpendicularParking'.  - `permitActiveHours`: この属性により、特定の時間帯や曜日のみ許可が必要な状況を把握することができる。これは構造化された値で、必要な各許可ごとにサブプロパティを含む必要があり、許可がいつアクティブになるかを示す。許可証に何も指定されていない場合、許可証は常に必要であることを意味する。空のオブジェクトは、常にアクティブであることを意味する。構文は schema.org [opening hours specification](https://schema.org/openingHours) に準拠する必要があります。例えば、平日のみ活動するブルーゾーンは、'blueZonePermit': 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00' としてエンコードされます。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ ことになる。  - `refParkingSite`: このゾーンが属する駐車場サイト。グループを孤立させることはできません。グループにサブグループを持たせることはできない。OffStreetParkingまたはOnStreetParkingへの参照。  - `refParkingSpot`: この駐車場グループに属する個々の駐車場。  - `requiredPermit`: この属性は、このサイトでの駐車に必要な許可証の種類を捕捉する。意味としては、駐車するためには、これらの許可証のうち少なくとも1つが必要であるということです。許可証が複数の項目で構成されている場合（および）、それらは','で結合することができる。例えば、'residentPermit,disabledPermit' は、駐車するために、居住者と身体障害者の両方の許可証が同時に必要であることを意味します。リストが空の場合、許可証は必要ありません。  - `reservationType`: 予約の条件。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ です。Enum:'mandatory, notAvailable, optional, partly'.  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで指定する文字の列。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `totalSpotNumber`: このグループに属するスポットの総数。許容される値。正の整数値または 0。DATEX 2 version 2.3 _ParkingRecord_ クラスの _parkingNumberOfSpaces_ 属性。  - `type`: NGSI エンティティタイプ。これはParkingGroupでなければなりません。    
+必要なプロパティ  
 - `id`  - `refParkingSite`  - `type`    
-駐車場のグループです。粒度のレベルは様々です。駐車場の階数であったり、大きな駐車場に属する特定のゾーンであったり、特定の車種を駐車するためのスポットのグループであったり、特定の制限（障害者、居住者、...）の対象となるスポットであったり。簡略化のため、1つの駐車場グループにつき1種類の車両のみが許可されます。同様に、必要な許可証も1つのグループタイプにつき1つしか認められません。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+駐車場の一群のこと。粒度は様々です。駐車場の1階部分であったり、大きな駐車場の特定のゾーンであったり、特定の車種や特定の制限（障害者、住民など）のある駐車場のグループであったりします。簡単のために、1つの駐車場グループにつき1つの車種のみ許可されます。同様に、必要な許可証も1つのグループタイプにつき、1つだけ許可されます。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 ParkingGroup:    
   description: 'Parking Group '    
   properties:    
+    address:    
+      description: 'The mailing address'    
+      properties:    
+        addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          type: string    
+        addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          type: string    
+        addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          type: string    
+        postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          type: string    
+        postalCode:    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          type: string    
+        streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          type: string    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/address    
+        type: Property    
     allowedVehicleType:    
       description: 'Vehicle type allowed (a parking group only allows one vehicle type). Enum:''bicycle, bus, car, caravan, motorcycle, motorscooter, truck'' '    
       enum:    
@@ -41,6 +68,12 @@ ParkingGroup:
       type: boolean    
       x-ngsi:    
         model: https://schema.org/Boolean    
+        type: Property    
+    areaServed:    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
         type: Property    
     availableSpotNumber:    
       description: 'The number of spots available in this group. It must lower or equal than `totalSpotNumber`.'    
@@ -150,6 +183,159 @@ ParkingGroup:
       description: 'Unique identifier of the entity'    
       x-ngsi:    
         type: Property    
+    location:    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      oneOf:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON LineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiLineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
+          type: object    
+      x-ngsi:    
+        type: Geoproperty    
     maximumAllowedHeight:    
       description: 'Maximum allowed height for vehicles.  Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined.'    
       exclusiveMinimum: 0    
@@ -325,12 +511,12 @@ ParkingGroup:
   x-license-url: https://github.com/smart-data-models/dataModel.Parking/blob/master/ParkingGroup/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Parking/ParkingGroup/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.1.0    
 ```  
 </details>    
 ## ペイロードの例  
-#### ParkingGroup NGSI-v2 key-values の例。  
-ここでは、ParkingGroupをkey-valuesとしてJSON-LD形式で表現した例を紹介します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### ParkingGroup NGSI-v2 key-value の例。  
+ParkingGroupをJSON-LD形式でkey-valueにした例です。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "daoiz-velarde-1-5-disabled",  
@@ -358,8 +544,8 @@ ParkingGroup:
   "permitActiveHours": {"Monday":"null"}  
 }  
 ```  
-#### パーキンググループ NGSI-v2 正規化された例  
-ここでは、正規化されたJSON-LD形式のParkingGroupの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### ParkingGroup NGSI-v2 正規化例  
+以下は、ParkingGroupをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "daoiz-velarde-1-5-disabled",  
@@ -415,147 +601,146 @@ ParkingGroup:
   }  
 }  
 ```  
-#### ParkingGroup NGSI-LDのキーバリューの例。  
-ここでは、ParkingGroupをkey-valuesとしてJSON-LD形式で表現した例を紹介します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### ParkingGroup NGSI-LD キー値例  
+ParkingGroupをJSON-LD形式でkey-valueにした例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
-  "type": "ParkingGroup",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "onstreet",  
-      "adjacentSpaces",  
-      "onlyDisabled"  
-    ]  
-  },  
-  "refParkingSite": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5"  
-  },  
-  "permitActiveHours": {  
-    "type": "Property",  
-    "value": "null"  
-  },  
-  "requiredPermit": {  
-    "type": "Property",  
-    "value": "disabledPermit"  
-  },  
-  "allowedVehicleType": {  
-    "type": "Property",  
-    "value": "car"  
-  },  
-  "availableSpotNumber": {  
-    "type": "Property",  
-    "value": 1,  
-    "observedAt": "2018-09-12T12:00:00Z"  
-  },  
-  "totalSpotNumber": {  
-    "type": "Property",  
-    "value": 2  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Polygon",  
-      "coordinates": [  
-        [  
-          [  
-            -3.80356167695194,  
-            43.46296641666926  
-          ],  
-          [  
-            -3.803161973253841,  
-            43.46301091092682  
-          ],  
-          [  
-            -3.803147082548618,  
-            43.462879859445884  
-          ],  
-          [  
-            -3.803536474744068,  
-            43.462838666196674  
-          ],  
-          [  
-            -3.80356167695194,  
-            43.46296641666926  
-          ]  
+    "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
+    "type": "ParkingGroup",  
+    "allowedVehicleType": {  
+        "type": "Property",  
+        "value": "car"  
+    },  
+    "availableSpotNumber": {  
+        "type": "Property",  
+        "value": 1,  
+        "observedAt": "2018-09-12T12:00:00Z"  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "onstreet",  
+            "adjacentSpaces",  
+            "onlyDisabled"  
         ]  
-      ]  
-    }  
-  },  
-  "chargeType": {  
-    "type": "Property",  
-    "value": [  
-      "free"  
+    },  
+    "chargeType": {  
+        "type": "Property",  
+        "value": [  
+            "free"  
+        ]  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Two parking spots reserved for disabled people"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Polygon",  
+            "coordinates": [  
+                [  
+                    [  
+                        -3.80356167695194,  
+                        43.46296641666926  
+                    ],  
+                    [  
+                        -3.803161973253841,  
+                        43.46301091092682  
+                    ],  
+                    [  
+                        -3.803147082548618,  
+                        43.462879859445884  
+                    ],  
+                    [  
+                        -3.803536474744068,  
+                        43.462838666196674  
+                    ],  
+                    [  
+                        -3.80356167695194,  
+                        43.46296641666926  
+                    ]  
+                ]  
+            ]  
+        }  
+    },  
+    "permitActiveHours": {  
+        "type": "Property",  
+        "value": "null"  
+    },  
+    "refParkingSite": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5"  
+    },  
+    "requiredPermit": {  
+        "type": "Property",  
+        "value": "disabledPermit"  
+    },  
+    "totalSpotNumber": {  
+        "type": "Property",  
+        "value": 2  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
     ]  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Two parking spots reserved for disabled people"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-#### パーキンググループ NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のParkingGroupの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### 駐車場グループ NGSI-LD 正規化例  
+以下は、ParkingGroupをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "allowedVehicleType": "car",  
-  "availableSpotNumber": 1,  
-  "category": [  
-    "onStreet",  
-    "adjacentSpaces",  
-    "onlyDisabled"  
-  ],  
-  "chargeType": [  
-    "free"  
-  ],  
-  "description": "Two parking spots reserved for disabled people",  
-  "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
-  "location": {  
-    "coordinates": [  
-      [  
-        [  
-          -3.80356167695194,  
-          43.46296641666926  
-        ],  
-        [  
-          -3.803161973253841,  
-          43.46301091092682  
-        ],  
-        [  
-          -3.803147082548618,  
-          43.462879859445884  
-        ],  
-        [  
-          -3.803536474744068,  
-          43.462838666196674  
-        ],  
-        [  
-          -3.80356167695194,  
-          43.46296641666926  
-        ]  
-      ]  
+    "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
+    "type": "ParkingGroup",  
+    "allowedVehicleType": "car",  
+    "availableSpotNumber": 1,  
+    "category": [  
+        "onStreet",  
+        "adjacentSpaces",  
+        "onlyDisabled"  
     ],  
-    "type": "Polygon"  
-  },  
-  "permitActiveHours": {  
-    "Monday": "null"  
-  },  
-  "refParkingSite": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5",  
-  "requiredPermit": [  
-    "disabledPermit"  
-  ],  
-  "totalSpotNumber": 2,  
-  "type": "ParkingGroup"  
+    "chargeType": [  
+        "free"  
+    ],  
+    "description": "Two parking spots reserved for disabled people",  
+    "location": {  
+        "coordinates": [  
+            [  
+                [  
+                    -3.80356167695194,  
+                    43.46296641666926  
+                ],  
+                [  
+                    -3.803161973253841,  
+                    43.46301091092682  
+                ],  
+                [  
+                    -3.803147082548618,  
+                    43.462879859445884  
+                ],  
+                [  
+                    -3.803536474744068,  
+                    43.462838666196674  
+                ],  
+                [  
+                    -3.80356167695194,  
+                    43.46296641666926  
+                ]  
+            ]  
+        ],  
+        "type": "Polygon"  
+    },  
+    "permitActiveHours": {  
+        "Monday": "null"  
+    },  
+    "refParkingSite": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5",  
+    "requiredPermit": [  
+        "disabledPermit"  
+    ],  
+    "totalSpotNumber": 2,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
