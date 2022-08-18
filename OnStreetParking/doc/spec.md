@@ -1,8 +1,10 @@
-Entity: OnStreetParking  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: OnStreetParking  
 =======================  
 [Open License](https://github.com/smart-data-models//dataModel.Parking/blob/master/OnStreetParking/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **A site, open space zone, on street, (metered or not) with direct access from a road, intended to park vehicles.**  
+version: 0.1.0  
 
 ## List of properties  
 
@@ -58,7 +60,7 @@ OnStreetParking:
         model: https://schema.org/address    
         type: Property    
     allowedVehicleType:    
-      description: 'Vehicle type allowed (only one per on street parking). Enum:''agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, van, vehicleWithCatalyticConverter, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'''    
+      description: 'Vehicle type allowed. Enum:''agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, van, vehicleWithCatalyticConverter, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'''    
       items:    
         enum:    
           - agriculturalVehicle    
@@ -507,7 +509,7 @@ OnStreetParking:
         model: https://schema.org/Text    
         type: Property    
     permitActiveHours:    
-      description: 'This attribute allows to capture situations when a permit is only needed at specific hours or days of week.  It is an structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. An empty JSON Object means always active. The syntax must be conformant with schema.org'    
+      description: 'This attribute allows to capture situations when a permit is only needed at specific hours or days of week. It is a structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. An empty JSON Object means always active. The syntax must be conformant with schema.org'    
       type: object    
       x-ngsi:    
         type: Property    
@@ -619,11 +621,11 @@ OnStreetParking:
     - location    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Parking/blob/master/OnStreetParking/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Parking/OnStreetParking/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.1.0    
+  x-version: 0.1.1    
 ```  
 </details>    
 ## Example payloads    
@@ -633,10 +635,21 @@ OnStreetParking:
 {  
   "id": "santander:daoiz_velarde_1_5",  
   "type": "OnStreetParking",  
-  "category": ["blueZone", "shortTerm", "forDisabled"],  
-  "allowedVehicleType": "car",  
-  "chargeType": ["temporaryFee"],  
-  "requiredPermit": ["blueZonePermit", "disabledPermit"],  
+  "category": [  
+    "blueZone",  
+    "shortTerm",  
+    "forDisabled"  
+  ],  
+  "allowedVehicleType": [  
+    "car"  
+  ],  
+  "chargeType": [  
+    "temporaryFee"  
+  ],  
+  "requiredPermit": [  
+    "blueZonePermit",  
+    "disabledPermit"  
+  ],  
   "permitActiveHours": {  
     "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"  
   },  
@@ -650,17 +663,35 @@ OnStreetParking:
     "type": "Polygon",  
     "coordinates": [  
       [  
-        [-3.80356167695194, 43.46296641666926],  
-        [-3.803161973253841, 43.46301091092682],  
-        [-3.803147082548618, 43.462879859445884],  
-        [-3.803536474744068, 43.462838666196674],  
-        [-3.80356167695194, 43.46296641666926]  
+        [  
+          -3.80356167695194,  
+          43.46296641666926  
+        ],  
+        [  
+          -3.803161973253841,  
+          43.46301091092682  
+        ],  
+        [  
+          -3.803147082548618,  
+          43.462879859445884  
+        ],  
+        [  
+          -3.803536474744068,  
+          43.462838666196674  
+        ],  
+        [  
+          -3.80356167695194,  
+          43.46296641666926  
+        ]  
       ]  
     ]  
   },  
   "areaServed": "Zona Centro",  
-  "refParkingGroup": ["daoiz-velarde-1-5-main", "daoiz-velarde-1-5-disabled"],  
-   "outOfServiceSlotNumber": 0,  
+  "refParkingGroup": [  
+    "daoiz-velarde-1-5-main",  
+    "daoiz-velarde-1-5-disabled"  
+  ],  
+  "outOfServiceSlotNumber": 0,  
   "parkingSiteId": "P2",  
   "observationDateTime": "2021-03-11T15:51:02+05:30",  
   "fourWheelerSlots": {  
@@ -700,7 +731,11 @@ OnStreetParking:
   "type": "OnStreetParking",  
   "category": {  
     "type": "array",  
-    "value": ["blueZone", "shortTerm", "forDisabled"]  
+    "value": [  
+      "blueZone",  
+      "shortTerm",  
+      "forDisabled"  
+    ]  
   },  
   "permitActiveHours": {  
     "type": "array",  
@@ -710,19 +745,29 @@ OnStreetParking:
   },  
   "requiredPermit": {  
     "type": "array",  
-    "value": ["blueZonePermit", "disabledPermit"]  
+    "value": [  
+      "blueZonePermit",  
+      "disabledPermit"  
+    ]  
   },  
   "allowedVehicleType": {  
     "type": "Text",  
-    "value": "car"  
+    "value": [  
+      "car"  
+    ]  
   },  
   "chargeType": {  
     "type": "array",  
-    "value": ["temporaryFee"]  
+    "value": [  
+      "temporaryFee"  
+    ]  
   },  
   "refParkingGroup": {  
     "type": "Relationship",  
-    "value": ["daoiz-velarde-1-5-main", "daoiz-velarde-1-5-disabled"]  
+    "value": [  
+      "daoiz-velarde-1-5-main",  
+      "daoiz-velarde-1-5-disabled"  
+    ]  
   },  
   "totalSpotNumber": {  
     "type": "Number",  
@@ -734,11 +779,26 @@ OnStreetParking:
       "type": "Polygon",  
       "coordinates": [  
         [  
-          [-3.80356167695194, 43.46296641666926],  
-          [-3.803161973253841, 43.46301091092682],  
-          [-3.803147082548618, 43.462879859445884],  
-          [-3.803536474744068, 43.462838666196674],  
-          [-3.80356167695194, 43.46296641666926]  
+          [  
+            -3.80356167695194,  
+            43.46296641666926  
+          ],  
+          [  
+            -3.803161973253841,  
+            43.46301091092682  
+          ],  
+          [  
+            -3.803147082548618,  
+            43.462879859445884  
+          ],  
+          [  
+            -3.803536474744068,  
+            43.462838666196674  
+          ],  
+          [  
+            -3.80356167695194,  
+            43.46296641666926  
+          ]  
         ]  
       ]  
     }  
@@ -779,7 +839,7 @@ OnStreetParking:
       }  
     }  
   },  
-   "observationDateTime": {  
+  "observationDateTime": {  
     "type": "DateTime",  
     "value": "2021-03-11T15:51:02+05:30"  
   },  
@@ -828,14 +888,13 @@ OnStreetParking:
 Here is an example of a OnStreetParking in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "iudx:SmartParking"  
+  "id": "urn:ngsi-ld:OnStreetParking:santander:daoiz_velarde_1_5",  
+  "type": "OnStreetParking",  
+  "allowedVehicleType": [  
+    "car"  
   ],  
-  "allowedVehicleType": "car",  
   "areaServed": "Zona Centro",  
   "availableSpotNumber": 3,  
-  "occupiedSpotNumber": 3,  
   "category": [  
     "blueZone",  
     "shortTerm",  
@@ -845,7 +904,11 @@ OnStreetParking:
     "temporaryFee"  
   ],  
   "extraSpotNumber": 2,  
-  "id": "urn:ngsi-ld:OnStreetParking:santander:daoiz_velarde_1_5",  
+  "fourWheelerSlots": {  
+    "availableSpotNumber": 25,  
+    "totalSpotNumber": 25,  
+    "occupiedSpotNumber": 0  
+  },  
   "location": {  
     "coordinates": [  
       [  
@@ -875,6 +938,21 @@ OnStreetParking:
   },  
   "maximumAllowedStay": "PT2H",  
   "modifiedAt": "2016-06-02T09:25:55.00Z",  
+  "municipalityInfo": {  
+    "district": "Bangalore Urban",  
+    "ulbName": "BMC",  
+    "cityId": "23",  
+    "wardId": "23",  
+    "stateName": "Karnataka",  
+    "cityName": "Bangalore",  
+    "zoneName": "South",  
+    "wardName": "Bangalore Urban",  
+    "zoneId": "2",  
+    "wardNum": 4  
+  },  
+  "observationDateTime": "2021-03-11T15:51:02+05:30",  
+  "occupiedSpotNumber": 3,  
+  "parkingSiteId": "P2",  
   "permitActiveHours": {  
     "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"  
   },  
@@ -887,12 +965,9 @@ OnStreetParking:
     "disabledPermit"  
   ],  
   "totalSpotNumber": 6,  
-  "type": "OnStreetParking",  
-  "parkingSiteId": "P2",  
-  "observationDateTime": "2021-03-11T15:51:02+05:30",  
-  "fourWheelerSlots": {  
-    "availableSpotNumber": 25,  
-    "totalSpotNumber": 25,  
+  "twoWheelerSlots": {  
+    "availableSpotNumber": 20,  
+    "totalSpotNumber": 20,  
     "occupiedSpotNumber": 0  
   },  
   "unclassifiedSlots": {  
@@ -900,23 +975,10 @@ OnStreetParking:
     "totalSpotNumber": 0,  
     "occupiedSpotNumber": 0  
   },  
-  "twoWheelerSlots": {  
-    "availableSpotNumber": 20,  
-    "totalSpotNumber": 20,  
-    "occupiedSpotNumber": 0  
-  },  
-  "municipalityInfo": {  
-    "district": "Bangalore Urban",  
-    "ulbName": "BMC",  
-    "cityId": "23",  
-    "wardId": "23",  
-    "stateName": "Karnataka",  
-    "cityName": "Bangalore",  
-    "zoneName": "South",  
-    "wardName": "Bangalore Urban",  
-    "zoneId": "2",  
-    "wardNum": 4  
-  }  
+  "@context": [  
+    "iudx:SmartParking",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
+  ]  
 }  
 ```  
 #### OnStreetParking NGSI-LD normalized Example    
@@ -925,6 +987,21 @@ OnStreetParking:
 {  
   "id": "urn:ngsi-ld:OnStreetParking:santander:daoiz_velarde_1_5",  
   "type": "OnStreetParking",  
+  "allowedVehicleType": {  
+    "type": "Property",  
+    "value": [  
+      "car"  
+    ]  
+  },  
+  "areaServed": {  
+    "type": "Property",  
+    "value": "Zona Centro"  
+  },  
+  "availableSpotNumber": {  
+    "type": "Property",  
+    "value": 3,  
+    "observedAt": "2018-09-12T12:00:00Z"  
+  },  
   "category": {  
     "type": "Property",  
     "value": [  
@@ -933,39 +1010,15 @@ OnStreetParking:
       "forDisabled"  
     ]  
   },  
-  "permitActiveHours": {  
-    "type": "Property",  
-    "value": {  
-      "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"  
-    }  
-  },  
-  "requiredPermit": {  
-    "type": "Property",  
-    "value": [  
-      "blueZonePermit",  
-      "disabledPermit"  
-    ]  
-  },  
-  "allowedVehicleType": {  
-    "type": "Property",  
-    "value": "car"  
-  },  
   "chargeType": {  
     "type": "Property",  
     "value": [  
       "temporaryFee"  
     ]  
   },  
-  "refParkingGroup": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-main",  
-      "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled"  
-    ]  
-  },  
-  "totalSpotNumber": {  
+  "extraSpotNumber": {  
     "type": "Property",  
-    "value": 6  
+    "value": 2  
   },  
   "location": {  
     "type": "Geoproperty",  
@@ -997,30 +1050,40 @@ OnStreetParking:
       ]  
     }  
   },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": "Zona Centro"  
-  },  
   "maximumAllowedStay": {  
     "type": "Property",  
     "value": "PT2H"  
-  },  
-  "extraSpotNumber": {  
-    "type": "Property",  
-    "value": 2  
-  },  
-  "availableSpotNumber": {  
-    "type": "Property",  
-    "value": 3,  
-    "observedAt": "2018-09-12T12:00:00Z"  
   },  
   "occupiedSpotNumber": {  
     "type": "Property",  
     "value": 3,  
     "observedAt": "2018-09-12T12:00:00Z"  
   },  
+  "permitActiveHours": {  
+    "type": "Property",  
+    "value": {  
+      "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"  
+    }  
+  },  
+  "refParkingGroup": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-main",  
+      "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled"  
+    ]  
+  },  
+  "requiredPermit": {  
+    "type": "Property",  
+    "value": [  
+      "blueZonePermit",  
+      "disabledPermit"  
+    ]  
+  },  
+  "totalSpotNumber": {  
+    "type": "Property",  
+    "value": 6  
+  },  
   "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
 }  
