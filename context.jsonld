@@ -51,7 +51,7 @@
         "occupancyDetectionType": "https://smartdatamodels.org/dataModel.Parking/occupancyDetectionType",
         "occupancyModified": "https://smartdatamodels.org/dataModel.Parking/occupancyModified",
         "occupiedSpotNumber": "https://smartdatamodels.org/dataModel.Parking/occupiedSpotNumber",
-        "openingHours": "https://smartdatamodels.org/dataModel.Parking/openingHours",
+        "openingHours": "https://smartdatamodels.org/openingHours",
         "outOfServiceSlotNumber": "https://smartdatamodels.org/dataModel.Parking/outOfServiceSlotNumber",
         "owner": "https://smartdatamodels.org/owner",
         "parkingMode": "https://smartdatamodels.org/dataModel.Parking/parkingMode",

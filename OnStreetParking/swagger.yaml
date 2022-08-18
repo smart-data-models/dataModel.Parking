@@ -1,5 +1,5 @@
 ---
-# Copyleft (c) 2021 Contributors to Smart Data Models initiative
+# Copyleft (c) 2022 Contributors to Smart Data Models initiative
 # 
 
 
@@ -11,7 +11,7 @@ info:
   description:  |
     A site, open space zone, on street, (metered or not) with direct access from a road, intended to park vehicles.
   title: OnStreetParking
-  version: "0.1.0"
+  version: "0.1.1"
 openapi: "3.0.0"
 
 paths: 

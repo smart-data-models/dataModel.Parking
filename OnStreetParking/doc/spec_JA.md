@@ -1,15 +1,17 @@
-エンティティオンストリートパーキング  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティオンストリートパーキング  
 ==================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Parking/blob/master/OnStreetParking/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 グローバルな説明。車を駐車するために意図される道路からの直接アクセスで、（メーターまたはない）、路上で**サイト、オープンスペースのゾーン、**。  
+バージョン: 0.1.0  
 
 ## プロパティ一覧  
 
-- `acceptedPaymentMethod`: 駐車場が行う料金の種類。Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'（前払い）。  - `address`: 郵送先住所  - `allowedVehicleType`: 許可された車種（路上駐車1台につき1台のみ）。列挙する。'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter.All rights reserved.All Rights Reserved,タンカー、3輪車、トレーラー、路面電車、2輪車、バン、触媒コンバーター付き車両、触媒コンバーターなし車両、キャラバン付き車両、トレーラー付き車両、偶数番号登録プレート付き、奇数番号登録プレート付き、その他'  - `alternateName`: この項目の別称  - `areBordersMarked`: 駐車場の区切り（空白線など）の有無を示す。  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `availableSpotNumber`: 身体障害者用、長期駐車者用などの予約スペースを含む、全世界の利用可能なスポットの数。駐車場の境界線が明確でない場所では、推定が困難な場合があります。  - `averageSpotLength`: 駐車場の平均的な長さ  - `averageSpotWidth`: 駐車場の平均幅  - `category`: 路上駐車のカテゴリー。Enum:'blueZone, feeCharged, forDisabled, forElectricalCharging, forLoadUnload, forResidents, free, greenZone, mediumTerm, onlyWithPermit, shortTerm, taxiStop' （ブルーゾーン、有料、障害者用、電気料金用、荷下ろし用、居住者用、無料  - `chargeType`: 駐車場が行う料金の種類。Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other' （追加インターバル価格、年間支払い、最初のインターバル価格、フラット、無料、最小、最大、月間支払い、シーズンチケット、一時料金、一時価格、不明、その他  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `extraSpotNumber`: 余分なスポットの数、つまり無料です。余分なスポットとは、特別な目的のために予約されたスポットで、通常は許可証が必要です。許可証の詳細は駐車場グループレベル（`ParkingGroup`タイプのエンティティ）で見つけることができる。この値は、特別な駐車条件に充てられたすべてのグループのフリースポットを集約したものでなければならない。許可された値。0を含む正の整数。 `extraSpotNumber`と `availableSpotNumber`を足した値は、 `totalSpotNumber`以下である必要がある。  - `fourWheelerSlots`: この観測に対応する駐車場の四輪車駐車場の空き状況。  - `id`: エンティティの一意な識別子  - `layout`: 駐車場のレイアウトの一般的な分類  - `location`: 項目へのGeojson参照。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `maximumParkingDuration`: ISO8601の期間としてエンコードされた、サイトでの最大許容滞在時間。空の値は、無期限を示します。  - `municipalityInfo`: この観測に対応する自治体情報。  - `name`: このアイテムの名称です。  - `observationDateTime`: 最後に報告された観測時刻。  - `occupancyDetectionType`: 入居者検知の方法。Enum:'balancing, manual, modelBased, none, singleSpaceDetection'（バランス、マニュアル、モデルベース、なし、シングルスペース検出）。以下、DATEX II バージョン 2.3 _OccupancyDetectionTypeEnum_ より。  - `occupancyModified`: 最後に駐車場の占有率が変更された日  - `occupiedSpotNumber`: この観測に対応するスマートパーキングサイトで占有されている総駐車場数。これは totalSpotNumber よりも小さいか等しい正の数でなければならない。  - `outOfServiceSlotNumber`: この観測に対応する自転車ラック/自転車ドッキングステーションまたは駐車場のうち、故障していて自転車を借りたり停めたりすることができないものの数。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `parkingMode`: 駐車モード（複数可）。Enum:'echelonParking, parallelParking, perpendicularParking'.  - `parkingSiteId`: この観測に対応する駐車場サイトまたは駐車場の固有 ID。  - `permitActiveHours`: この属性により、特定の時間帯や曜日のみ許可が必要な状況を把握することができる。  これは構造化された値で、必要な各許可ごとに、その許可がいつ有効かを示すサブプロパティを含む必要があります。許可証に何も指定しない場合、許可証は常に必要であることを意味する。空のJSONオブジェクトは、常にアクティブであることを意味する。構文は、schema.org に準拠する必要があります。  - `refParkingGroup`: この路上駐車ゾーンに属する駐車グループ（もしあれば）への言及。  - `refParkingSpot`: この路面駐車場に属する個別駐車場。  - `requiredPermit`: この属性は、このサイトでの駐車に必要な許可証の種類を捕捉する。意味としては、駐車するためには、これらの許可証のうち少なくとも1つが必要であるということです。許可証が複数の項目で構成されている場合（および）、それらは','で結合することができる。例えば、'residentPermit,disabledPermit' は、駐車するために、居住者と身体障害者の両方の許可証が同時に必要であることを意味します。リストが空の場合、許可証は必要ありません。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで指定する文字の列。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `totalSpotNumber`: この駐車場が提供するスポットの総数。この数は、駐車場が線によって明確に示されていない場合、取得が困難なことがある。規範的な参考文献。DATEX 2 バージョン 2.3 の _ParkingRecord_ クラスの _parkingNumberOfSpaces_ 属性。  - `twoWheelerSlots`: この観測に対応する駐車場の二輪車駐車場の空き状況。  - `type`: エンティティタイプ。OnStreetParkingと同じでなければならない。  - `unclassifiedSlots`: この観測に対応する駐車場での未分類車やその他の車の駐車場の空き状況。  - `usageScenario`: 駐車場が行う料金の種類。Enum:'carSharing, dropOff, kissAndRide, liftShare, loadingBay, overnightParking, parkAndRide, parkAndCycle, parkAndWalk, vehicleLift,' （カーシェアリング、ドロップオフ、キスアンドライド、リフトシェア、ローディングベイ、オーバーナイトパーキング、パークアンドライド、パークアンドサイクル、パークアンドウォーク、車両リフト    
+- `acceptedPaymentMethod`: 駐車場が行う料金の種類。Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'（前払い、後払い）。  - `address`: 郵送先住所  - `allowedVehicleType`: 許可された車種（路上駐車につき1台のみ）。Enum。'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter.All Rights Reserved,タンカー、3輪車、トレーラー、路面電車、2輪車、バン、触媒コンバーター付き車両、触媒コンバーターなし車両、キャラバン付き車両、トレーラー付き車両、偶数番号登録プレート付き、奇数番号登録プレート付き、その他'  - `alternateName`: この項目の別称  - `areBordersMarked`: 駐車場の区切り（空白線など）の有無を示す。  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `availableSpotNumber`: 身体障害者用、長期駐車者用などの予約スペースを含む、全世界で利用可能なスポットの数です。駐車場の境界線が明確でない場所では、推定が困難な場合があります。  - `averageSpotLength`: 駐車場の平均的な長さ  - `averageSpotWidth`: 駐車場の平均幅  - `category`: 路上駐車のカテゴリー。Enum:'blueZone, feeCharged, forDisabled, forElectricalCharging, forLoadUnload, forResidents, free, greenZone, mediumTerm, onlyWithPermit, shortTerm, taxiStop'.  - `chargeType`: 駐車場によって実行される料金のタイプ（複数可）。Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'.  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `extraSpotNumber`: 利用可能なエクストラスポットの数、つまり無料。余分なスポットは特別な目的のために予約されたもので、通常は許可証が必要です。許可証の詳細は駐車場グループレベル（`ParkingGroup`タイプのエンティティ）で見つけることができる。この値は、特別な駐車条件に充てられたすべてのグループのフリースポットを集約したものでなければならない。許可された値。0を含む正の整数。 `extraSpotNumber`と `availableSpotNumber`を足した値は、 `totalSpotNumber`以下である必要がある。  - `fourWheelerSlots`: この観測に対応する駐車場の四輪車駐車場の空き状況。  - `id`: エンティティの一意な識別子  - `layout`: 駐車場のレイアウトの一般的な分類  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `maximumParkingDuration`: ISO8601の期間としてエンコードされた、サイトでの最大許容滞在時間。空の値は、無期限を示します。  - `municipalityInfo`: この観測に対応する市町村情報。  - `name`: このアイテムの名称です。  - `observationDateTime`: 最後に報告された観測時刻。  - `occupancyDetectionType`: 占有検知方法（複数可）。Enum:'balancing, manual, modelBased, none, singleSpaceDetection'.以下、DATEX II バージョン 2.3 _OccupancyDetectionTypeEnum_ より。  - `occupancyModified`: 最後に駐車場の占有率が変更された日  - `occupiedSpotNumber`: この観測に対応するスマートパーキングサイトで占有されている総パーキングスポットの数。これは totalSpotNumber よりも小さいか等しい正の数でなければならない。  - `outOfServiceSlotNumber`: この観測に対応する自転車ラック/自転車ドッキングステーションまたは駐車場のうち、故障していて自転車を借りたり停めたりすることができないものの数。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `parkingMode`: 駐車モード（複数可）。Enum:'echelonParking, parallelParking, perpendicularParking'.  - `parkingSiteId`: この観測に対応する駐車場サイトまたは駐車場の固有 ID。  - `permitActiveHours`: この属性は、特定の時間帯や曜日のみ許可が必要な状況を把握することができる。  これは構造化された値で、必要な各許可ごとにサブプロパティを含む必要があり、許可がいつアクティブになるかを示す。許可証に何も指定されていない場合、許可証は常に必要であることを意味します。空のJSONオブジェクトは、常にアクティブであることを意味する。構文は、schema.org に準拠する必要があります。  - `refParkingGroup`: この路上駐車ゾーンに属する駐車グループ（もしあれば）への言及。  - `refParkingSpot`: この路面駐車場に属する個別駐車場。  - `requiredPermit`: この属性は、このサイトでの駐車に必要な許可証の種類を捕捉する。意味的には、これらの許可証の少なくとも1つが駐車に必要である。許可証が複数の項目で構成されている場合（および）、それらは','で結合することができます。例えば、'residentPermit,disabledPermit' は、駐車するために、居住者と身体障害者の両方の許可証が同時に必要であることを意味します。リストが空の場合、許可証は必要ありません。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `totalSpotNumber`: この駐車場が提供しているスポットの総数です。この数は、駐車場が線によって明確に示されていない場合、取得が困難なことがある。規範的な参考文献。DATEX 2 バージョン 2.3 の _ParkingRecord_ クラスの _parkingNumberOfSpaces_ 属性。  - `twoWheelerSlots`: この観測に対応する駐車場の二輪車駐車場の空き状況。  - `type`: エンティティタイプ。OnStreetParkingと同じでなければならない。  - `unclassifiedSlots`: この観測に対応する駐車場での未分類車やその他の車の駐車場の空き状況。  - `usageScenario`: 駐車場が行う料金の種類。Enum:'carSharing, dropOff, kissAndRide, liftShare, loadingBay, overnightParking, parkAndRide, parkAndCycle, parkAndWalk, vehicleLift,' （駐車場料金の種類。    
 必要なプロパティ  
 - `id`  - `location`  - `type`    
-DATEX 2 バージョン 2.3 の用語では、_onStreetParking_ タイプの _UrbanParkingSite_ に対応する。DATEX IIの用語のデータ辞書は、[http://datexbrowser.tamtamresearch.com/](http://datexbrowser.tamtamresearch.com/)にあります。  
+DATEX 2 バージョン 2.3 の用語では、_onStreetParking_ タイプの _UrbanParkingSite_ に相当する。DATEX IIの用語のデータ辞書は、[http://datexbrowser.tamtamresearch.com/](http://datexbrowser.tamtamresearch.com/)にあります。  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -58,7 +60,7 @@ OnStreetParking:
         model: https://schema.org/address    
         type: Property    
     allowedVehicleType:    
-      description: 'Vehicle type allowed (only one per on street parking). Enum:''agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, van, vehicleWithCatalyticConverter, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'''    
+      description: 'Vehicle type allowed. Enum:''agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle, van, vehicleWithCatalyticConverter, vehicleWithoutCatalyticConverter, vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates, other'''    
       items:    
         enum:    
           - agriculturalVehicle    
@@ -507,7 +509,7 @@ OnStreetParking:
         model: https://schema.org/Text    
         type: Property    
     permitActiveHours:    
-      description: 'This attribute allows to capture situations when a permit is only needed at specific hours or days of week.  It is an structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. An empty JSON Object means always active. The syntax must be conformant with schema.org'    
+      description: 'This attribute allows to capture situations when a permit is only needed at specific hours or days of week. It is a structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. An empty JSON Object means always active. The syntax must be conformant with schema.org'    
       type: object    
       x-ngsi:    
         type: Property    
@@ -619,24 +621,35 @@ OnStreetParking:
     - location    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Parking/blob/master/OnStreetParking/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Parking/OnStreetParking/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.1.0    
+  x-version: 0.1.1    
 ```  
 </details>    
 ## ペイロードの例  
 #### OnStreetParking NGSI-v2 key-value の例。  
-OnStreetParkingをJSON-LD形式でkey-valueとした例です。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+OnStreetParkingをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "santander:daoiz_velarde_1_5",  
   "type": "OnStreetParking",  
-  "category": ["blueZone", "shortTerm", "forDisabled"],  
-  "allowedVehicleType": "car",  
-  "chargeType": ["temporaryFee"],  
-  "requiredPermit": ["blueZonePermit", "disabledPermit"],  
+  "category": [  
+    "blueZone",  
+    "shortTerm",  
+    "forDisabled"  
+  ],  
+  "allowedVehicleType": [  
+    "car"  
+  ],  
+  "chargeType": [  
+    "temporaryFee"  
+  ],  
+  "requiredPermit": [  
+    "blueZonePermit",  
+    "disabledPermit"  
+  ],  
   "permitActiveHours": {  
     "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"  
   },  
@@ -650,17 +663,35 @@ OnStreetParking:
     "type": "Polygon",  
     "coordinates": [  
       [  
-        [-3.80356167695194, 43.46296641666926],  
-        [-3.803161973253841, 43.46301091092682],  
-        [-3.803147082548618, 43.462879859445884],  
-        [-3.803536474744068, 43.462838666196674],  
-        [-3.80356167695194, 43.46296641666926]  
+        [  
+          -3.80356167695194,  
+          43.46296641666926  
+        ],  
+        [  
+          -3.803161973253841,  
+          43.46301091092682  
+        ],  
+        [  
+          -3.803147082548618,  
+          43.462879859445884  
+        ],  
+        [  
+          -3.803536474744068,  
+          43.462838666196674  
+        ],  
+        [  
+          -3.80356167695194,  
+          43.46296641666926  
+        ]  
       ]  
     ]  
   },  
   "areaServed": "Zona Centro",  
-  "refParkingGroup": ["daoiz-velarde-1-5-main", "daoiz-velarde-1-5-disabled"],  
-   "outOfServiceSlotNumber": 0,  
+  "refParkingGroup": [  
+    "daoiz-velarde-1-5-main",  
+    "daoiz-velarde-1-5-disabled"  
+  ],  
+  "outOfServiceSlotNumber": 0,  
   "parkingSiteId": "P2",  
   "observationDateTime": "2021-03-11T15:51:02+05:30",  
   "fourWheelerSlots": {  
@@ -700,7 +731,11 @@ OnStreetParking:
   "type": "OnStreetParking",  
   "category": {  
     "type": "array",  
-    "value": ["blueZone", "shortTerm", "forDisabled"]  
+    "value": [  
+      "blueZone",  
+      "shortTerm",  
+      "forDisabled"  
+    ]  
   },  
   "permitActiveHours": {  
     "type": "array",  
@@ -710,19 +745,29 @@ OnStreetParking:
   },  
   "requiredPermit": {  
     "type": "array",  
-    "value": ["blueZonePermit", "disabledPermit"]  
+    "value": [  
+      "blueZonePermit",  
+      "disabledPermit"  
+    ]  
   },  
   "allowedVehicleType": {  
     "type": "Text",  
-    "value": "car"  
+    "value": [  
+      "car"  
+    ]  
   },  
   "chargeType": {  
     "type": "array",  
-    "value": ["temporaryFee"]  
+    "value": [  
+      "temporaryFee"  
+    ]  
   },  
   "refParkingGroup": {  
     "type": "Relationship",  
-    "value": ["daoiz-velarde-1-5-main", "daoiz-velarde-1-5-disabled"]  
+    "value": [  
+      "daoiz-velarde-1-5-main",  
+      "daoiz-velarde-1-5-disabled"  
+    ]  
   },  
   "totalSpotNumber": {  
     "type": "Number",  
@@ -734,11 +779,26 @@ OnStreetParking:
       "type": "Polygon",  
       "coordinates": [  
         [  
-          [-3.80356167695194, 43.46296641666926],  
-          [-3.803161973253841, 43.46301091092682],  
-          [-3.803147082548618, 43.462879859445884],  
-          [-3.803536474744068, 43.462838666196674],  
-          [-3.80356167695194, 43.46296641666926]  
+          [  
+            -3.80356167695194,  
+            43.46296641666926  
+          ],  
+          [  
+            -3.803161973253841,  
+            43.46301091092682  
+          ],  
+          [  
+            -3.803147082548618,  
+            43.462879859445884  
+          ],  
+          [  
+            -3.803536474744068,  
+            43.462838666196674  
+          ],  
+          [  
+            -3.80356167695194,  
+            43.46296641666926  
+          ]  
         ]  
       ]  
     }  
@@ -779,7 +839,7 @@ OnStreetParking:
       }  
     }  
   },  
-   "observationDateTime": {  
+  "observationDateTime": {  
     "type": "DateTime",  
     "value": "2021-03-11T15:51:02+05:30"  
   },  
@@ -825,17 +885,16 @@ OnStreetParking:
 }  
 ```  
 #### OnStreetParking NGSI-LD キー値例  
-OnStreetParkingをJSON-LD形式でkey-valueとした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+OnStreetParkingをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "iudx:SmartParking"  
+  "id": "urn:ngsi-ld:OnStreetParking:santander:daoiz_velarde_1_5",  
+  "type": "OnStreetParking",  
+  "allowedVehicleType": [  
+    "car"  
   ],  
-  "allowedVehicleType": "car",  
   "areaServed": "Zona Centro",  
   "availableSpotNumber": 3,  
-  "occupiedSpotNumber": 3,  
   "category": [  
     "blueZone",  
     "shortTerm",  
@@ -845,7 +904,11 @@ OnStreetParking:
     "temporaryFee"  
   ],  
   "extraSpotNumber": 2,  
-  "id": "urn:ngsi-ld:OnStreetParking:santander:daoiz_velarde_1_5",  
+  "fourWheelerSlots": {  
+    "availableSpotNumber": 25,  
+    "totalSpotNumber": 25,  
+    "occupiedSpotNumber": 0  
+  },  
   "location": {  
     "coordinates": [  
       [  
@@ -875,6 +938,21 @@ OnStreetParking:
   },  
   "maximumAllowedStay": "PT2H",  
   "modifiedAt": "2016-06-02T09:25:55.00Z",  
+  "municipalityInfo": {  
+    "district": "Bangalore Urban",  
+    "ulbName": "BMC",  
+    "cityId": "23",  
+    "wardId": "23",  
+    "stateName": "Karnataka",  
+    "cityName": "Bangalore",  
+    "zoneName": "South",  
+    "wardName": "Bangalore Urban",  
+    "zoneId": "2",  
+    "wardNum": 4  
+  },  
+  "observationDateTime": "2021-03-11T15:51:02+05:30",  
+  "occupiedSpotNumber": 3,  
+  "parkingSiteId": "P2",  
   "permitActiveHours": {  
     "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"  
   },  
@@ -887,12 +965,9 @@ OnStreetParking:
     "disabledPermit"  
   ],  
   "totalSpotNumber": 6,  
-  "type": "OnStreetParking",  
-  "parkingSiteId": "P2",  
-  "observationDateTime": "2021-03-11T15:51:02+05:30",  
-  "fourWheelerSlots": {  
-    "availableSpotNumber": 25,  
-    "totalSpotNumber": 25,  
+  "twoWheelerSlots": {  
+    "availableSpotNumber": 20,  
+    "totalSpotNumber": 20,  
     "occupiedSpotNumber": 0  
   },  
   "unclassifiedSlots": {  
@@ -900,31 +975,33 @@ OnStreetParking:
     "totalSpotNumber": 0,  
     "occupiedSpotNumber": 0  
   },  
-  "twoWheelerSlots": {  
-    "availableSpotNumber": 20,  
-    "totalSpotNumber": 20,  
-    "occupiedSpotNumber": 0  
-  },  
-  "municipalityInfo": {  
-    "district": "Bangalore Urban",  
-    "ulbName": "BMC",  
-    "cityId": "23",  
-    "wardId": "23",  
-    "stateName": "Karnataka",  
-    "cityName": "Bangalore",  
-    "zoneName": "South",  
-    "wardName": "Bangalore Urban",  
-    "zoneId": "2",  
-    "wardNum": 4  
-  }  
+  "@context": [  
+    "iudx:SmartParking",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
+  ]  
 }  
 ```  
 #### OnStreetParking NGSI-LD 正規化例  
-以下は、OnStreetParkingをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、OnStreetParkingを正規化したJSON-LD形式の例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:OnStreetParking:santander:daoiz_velarde_1_5",  
   "type": "OnStreetParking",  
+  "allowedVehicleType": {  
+    "type": "Property",  
+    "value": [  
+      "car"  
+    ]  
+  },  
+  "areaServed": {  
+    "type": "Property",  
+    "value": "Zona Centro"  
+  },  
+  "availableSpotNumber": {  
+    "type": "Property",  
+    "value": 3,  
+    "observedAt": "2018-09-12T12:00:00Z"  
+  },  
   "category": {  
     "type": "Property",  
     "value": [  
@@ -933,39 +1010,15 @@ OnStreetParking:
       "forDisabled"  
     ]  
   },  
-  "permitActiveHours": {  
-    "type": "Property",  
-    "value": {  
-      "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"  
-    }  
-  },  
-  "requiredPermit": {  
-    "type": "Property",  
-    "value": [  
-      "blueZonePermit",  
-      "disabledPermit"  
-    ]  
-  },  
-  "allowedVehicleType": {  
-    "type": "Property",  
-    "value": "car"  
-  },  
   "chargeType": {  
     "type": "Property",  
     "value": [  
       "temporaryFee"  
     ]  
   },  
-  "refParkingGroup": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-main",  
-      "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled"  
-    ]  
-  },  
-  "totalSpotNumber": {  
+  "extraSpotNumber": {  
     "type": "Property",  
-    "value": 6  
+    "value": 2  
   },  
   "location": {  
     "type": "Geoproperty",  
@@ -997,30 +1050,40 @@ OnStreetParking:
       ]  
     }  
   },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": "Zona Centro"  
-  },  
   "maximumAllowedStay": {  
     "type": "Property",  
     "value": "PT2H"  
-  },  
-  "extraSpotNumber": {  
-    "type": "Property",  
-    "value": 2  
-  },  
-  "availableSpotNumber": {  
-    "type": "Property",  
-    "value": 3,  
-    "observedAt": "2018-09-12T12:00:00Z"  
   },  
   "occupiedSpotNumber": {  
     "type": "Property",  
     "value": 3,  
     "observedAt": "2018-09-12T12:00:00Z"  
   },  
+  "permitActiveHours": {  
+    "type": "Property",  
+    "value": {  
+      "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"  
+    }  
+  },  
+  "refParkingGroup": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-main",  
+      "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled"  
+    ]  
+  },  
+  "requiredPermit": {  
+    "type": "Property",  
+    "value": [  
+      "blueZonePermit",  
+      "disabledPermit"  
+    ]  
+  },  
+  "totalSpotNumber": {  
+    "type": "Property",  
+    "value": 6  
+  },  
   "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
 }  
