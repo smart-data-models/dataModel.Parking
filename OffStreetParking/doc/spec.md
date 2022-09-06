@@ -1,8 +1,10 @@
-Entity: OffStreetParking  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: OffStreetParking  
 ========================  
 [Open License](https://github.com/smart-data-models//dataModel.Parking/blob/master/OffStreetParking/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **Off street parking**  
+version: 0.1.1  
 
 ## List of properties  
 
@@ -123,7 +125,6 @@ OffStreetParking:
     averageSpotLength:    
       description: 'The average length of parking spots.'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/length    
@@ -131,7 +132,6 @@ OffStreetParking:
         units: meters    
     averageSpotWidth:    
       description: 'The average width of parking spots.'    
-      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -518,7 +518,6 @@ OffStreetParking:
     maximumAllowedHeight:    
       description: 'Maximum allowed height for vehicles. If there are multiple zones, it will be the minimum height of all the zones.'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/heigth    
@@ -527,7 +526,6 @@ OffStreetParking:
     maximumAllowedWidth:    
       description: 'Maximum allowed width for vehicles. If there are multiple zones, it will be the minimum width of all the zones.'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/width    
@@ -947,11 +945,11 @@ OffStreetParking:
     - location    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Parking/blob/master/OffStreetParking/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.1.0    
+  x-version: 0.1.1    
 ```  
 </details>    
 ## Example payloads    
@@ -1199,252 +1197,251 @@ OffStreetParking:
 Here is an example of a OffStreetParking in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",  
-  "type": "OffStreetParking",  
-  "address": {  
-    "addressCountry": "Portugal",  
-    "addressLocality": "Porto",  
-    "streetAddress": "Rua de Fernandes Tom\u00e1s",  
-    "type": "PostalAddress"  
-  },  
-  "allowedVehicleType": [  
-    "car"  
-  ],  
-  "availableSpotNumber": 132,  
-  "occupiedSpotNumber": 282,  
-  "occupancyModified": "2018-09-21T12:00:00Z",  
-  "occupancy": 0.68,  
-  "category": [  
-    "underground",  
-    "public",  
-    "feeCharged",  
-    "mediumTerm",  
-    "barrierAccess"  
-  ],  
-  "chargeType": [  
-    "temporaryPrice"  
-  ],  
-  "description": "Municipal car park located near the Trindade metro station and the Town Hall",  
-  "layout": [  
-    "multiLevel"  
-  ],  
-  "location": {  
-    "coordinates": [  
-      -8.60961198807,  
-      41.150691773  
+    "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",  
+    "type": "OffStreetParking",  
+    "accessModified": "2018-09-21T12:00:00Z",  
+    "address": {  
+        "addressCountry": "Portugal",  
+        "addressLocality": "Porto",  
+        "streetAddress": "Rua de Fernandes Tom\u00e1s",  
+        "type": "PostalAddress"  
+    },  
+    "allowedVehicleType": [  
+        "car"  
     ],  
-    "type": "Point"  
-  },  
-  "maximumParkingDuration": "PT8H",  
-  "modifiedAt": "2018-09-21T12:00:05Z",  
-  "name": "Parque de estacionamento Trindade",  
-  "requiredPermit": [],  
-  "totalSpotNumber": 414,  
-  "vehicleEntranceCount": 28,  
-  "vehicleExitCount": 12,  
-  "accessModified": "2018-09-21T12:00:00Z",  
-  "outOfServiceSlotNumber": 0,  
-  "parkingSiteId": "P2",  
-  "observationDateTime": "2021-03-11T15:51:02+05:30",  
-  "fourWheelerSlots": {  
-    "availableSpotNumber": 25,  
-    "totalSpotNumber": 25,  
-    "occupiedSpotNumber": 0  
-  },  
-  "unclassifiedSlots": {  
-    "availableSpotNumber": 0,  
-    "totalSpotNumber": 0,  
-    "occupiedSpotNumber": 0  
-  },  
-  "twoWheelerSlots": {  
-    "availableSpotNumber": 20,  
-    "totalSpotNumber": 20,  
-    "occupiedSpotNumber": 0  
-  },  
-  "municipalityInfo": {  
-    "district": "Bangalore Urban",  
-    "ulbName": "BMC",  
-    "cityId": "23",  
-    "wardId": "23",  
-    "stateName": "Karnataka",  
-    "cityName": "Bangalore",  
-    "zoneName": "South",  
-    "wardName": "Bangalore Urban",  
-    "zoneId": "2",  
-    "wardNum": 4  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "iudx:SmartParking"  
-  ]  
+    "availableSpotNumber": 132,  
+    "category": [  
+        "underground",  
+        "public",  
+        "feeCharged",  
+        "mediumTerm",  
+        "barrierAccess"  
+    ],  
+    "chargeType": [  
+        "temporaryPrice"  
+    ],  
+    "description": "Municipal car park located near the Trindade metro station and the Town Hall",  
+    "fourWheelerSlots": {  
+        "availableSpotNumber": 25,  
+        "totalSpotNumber": 25,  
+        "occupiedSpotNumber": 0  
+    },  
+    "layout": [  
+        "multiLevel"  
+    ],  
+    "location": {  
+        "coordinates": [  
+            -8.60961198807,  
+            41.150691773  
+        ],  
+        "type": "Point"  
+    },  
+    "maximumParkingDuration": "PT8H",  
+    "modifiedAt": "2018-09-21T12:00:05Z",  
+    "municipalityInfo": {  
+        "district": "Bangalore Urban",  
+        "ulbName": "BMC",  
+        "cityId": "23",  
+        "wardId": "23",  
+        "stateName": "Karnataka",  
+        "cityName": "Bangalore",  
+        "zoneName": "South",  
+        "wardName": "Bangalore Urban",  
+        "zoneId": "2",  
+        "wardNum": 4  
+    },  
+    "name": "Parque de estacionamento Trindade",  
+    "observationDateTime": "2021-03-11T15:51:02+05:30",  
+    "occupancy": 0.68,  
+    "occupancyModified": "2018-09-21T12:00:00Z",  
+    "occupiedSpotNumber": 282,  
+    "outOfServiceSlotNumber": 0,  
+    "parkingSiteId": "P2",  
+    "requiredPermit": [],  
+    "totalSpotNumber": 414,  
+    "twoWheelerSlots": {  
+        "availableSpotNumber": 20,  
+        "totalSpotNumber": 20,  
+        "occupiedSpotNumber": 0  
+    },  
+    "unclassifiedSlots": {  
+        "availableSpotNumber": 0,  
+        "totalSpotNumber": 0,  
+        "occupiedSpotNumber": 0  
+    },  
+    "vehicleEntranceCount": 28,  
+    "vehicleExitCount": 12,  
+    "@context": [  
+        "iudx:SmartParking",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### OffStreetParking NGSI-LD normalized Example    
 Here is an example of a OffStreetParking in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",  
-  "type": "OffStreetParking",  
-  "modifiedAt": "2018-09-21T12:00:05Z",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "underground",  
-      "public",  
-      "feeCharged",  
-      "mediumTerm",  
-      "barrierAccess"  
+    "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",  
+    "type": "OffStreetParking",  
+    "accessModified": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2018-09-21T12:00:00Z"  
+        }  
+    },  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressLocality": "Porto",  
+            "addressCountry": "Portugal",  
+            "streetAddress": "Rua de Fernandes Tomas",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "allowedVehicleType": {  
+        "type": "Property",  
+        "value": [  
+            "car"  
+        ]  
+    },  
+    "availableSpotNumber": {  
+        "type": "Property",  
+        "value": 132,  
+        "observedAt": "2018-09-21T12:00:00Z"  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "underground",  
+            "public",  
+            "feeCharged",  
+            "mediumTerm",  
+            "barrierAccess"  
+        ]  
+    },  
+    "chargeType": {  
+        "type": "Property",  
+        "value": [  
+            "temporaryPrice"  
+        ]  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Municipal car park located near the Trindade metro station and the Town Hall"  
+    },  
+    "extCategory": {  
+        "type": "Property",  
+        "value": [  
+            "A"  
+        ]  
+    },  
+    "fourWheelerSlots": {  
+        "type": "Property",  
+        "value": {  
+            "availableSpotNumber": 25,  
+            "totalSpotNumber": 25,  
+            "occupiedSpotNumber": 0  
+        }  
+    },  
+    "layout": {  
+        "type": "Property",  
+        "value": [  
+            "multiLevel"  
+        ]  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -8.60961198807,  
+                41.150691773  
+            ]  
+        }  
+    },  
+    "maximumParkingDuration": {  
+        "type": "Property",  
+        "value": "PT8H"  
+    },  
+    "modifiedAt": "2018-09-21T12:00:05Z",  
+    "municipalityInfo": {  
+        "type": "Property",  
+        "value": {  
+            "district": "Bangalore Urban",  
+            "ulbName": "BMC",  
+            "cityId": "23",  
+            "wardId": "23",  
+            "stateName": "Karnataka",  
+            "cityName": "Bangalore",  
+            "zoneName": "South",  
+            "wardName": "Bangalore Urban",  
+            "zoneId": "2",  
+            "wardNum": 4  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Parque de estacionamento Trindade"  
+    },  
+    "observationDateTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-03-11T15:51:02+05:30"  
+        }  
+    },  
+    "occupancy": {  
+        "type": "Property",  
+        "value": 0.68  
+    },  
+    "occupancyModified": {  
+        "type": "Property",  
+        "value": "2018-09-21T12:00:00Z"  
+    },  
+    "occupiedSpotNumber": {  
+        "type": "Property",  
+        "value": 282  
+    },  
+    "parkingSiteID": {  
+        "type": "Property",  
+        "value": "P2"  
+    },  
+    "requiredPermit": {  
+        "type": "Property",  
+        "value": []  
+    },  
+    "totalSpotNumber": {  
+        "type": "Property",  
+        "value": 414  
+    },  
+    "twoWheelerSlots": {  
+        "type": "Property",  
+        "value": {  
+            "availableSpotNumber": 20,  
+            "totalSpotNumber": 20,  
+            "occupiedSpotNumber": 0  
+        }  
+    },  
+    "unclassifiedSlots": {  
+        "type": "Property",  
+        "value": {  
+            "availableSpotNumber": 0,  
+            "totalSpotNumber": 0,  
+            "occupiedSpotNumber": 0  
+        }  
+    },  
+    "vehicleEntranceCount": {  
+        "type": "Property",  
+        "value": 28  
+    },  
+    "vehicleExitCount": {  
+        "type": "Property",  
+        "value": 12  
+    },  
+    "@context": [  
+        "iudx:SmartParking"  
     ]  
-  },  
-  "extCategory": {  
-    "type": "Property",  
-    "value": [  
-      "A"  
-    ]  
-  },  
-  "layout": {  
-    "type": "Property",  
-    "value": [  
-      "multiLevel"  
-    ]  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Parque de estacionamento Trindade"  
-  },  
-  "requiredPermit": {  
-    "type": "Property",  
-    "value": []  
-  },  
-  "allowedVehicleType": {  
-    "type": "Property",  
-    "value": [  
-      "car"  
-    ]  
-  },  
-  "availableSpotNumber": {  
-    "type": "Property",  
-    "value": 132,  
-    "observedAt": "2018-09-21T12:00:00Z"  
-  },  
-  "totalSpotNumber": {  
-    "type": "Property",  
-    "value": 414  
-  },  
-  "occupiedSpotNumber": {  
-    "type": "Property",  
-    "value": 282  
-  },  
-  "occupancyModified": {  
-    "type": "Property",  
-    "value": "2018-09-21T12:00:00Z"  
-  },  
-  "occupancy": {  
-    "type": "Property",  
-    "value": 0.68  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -8.60961198807,  
-        41.150691773  
-      ]  
-    }  
-  },  
-  "chargeType": {  
-    "type": "Property",  
-    "value": [  
-      "temporaryPrice"  
-    ]  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "Porto",  
-      "addressCountry": "Portugal",  
-      "streetAddress": "Rua de Fernandes Tomas",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "maximumParkingDuration": {  
-    "type": "Property",  
-    "value": "PT8H"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Municipal car park located near the Trindade metro station and the Town Hall"  
-  },  
-  "vehicleEntranceCount": {  
-    "type": "Property",  
-    "value": 28  
-  },  
-  "vehicleExitCount": {  
-    "type": "Property",  
-    "value": 12  
-  },  
-  "accessModified": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2018-09-21T12:00:00Z"  
-    }  
-  },  
-  "parkingSiteID": {  
-    "type": "Property",  
-    "value": "P2"  
-  },  
-  "observationDateTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-03-11T15:51:02+05:30"  
-    }  
-  },  
-  "fourWheelerSlots": {  
-    "type": "Property",  
-    "value": {  
-      "availableSpotNumber": 25,  
-      "totalSpotNumber": 25,  
-      "occupiedSpotNumber": 0  
-    }  
-  },  
-  "unclassifiedSlots": {  
-    "type": "Property",  
-    "value": {  
-      "availableSpotNumber": 0,  
-      "totalSpotNumber": 0,  
-      "occupiedSpotNumber": 0  
-    }  
-  },  
-  "twoWheelerSlots": {  
-    "type": "Property",  
-    "value": {  
-      "availableSpotNumber": 20,  
-      "totalSpotNumber": 20,  
-      "occupiedSpotNumber": 0  
-    }  
-  },  
-  "municipalityInfo": {  
-    "type": "Property",  
-    "value": {  
-      "district": "Bangalore Urban",  
-      "ulbName": "BMC",  
-      "cityId": "23",  
-      "wardId": "23",  
-      "stateName": "Karnataka",  
-      "cityName": "Bangalore",  
-      "zoneName": "South",  
-      "wardName": "Bangalore Urban",  
-      "zoneId": "2",  
-      "wardNum": 4  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "iudx:SmartParking"  
-  ]  
 }  
 ```  
 See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
