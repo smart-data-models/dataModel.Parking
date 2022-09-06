@@ -1,18 +1,18 @@
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entità: ParkingGroup  
-====================  
+Entità: ParcheggioGruppo  
+========================  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingGroup/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Gruppo di parcheggio **  
-versione: 0.1.0  
+Descrizione globale: **Gruppo parcheggio **  
+versione: 0.1.1  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `allowedVehicleType`: Tipo di veicolo permesso (un gruppo di parcheggio permette solo un tipo di veicolo). Enum:'bicicletta, autobus, auto, caravan, moto, motorscooter, camion'  - `alternateName`: Un nome alternativo per questa voce  - `areBordersMarked`: Indica se i posti auto sono delimitati (con linee bianche o simili) o no. Le applicazioni _DOVREBBERO_ controllare il valore di questa proprietà a livello del genitore se non è definito  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `availableSpotNumber`: Il numero di posti disponibili in questo gruppo. Deve essere inferiore o uguale a `totalSpotNumber`.  - `averageSpotLength`: La lunghezza media dei posti auto. Le applicazioni _DOVREBBERO_ controllare il valore di questa proprietà a livello del genitore se non è definito.  - `averageSpotWidth`: La larghezza media dei posti auto. Le applicazioni _DOVREBBERO_ controllare il valore di questa proprietà a livello del genitore se non è definito.  - `category`: Categoria del gruppo di parcheggio. Enum:'adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'  - `chargeType`: Tipo di tariffa(e) applicata(e) dal sito di parcheggio. Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `id`: Identificatore unico dell'entità  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `maximumAllowedHeight`: Altezza massima consentita per i veicoli.  Le applicazioni _DOVREBBERO_ controllare il valore di questa proprietà a livello del genitore se non è definito.  - `maximumAllowedWidth`: Larghezza massima consentita per i veicoli. Le applicazioni _DOVREBBERO_ controllare il valore di questa proprietà a livello del genitore se non è definito.  - `maximumParkingDuration`: Soggiorno massimo consentito codificato come durata ISO8601. Quando non presente o uguale alla stringa vuota significa indefinito. Le applicazioni _DOVREBBERO_ controllare il valore di questa proprietà a livello del genitore se non è definito.  - `name`: Il nome di questo articolo.  - `occupancyDetectionType`: Valori consentiti: I seguenti da DATEX II versione 2.3 _OccupancyDetectionTypeEnum_. Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. O qualsiasi altra applicazione specifica  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `parkingMode`: Modalità di parcheggio. Le applicazioni _DOVREBBERO_ controllare il valore di questa proprietà a livello del genitore se non è definito. Valori consentiti: Quelli definiti dall'enumerazione _ParkingModeEnum_ di DATEX II versione 2.3. Enum:'echelonParking, parallelParking, perpendicularParking'.  - `permitActiveHours`: Questo attributo permette di catturare situazioni in cui un permesso è necessario solo in determinate ore o giorni della settimana. È un valore strutturato che deve contenere una sottoproprietà per ogni permesso richiesto, indicando quando il permesso è attivo. Se non è specificato nulla per un permesso, significa che un permesso è sempre richiesto. Un oggetto vuoto significa sempre attivo. La sintassi deve essere conforme a schema.org [specifica degli orari di apertura](https://schema.org/openingHours). Per esempio, una zona blu che è attiva solo nelle settimane diurne sarà codificata come 'blueZonePermit': 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'. Le applicazioni _DOVREBBERO_ controllare il valore di questa proprietà a livello del genitore se non è definito  - `refParkingSite`: Sito di parcheggio a cui appartiene questa zona. Un gruppo non può essere orfano. Un gruppo non può avere sottogruppi. Riferimento a un OffStreetParking o a un OnStreetParking  - `refParkingSpot`: Posti auto individuali appartenenti a questo gruppo di parcheggio.  - `requiredPermit`: Questo attributo cattura quali permessi potrebbero essere necessari per parcheggiare in questo sito. La semantica è che almeno _uno_ di questi permessi è necessario per parcheggiare. Quando un permesso è composto da più di un elemento (e) possono essere combinati con un ','. Per esempio 'residentPermit,disabledPermit' sta a significare che entrambi, allo stesso tempo, un permesso per residenti e uno per disabili sono necessari per parcheggiare. Se la lista è vuota, nessun permesso è necessario  - `reservationType`: Condizioni per la prenotazione. Le applicazioni _DOVREBBERO_ controllare il valore di questa proprietà a livello del genitore se non è definito. Enum:'mandatory, notAvailable, optional, partly'.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `totalSpotNumber`: Il numero totale di spot appartenenti a questo gruppo. Valori consentiti: Qualsiasi numero intero positivo o 0. Riferimenti normativi: DATEX 2 versione 2.3 attributo _parkingNumberOfSpaces_ della classe _ParkingRecord_.  - `type`: Tipo di entità NGSI. Deve essere ParkingGroup    
+- `address`: L'indirizzo postale  - `allowedVehicleType`: Tipo di veicolo consentito (un gruppo di parcheggio consente un solo tipo di veicolo). Enum:'bicicletta, autobus, auto, roulotte, motocicletta, motoscooter, camion'.  - `alternateName`: Un nome alternativo per questa voce  - `areBordersMarked`: Indica se i posti auto sono delimitati (con linee vuote o simili) o meno. Le applicazioni _DOVREBBERO_ ispezionare il valore di questa proprietà a livello di genitore, se non è definita.  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `availableSpotNumber`: Il numero di posti disponibili in questo gruppo. Deve essere inferiore o uguale a `totalSpotNumber`.  - `averageSpotLength`: La lunghezza media dei posti auto. Le applicazioni DEVONO ispezionare il valore di questa proprietà a livello di genitore, se non è definita.  - `averageSpotWidth`: Larghezza media dei posti auto. Le applicazioni DEVONO ispezionare il valore di questa proprietà a livello di genitore, se non è definita.  - `category`: Categoria del gruppo di parcheggio. Enum:'adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'.  - `chargeType`: Tipo di tariffe applicate dal parcheggio. Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `id`: Identificatore univoco dell'entità  - `location`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `maximumAllowedHeight`: Altezza massima consentita per i veicoli.  Le applicazioni DEVONO ispezionare il valore di questa proprietà a livello di genitore, se non è definita.  - `maximumAllowedWidth`: Larghezza massima consentita per i veicoli. Le applicazioni DEVONO ispezionare il valore di questa proprietà a livello di genitore, se non è definita.  - `maximumParkingDuration`: Soggiorno massimo consentito, codificato come durata ISO8601. Quando non è presente o è uguale alla stringa vuota, significa indefinito. Le applicazioni DEVONO ispezionare il valore di questa proprietà a livello di genitore se non è definita.  - `name`: Il nome di questo elemento.  - `occupancyDetectionType`: Valori ammessi: I seguenti da DATEX II versione 2.3 _OccupancyDetectionTypeEnum_. Enum:'bilanciamento, manuale, modelBased, nessuno, singleSpaceDetection'. O qualsiasi altro valore specifico dell'applicazione  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `parkingMode`: Modalità di parcheggio. Le applicazioni DEVONO ispezionare il valore di questa proprietà a livello di genitore, se non è definita. Valori ammessi: Quelli definiti dall'enumerazione DATEX II versione 2.3 _ParkingModeEnum_. Enum:'echelonParking, parallelParking, perpendicularParking'.  - `permitActiveHours`: Questo attributo consente di cogliere situazioni in cui un permesso è necessario solo in determinati orari o giorni della settimana. È un valore strutturato che deve contenere una sottoproprietà per ogni permesso richiesto, che indica quando il permesso è attivo. Se non viene specificato nulla per un permesso, significa che il permesso è sempre richiesto. Un oggetto vuoto significa sempre attivo. La sintassi deve essere conforme a schema.org [specifica degli orari di apertura] (https://schema.org/openingHours). Ad esempio, una zona blu attiva solo nei giorni feriali sarà codificata come "blueZonePermit": "Mo,Tu,We,Th,Fr,Sa 09:00-20:00". Le applicazioni DEVONO ispezionare il valore di questa proprietà a livello di genitore, se non è definita.  - `refParkingSite`: Sito di parcheggio a cui appartiene questa zona. Un gruppo non può essere orfano. Un gruppo non può avere sottogruppi. Riferimento a un Parcheggio fuori strada o a un Parcheggio su strada  - `refParkingSpot`: I singoli posti auto appartenenti a questo gruppo di parcheggi.  - `requiredPermit`: Questo attributo indica quali permessi potrebbero essere necessari per parcheggiare in questo sito. La semantica è che almeno _uno_ di questi permessi è necessario per parcheggiare. Quando un permesso è composto da più elementi (e), questi possono essere combinati con un ','. Ad esempio, 'residentPermit,disabledPermit' indica che per parcheggiare sono necessari contemporaneamente un permesso per residenti e uno per disabili. Se l'elenco è vuoto, non è necessario alcun permesso  - `reservationType`: Condizioni per la prenotazione. Le applicazioni DEVONO ispezionare il valore di questa proprietà a livello di genitore, se non è definita. Enum:'mandatory, notAvailable, optional, partly'.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `totalSpotNumber`: Il numero totale di spot appartenenti a questo gruppo. Valori ammessi: Qualsiasi numero intero positivo o 0. Riferimenti normativi: Attributo DATEX 2 versione 2.3 _parkingNumberOfSpaces_ della classe _ParkingRecord_.  - `type`: Tipo di entità NGSI. Deve essere ParkingGroup    
 Proprietà richieste  
 - `id`  - `refParkingSite`  - `type`    
-Un gruppo di posti auto. Il livello di granularità può variare. Può essere un piano di un garage, una zona specifica appartenente a un grande parcheggio, o semplicemente un gruppo di posti destinati a parcheggiare un certo tipo di veicolo o soggetti a certe restrizioni (disabili, residenti, ...). Per semplicità, è consentito un solo tipo di veicolo per gruppo di parcheggio. Allo stesso modo, è consentito un solo permesso richiesto per tipo di gruppo.  
-## Descrizione del modello di dati delle proprietà  
+Un gruppo di posti auto. Il livello di granularità può variare. Può trattarsi di un piano di un garage, di una zona specifica di un grande parcheggio o semplicemente di un gruppo di posti destinati al parcheggio di un certo tipo di veicolo o soggetti a determinate restrizioni (disabili, residenti, ...). Per semplicità, è consentito un solo tipo di veicolo per gruppo di parcheggi. Allo stesso modo, è consentito un solo permesso per ogni tipo di gruppo.  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -85,7 +85,6 @@ ParkingGroup:
     averageSpotLength:    
       description: 'The average length of parking spots. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined.'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/length    
@@ -94,7 +93,6 @@ ParkingGroup:
     averageSpotWidth:    
       description: 'The average width of parking spots. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined.'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/width    
@@ -339,7 +337,6 @@ ParkingGroup:
     maximumAllowedHeight:    
       description: 'Maximum allowed height for vehicles.  Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined.'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/heigth    
@@ -348,7 +345,6 @@ ParkingGroup:
     maximumAllowedWidth:    
       description: 'Maximum allowed width for vehicles. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined.'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/width    
@@ -507,16 +503,16 @@ ParkingGroup:
     - refParkingSite    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Parking/blob/master/ParkingGroup/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Parking/ParkingGroup/schema.json    
   x-model-tags: ""    
-  x-version: 0.1.0    
+  x-version: 0.1.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### ParkingGroup NGSI-v2 valori chiave Esempio  
-Ecco un esempio di un ParkingGroup in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+## Esempi di payload  
+#### Gruppo di parcheggio NGSI-v2 valori chiave Esempio  
+Ecco un esempio di ParkingGroup in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "daoiz-velarde-1-5-disabled",  
@@ -545,7 +541,7 @@ ParkingGroup:
 }  
 ```  
 #### ParkingGroup NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un ParkingGroup in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di ParkingGroup in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "daoiz-velarde-1-5-disabled",  
@@ -601,8 +597,8 @@ ParkingGroup:
   }  
 }  
 ```  
-#### ParkingGroup NGSI-LD valori-chiave Esempio  
-Ecco un esempio di un ParkingGroup in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+#### Gruppo di parcheggio Valori chiave NGSI-LD Esempio  
+Ecco un esempio di ParkingGroup in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
     "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
@@ -687,7 +683,7 @@ ParkingGroup:
 }  
 ```  
 #### ParkingGroup NGSI-LD normalizzato Esempio  
-Ecco un esempio di un ParkingGroup in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di ParkingGroup in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
     "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
@@ -743,4 +739,4 @@ ParkingGroup:
     ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
