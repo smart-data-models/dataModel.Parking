@@ -106,7 +106,8 @@ OffStreetParking:
         type: Property
     averageSpotLength:
       description: 'The average length of parking spots.'
-      exclusiveMinimum: 0
+      exclusiveMinimum: true
+      minimum: 0
       type: number
       x-ngsi:
         model: http://schema.org/length
@@ -273,7 +274,7 @@ OffStreetParking:
       description: 'Four wheeler parking spot availability status in parking site corresponding to this observation.'
       properties:
         availableSlotNumber:
-          description: 'Property. Model:''https://schema.org/Number''. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'
+          description: 'Property. Model:''https://schema.org/Number''. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positive number lower than or equal to the totalSpotNumber.'
           type: number
         occupiedSlotNumber:
           description: 'Property. Model:''https://schema.org/Number''. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'
@@ -499,7 +500,8 @@ OffStreetParking:
         type: Property
     maximumAllowedHeight:
       description: 'Maximum allowed height for vehicles. If there are multiple zones, it will be the minimum height of all the zones.'
-      exclusiveMinimum: 0
+      exclusiveMinimum: true
+      minimum: 0
       type: number
       x-ngsi:
         model: http://schema.org/heigth
@@ -507,7 +509,8 @@ OffStreetParking:
         units: meters
     maximumAllowedWidth:
       description: 'Maximum allowed width for vehicles. If there are multiple zones, it will be the minimum width of all the zones.'
-      exclusiveMinimum: 0
+      exclusiveMinimum: true
+      minimum: 0
       type: number
       x-ngsi:
         model: http://schema.org/width
@@ -612,7 +615,7 @@ OffStreetParking:
         model: http://schema.org/Number
         type: Property
     occupiedSpotNumber:
-      description: 'Number of spots occupied. Allowed values: 0 - `totalSpotNumber`'
+      description: 'Number of total parking spots occupied in the smart parking site corresponding to this observation. This must a positive number lower than or equal to the totalSpotNumber'
       minimum: 0
       type: integer
       x-ngsi:
@@ -931,4 +934,4 @@ OffStreetParking:
   x-license-url: https://github.com/smart-data-models/dataModel.Parking/blob/master/OffStreetParking/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/schema.json
   x-model-tags: IUDX
-  x-version: 0.1.1
+  x-version: 0.1.2
