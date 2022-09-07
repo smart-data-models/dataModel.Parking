@@ -4,7 +4,7 @@
 [Open License](https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingGroup/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **Parking Group **  
-version: 0.1.1  
+version: 0.1.2  
 
 ## List of properties  
 
@@ -84,7 +84,8 @@ ParkingGroup:
         type: Property    
     averageSpotLength:    
       description: 'The average length of parking spots. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined.'    
-      exclusiveMinimum: 0    
+      exclusiveMinimum: true    
+      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/length    
@@ -92,7 +93,8 @@ ParkingGroup:
         units: meters    
     averageSpotWidth:    
       description: 'The average width of parking spots. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined.'    
-      exclusiveMinimum: 0    
+      exclusiveMinimum: true    
+      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/width    
@@ -336,7 +338,8 @@ ParkingGroup:
         type: Geoproperty    
     maximumAllowedHeight:    
       description: 'Maximum allowed height for vehicles.  Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined.'    
-      exclusiveMinimum: 0    
+      exclusiveMinimum: true    
+      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/heigth    
@@ -344,7 +347,8 @@ ParkingGroup:
         units: meters    
     maximumAllowedWidth:    
       description: 'Maximum allowed width for vehicles. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined.'    
-      exclusiveMinimum: 0    
+      exclusiveMinimum: true    
+      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/width    
@@ -507,7 +511,7 @@ ParkingGroup:
   x-license-url: https://github.com/smart-data-models/dataModel.Parking/blob/master/ParkingGroup/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Parking/ParkingGroup/schema.json    
   x-model-tags: ""    
-  x-version: 0.1.1    
+  x-version: 0.1.2    
 ```  
 </details>    
 ## Example payloads    
