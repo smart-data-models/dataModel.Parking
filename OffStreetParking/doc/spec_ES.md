@@ -1,15 +1,17 @@
-Entidad: OffStreetParking  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: OffStreetParking  
 =========================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Parking/blob/master/OffStreetParking/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Estacionamiento en la calle**  
+versión: 0.1.1  
 
 ## Lista de propiedades  
 
-- `acceptedPaymentMethod`: Enum:'Transferencia bancaria por adelantado, Por factura, En efectivo, Cheque por adelantado, Contra reembolso, Débito directo, GoogleCheckout, PayPal, PaySwarm'. Método(s) de pago aceptado(s).  - `accessModified`: Marca de tiempo cuando se actualizó `vehicleEntranceCount` y `vehicleExitCount`. Valores permitidos: ISO8601  - `address`: La dirección postal  - `aggregateRating`: Valoración agregada de este aparcamiento.  - `allowedVehicleType`:  Tipo(s) de vehículo permitido(s). El primer elemento de esta matriz _DEBE_ ser el tipo de vehículo principal permitido. Los números de plaza libre de otros tipos de vehículos permitidos pueden notificarse bajo el atributo `extraSpotNumber` y a través de entidades específicas de tipo _ParkingGroup_. Los siguientes valores definidos por _VehicleTypeEnum_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/downloads/modelv23.html). Enum:'agriculturalVehicle, anyVehicle, bicycle, bus, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van'  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `availableSpotNumber`: El número de plazas disponibles (_incluyendo_ todos los tipos de vehículos o las plazas reservadas, como las de discapacitados, las de larga duración, etc.). Esto puede ser más difícil de estimar en aquellos aparcamientos en los que los límites de las plazas no están claramente marcados por líneas. Valores permitidos: Un número entero positivo, incluyendo el 0. Debe ser menor o igual que `totalSpotNumber`.  - `averageSpotLength`: La longitud media de las plazas de aparcamiento.  - `averageSpotWidth`: La anchura media de las plazas de aparcamiento.  - `category`: Categoría(s) del aparcamiento. El propósito de este campo es permitir etiquetar, en términos generales, las entidades de estacionamiento fuera de la calle  - `chargeType`: Tipo(s) de carga realizado(s) por el aparcamiento. Valores permitidos: Algunos de los definidos por la enumeración DATEX II versión 2.3 _ ChargeTypeEnum_. Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, other, seasonTicket, temporaryPrice'. O cualquier otra aplicación específica  - `contactPoint`: Punto de contacto del aparcamiento.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `extCategory`: Categoría externa para complementar la categoría.  - `extraSpotNumber`: El número de plazas adicionales _disponibles_, es decir, libres. Este valor debe sumar las plazas libres de todos los grupos mencionados a continuación: A/ Las reservadas para fines especiales y que suelen requerir un permiso. Los detalles del permiso se encontrarán a nivel de grupo de aparcamiento (entidad de tipo `ParkingGroup`). B/ Las reservadas para otros tipos de vehículos diferentes al tipo de vehículo principal permitido. C/ Cualquier otro grupo de plazas de aparcamiento que no esté sujeto a las normas de condición general transmitidas por esta entidad.  - `facilities`: Valores permitidos: Los siguientes definidos por la enumeración _EquipmentTypeEnum_ de DATEX II versión 2.3. Enum:'bikeParking, cashMachine, copyMachineOrService, defibrillator, dumpingStation, electricChargingStation, elevator, faxMachineOrService, fireHose, fireExtinguisher, fireHydrant, firstAidEquipment, freshWater, andamio sin hielo, punto de información, internet inalámbrico, consigna de equipaje, mostrador de pago, máquina de pago, parque infantil, teléfono público, cubo de basura, caja fuerte, ducha, aseo, terminal de peaje, máquina expendedora, eliminación de residuos". Cualquier otra aplicación específica  - `firstAvailableFloor`: Número de la planta más cercana al suelo que tiene actualmente plazas de aparcamiento disponibles. Valores permitidos: Las plantas se numeran entre -n y n, siendo 0 la planta baja.  - `fourWheelerSlots`: Estado de disponibilidad de plazas de aparcamiento para vehículos de cuatro ruedas en el lugar de estacionamiento correspondiente a esta observación.  - `highestFloor`: En el caso de los aparcamientos con varias plantas, la planta más alta. Un número entero. El 0 es la planta baja. Las plantas superiores son números positivos. Las plantas inferiores son números negativos.  - `id`: Identificador único de la entidad  - `images`: Una URL que contenga una foto de este aparcamiento  - `layout`: Disposición del aparcamiento. Da más detalles al atributo `categoría`. Valores permitidos: Según el _ParkingLayoutEnum_ de DATEX II versión 2.3. Enum:'automatedParkingGarage, carports, covered, field, garageBoxes, multiLevel, multiStorey, nested, openSpace, rooftop, sheds, singleLevel, surface, other'. Véase también [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking). O cualquier otro valor útil para la aplicación y que no esté contemplado anteriormente.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `lowestFloor`: En los aparcamientos con varias plantas, la planta más baja. Valores permitidos: Un número entero.  - `maximumAllowedHeight`: Altura máxima permitida para los vehículos. Si hay varias zonas, será la altura mínima de todas ellas.  - `maximumAllowedWidth`: Anchura máxima permitida para los vehículos. Si hay varias zonas, será la anchura mínima de todas ellas.  - `maximumParkingDuration`: La estancia máxima permitida en el sitio, de forma general, codificada como una duración ISO8601 o con cualquier otra cadena relevante para el estacionamiento.  Un valor vacío o no presente indica una duración indefinida  - `measuresPeriod`: El período de medidas relacionadas con availableSpotNumber y priceRatePerMinute.  - `measuresPeriodUnit`: La unidad de período de medidas relacionadas con availableSpotNumber y PriceRatePerMinute.  - `municipalityInfo`: Información del municipio correspondiente a esta observación.  - `name`: El nombre de este artículo.  - `observationDateTime`: Última hora de observación comunicada.  - `occupancy`: Valor relativo de las plazas ocupadas sobre el total de plazas.  - `occupancyDetectionType`: Método(s) de detección de la ocupación.  Valores permitidos: Los siguientes de DATEX II versión 2.3 _OccupancyDetectionTypeEnum_. Enum:'balanceo, manual, modelBased, none, singleSpaceDetection'. O cualquier otro específico de la aplicación  - `occupancyModified`: Valor relativo de los puntos ocupados sobre el total de puntos. Valores permitidos: 0 - 1  - `occupiedSpotNumber`: Número de plazas ocupadas. Valores permitidos: 0 - `totalSpotNumber`  - `openingHours`: Horario de apertura del aparcamiento.  - `outOfServiceSlotNumber`: El número de aparcabicicletas/plazas de estacionamiento de bicicletas o plazas de aparcamiento que están fuera de servicio y no pueden utilizarse para alquilar o aparcar una bicicleta en la estación de estacionamiento de bicicletas o en el lugar de estacionamiento correspondiente a esta observación.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `parkingMode`: Modo(s) de aparcamiento. Valores permitidos: Los definidos por la enumeración _ParkingModeEnum_ de DATEX II versión 2.3. Enum:'echelonParking, parallelParking, perpendicularParking'  - `parkingSiteId`: El ID único del aparcamiento o estacionamiento correspondiente a esta observación.  - `priceCurrency`: Moneda de precio de la tarifa por minuto  - `priceRatePerMinute`: Precio por minuto.  - `provider`: Proveedor de servicios de aparcamiento  - `refParkingAccess`: Punto(s) de acceso al aparcamiento.  - `refParkingGroup`: Grupo(s) identificado(s) del sitio de estacionamiento. Un grupo puede corresponder a una zona, una planta completa, un grupo de plazas, etc.  - `refParkingSpot`: Plazas de aparcamiento individuales que pertenecen a este sitio de estacionamiento fuera de la calle.  - `requiredPermit`: Este atributo captura qué permiso(s) puede(n) ser necesario(s) para aparcar en este sitio. La semántica es que al menos _uno de estos permisos es necesario para aparcar. Cuando un permiso está compuesto por más de un elemento (y) se pueden combinar con un ','. Por ejemplo, "permiso de residente, permiso de discapacitado" significa que se necesita al mismo tiempo un permiso de residente y un permiso de discapacitado para aparcar. Si la lista está vacía, no se necesita ningún permiso. Valores permitidos: Los siguientes, definidos por la enumeración _PermitTypeEnum_ de DATEX II versión 2.3. Enum:'employeePermit, fairPermit, governmentPermit, noPermitNeed, residentPermit, specificIdentifiedVehiclePermit, studentPermit, visitorPermit'. O cualquier otra aplicación específica  - `reservationType`: a siguiente especificada por _ReservationTypeEnum_ de DATEX II versión 2.3. Enum:'obligatorio, no disponible, opcional, parcialmente'  - `security`: Aspectos de seguridad proporcionados por este aparcamiento. Valores permitidos: Los siguientes, algunos de ellos, definidos por _ParkingSecurityEnum_ de DATEX II versión 2.3. Enum:'areaSeparatedFromSurroundings, cctv, dog, externalSecurity, fences, floodLight, guard24hours, lighting, patrolled, securityStaff' . o cualquier otro específico de la aplicación  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `specialLocation`: Si el aparcamiento se encuentra en un lugar especial (aeropuerto, grandes almacenes, etc.) transmite cuál es ese lugar especial.  Valores permitidos: Los definidos por _ParkingSpecialLocationEnum_ de [DATEX II versión 2.3](http://www.datex2.eu/content/parking-publications-extension-v10a). Enum:'terminal de aeropuerto, estación de cable, camping, cine, estación de autocares, centro de convenciones, centro de exposiciones, terminal de ferry, hotel, mercado, estación de transporte público, centro religioso, centro comercial, ascensor, instalación específica, parque temático, estación de tren, terminal de vehículos sobre raíles, otros'.  - `status`: Estado del aparcamiento. Valores permitidos: Los siguientes definidos por las siguientes enumeraciones definidas por DATEX II versión 2.3. Enum:'casiLleno, cerrado, cerradoAnormal, lleno, llenoEnEntrada, abierto, aperturaTiempoEnFuerza, plazasDisponibles'. O cualquier otra aplicación específica  - `totalSpotNumber`: El número total de plazas que ofrece este aparcamiento.  Este número puede ser difícil de obtener para aquellos aparcamientos en los que las plazas no están claramente marcadas con líneas. Valores permitidos: Cualquier número entero positivo o 0. Referencias normativas: Atributo _parkingNumberOfSpaces_ de la clase _ParkingRecord_ de DATEX 2 versión 2.3.  - `twoWheelerSlots`: Estado de disponibilidad de plazas de aparcamiento de dos ruedas en el lugar de estacionamiento correspondiente a esta observación.  - `type`: Tiene que ser OffStreetParking  - `unclassifiedSlots`: Estado de disponibilidad de plazas de aparcamiento de vehículos no clasificados u otros vehículos en el lugar de aparcamiento correspondiente a esta observación.  - `usageScenario`: Escenario(s) de uso. Da más detalles al atributo `categoría`. Valores permitidos: Los definidos por la enumeración _ParkingUsageScenarioEnum_ de DATEX II versión 2.3. Enum: 'automaticParkingGuidance, carSharing, dropOffWithValet, dropOffMechanical, dropOff, eventParking, kissAndRide, liftShare, loadingBay, overnightParking, parkAndCycle, parkAndRide, parkAndWalk, restArea, serviceArea, staffGuidesToSpace, truckParking, vehicleLift, other'. O cualquier otro valor útil para la aplicación y que no esté contemplado anteriormente.  - `vehicleEntranceCount`: Número agregado de vehículos que entran en el aparcamiento en un periodo de tiempo.  - `vehicleExitCount`: Número agregado de vehículos que salen del aparcamiento en un periodo de tiempo.    
+- `acceptedPaymentMethod`: Enum:'Transferencia bancaria por adelantado, Por factura, En efectivo, Cheque por adelantado, Contra reembolso, Débito directo, GoogleCheckout, PayPal, PaySwarm'. Método(s) de pago aceptado(s).  - `accessModified`: Marca de tiempo cuando se actualizó `vehicleEntranceCount` y `vehicleExitCount`. Valores permitidos: ISO8601  - `address`: La dirección postal  - `aggregateRating`: Valoración agregada de este aparcamiento.  - `allowedVehicleType`:  Tipo(s) de vehículo permitido(s). El primer elemento de esta matriz _DEBE_ ser el tipo de vehículo principal permitido. Los números de plaza libre de otros tipos de vehículos permitidos pueden notificarse bajo el atributo `extraSpotNumber` y a través de entidades específicas de tipo _ParkingGroup_. Los siguientes valores definidos por _VehicleTypeEnum_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/downloads/modelv23.html). Enum:'agriculturalVehicle, anyVehicle, bicycle, bus, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van'  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `availableSpotNumber`: El número de plazas disponibles (_incluyendo_ todos los tipos de vehículos o las plazas reservadas, como las de discapacitados, las de larga duración, etc.). Esto puede ser más difícil de estimar en aquellos aparcamientos en los que los límites de las plazas no están claramente marcados por líneas. Valores permitidos: Un número entero positivo, incluyendo el 0. Debe ser menor o igual que `totalSpotNumber`.  - `averageSpotLength`: La longitud media de las plazas de aparcamiento.  - `averageSpotWidth`: La anchura media de las plazas de aparcamiento.  - `category`: Categoría(s) del aparcamiento. El propósito de este campo es permitir etiquetar, en términos generales, las entidades de estacionamiento fuera de la calle  - `chargeType`: Tipo(s) de carga realizado(s) por el aparcamiento. Valores permitidos: Algunos de los definidos por la enumeración DATEX II versión 2.3 _ ChargeTypeEnum_. Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, other, seasonTicket, temporaryPrice'. O cualquier otra aplicación específica  - `contactPoint`: Punto de contacto del aparcamiento.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `extCategory`: Categoría externa para complementar la categoría.  - `extraSpotNumber`: El número de plazas adicionales _disponibles_, es decir, libres. Este valor debe sumar las plazas libres de todos los grupos mencionados a continuación: A/ Las reservadas para fines especiales y que suelen requerir un permiso. Los detalles del permiso se encontrarán a nivel de grupo de aparcamiento (entidad de tipo `ParkingGroup`). B/ Las reservadas para otros tipos de vehículos diferentes al tipo de vehículo principal permitido. C/ Cualquier otro grupo de plazas de aparcamiento que no esté sujeto a las normas de condición general transmitidas por esta entidad.  - `facilities`: Valores permitidos: Los siguientes definidos por la enumeración _EquipmentTypeEnum_ de DATEX II versión 2.3. Enum:'bikeParking, cashMachine, copyMachineOrService, defibrillator, dumpingStation, electricChargingStation, elevator, faxMachineOrService, fireHose, fireExtinguisher, fireHydrant, firstAidEquipment, freshWater, andamio sin hielo, punto de información, internet inalámbrico, consigna de equipaje, mostrador de pago, máquina de pago, parque infantil, teléfono público, cubo de basura, caja fuerte, ducha, aseo, terminal de peaje, máquina expendedora, eliminación de residuos". Cualquier otra aplicación específica  - `firstAvailableFloor`: Número de la planta más cercana al suelo que tiene actualmente plazas de aparcamiento disponibles. Valores permitidos: Las plantas se numeran entre -n y n, siendo 0 la planta baja.  - `fourWheelerSlots`: Estado de disponibilidad de plazas de aparcamiento para vehículos de cuatro ruedas en el lugar de estacionamiento correspondiente a esta observación.  - `highestFloor`: En el caso de los aparcamientos con varias plantas, la planta más alta. Un número entero. El 0 es la planta baja. Las plantas superiores son números positivos. Las plantas inferiores son números negativos.  - `id`: Identificador único de la entidad  - `images`: Una URL que contenga una foto de este aparcamiento  - `layout`: Disposición del aparcamiento. Da más detalles al atributo `categoría`. Valores permitidos: Según el _ParkingLayoutEnum_ de DATEX II versión 2.3. Enum:'automatedParkingGarage, carports, covered, field, garageBoxes, multiLevel, multiStorey, nested, openSpace, rooftop, sheds, singleLevel, surface, other'. Véase también [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking). O cualquier otro valor útil para la aplicación y que no esté contemplado anteriormente.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `lowestFloor`: En los aparcamientos con varias plantas, la planta más baja. Valores permitidos: Un número entero.  - `maximumAllowedHeight`: Altura máxima permitida para los vehículos. Si hay varias zonas, será la altura mínima de todas ellas.  - `maximumAllowedWidth`: Anchura máxima permitida para los vehículos. Si hay varias zonas, será la anchura mínima de todas ellas.  - `maximumParkingDuration`: La estancia máxima permitida en el sitio, de forma general, codificada como una duración ISO8601 o con cualquier otra cadena relevante para el estacionamiento.  Un valor vacío o no presente indica una duración indefinida  - `measuresPeriod`: El período de medidas relacionadas con availableSpotNumber y priceRatePerMinute.  - `measuresPeriodUnit`: La unidad de período de medidas relacionadas con availableSpotNumber y PriceRatePerMinute.  - `municipalityInfo`: Información del municipio correspondiente a esta observación.  - `name`: El nombre de este artículo.  - `observationDateTime`: Última hora de observación comunicada.  - `occupancy`: Valor relativo de las plazas ocupadas sobre el total de plazas.  - `occupancyDetectionType`: Método(s) de detección de la ocupación.  Valores permitidos: Los siguientes de DATEX II versión 2.3 _OccupancyDetectionTypeEnum_. Enum:'balanceo, manual, modelBased, none, singleSpaceDetection'. O cualquier otro específico de la aplicación  - `occupancyModified`: Valor relativo de los puntos ocupados sobre el total de puntos. Valores permitidos: 0 - 1  - `occupiedSpotNumber`: Número de plazas ocupadas. Valores permitidos: 0 - `totalSpotNumber`  - `openingHours`: Horario de apertura del aparcamiento.  - `outOfServiceSlotNumber`: El número de aparcabicicletas/plazas de estacionamiento de bicicletas o plazas de aparcamiento que están fuera de servicio y no pueden utilizarse para alquilar o aparcar una bicicleta en la estación de estacionamiento de bicicletas o en el lugar de estacionamiento correspondiente a esta observación.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `parkingMode`: Modo(s) de aparcamiento. Valores permitidos: Los definidos por la enumeración _ParkingModeEnum_ de DATEX II versión 2.3. Enum:'echelonParking, parallelParking, perpendicularParking'  - `parkingSiteId`: El ID único del aparcamiento o estacionamiento correspondiente a esta observación.  - `priceCurrency`: Moneda de precio de la tarifa por minuto  - `priceRatePerMinute`: Precio por minuto.  - `provider`: Proveedor de servicios de aparcamiento  - `refParkingAccess`: Punto(s) de acceso al aparcamiento.  - `refParkingGroup`: Grupo(s) identificado(s) del sitio de estacionamiento. Un grupo puede corresponder a una zona, una planta completa, un grupo de plazas, etc.  - `refParkingSpot`: Plazas de aparcamiento individuales que pertenecen a este sitio de estacionamiento fuera de la calle.  - `requiredPermit`: Este atributo captura qué permiso(s) puede(n) ser necesario(s) para aparcar en este sitio. La semántica es que al menos _uno de estos permisos es necesario para aparcar. Cuando un permiso está compuesto por más de un elemento (y) se pueden combinar con un ','. Por ejemplo, "permiso de residente, permiso de discapacitado" significa que se necesita al mismo tiempo un permiso de residente y un permiso de discapacitado para aparcar. Si la lista está vacía, no se necesita ningún permiso. Valores permitidos: Los siguientes, definidos por la enumeración _PermitTypeEnum_ de DATEX II versión 2.3. Enum:'employeePermit, fairPermit, governmentPermit, noPermitNeed, residentPermit, specificIdentifiedVehiclePermit, studentPermit, visitorPermit'. O cualquier otra aplicación específica  - `reservationType`: a siguiente especificada por _ReservationTypeEnum_ de DATEX II versión 2.3. Enum:'obligatorio, no disponible, opcional, parcialmente'  - `security`: Aspectos de seguridad proporcionados por este aparcamiento. Valores permitidos: Los siguientes, algunos de ellos, definidos por _ParkingSecurityEnum_ de DATEX II versión 2.3. Enum:'areaSeparatedFromSurroundings, cctv, dog, externalSecurity, fences, floodLight, guard24hours, lighting, patrolled, securityStaff' . o cualquier otro específico de la aplicación  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `specialLocation`: Si el aparcamiento se encuentra en un lugar especial (aeropuerto, grandes almacenes, etc.) transmite cuál es ese lugar especial.  Valores permitidos: Los definidos por _ParkingSpecialLocationEnum_ de [DATEX II versión 2.3](http://www.datex2.eu/content/parking-publications-extension-v10a). Enum:'terminal de aeropuerto, estación de cable, camping, cine, estación de autocares, centro de convenciones, centro de exposiciones, terminal de ferry, hotel, mercado, estación de transporte público, centro religioso, centro comercial, ascensor, instalación específica, parque temático, estación de tren, terminal de vehículos sobre raíles, otros'.  - `status`: Estado del aparcamiento. Valores permitidos: Los siguientes definidos por las siguientes enumeraciones definidas por DATEX II versión 2.3. Enum:'casiLleno, cerrado, cerradoAnormal, lleno, llenoEnEntrada, abierto, aperturaTiempoEnFuerza, plazasDisponibles'. O cualquier otra aplicación específica  - `totalSpotNumber`: El número total de plazas que ofrece este aparcamiento.  Este número puede ser difícil de obtener para aquellos aparcamientos en los que las plazas no están claramente marcadas con líneas. Valores permitidos: Cualquier número entero positivo o 0. Referencias normativas: Atributo _parkingNumberOfSpaces_ de la clase _ParkingRecord_ de DATEX 2 versión 2.3.  - `twoWheelerSlots`: Estado de disponibilidad de plazas de aparcamiento de dos ruedas en el lugar de estacionamiento correspondiente a esta observación.  - `type`: Tiene que ser OffStreetParking  - `unclassifiedSlots`: Estado de disponibilidad de plazas de aparcamiento de vehículos no clasificados u otros vehículos en el lugar de aparcamiento correspondiente a esta observación.  - `usageScenario`: Escenario(s) de uso. Da más detalles al atributo `categoría`. Valores permitidos: Los definidos por la enumeración _ParkingUsageScenarioEnum_ de DATEX II versión 2.3. Enum: 'automaticParkingGuidance, carSharing, dropOffWithValet, dropOffMechanical, dropOff, eventParking, kissAndRide, liftShare, loadingBay, overnightParking, parkAndCycle, parkAndRide, parkAndWalk, restArea, serviceArea, staffGuidesToSpace, truckParking, vehicleLift, other'. O cualquier otro valor útil para la aplicación y que no esté contemplado anteriormente.  - `vehicleEntranceCount`: Número agregado de vehículos que entran en el aparcamiento en un periodo de tiempo.  - `vehicleExitCount`: Número agregado de vehículos que salen del aparcamiento en un periodo de tiempo.    
 Propiedades requeridas  
 - `id`  - `location`  - `type`    
-Un sitio, fuera de la calle, destinado al estacionamiento de vehículos, gestionado de forma independiente y con puntos de acceso adecuados y claramente señalizados (entradas y salidas). Si es necesario, y con fines de gestión o para tratar sitios de estacionamiento con varias ubicaciones, puede dividirse en diferentes zonas modeladas por el tipo de entidad [ParkingGroup](../ParkingGroup/README.md) . En la terminología de DATEX 2 versión 2.3 corresponde a un _UrbanParkingSite_ de tipo _offStreetParking_. Un diccionario de datos para los términos de DATEX II puede encontrarse en [http://datexbrowser.tamtamresearch.com/](http://datexbrowser.tamtamresearch.com/).  
+Un sitio, fuera de la calle, destinado al estacionamiento de vehículos, gestionado de forma independiente y con puntos de acceso adecuados y claramente señalizados (entradas y salidas). Si es necesario, y con fines de gestión o para tratar sitios de estacionamiento con múltiples ubicaciones, puede dividirse en diferentes zonas modeladas por el tipo de entidad [ParkingGroup](../ParkingGroup/README.md) . En la terminología de DATEX 2 versión 2.3 corresponde a un _UrbanParkingSite_ de tipo _offStreetParking_. Un diccionario de datos para los términos de DATEX II puede encontrarse en [http://datexbrowser.tamtamresearch.com/](http://datexbrowser.tamtamresearch.com/).  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -123,7 +125,6 @@ OffStreetParking:
     averageSpotLength:    
       description: 'The average length of parking spots.'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/length    
@@ -131,7 +132,6 @@ OffStreetParking:
         units: meters    
     averageSpotWidth:    
       description: 'The average width of parking spots.'    
-      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -518,7 +518,6 @@ OffStreetParking:
     maximumAllowedHeight:    
       description: 'Maximum allowed height for vehicles. If there are multiple zones, it will be the minimum height of all the zones.'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/heigth    
@@ -527,7 +526,6 @@ OffStreetParking:
     maximumAllowedWidth:    
       description: 'Maximum allowed width for vehicles. If there are multiple zones, it will be the minimum width of all the zones.'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/width    
@@ -947,11 +945,11 @@ OffStreetParking:
     - location    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Parking/blob/master/OffStreetParking/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.1.0    
+  x-version: 0.1.1    
 ```  
 </details>    
 ## Ejemplo de carga útil  
@@ -1199,252 +1197,251 @@ OffStreetParking:
 Aquí hay un ejemplo de un OffStreetParking en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",  
-  "type": "OffStreetParking",  
-  "address": {  
-    "addressCountry": "Portugal",  
-    "addressLocality": "Porto",  
-    "streetAddress": "Rua de Fernandes Tom\u00e1s",  
-    "type": "PostalAddress"  
-  },  
-  "allowedVehicleType": [  
-    "car"  
-  ],  
-  "availableSpotNumber": 132,  
-  "occupiedSpotNumber": 282,  
-  "occupancyModified": "2018-09-21T12:00:00Z",  
-  "occupancy": 0.68,  
-  "category": [  
-    "underground",  
-    "public",  
-    "feeCharged",  
-    "mediumTerm",  
-    "barrierAccess"  
-  ],  
-  "chargeType": [  
-    "temporaryPrice"  
-  ],  
-  "description": "Municipal car park located near the Trindade metro station and the Town Hall",  
-  "layout": [  
-    "multiLevel"  
-  ],  
-  "location": {  
-    "coordinates": [  
-      -8.60961198807,  
-      41.150691773  
+    "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",  
+    "type": "OffStreetParking",  
+    "accessModified": "2018-09-21T12:00:00Z",  
+    "address": {  
+        "addressCountry": "Portugal",  
+        "addressLocality": "Porto",  
+        "streetAddress": "Rua de Fernandes Tom\u00e1s",  
+        "type": "PostalAddress"  
+    },  
+    "allowedVehicleType": [  
+        "car"  
     ],  
-    "type": "Point"  
-  },  
-  "maximumParkingDuration": "PT8H",  
-  "modifiedAt": "2018-09-21T12:00:05Z",  
-  "name": "Parque de estacionamento Trindade",  
-  "requiredPermit": [],  
-  "totalSpotNumber": 414,  
-  "vehicleEntranceCount": 28,  
-  "vehicleExitCount": 12,  
-  "accessModified": "2018-09-21T12:00:00Z",  
-  "outOfServiceSlotNumber": 0,  
-  "parkingSiteId": "P2",  
-  "observationDateTime": "2021-03-11T15:51:02+05:30",  
-  "fourWheelerSlots": {  
-    "availableSpotNumber": 25,  
-    "totalSpotNumber": 25,  
-    "occupiedSpotNumber": 0  
-  },  
-  "unclassifiedSlots": {  
-    "availableSpotNumber": 0,  
-    "totalSpotNumber": 0,  
-    "occupiedSpotNumber": 0  
-  },  
-  "twoWheelerSlots": {  
-    "availableSpotNumber": 20,  
-    "totalSpotNumber": 20,  
-    "occupiedSpotNumber": 0  
-  },  
-  "municipalityInfo": {  
-    "district": "Bangalore Urban",  
-    "ulbName": "BMC",  
-    "cityId": "23",  
-    "wardId": "23",  
-    "stateName": "Karnataka",  
-    "cityName": "Bangalore",  
-    "zoneName": "South",  
-    "wardName": "Bangalore Urban",  
-    "zoneId": "2",  
-    "wardNum": 4  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "iudx:SmartParking"  
-  ]  
+    "availableSpotNumber": 132,  
+    "category": [  
+        "underground",  
+        "public",  
+        "feeCharged",  
+        "mediumTerm",  
+        "barrierAccess"  
+    ],  
+    "chargeType": [  
+        "temporaryPrice"  
+    ],  
+    "description": "Municipal car park located near the Trindade metro station and the Town Hall",  
+    "fourWheelerSlots": {  
+        "availableSpotNumber": 25,  
+        "totalSpotNumber": 25,  
+        "occupiedSpotNumber": 0  
+    },  
+    "layout": [  
+        "multiLevel"  
+    ],  
+    "location": {  
+        "coordinates": [  
+            -8.60961198807,  
+            41.150691773  
+        ],  
+        "type": "Point"  
+    },  
+    "maximumParkingDuration": "PT8H",  
+    "modifiedAt": "2018-09-21T12:00:05Z",  
+    "municipalityInfo": {  
+        "district": "Bangalore Urban",  
+        "ulbName": "BMC",  
+        "cityId": "23",  
+        "wardId": "23",  
+        "stateName": "Karnataka",  
+        "cityName": "Bangalore",  
+        "zoneName": "South",  
+        "wardName": "Bangalore Urban",  
+        "zoneId": "2",  
+        "wardNum": 4  
+    },  
+    "name": "Parque de estacionamento Trindade",  
+    "observationDateTime": "2021-03-11T15:51:02+05:30",  
+    "occupancy": 0.68,  
+    "occupancyModified": "2018-09-21T12:00:00Z",  
+    "occupiedSpotNumber": 282,  
+    "outOfServiceSlotNumber": 0,  
+    "parkingSiteId": "P2",  
+    "requiredPermit": [],  
+    "totalSpotNumber": 414,  
+    "twoWheelerSlots": {  
+        "availableSpotNumber": 20,  
+        "totalSpotNumber": 20,  
+        "occupiedSpotNumber": 0  
+    },  
+    "unclassifiedSlots": {  
+        "availableSpotNumber": 0,  
+        "totalSpotNumber": 0,  
+        "occupiedSpotNumber": 0  
+    },  
+    "vehicleEntranceCount": 28,  
+    "vehicleExitCount": 12,  
+    "@context": [  
+        "iudx:SmartParking",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### OffStreetParking NGSI-LD normalizado Ejemplo  
 Este es un ejemplo de OffStreetParking en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",  
-  "type": "OffStreetParking",  
-  "modifiedAt": "2018-09-21T12:00:05Z",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "underground",  
-      "public",  
-      "feeCharged",  
-      "mediumTerm",  
-      "barrierAccess"  
+    "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",  
+    "type": "OffStreetParking",  
+    "accessModified": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2018-09-21T12:00:00Z"  
+        }  
+    },  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressLocality": "Porto",  
+            "addressCountry": "Portugal",  
+            "streetAddress": "Rua de Fernandes Tomas",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "allowedVehicleType": {  
+        "type": "Property",  
+        "value": [  
+            "car"  
+        ]  
+    },  
+    "availableSpotNumber": {  
+        "type": "Property",  
+        "value": 132,  
+        "observedAt": "2018-09-21T12:00:00Z"  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "underground",  
+            "public",  
+            "feeCharged",  
+            "mediumTerm",  
+            "barrierAccess"  
+        ]  
+    },  
+    "chargeType": {  
+        "type": "Property",  
+        "value": [  
+            "temporaryPrice"  
+        ]  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Municipal car park located near the Trindade metro station and the Town Hall"  
+    },  
+    "extCategory": {  
+        "type": "Property",  
+        "value": [  
+            "A"  
+        ]  
+    },  
+    "fourWheelerSlots": {  
+        "type": "Property",  
+        "value": {  
+            "availableSpotNumber": 25,  
+            "totalSpotNumber": 25,  
+            "occupiedSpotNumber": 0  
+        }  
+    },  
+    "layout": {  
+        "type": "Property",  
+        "value": [  
+            "multiLevel"  
+        ]  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -8.60961198807,  
+                41.150691773  
+            ]  
+        }  
+    },  
+    "maximumParkingDuration": {  
+        "type": "Property",  
+        "value": "PT8H"  
+    },  
+    "modifiedAt": "2018-09-21T12:00:05Z",  
+    "municipalityInfo": {  
+        "type": "Property",  
+        "value": {  
+            "district": "Bangalore Urban",  
+            "ulbName": "BMC",  
+            "cityId": "23",  
+            "wardId": "23",  
+            "stateName": "Karnataka",  
+            "cityName": "Bangalore",  
+            "zoneName": "South",  
+            "wardName": "Bangalore Urban",  
+            "zoneId": "2",  
+            "wardNum": 4  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Parque de estacionamento Trindade"  
+    },  
+    "observationDateTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-03-11T15:51:02+05:30"  
+        }  
+    },  
+    "occupancy": {  
+        "type": "Property",  
+        "value": 0.68  
+    },  
+    "occupancyModified": {  
+        "type": "Property",  
+        "value": "2018-09-21T12:00:00Z"  
+    },  
+    "occupiedSpotNumber": {  
+        "type": "Property",  
+        "value": 282  
+    },  
+    "parkingSiteID": {  
+        "type": "Property",  
+        "value": "P2"  
+    },  
+    "requiredPermit": {  
+        "type": "Property",  
+        "value": []  
+    },  
+    "totalSpotNumber": {  
+        "type": "Property",  
+        "value": 414  
+    },  
+    "twoWheelerSlots": {  
+        "type": "Property",  
+        "value": {  
+            "availableSpotNumber": 20,  
+            "totalSpotNumber": 20,  
+            "occupiedSpotNumber": 0  
+        }  
+    },  
+    "unclassifiedSlots": {  
+        "type": "Property",  
+        "value": {  
+            "availableSpotNumber": 0,  
+            "totalSpotNumber": 0,  
+            "occupiedSpotNumber": 0  
+        }  
+    },  
+    "vehicleEntranceCount": {  
+        "type": "Property",  
+        "value": 28  
+    },  
+    "vehicleExitCount": {  
+        "type": "Property",  
+        "value": 12  
+    },  
+    "@context": [  
+        "iudx:SmartParking"  
     ]  
-  },  
-  "extCategory": {  
-    "type": "Property",  
-    "value": [  
-      "A"  
-    ]  
-  },  
-  "layout": {  
-    "type": "Property",  
-    "value": [  
-      "multiLevel"  
-    ]  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Parque de estacionamento Trindade"  
-  },  
-  "requiredPermit": {  
-    "type": "Property",  
-    "value": []  
-  },  
-  "allowedVehicleType": {  
-    "type": "Property",  
-    "value": [  
-      "car"  
-    ]  
-  },  
-  "availableSpotNumber": {  
-    "type": "Property",  
-    "value": 132,  
-    "observedAt": "2018-09-21T12:00:00Z"  
-  },  
-  "totalSpotNumber": {  
-    "type": "Property",  
-    "value": 414  
-  },  
-  "occupiedSpotNumber": {  
-    "type": "Property",  
-    "value": 282  
-  },  
-  "occupancyModified": {  
-    "type": "Property",  
-    "value": "2018-09-21T12:00:00Z"  
-  },  
-  "occupancy": {  
-    "type": "Property",  
-    "value": 0.68  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -8.60961198807,  
-        41.150691773  
-      ]  
-    }  
-  },  
-  "chargeType": {  
-    "type": "Property",  
-    "value": [  
-      "temporaryPrice"  
-    ]  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "Porto",  
-      "addressCountry": "Portugal",  
-      "streetAddress": "Rua de Fernandes Tomas",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "maximumParkingDuration": {  
-    "type": "Property",  
-    "value": "PT8H"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Municipal car park located near the Trindade metro station and the Town Hall"  
-  },  
-  "vehicleEntranceCount": {  
-    "type": "Property",  
-    "value": 28  
-  },  
-  "vehicleExitCount": {  
-    "type": "Property",  
-    "value": 12  
-  },  
-  "accessModified": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2018-09-21T12:00:00Z"  
-    }  
-  },  
-  "parkingSiteID": {  
-    "type": "Property",  
-    "value": "P2"  
-  },  
-  "observationDateTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-03-11T15:51:02+05:30"  
-    }  
-  },  
-  "fourWheelerSlots": {  
-    "type": "Property",  
-    "value": {  
-      "availableSpotNumber": 25,  
-      "totalSpotNumber": 25,  
-      "occupiedSpotNumber": 0  
-    }  
-  },  
-  "unclassifiedSlots": {  
-    "type": "Property",  
-    "value": {  
-      "availableSpotNumber": 0,  
-      "totalSpotNumber": 0,  
-      "occupiedSpotNumber": 0  
-    }  
-  },  
-  "twoWheelerSlots": {  
-    "type": "Property",  
-    "value": {  
-      "availableSpotNumber": 20,  
-      "totalSpotNumber": 20,  
-      "occupiedSpotNumber": 0  
-    }  
-  },  
-  "municipalityInfo": {  
-    "type": "Property",  
-    "value": {  
-      "district": "Bangalore Urban",  
-      "ulbName": "BMC",  
-      "cityId": "23",  
-      "wardId": "23",  
-      "stateName": "Karnataka",  
-      "cityName": "Bangalore",  
-      "zoneName": "South",  
-      "wardName": "Bangalore Urban",  
-      "zoneId": "2",  
-      "wardNum": 4  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "iudx:SmartParking"  
-  ]  
 }  
 ```  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  

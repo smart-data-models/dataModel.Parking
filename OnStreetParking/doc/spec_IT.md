@@ -4,7 +4,7 @@
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Parking/blob/master/OnStreetParking/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descrizione globale: **Un sito, zona di spazio aperto, su strada, (con o senza contatore) con accesso diretto da una strada, destinato al parcheggio di veicoli.**  
-versione: 0.1.2  
+versione: 0.1.3  
 
 ## Elenco delle proprietà  
 
@@ -117,21 +117,21 @@ OnStreetParking:
         type: Property    
     availableSpotNumber:    
       description: 'The number of spots available globally, including reserved spaces, such as those for disabled people, long term parkers and so on. This might be harder to estimate at those parking locations on which spots borders are not clearly marked by lines'    
-      minvalue: 0    
+      minimum: 0    
       type: integer    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     averageSpotLength:    
       description: 'The average length of parking spots'    
-      minvalue: 0    
+      minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/length    
         type: Property    
     averageSpotWidth:    
       description: 'The average width of parking spots'    
-      minvalue: 0    
+      minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/width    
@@ -204,7 +204,7 @@ OnStreetParking:
         type: Property    
     extraSpotNumber:    
       description: 'The number of extra spots available, i.e. free. Extra    spots are those reserved for special purposes and usually require a permit. Permit details will be found at parking group level (entity of type `ParkingGroup`). This value must aggregate free spots from all groups devoted to special parking conditions. Allowed values: A positive integer number, including 0. `extraSpotNumber` plus `availableSpotNumber` must be lower than or equal to `totalSpotNumber'    
-      minvalue: 0    
+      minimum: 0    
       type: integer    
       x-ngsi:    
         model: http://schema.org/Number    
@@ -554,7 +554,7 @@ OnStreetParking:
         type: Property    
     totalSpotNumber:    
       description: 'The total number of spots offered by this parking site. This number can be difficult to be obtained for those parking locations on which spots are not clearly marked by lines. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class.'    
-      minvalue: 0    
+      minimum: 0    
       type: integer    
       x-ngsi:    
         model: http://schema.org/Number    
@@ -625,7 +625,7 @@ OnStreetParking:
   x-license-url: https://github.com/smart-data-models/dataModel.Parking/blob/master/OnStreetParking/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Parking/OnStreetParking/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.1.2    
+  x-version: 0.1.3    
 ```  
 </details>    
 ## Esempi di payload  
@@ -724,7 +724,7 @@ OnStreetParking:
 }  
 ```  
 #### OnStreetParking NGSI-v2 normalizzato Esempio  
-Ecco un esempio di OnStreetParking in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di OnStreetParking in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "santander:daoiz_velarde_1_5",  

@@ -1,15 +1,17 @@
-エンティティオフストリートパーキング  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティオフストリートパーキング  
 ==================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Parking/blob/master/OffStreetParking/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 グローバルな説明**オフロードパーキング**  
+バージョン: 0.1.1  
 
 ## プロパティ一覧  
 
-- `acceptedPaymentMethod`: Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'.利用可能な支払い方法（複数可）。  - `accessModified`: vehicleEntranceCount` と `vehicleExitCount` が更新されたときのタイムスタンプ。許容される値。ISO8601  - `address`: 郵送先住所  - `aggregateRating`: この駐車場サイトの集計評価。  - `allowedVehicleType`: 使用可能な車種。この配列の最初の要素は、許可される主要な車種でなければならない (MUST)。他の許可された車種のフリースポット番号は、`extraSpotNumber` 属性と _ParkingGroup_ タイプの特定のエンティティを通して報告されるかもしれません。VehicleTypeEnum_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/downloads/modelv23.html) で定義される以下の値。Enum:'agriculturalVehicle, anyVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van' （農業車、商用車、オートバイ、トレーラー、モータースクーター、トレーラー、バン）。  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `availableSpotNumber`: 利用可能なスポットの数（すべての車種、または身体障害者用や長期駐車者用などの予約されたスペースを含む）。これは、駐車場の境界が線によって明確に示されていない場所では、推定が困難な場合がある。許容される値。0を含む正の整数であり、 `totalSpotNumber` よりも小さいか等しくなければならない。  - `averageSpotLength`: 駐車場の平均的な長さです。  - `averageSpotWidth`: 駐車場の平均的な幅のこと。  - `category`: 駐車場サイトのカテゴリです。このフィールドの目的は、一般的に言えば、路上駐車のエンティティをタグ付けできるようにすることです。  - `chargeType`: 駐車場が行う充電の種類。許可された値。DATEX II version 2.3 _ ChargeTypeEnum_ enumeration で定義されているもののうち、いくつか。Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, other, seasonTicket, temporaryPrice'（追加インターバル価格、年間支払い、最初のインターバル価格、フラット、無料、最小、最大、月払い、その他、シーズンチケット、一時払い）。または、その他のアプリケーション固有の  - `contactPoint`: 駐車場サイトの連絡先  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `extCategory`: 外部カテゴリーからカテゴリーを補完する。  - `extraSpotNumber`: 利用可能な、つまり空いている余分なスポットの数。この値には、以下のすべてのグループのフリースポットが含まれる必要があります。A/ 特別な目的のために予約されたもので、通常は許可証が必要。許可証の詳細は、駐車場グループレベル（`ParkingGroup`タイプのエンティティ）で確認できます。B/ 主な許可車種とは異なる他の車種のために予約されたもの。C/ このエンティティによって伝達される一般的な条件ルールに従わない、その他の駐車場グループ。  - `facilities`: 許容される値。DATEX II version 2.3 の _EquipmentTypeEnum_ enumeration で定義される以下のもの。列挙する。'bikeParking, cashMachine, copyMachineOrService, defibrillator, dumpingStation, electricChargingStation, elevator, faxMachineOrService, fireHose, fireExtinguisher, fireHydrant, firstAidEquipment, freshWater,アイスフリースクエア、インフォメーションポイント、インターネットワイヤレス、ラゲージロッカー、ペイデスク、支払機、プレイグラウンド、公衆電話、ごみ箱、セーフティボックス、シャワー、トイレ、料金所、自動販売機、ごみ処理'。その他のアプリケーション固有の  - `firstAvailableFloor`: 現在、駐車可能台数がある最も地盤に近い階の番号。許容される値。階数は-nからnまでで、0階が1階となる。  - `fourWheelerSlots`: この観測に対応する駐車場の四輪車駐車場の空き状況。  - `highestFloor`: 複数階建ての駐車場の場合、最上階。整数値。0は地上階。高層階は正の数。低層階は負の数。  - `id`: エンティティの一意な識別子  - `images`: この駐車場の写真を含むURL  - `layout`: 駐車場のレイアウト。category` 属性の詳細を指定します。許容される値。DATEX II バージョン 2.3 の _ParkingLayoutEnum_ による。Enum:'automatedParkingGarage, carports, covered, field, garageBoxes, multiLevel, multiStorey, nested, openSpace, rooftop, sheds, singleLevel, surface, other'（自動駐車場、カーポート、屋根付き、フィールド、ガレージボックス、複数階建て、屋上、小屋、単一階、表面、その他）。OpenStreetMap](http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking)も参照してください。または、アプリケーションに有用で、上記でカバーされていないその他の値。  - `location`: 項目へのGeojson参照。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `lowestFloor`: 複数階建ての駐車場敷地では、最下層階。許容される値。整数値。  - `maximumAllowedHeight`: 車両の最大許容高さ。複数のゾーンがある場合は、すべてのゾーンの最低高となる。  - `maximumAllowedWidth`: 車両の最大許容幅。複数のゾーンがある場合は、すべてのゾーンの最小幅となる。  - `maximumParkingDuration`: ISO8601の期間あるいは駐車に関連するその他の文字列としてエンコードされた、一般的な基準での、サイトでの最大許容滞在時間。  空の値，または存在しない場合は，無期限を示す。  - `measuresPeriod`: AvailableSpotNumberとpriceRatePerMinuteに関連する測定期間。  - `measuresPeriodUnit`: AvailableSpotNumber と PriceRatePerMinute に関連する測定期間単位。  - `municipalityInfo`: この観測に対応する自治体情報。  - `name`: このアイテムの名称です。  - `observationDateTime`: 最後に報告された観測時刻。  - `occupancy`: 全スポットのうち、占有されているスポットの相対的な値。  - `occupancyDetectionType`: 稼働率検出方法（複数可）。  許容される値。DATEX II version 2.3 _OccupancyDetectionTypeEnum_ より以下の通り。Enum:'balancing, manual, modelBased, none, singleSpaceDetection'.または、その他のアプリケーション固有の  - `occupancyModified`: 全スポットのうち、占有されているスポットの相対的な値。許容される値。0 - 1  - `occupiedSpotNumber`: 占有されているスポットの数。許可された値。0 - `totalSpotNumber`.  - `openingHours`: 駐車場の営業時間  - `outOfServiceSlotNumber`: この観測に対応する自転車ラック/自転車ドッキングステーションまたは駐車場のうち、故障していて自転車を借りたり停めたりすることができないものの数。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `parkingMode`: 駐車モード（複数可）。許容される値。DATEX II version 2.3 _ParkingModeEnum_ enumeration で定義されているもの。Enum:'echelonParking, parallelParking, perpendicularParking'.  - `parkingSiteId`: この観測に対応する駐車場サイトまたは駐車場の固有 ID。  - `priceCurrency`: 1分あたりの価格レートの通貨  - `priceRatePerMinute`: 1分あたりの価格レートです。  - `provider`: 駐車場サービス事業者  - `refParkingAccess`: 駐車場のアクセスポイント。  - `refParkingGroup`: 駐車場が特定されたグループ（複数可）。グループは、ゾーン、完全な階、スポットのグループなどに対応することができます。  - `refParkingSpot`: この路外駐車場に属する個別駐車場。  - `requiredPermit`: この属性は、このサイトでの駐車に必要な許可証の種類を捕捉する。意味としては、駐車するためには、これらの許可証のうち少なくとも1つが必要であるということです。許可証が複数の項目で構成されている場合（および）、それらは','で結合することができる。例えば、'residentPermit,disabledPermit' は、駐車するために、居住者と身体障害者の両方の許可証が同時に必要であることを意味します。リストが空の場合、許可証は必要ありません。許可された値。DATEX II version 2.3 の _PermitTypeEnum_ enumeration で定義される以下のもの。Enum:'employeePermit, fairPermit, governmentPermit, noPermitNeeded, residentPermit, specificIdentifiedVehiclePermit, studentPermit, visitorPermit'（従業員許可、公正許可、政府許可、学生許可、ビジター許可）。またはその他のアプリケーション固有の  - `reservationType`: DATEX II Ver.2.3の_ReservationTypeEnum_で規定される以下のもの。Enum:'mandatory, notAvailable, optional, partly'.  - `security`: この駐車場が提供するセキュリティ面。許可された値。DATEX II version 2.3 の _ParkingSecurityEnum_ で定義された以下のものがある。Enum: 'areaSeparatedFromSurroundings, cctv, dog, externalSecurity, fences, floodLight, guard24hours, lighting, patrolled, securityStaff' ... あるいはその他のアプリケーション固有の値。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで指定する文字の列。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `specialLocation`: 駐車場が特殊な場所（空港、デパートなど）にある場合、その特殊な場所が何であるかを伝える。  許容される値。DATEX II version 2.3](http://www.datex2.eu/content/parking-publications-extension-v10a) の _ParkingSpecialLocationEnum_ で定義されているもの。Enum:'airportTerminal, cableCarStation, campground, cinema, coachStation, conventionCentre, exhibitionCentre, ferryTerminal, hotel, market, publicTransportStation, religiousCentre, shoppingCentre, skilift, specificFacility, themePark, trainStation, vehicleOnRailTerminal, other' （「空港ターミナル」、「ケーブルカーステーション」、「キャンプ場」、「映画館」、「コーチステーション」、「コンベンションセンター」、「展示場」、「フェリーターミナル」、「ホテル」、「マーケット」、「公共交通機関」、「宗教施設」、「買い物センター  - `status`: 駐車場サイトの状況。許容される値。DATEX II Ver.2.3で定義された以下の列挙型により定義される。Enum:'almostFull, closed, closedAbnormal, full, fullAtEntrance, open, openingTimesInForce, spacesAvailable'.あるいは、その他のアプリケーション固有の  - `totalSpotNumber`: この駐車場が提供するスポットの総数。  この数値は、駐車場が線によって明確に示されていない場合、取得が困難なことがある。許容される値。任意の正の整数値または 0。DATEX 2 バージョン 2.3 の _ParkingRecord_ クラスの _parkingNumberOfSpaces_ 属性。  - `twoWheelerSlots`: この観測に対応する駐車場の二輪車駐車場の空き状況。  - `type`: OffStreetParkingである必要があります。  - `unclassifiedSlots`: この観測に対応する駐車場での未分類車やその他の車の駐車場の空き状況。  - `usageScenario`: 利用シーン(複数可)category` 属性に詳細を与えます。許容される値。DATEX II version 2.3 の enumeration _ParkingUsageScenarioEnum_ で定義されているもの。Enum:'automaticParkingGuidance, carSharing, dropOffWithValet, dropOffMechanical, dropOff, eventParking, kissAndRide, liftShare, loadingBay, overnightParking, parkAndCycle, parkAndRide, parkAndWalk, restArea, serviceArea, staffGuidesToSpace, truckParking, vehicleLift, other'.これらは、駐車場利用シーンの列挙として使用できる。または、アプリケーションに有用で、上記でカバーされていないその他の値。  - `vehicleEntranceCount`: 一定期間に駐車場に入庫した車両の台数を集計したもの。  - `vehicleExitCount`: 一定時間内に駐車場から退出した車両の数を集計したもの。    
+- `acceptedPaymentMethod`: Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'.利用可能な支払い方法（複数可）。  - `accessModified`: vehicleEntranceCount` と `vehicleExitCount` が更新されたときのタイムスタンプ。許容される値ISO8601  - `address`: 郵送先住所  - `aggregateRating`: この駐車場サイトの集計評価。  - `allowedVehicleType`: 許可される車種。この配列の最初の要素は、許可された主要な車両タイプでなければなりません。他の車両タイプのフリースポット番号は `extraSpotNumber` 属性と _ParkingGroup_ タイプの特定のエンティティを通して報告されるかもしれません。VehicleTypeEnum_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/downloads/modelv23.html) で定義される以下の値。Enum:'agriculturalVehicle, anyVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van' （農業車、自動車、オートバイ、トレーラー、モータースクーター、トレーラー、バン  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `availableSpotNumber`: 利用可能な駐車場の数（すべての車種、または身体障害者や長期駐車者などの予約された駐車場を含む）。これは、駐車場の境界が線によって明確にマークされていない場所では、推定するのが難しいかもしれない。許容される値。0を含む正の整数であり、 `totalSpotNumber` よりも小さいか等しくなければならない。  - `averageSpotLength`: 駐車場の平均的な長さです。  - `averageSpotWidth`: 駐車場の平均的な幅のこと。  - `category`: 駐車場サイトのカテゴリ（ies）。このフィールドの目的は、一般的に言えば、路上駐車のエンティティをタグ付けできるようにすることです。  - `chargeType`: 駐車場が行う充電の種類。許容される値。DATEX II version 2.3 _ ChargeTypeEnum_ enumerationで定義されているもののうち、幾つか。Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, other, seasonTicket, temporaryPrice'.あるいはその他のアプリケーション固有の値。または、その他のアプリケーション固有の  - `contactPoint`: 駐車場サイトの連絡先  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `extCategory`: 外部カテゴリーからカテゴリーを補完する。  - `extraSpotNumber`: 利用可能な、つまり空いている余分なスポットの数。この値には、以下のすべてのグループのフリースポットが含まれていなければなりません。A/ 特別な目的のために予約されたもので、通常は許可証が必要です。許可証の詳細は、駐車場グループレベル（`ParkingGroup`タイプのエンティティ）で見つかります。B/ 主な許可車種とは異なる他の車種のために予約されたもの。C/ このエンティティによって伝達される一般的な条件ルールに従わない、その他の駐車場グループ。  - `facilities`: 許容される値。DATEX II version 2.3 の _EquipmentTypeEnum_ enumeration で定義される以下のもの。列挙する。'bikeParking, cashMachine, copyMachineOrService, defibrillator, dumpingStation, electricChargingStation, elevator, faxMachineOrService, fireHose, fireExtinguisher, fireHydrant, firstAidEquipment, freshWater.IceFreeScaffold, informationPoint, internetWireless, internetAdvancedScaffold,etc。足場, インフォメーションポイント, インターネットワイヤレス, ラゲージロッカー, ペイデスク, 支払機, プレイグラウンド, 公衆電話, ゴミ箱, セーフティーボックス, シャワー, トイレ, 有料端末, 自動販売機, ゴミ箱' .その他のアプリケーション固有の  - `firstAvailableFloor`: 現在利用可能な駐車場がある、最も地上に近い階の番号。許容される値。階数は-nからnまでで、0階が1階となる。  - `fourWheelerSlots`: この観測に対応する駐車場の四輪車駐車場の空き状況。  - `highestFloor`: 複数階建ての駐車場の場合、最上階。整数値。0は地上階。上層階は正の数。低層階は負の数。  - `id`: エンティティの一意な識別子  - `images`: この駐車場の写真を含むURL  - `layout`: 駐車場のレイアウト。category` 属性の詳細を指定します。許容される値。DATEX II バージョン 2.3 の _ParkingLayoutEnum_ による。Enum:'automatedParkingGarage, carports, covered, field, garageBoxes, multiLevel, multiStorey, nested, openSpace, rooftop, sheds, singleLevel, surface, other'（自動駐車場、カーポート、屋根付き、フィールド、ガレージボックス、複数階建て、屋上、小屋、単一階、表面、その他）。OpenStreetMap](http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking)も参照してください。または、アプリケーションに有用で、上記でカバーされていないその他の値。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `lowestFloor`: 複数階建ての駐車場敷地では、最下層階。許容される値。整数値。  - `maximumAllowedHeight`: 車両の最大許容高さ。複数のゾーンがある場合は、すべてのゾーンの最低高となる。  - `maximumAllowedWidth`: 車両の最大許容幅。複数のゾーンがある場合は、すべてのゾーンの最小幅となる。  - `maximumParkingDuration`: ISO8601 の期間あるいは駐車に関連するその他の文字列としてエンコードされた、一般的にサイトでの最大許容滞在時間。  空の値，または存在しない場合は，無期限を示す。  - `measuresPeriod`: AvailableSpotNumberとpriceRatePerMinuteに関連する測定期間。  - `measuresPeriodUnit`: AvailableSpotNumber と PriceRatePerMinute に関連する測定期間単位。  - `municipalityInfo`: この観測に対応する市町村情報。  - `name`: このアイテムの名称です。  - `observationDateTime`: 最後に報告された観測時刻。  - `occupancy`: 全スポットのうち、占有されているスポットの相対的な値。  - `occupancyDetectionType`: 稼働率検出の方法（複数可）。  許容される値。DATEX II version 2.3 _OccupancyDetectionTypeEnum_ より以下の通り。Enum:'balancing, manual, modelBased, none, singleSpaceDetection'.または、その他のアプリケーション固有の  - `occupancyModified`: 全スポットに対する占有スポットの相対値。許容される値。0 - 1  - `occupiedSpotNumber`: 占有されているスポットの数。許可された値。0 - `totalSpotNumber`.  - `openingHours`: 駐車場の営業時間  - `outOfServiceSlotNumber`: この観測に対応する自転車ラック/自転車ドッキングステーションまたは駐車場のうち、故障していて自転車を借りたり停めたりすることができないものの数。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `parkingMode`: 駐車モード（複数可）。許容される値。DATEX II version 2.3 _ParkingModeEnum_ enumeration で定義されているもの。Enum:'echelonParking, parallelParking, perpendicularParking'.  - `parkingSiteId`: この観測に対応する駐車場サイトまたは駐車場の固有 ID。  - `priceCurrency`: 1分あたりの価格レートの通貨  - `priceRatePerMinute`: 1分あたりの価格レートです。  - `provider`: 駐車場サービス事業者  - `refParkingAccess`: 駐車場のアクセスポイント。  - `refParkingGroup`: 駐車場が特定されたグループ。グループは、ゾーン、完全な階、スポットのグループなどに対応することができます。  - `refParkingSpot`: この路外駐車場に属する個別駐車場。  - `requiredPermit`: この属性は、このサイトでの駐車に必要な許可証の種類を捕捉する。意味的には、これらの許可証の少なくとも1つが駐車に必要である。許可証が複数の項目で構成されている場合（および）、それらは','で結合することができます。例えば、'residentPermit,disabledPermit' は、駐車するために、居住者と身体障害者の両方の許可証が同時に必要であることを意味します。リストが空の場合、許可証は必要ありません。許可された値。DATEX II version 2.3 の _PermitTypeEnum_ enumeration で定義される以下のものである。Enum:'employeePermit, fairPermit, governmentPermit, noPermitNeeded, residentPermit, specificIdentifiedVehiclePermit, studentPermit, visitorPermit'（従業員許可、公正許可、政府許可、学生許可、ビジター許可）。またはその他のアプリケーション固有の  - `reservationType`: DATEX II Ver.2.3の_ReservationTypeEnum_で規定される以下の項目。Enum:'mandatory, notAvailable, optional, partly'.  - `security`: この駐車場サイトが提供するセキュリティの側面。許容される値。DATEX II version 2.3 の _ParkingSecurityEnum_ で定義された以下のものがある。Enum: 'areaSeparatedFromSurroundings, cctv, dog, externalSecurity, fences, floodLight, guard24hours, lighting, patrolled, securityStaff' ... あるいはその他のアプリケーション固有の値。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `specialLocation`: 駐車場が特殊な場所（空港、デパートなど）にある場合、その特殊な場所が何であるかを伝える。  許容される値。DATEX II version 2.3](http://www.datex2.eu/content/parking-publications-extension-v10a) の _ParkingSpecialLocationEnum_ で定義されているもの。Enum:'airportTerminal, cableCarStation, campground, cinema, coachStation, conventionCentre, exhibitionCentre, ferryTerminal, hotel, market, publicTransportStation, religiousCentre, shoppingCentre, skilift, specificFacility, themePark, trainStation, vehicleOnRailTerminal, other' （「空港ターミナル」、「ケーブルカーステーション」、「キャンプ場」、「映画館」、「コーチステーション」、「コンベンションセンター」、 「展示場」、「フェリーターミナル」、「市場」、「鉄道ターミナル」、「宗教施設」、「ショッピングセン ター」など。  - `status`: 駐車場サイトの状況。許容される値。DATEX II version 2.3 で定義された以下の列挙型により定義される。Enum:'almostFull, closed, closedAbnormal, full, fullAtEntrance, open, openingTimesInForce, spacesAvailable'.あるいは、その他のアプリケーション固有の  - `totalSpotNumber`: この駐車場が提供しているスポットの総数です。  この数値は、駐車場がラインによって明確に示されていない場合、取得が困難な場合がある。許容される値。任意の正の整数値または 0。DATEX 2 バージョン 2.3 の _ParkingRecord_ クラスの _parkingNumberOfSpaces_ 属性。  - `twoWheelerSlots`: この観測に対応する駐車場の二輪車駐車場の空き状況。  - `type`: OffStreetParkingである必要があります。  - `unclassifiedSlots`: この観測に対応する駐車場での未分類車やその他の車の駐車場の空き状況。  - `usageScenario`: 使用シナリオ(s)category` 属性に詳細を指定します。許容される値。DATEX II version 2.3 の enumeration _ParkingUsageScenarioEnum_ で定義されているもの。Enum:'automaticParkingGuidance, carSharing, dropOffWithValet, dropOffMechanical, dropOff, eventParking, kissAndRide, liftShare, loadingBay, overnightParking, parkAndCycle, parkAndRide, parkAndWalk, restArea, serviceArea, staffGuidesToSpace, truckParking, vehicleLift, other'（「自動駐車案内」）。または、アプリケーションに有用で、上記でカバーされていないその他の値。  - `vehicleEntranceCount`: 一定期間に駐車場に入庫した車両の台数を集計したもの。  - `vehicleExitCount`: 一定時間内に駐車場から退出した車両の数を集計したもの。    
 必要なプロパティ  
 - `id`  - `location`  - `type`    
-路上にある、車両の駐車を目的とした敷地で、独立して管理され、適切かつ明確にマークされたアクセスポイント（入口と出口）を持つもの。必要であれば、管理目的のため、または複数個所の駐車場を扱うために、エンティティタイプ [ParkingGroup] (../ParkingGroup/README.md) によってモデル化された異なるゾーンに分割することができる。DATEX2バージョン2.3の用語では、_offStreetParking_タイプの_UrbanParkingSite_に相当します。DATEX IIの用語のデータ辞書は、[http://datexbrowser.tamtamresearch.com/](http://datexbrowser.tamtamresearch.com/)にあります。  
+駐車場は独立して管理され、適切なアクセスポイント（入口と出口）が明確に表示されている。必要であれば、管理のため、あるいは複数個所の駐車場を扱うために、[ParkingGroup](../ParkingGroup/README.md)というエンティティタイプによって異なるゾーンに分割することができる。DATEX2バージョン2.3の用語では、_offStreetParking_タイプの_UrbanParkingSite_に相当します。DATEX IIの用語のデータ辞書は、[http://datexbrowser.tamtamresearch.com/](http://datexbrowser.tamtamresearch.com/)にあります。  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -123,7 +125,6 @@ OffStreetParking:
     averageSpotLength:    
       description: 'The average length of parking spots.'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/length    
@@ -131,7 +132,6 @@ OffStreetParking:
         units: meters    
     averageSpotWidth:    
       description: 'The average width of parking spots.'    
-      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -518,7 +518,6 @@ OffStreetParking:
     maximumAllowedHeight:    
       description: 'Maximum allowed height for vehicles. If there are multiple zones, it will be the minimum height of all the zones.'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/heigth    
@@ -527,7 +526,6 @@ OffStreetParking:
     maximumAllowedWidth:    
       description: 'Maximum allowed width for vehicles. If there are multiple zones, it will be the minimum width of all the zones.'    
       exclusiveMinimum: 0    
-      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/width    
@@ -947,16 +945,16 @@ OffStreetParking:
     - location    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Parking/blob/master/OffStreetParking/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.1.0    
+  x-version: 0.1.1    
 ```  
 </details>    
 ## ペイロードの例  
 #### OffStreetParking NGSI-v2 key-value の例。  
-OffStreetParkingをJSON-LD形式でkey-valueとした例です。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+OffStreetParkingをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "porto-ParkingLot-23889",  
@@ -1196,255 +1194,254 @@ OffStreetParking:
 }  
 ```  
 #### OffStreetParking NGSI-LD キー値例  
-OffStreetParkingをJSON-LD形式でkey-valueにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+OffStreetParkingをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",  
-  "type": "OffStreetParking",  
-  "address": {  
-    "addressCountry": "Portugal",  
-    "addressLocality": "Porto",  
-    "streetAddress": "Rua de Fernandes Tom\u00e1s",  
-    "type": "PostalAddress"  
-  },  
-  "allowedVehicleType": [  
-    "car"  
-  ],  
-  "availableSpotNumber": 132,  
-  "occupiedSpotNumber": 282,  
-  "occupancyModified": "2018-09-21T12:00:00Z",  
-  "occupancy": 0.68,  
-  "category": [  
-    "underground",  
-    "public",  
-    "feeCharged",  
-    "mediumTerm",  
-    "barrierAccess"  
-  ],  
-  "chargeType": [  
-    "temporaryPrice"  
-  ],  
-  "description": "Municipal car park located near the Trindade metro station and the Town Hall",  
-  "layout": [  
-    "multiLevel"  
-  ],  
-  "location": {  
-    "coordinates": [  
-      -8.60961198807,  
-      41.150691773  
+    "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",  
+    "type": "OffStreetParking",  
+    "accessModified": "2018-09-21T12:00:00Z",  
+    "address": {  
+        "addressCountry": "Portugal",  
+        "addressLocality": "Porto",  
+        "streetAddress": "Rua de Fernandes Tom\u00e1s",  
+        "type": "PostalAddress"  
+    },  
+    "allowedVehicleType": [  
+        "car"  
     ],  
-    "type": "Point"  
-  },  
-  "maximumParkingDuration": "PT8H",  
-  "modifiedAt": "2018-09-21T12:00:05Z",  
-  "name": "Parque de estacionamento Trindade",  
-  "requiredPermit": [],  
-  "totalSpotNumber": 414,  
-  "vehicleEntranceCount": 28,  
-  "vehicleExitCount": 12,  
-  "accessModified": "2018-09-21T12:00:00Z",  
-  "outOfServiceSlotNumber": 0,  
-  "parkingSiteId": "P2",  
-  "observationDateTime": "2021-03-11T15:51:02+05:30",  
-  "fourWheelerSlots": {  
-    "availableSpotNumber": 25,  
-    "totalSpotNumber": 25,  
-    "occupiedSpotNumber": 0  
-  },  
-  "unclassifiedSlots": {  
-    "availableSpotNumber": 0,  
-    "totalSpotNumber": 0,  
-    "occupiedSpotNumber": 0  
-  },  
-  "twoWheelerSlots": {  
-    "availableSpotNumber": 20,  
-    "totalSpotNumber": 20,  
-    "occupiedSpotNumber": 0  
-  },  
-  "municipalityInfo": {  
-    "district": "Bangalore Urban",  
-    "ulbName": "BMC",  
-    "cityId": "23",  
-    "wardId": "23",  
-    "stateName": "Karnataka",  
-    "cityName": "Bangalore",  
-    "zoneName": "South",  
-    "wardName": "Bangalore Urban",  
-    "zoneId": "2",  
-    "wardNum": 4  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "iudx:SmartParking"  
-  ]  
+    "availableSpotNumber": 132,  
+    "category": [  
+        "underground",  
+        "public",  
+        "feeCharged",  
+        "mediumTerm",  
+        "barrierAccess"  
+    ],  
+    "chargeType": [  
+        "temporaryPrice"  
+    ],  
+    "description": "Municipal car park located near the Trindade metro station and the Town Hall",  
+    "fourWheelerSlots": {  
+        "availableSpotNumber": 25,  
+        "totalSpotNumber": 25,  
+        "occupiedSpotNumber": 0  
+    },  
+    "layout": [  
+        "multiLevel"  
+    ],  
+    "location": {  
+        "coordinates": [  
+            -8.60961198807,  
+            41.150691773  
+        ],  
+        "type": "Point"  
+    },  
+    "maximumParkingDuration": "PT8H",  
+    "modifiedAt": "2018-09-21T12:00:05Z",  
+    "municipalityInfo": {  
+        "district": "Bangalore Urban",  
+        "ulbName": "BMC",  
+        "cityId": "23",  
+        "wardId": "23",  
+        "stateName": "Karnataka",  
+        "cityName": "Bangalore",  
+        "zoneName": "South",  
+        "wardName": "Bangalore Urban",  
+        "zoneId": "2",  
+        "wardNum": 4  
+    },  
+    "name": "Parque de estacionamento Trindade",  
+    "observationDateTime": "2021-03-11T15:51:02+05:30",  
+    "occupancy": 0.68,  
+    "occupancyModified": "2018-09-21T12:00:00Z",  
+    "occupiedSpotNumber": 282,  
+    "outOfServiceSlotNumber": 0,  
+    "parkingSiteId": "P2",  
+    "requiredPermit": [],  
+    "totalSpotNumber": 414,  
+    "twoWheelerSlots": {  
+        "availableSpotNumber": 20,  
+        "totalSpotNumber": 20,  
+        "occupiedSpotNumber": 0  
+    },  
+    "unclassifiedSlots": {  
+        "availableSpotNumber": 0,  
+        "totalSpotNumber": 0,  
+        "occupiedSpotNumber": 0  
+    },  
+    "vehicleEntranceCount": 28,  
+    "vehicleExitCount": 12,  
+    "@context": [  
+        "iudx:SmartParking",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### OffStreetParking NGSI-LD 正規化例  
 以下は、OffStreetParkingを正規化したJSON-LD形式の例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",  
-  "type": "OffStreetParking",  
-  "modifiedAt": "2018-09-21T12:00:05Z",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "underground",  
-      "public",  
-      "feeCharged",  
-      "mediumTerm",  
-      "barrierAccess"  
+    "id": "urn:ngsi-ld:OffStreetParking:porto-ParkingLot-23889",  
+    "type": "OffStreetParking",  
+    "accessModified": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2018-09-21T12:00:00Z"  
+        }  
+    },  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressLocality": "Porto",  
+            "addressCountry": "Portugal",  
+            "streetAddress": "Rua de Fernandes Tomas",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "allowedVehicleType": {  
+        "type": "Property",  
+        "value": [  
+            "car"  
+        ]  
+    },  
+    "availableSpotNumber": {  
+        "type": "Property",  
+        "value": 132,  
+        "observedAt": "2018-09-21T12:00:00Z"  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "underground",  
+            "public",  
+            "feeCharged",  
+            "mediumTerm",  
+            "barrierAccess"  
+        ]  
+    },  
+    "chargeType": {  
+        "type": "Property",  
+        "value": [  
+            "temporaryPrice"  
+        ]  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Municipal car park located near the Trindade metro station and the Town Hall"  
+    },  
+    "extCategory": {  
+        "type": "Property",  
+        "value": [  
+            "A"  
+        ]  
+    },  
+    "fourWheelerSlots": {  
+        "type": "Property",  
+        "value": {  
+            "availableSpotNumber": 25,  
+            "totalSpotNumber": 25,  
+            "occupiedSpotNumber": 0  
+        }  
+    },  
+    "layout": {  
+        "type": "Property",  
+        "value": [  
+            "multiLevel"  
+        ]  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -8.60961198807,  
+                41.150691773  
+            ]  
+        }  
+    },  
+    "maximumParkingDuration": {  
+        "type": "Property",  
+        "value": "PT8H"  
+    },  
+    "modifiedAt": "2018-09-21T12:00:05Z",  
+    "municipalityInfo": {  
+        "type": "Property",  
+        "value": {  
+            "district": "Bangalore Urban",  
+            "ulbName": "BMC",  
+            "cityId": "23",  
+            "wardId": "23",  
+            "stateName": "Karnataka",  
+            "cityName": "Bangalore",  
+            "zoneName": "South",  
+            "wardName": "Bangalore Urban",  
+            "zoneId": "2",  
+            "wardNum": 4  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Parque de estacionamento Trindade"  
+    },  
+    "observationDateTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-03-11T15:51:02+05:30"  
+        }  
+    },  
+    "occupancy": {  
+        "type": "Property",  
+        "value": 0.68  
+    },  
+    "occupancyModified": {  
+        "type": "Property",  
+        "value": "2018-09-21T12:00:00Z"  
+    },  
+    "occupiedSpotNumber": {  
+        "type": "Property",  
+        "value": 282  
+    },  
+    "parkingSiteID": {  
+        "type": "Property",  
+        "value": "P2"  
+    },  
+    "requiredPermit": {  
+        "type": "Property",  
+        "value": []  
+    },  
+    "totalSpotNumber": {  
+        "type": "Property",  
+        "value": 414  
+    },  
+    "twoWheelerSlots": {  
+        "type": "Property",  
+        "value": {  
+            "availableSpotNumber": 20,  
+            "totalSpotNumber": 20,  
+            "occupiedSpotNumber": 0  
+        }  
+    },  
+    "unclassifiedSlots": {  
+        "type": "Property",  
+        "value": {  
+            "availableSpotNumber": 0,  
+            "totalSpotNumber": 0,  
+            "occupiedSpotNumber": 0  
+        }  
+    },  
+    "vehicleEntranceCount": {  
+        "type": "Property",  
+        "value": 28  
+    },  
+    "vehicleExitCount": {  
+        "type": "Property",  
+        "value": 12  
+    },  
+    "@context": [  
+        "iudx:SmartParking"  
     ]  
-  },  
-  "extCategory": {  
-    "type": "Property",  
-    "value": [  
-      "A"  
-    ]  
-  },  
-  "layout": {  
-    "type": "Property",  
-    "value": [  
-      "multiLevel"  
-    ]  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Parque de estacionamento Trindade"  
-  },  
-  "requiredPermit": {  
-    "type": "Property",  
-    "value": []  
-  },  
-  "allowedVehicleType": {  
-    "type": "Property",  
-    "value": [  
-      "car"  
-    ]  
-  },  
-  "availableSpotNumber": {  
-    "type": "Property",  
-    "value": 132,  
-    "observedAt": "2018-09-21T12:00:00Z"  
-  },  
-  "totalSpotNumber": {  
-    "type": "Property",  
-    "value": 414  
-  },  
-  "occupiedSpotNumber": {  
-    "type": "Property",  
-    "value": 282  
-  },  
-  "occupancyModified": {  
-    "type": "Property",  
-    "value": "2018-09-21T12:00:00Z"  
-  },  
-  "occupancy": {  
-    "type": "Property",  
-    "value": 0.68  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -8.60961198807,  
-        41.150691773  
-      ]  
-    }  
-  },  
-  "chargeType": {  
-    "type": "Property",  
-    "value": [  
-      "temporaryPrice"  
-    ]  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "Porto",  
-      "addressCountry": "Portugal",  
-      "streetAddress": "Rua de Fernandes Tomas",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "maximumParkingDuration": {  
-    "type": "Property",  
-    "value": "PT8H"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Municipal car park located near the Trindade metro station and the Town Hall"  
-  },  
-  "vehicleEntranceCount": {  
-    "type": "Property",  
-    "value": 28  
-  },  
-  "vehicleExitCount": {  
-    "type": "Property",  
-    "value": 12  
-  },  
-  "accessModified": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2018-09-21T12:00:00Z"  
-    }  
-  },  
-  "parkingSiteID": {  
-    "type": "Property",  
-    "value": "P2"  
-  },  
-  "observationDateTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-03-11T15:51:02+05:30"  
-    }  
-  },  
-  "fourWheelerSlots": {  
-    "type": "Property",  
-    "value": {  
-      "availableSpotNumber": 25,  
-      "totalSpotNumber": 25,  
-      "occupiedSpotNumber": 0  
-    }  
-  },  
-  "unclassifiedSlots": {  
-    "type": "Property",  
-    "value": {  
-      "availableSpotNumber": 0,  
-      "totalSpotNumber": 0,  
-      "occupiedSpotNumber": 0  
-    }  
-  },  
-  "twoWheelerSlots": {  
-    "type": "Property",  
-    "value": {  
-      "availableSpotNumber": 20,  
-      "totalSpotNumber": 20,  
-      "occupiedSpotNumber": 0  
-    }  
-  },  
-  "municipalityInfo": {  
-    "type": "Property",  
-    "value": {  
-      "district": "Bangalore Urban",  
-      "ulbName": "BMC",  
-      "cityId": "23",  
-      "wardId": "23",  
-      "stateName": "Karnataka",  
-      "cityName": "Bangalore",  
-      "zoneName": "South",  
-      "wardName": "Bangalore Urban",  
-      "zoneId": "2",  
-      "wardNum": 4  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "iudx:SmartParking"  
-  ]  
 }  
 ```  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
