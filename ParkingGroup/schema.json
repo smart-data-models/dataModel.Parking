@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.1.1",
+  "$schemaVersion": "0.1.2",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Parking/ParkingGroup/schema.json",
   "title": "Smart Data Models - Parking / Parking Group",
@@ -193,22 +193,26 @@
         },
         "averageSpotWidth": {
           "type": "number",
-          "exclusiveMinimum": 0,
+          "minimum": 0,
+          "exclusiveMinimum": true,
           "description": "Property. Model:'http://schema.org/width'. Units:'meters'. The average width of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined."
         },
         "averageSpotLength": {
           "type": "number",
-          "exclusiveMinimum": 0,
+          "minimum": 0,
+          "exclusiveMinimum": true,
           "description": "Property. Model:'http://schema.org/length'. Units:'meters'. The average length of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined."
         },
         "maximumAllowedHeight": {
           "type": "number",
-          "exclusiveMinimum": 0,
+          "minimum": 0,
+          "exclusiveMinimum": true,
           "description": "Property. Model:'http://schema.org/heigth'. Units:'meters'. Maximum allowed height for vehicles.  Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined."
         },
         "maximumAllowedWidth": {
           "type": "number",
-          "exclusiveMinimum": 0,
+          "minimum": 0,
+          "exclusiveMinimum": true,
           "description": "Property. Model:'http://schema.org/width'. Units:'Meters'. Maximum allowed width for vehicles. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined."
         },
         "refParkingSpot": {

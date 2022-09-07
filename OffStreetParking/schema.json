@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.1.1",
+  "$schemaVersion": "0.1.2",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/schema.json",
   "title": "Smart Data Models - Parking / Off Street Parking",
@@ -70,10 +70,6 @@
           "minItems": 1,
           "uniqueItems": true,
           "description": "Property. External category to complement category."
-        },
-        "occupiedSpotNumber": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Number of total parking spots occupied in the smart parking site corresponding to this observation. This must a positive number lower than or equal to the totalSpotNumber."
         },
         "allowedVehicleType": {
           "type": "array",
@@ -163,7 +159,7 @@
         "occupiedSpotNumber": {
           "type": "integer",
           "minimum": 0,
-          "description": "Property. Model:'http://schema.org/Number'. Number of spots occupied. Allowed values: 0 - `totalSpotNumber`"
+          "description": "Property. Model:'http://schema.org/Number'. Number of total parking spots occupied in the smart parking site corresponding to this observation. This must a positive number lower than or equal to the totalSpotNumber"
         },
         "occupancyModified": {
           "type": "string",
@@ -455,17 +451,20 @@
         },
         "averageSpotLength": {
           "type": "number",
-          "exclusiveMinimum": 0,
+          "minimum": 0,
+          "exclusiveMinimum": true,
           "description": "Property. Model:'http://schema.org/length'. Units:'meters'. The average length of parking spots."
         },
         "maximumAllowedHeight": {
           "type": "number",
-          "exclusiveMinimum": 0,
+          "minimum": 0,
+          "exclusiveMinimum": true,
           "description": "Property. Model:'http://schema.org/heigth'. Units:'meters'. Maximum allowed height for vehicles. If there are multiple zones, it will be the minimum height of all the zones."
         },
         "maximumAllowedWidth": {
           "type": "number",
-          "exclusiveMinimum": 0,
+          "minimum": 0,
+          "exclusiveMinimum": true,
           "description": "Property. Model:'http://schema.org/width'. Units:'Meters'. Maximum allowed width for vehicles. If there are multiple zones, it will be the minimum width of all the zones."
         },
         "refParkingAccess": {
@@ -558,7 +557,7 @@
           "properties": {
             "availableSlotNumber": {
               "type": "number",
-              "description": "Property. Model:'https://schema.org/Number'. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber."
+              "description": "Property. Model:'https://schema.org/Number'. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positive number lower than or equal to the totalSpotNumber."
             },
             "totalSlotNumber": {
               "type": "number",
