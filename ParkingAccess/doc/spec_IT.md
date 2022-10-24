@@ -1,17 +1,32 @@
-Entità: ParkingAccess  
-=====================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: ParcheggioAccesso  
+=========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingAccess/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descrizione globale: **Accesso al parcheggio - TODO: fornire uno schema completo**  
+versione: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `category`: Categoria del punto di accesso (ingresso, uscita, ecc.). Valori consentiti: Quelli specificati da DATEX II _AccessCategoryEnum_ o altri valori significativi per l'applicazione.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `features`: Quelli specificati da DATEX II _essEquipmentEnum_ e da _AccessibilityEnum_ o altri valori significativi per l'applicazione.  - `height`: Altezza del punto di accesso  - `id`: Identificatore unico dell'entità  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: Il nome di questo articolo.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `refOffStreetParking`: Il sito di parcheggio fuori strada a cui questo punto di accesso dà accesso.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `slope`: Pendenza del punto di accesso (in termini relativi)  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI. Deve essere ParkingAccess  - `width`: Larghezza del punto di accesso    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Categoria del punto di accesso (ingresso, uscita, ecc.). Valori ammessi: Quelli specificati da DATEX II _AccessCategoryEnum_ o altri valori significativi per l'applicazione.  - `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `features[array]`: Quelli specificati da DATEX II _essEquipmentEnum_ e da _AccessibilityEnum_ o altri valori significativi per l'applicazione.  - `height[number]`: Altezza del punto di accesso  . Model: [https://schema.org/height](https://schema.org/height)- `id[*]`: Identificatore univoco dell'entità  - `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento.  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `refOffStreetParking[*]`: Il parcheggio fuori strada a cui dà accesso questo punto di accesso.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `slope[number]`: Pendenza del punto di accesso (in termini relativi)  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Tipo di entità NGSI. Deve essere ParkingAccess  - `width[number]`: Larghezza del punto di accesso  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `id`  - `location`  - `type`    
-Rappresenta un punto di accesso a un sito di parcheggio, normalmente un parcheggio fuori strada.  
-## Descrizione del modello di dati delle proprietà  
+- `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+Rappresenta un punto di accesso a un parcheggio, di solito un parcheggio fuori strada.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 ParkingAccess:    
@@ -336,9 +351,14 @@ ParkingAccess:
   x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### ParkingAccess NGSI-v2 valori chiave Esempio  
-Ecco un esempio di un ParkingAccess in formato JSON-LD come key-values. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## Esempi di payload  
+#### Valori chiave di ParkingAccess NGSI-v2 Esempio  
+Ecco un esempio di ParkingAccess in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "accesspoint-trinidade-1",  
@@ -353,8 +373,10 @@ ParkingAccess:
   "features": ["barrier"]  
 }  
 ```  
+</details>  
 #### ParkingAccess NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un ParkingAccess in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di ParkingAccess in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "accesspoint-trinidade-1",  
@@ -381,75 +403,85 @@ ParkingAccess:
   }  
 }  
 ```  
-#### ParkingAccess NGSI-LD valori chiave Esempio  
-Ecco un esempio di un ParkingAccess in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+</details>  
+#### Valori delle chiavi NGSI-LD di ParkingAccess Esempio  
+Ecco un esempio di ParkingAccess in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:ParkingAccess:accesspoint-trinidade-1",  
-  "type": "ParkingAccess",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "vehicleEntrance"  
+    "id": "urn:ngsi-ld:ParkingAccess:accesspoint-trinidade-1",  
+    "type": "ParkingAccess",  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "vehicleEntrance"  
+        ]  
+    },  
+    "features": {  
+        "type": "Property",  
+        "value": [  
+            "barrier"  
+        ]  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -8.60961198807,  
+                41.150691773  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Trinidade main entrance"  
+    },  
+    "refOffStreetParking": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:OffStreetParking:porto-OffStreetParking-23889"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
     ]  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Trinidade main entrance"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -8.60961198807,  
-        41.150691773  
-      ]  
-    }  
-  },  
-  "refOffStreetParking": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:OffStreetParking:porto-OffStreetParking-23889"  
-  },  
-  "features": {  
-    "type": "Property",  
-    "value": [  
-      "barrier"  
-    ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### ParkingAccess NGSI-LD normalizzato Esempio  
-Ecco un esempio di un ParkingAccess in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di ParkingAccess in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "category": [  
-    "vehicleEntrance"  
-  ],  
-  "features": [  
-    "barrier"  
-  ],  
-  "id": "urn:ngsi-ld:ParkingAccess:accesspoint-trinidade-1",  
-  "location": {  
-    "coordinates": [  
-      -8.60961198807,  
-      41.150691773  
+    "id": "urn:ngsi-ld:ParkingAccess:accesspoint-trinidade-1",  
+    "type": "ParkingAccess",  
+    "category": [  
+        "vehicleEntrance"  
     ],  
-    "type": "Point"  
-  },  
-  "name": "Trinidade main entrance",  
-  "refOffStreetParking": "urn:ngsi-ld:OffStreetParking:porto-OffStreetParking-23889",  
-  "type": "ParkingAccess"  
+    "features": [  
+        "barrier"  
+    ],  
+    "location": {  
+        "coordinates": [  
+            -8.60961198807,  
+            41.150691773  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Trinidade main entrance",  
+    "refOffStreetParking": "urn:ngsi-ld:OffStreetParking:porto-OffStreetParking-23889",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
+    ]  
 }  
 ```  
-
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
