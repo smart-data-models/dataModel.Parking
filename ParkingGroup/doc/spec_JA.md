@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティパーキンググループ  
-===============  
+===============<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingGroup/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな説明**駐車場グループ  
 バージョン: 0.1.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `allowedVehicleType`: 許可する車両タイプ（駐車場グループは1つの車両タイプのみ許可する）。Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck' （自転車、バス、車、キャラバン、オートバイ、モータースクーター、トラック  - `alternateName`: この項目の別称  - `areBordersMarked`: 駐車場が区切られているか（空白行などで）どうかを示す。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する必要がある（SHOULD_）。  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `availableSpotNumber`: このグループ内で利用可能なスポットの数です。totalSpotNumber` よりも小さいか等しくなければならない。  - `averageSpotLength`: 駐車場の平均的な長さ。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ 。  - `averageSpotWidth`: 駐車場の平均幅。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ 。  - `category`: 駐車場グループのカテゴリーです。Enum:'adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'.  - `chargeType`: 駐車場によって実行される料金のタイプ（複数可）。Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other' （追加インターバル価格、年間支払い、最初のインターバル価格、フラット、無料、最小、最大、月間支払い、シーズンチケット、一時料金、一時価格、不明、その他  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `maximumAllowedHeight`: 車両の最大許容高さ。  このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ があります。  - `maximumAllowedWidth`: 車両の最大許容幅。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ があります。  - `maximumParkingDuration`: ISO8601の期間としてエンコードされた、最大許容滞在時間。存在しないか空文字列と等しい場合、無期限を意味する。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する必要があります（SHOULD_）。  - `name`: このアイテムの名称です。  - `occupancyDetectionType`: 許容される値。DATEX II version 2.3 _OcupancyDetectionTypeEnum_の以下の通り。Enum:'balancing, manual, modelBased, none, singleSpaceDetection'（バランス、マニュアル、モデルベース、なし、シングルスペース検出）。または、その他のアプリケーション固有の  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `parkingMode`: 駐車モード。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ です。許容される値。DATEX II version 2.3 _ParkingModeEnum_ enumerationで定義されているもの。Enum:'echelonParking, parallelParking, perpendicularParking'.  - `permitActiveHours`: この属性は、特定の時間帯や曜日のみ許可が必要な状況を捕捉することができる。これは構造化された値で、必要な各許可ごとにサブプロパティを含む必要があり、許可がいつアクティブになるかを示す。許可証に何も指定されていない場合、許可証は常に必要であることを意味する。空のオブジェクトは、常にアクティブであることを意味する。構文は schema.org [営業時間指定](https://schema.org/openingHours) に準拠する必要があります。例えば、平日のみ活動するブルーゾーンは、'blueZonePermit': 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00' というようにエンコードされます。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ ことになる。  - `refParkingSite`: このゾーンが属する駐車場サイト。グループを孤立させることはできません。グループはサブグループを持つことができない。OffStreetParkingまたはOnStreetParkingへの参照。  - `refParkingSpot`: この駐車場グループに属する個々の駐車場。  - `requiredPermit`: この属性は、このサイトでの駐車に必要な許可証の種類を捕捉する。意味的には、これらの許可証の少なくとも1つが駐車に必要である。許可証が複数の項目で構成されている場合（および）、それらは','で結合することができます。例えば、'residentPermit,disabledPermit' は、駐車するために、居住者と身体障害者の両方の許可証が同時に必要であることを意味します。リストが空の場合、許可証は必要ありません。  - `reservationType`: 予約の条件アプリケーションは、このプロパティが定義されていない場合、親のレベルでその値を検査する _SHOULD_ です。Enum:'mandatory, notAvailable, optional, partly'.  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `totalSpotNumber`: このグループに属するスポットの総数。許容される値。正の整数値または0。DATEX 2 version 2.3 _ParkingRecord_ クラスの _parkingNumberOfSpaces_ 属性。  - `type`: NGSI エンティティタイプ。これはParkingGroupでなければなりません。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `allowedVehicleType[string]`: 許可する車両タイプ（駐車場グループは1つの車両タイプのみ許可する）。Enum:'bicycle, bus, car, caravan, motorcycle, motorscooter, truck' （自転車、バス、車、キャラバン、オートバイ、モータースクーター、トラック  . Model: [http://schema.org/Text](http://schema.org/Text)- `alternateName[string]`: この項目の別称  - `areBordersMarked[boolean]`: 駐車場が区切られているか（空白行などで）どうかを示す。このプロパティが定義されていない場合、アプリケーションは親レベルでこのプロパティの値を検査する必要がある（SHOULD_）。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableSpotNumber[integer]`: このグループ内で利用可能なスポットの数です。totalSpotNumber` よりも小さいか等しくなければならない。  . Model: [http://schema.org/Number](http://schema.org/Number)- `averageSpotLength[number]`: 駐車場の平均的な長さ。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ 。  . Model: [http://schema.org/length](http://schema.org/length)- `averageSpotWidth[number]`: 駐車場の平均幅。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ 。  . Model: [http://schema.org/width](http://schema.org/width)- `category[array]`: 駐車場グループのカテゴリーです。Enum:'adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'.  . Model: [http://schema.org/Text](http://schema.org/Text)- `chargeType[array]`: 駐車場によって実行される料金のタイプ（複数可）。Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other' （追加インターバル価格、年間支払い、最初のインターバル価格、フラット、無料、最小、最大、月間支払い、シーズンチケット、一時料金、一時価格、不明、その他  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `maximumAllowedHeight[number]`: 車両の最大許容高さ。  このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ があります。  . Model: [http://schema.org/heigth](http://schema.org/heigth)- `maximumAllowedWidth[number]`: 車両の最大許容幅。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ があります。  . Model: [http://schema.org/width](http://schema.org/width)- `maximumParkingDuration[string]`: ISO8601の期間としてエンコードされた、最大許容滞在時間。存在しないか空文字列と等しい場合、無期限を意味する。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する必要があります（SHOULD_）。  - `name[string]`: このアイテムの名称です。  - `occupancyDetectionType[array]`: 許容される値。DATEX II version 2.3 _OcupancyDetectionTypeEnum_の以下の通り。Enum:'balancing, manual, modelBased, none, singleSpaceDetection'（バランス、マニュアル、モデルベース、なし、シングルスペース検出）。または、その他のアプリケーション固有の  . Model: [http://schema.org/Text](http://schema.org/Text)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `parkingMode[array]`: 駐車モード。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ です。許容される値。DATEX II version 2.3 _ParkingModeEnum_ enumerationで定義されているもの。Enum:'echelonParking, parallelParking, perpendicularParking'.  . Model: [http://schema.org/Text](http://schema.org/Text)- `permitActiveHours[object]`: この属性は、特定の時間帯や曜日のみ許可が必要な状況を捕捉することができる。これは構造化された値で、必要な各許可ごとにサブプロパティを含む必要があり、許可がいつアクティブになるかを示す。許可証に何も指定されていない場合、許可証は常に必要であることを意味する。空のオブジェクトは、常にアクティブであることを意味する。構文は schema.org [営業時間指定](https://schema.org/openingHours) に準拠する必要があります。例えば、平日のみ活動するブルーゾーンは、'blueZonePermit': 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00' というようにエンコードされます。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_ ことになる。  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `refParkingSite[*]`: このゾーンが属する駐車場サイト。グループを孤立させることはできません。グループはサブグループを持つことができない。OffStreetParkingまたはOnStreetParkingへの参照。  - `refParkingSpot[*]`: この駐車場グループに属する個々の駐車場。  - `requiredPermit[array]`: この属性は、このサイトでの駐車に必要な許可証の種類を捕捉する。意味的には、これらの許可証の少なくとも1つが駐車に必要である。許可証が複数の項目で構成されている場合（および）、それらは','で結合することができます。例えば、'residentPermit,disabledPermit' は、駐車するために、居住者と身体障害者の両方の許可証が同時に必要であることを意味します。リストが空の場合、許可証は必要ありません。  . Model: [http://schema.org/Text](http://schema.org/Text)- `reservationType[string]`: 予約の条件アプリケーションは、このプロパティが定義されていない場合、親のレベルでその値を検査する _SHOULD_ です。Enum:'mandatory, notAvailable, optional, partly'.  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `totalSpotNumber[integer]`: このグループに属するスポットの総数。許容される値。正の整数値または0。DATEX 2 version 2.3 _ParkingRecord_ クラスの _parkingNumberOfSpaces_ 属性。  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSI エンティティタイプ。これはParkingGroupでなければなりません。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `id`  - `refParkingSite`  - `type`    
+- `id`  - `refParkingSite`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 駐車場のグループ。粒度は様々です。駐車場の1階部分、大きな駐車場の特定のゾーン、あるいは特定の車種を駐車するためのスポットのグループ、あるいは特定の制限（身体障害者、居住者、...）がある場合もあります。簡単のため、1つの駐車場グループにつき1つの車種のみ許可されます。同様に、必要な許可証も1つのグループタイプにつき、1つだけ許可されます。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 ParkingGroup:    
@@ -514,9 +527,14 @@ ParkingGroup:
   x-version: 0.1.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### ParkingGroup NGSI-v2 key-value の例。  
 ここでは、ParkingGroupをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "daoiz-velarde-1-5-disabled",  
@@ -544,8 +562,10 @@ ParkingGroup:
   "permitActiveHours": {"Monday":"null"}  
 }  
 ```  
+</details>  
 #### ParkingGroup NGSI-v2 正規化例  
 以下は、正規化されたJSON-LD形式のParkingGroupの例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "daoiz-velarde-1-5-disabled",  
@@ -601,8 +621,10 @@ ParkingGroup:
   }  
 }  
 ```  
+</details>  
 #### ParkingGroup NGSI-LD キー値例  
 ここでは、ParkingGroupをJSON-LD形式でkey-valuesにした例を示します。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
@@ -686,8 +708,10 @@ ParkingGroup:
     ]  
 }  
 ```  
+</details>  
 #### 駐車場グループ NGSI-LD 正規化例  
 ParkingGroupをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
@@ -739,8 +763,17 @@ ParkingGroup:
     ],  
     "totalSpotNumber": 2,  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
