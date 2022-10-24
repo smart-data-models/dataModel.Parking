@@ -1,17 +1,32 @@
-Entität: ParkingSpot  
-====================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: ParkingSpot  
+====================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingSpot/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Allgemeine Beschreibung: **Ein Parkplatz ist ein gut abgegrenzter Bereich, in dem ein Fahrzeug abgestellt werden kann.**  
+Version: 0.1.0  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `TimeInstant`: Von FIWAREs IoT-Agent gespeicherter Zeitstempel. Es kann Produktionsumgebungen geben, in denen der Attributtyp gleich der Zeichenkette "ISO8601" ist. In diesem Fall muss es als Synonym für "DateTime" betrachtet werden. Hinweis: Dieses Attribut wurde nicht harmonisiert, um die Rückwärtskompatibilität mit aktuellen FIWARE-Referenzimplementierungen zu wahren.  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `annotations`: Anmerkungen zum Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Kategorie(n) des Parkplatzes. onStreet" : Der Parkplatz gehört zu einem onStreet-Parkplatz. OffStreet": Der Parkplatz gehört zu einem OffStreet-Parkplatz.  - `color`: Die Farbe des Produkts  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `image`: Ein Bild des Artikels  - `length`: Länge des Parkplatzes.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refDevice`: Das Gerät, das den physischen Sensor darstellt, der zur Überwachung dieses Parkplatzes verwendet wird.  - `refParkingGroup`: Gruppe, zu der der Stellplatz gehört. Zur Vereinfachung des Modells ist nur eine Gruppe pro Parkplatz zulässig.  - `refParkingSite`: Parkplatz, zu dem der Stellplatz gehört.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `status`: Status des Parkplatzes unter dem Gesichtspunkt der Belegung. Enum:'geschlossen, frei, belegt, unbekannt'  - `type`: NGSI-Entitätstyp. Es muss ParkingSpot sein  - `width`: Breite des Parkplatzes.    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `annotations[array]`: Anmerkungen zum Artikel  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Kategorie(n) des Parkplatzes. onStreet": Der Parkplatz gehört zu einem onStreet-Parkplatz. OffStreet": Der Parkplatz gehört zu einem OffStreet-Parkplatz.  - `color[string]`: Die Farbe des Produkts  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `image[string]`: Ein Bild des Artikels  . Model: [https://schema.org/URL](https://schema.org/URL)- `length[number]`: Länge des Parkplatzes.  . Model: [https://schema.org/length](https://schema.org/length)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refDevice[array]`: Das Gerät, das den physischen Sensor darstellt, der zur Überwachung dieses Parkplatzes verwendet wird.  - `refParkingGroup[*]`: Gruppe, zu der der Stellplatz gehört. Zur Vereinfachung des Modells ist nur eine Gruppe pro Parkplatz zulässig.  - `refParkingSite[*]`: Parkplatz, zu dem der Stellplatz gehört.  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `status[string]`: Status des Parkplatzes unter dem Gesichtspunkt der Belegung. Enum:'geschlossen, frei, belegt, unbekannt'  . Model: [https://schema.org/Text](https://schema.org/Text)- `timeInstant[string]`: Zeitstempel der Nutzdaten. Es kann Produktionsumgebungen geben, in denen der Attributtyp der Zeichenfolge "ISO8601" entspricht. In diesem Fall ist es als Synonym für "DateTime" zu betrachten. Dieses Attribut wird aus Gründen der Abwärtskompatibilität mit alten FIWARE-Referenzimplementierungen beibehalten.  . Model: [https://schema.org/Datetime](https://schema.org/Datetime)- `type[string]`: NGSI-Entitätstyp. Es muss ParkingSpot sein  - `width[number]`: Breite des Parkplatzes.  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `category`  - `id`  - `location`  - `refParkingSite`  - `status`  - `type`    
+- `category`  - `id`  - `location`  - `refParkingSite`  - `status`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Der Zweck dieses Entitätstyps besteht darin, den Status der einzelnen Parkplätze zu überwachen. Daher kann eine Entität vom Typ ParkingSpot nicht ohne eine enthaltende Entität vom Typ (OnStreetParking, OffStreetParking) existieren. Ein ParkingSpot kann zu einer Gruppe gehören.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 ParkingSpot:    
@@ -394,12 +409,22 @@ ParkingSpot:
     - category    
     - refParkingSite    
   type: object    
-  version: 0.1.0    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Parking/blob/master/ParkingSpot/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Parking/ParkingSpot/schema.json    
+  x-model-tags: ""    
+  x-version: 0.1.0    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### ParkingSpot NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für einen ParkingSpot im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen ParkingSpot im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "santander:daoiz_velarde_1_5:3",  
@@ -414,8 +439,10 @@ ParkingSpot:
   "refParkingSite": "santander:daoiz_velarde_1_5"  
 }  
 ```  
+</details>  
 #### ParkingSpot NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für einen ParkingSpot im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "santander:daoiz_velarde_1_5:3",  
@@ -452,73 +479,86 @@ ParkingSpot:
   }  
 }  
 ```  
+</details>  
 #### ParkingSpot NGSI-LD key-values Beispiel  
 Hier ist ein Beispiel für einen ParkingSpot im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:ParkingSpot:santander:daoiz_velarde_1_5:3",  
-  "type": "ParkingSpot",  
-  "status": {  
-    "type": "Property",  
-    "value": "free",  
-    "observedAt": "2018-09-21T12:00:00Z",  
-    "parkingPermit": {  
-      "type": "Property",  
-      "value": "yes"  
-    }  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "onStreet"  
+    "id": "urn:ngsi-ld:ParkingSpot:santander:daoiz_velarde_1_5:3",  
+    "type": "ParkingSpot",  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "onStreet"  
+        ]  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.80356167695194,  
+                43.46296641666926  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "A-13"  
+    },  
+    "refParkingSite": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:ParkingSite:santander:daoiz_velarde_1_5"  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "free",  
+        "observedAt": "2018-09-21T12:00:00Z",  
+        "parkingPermit": {  
+            "type": "Property",  
+            "value": "yes"  
+        }  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
     ]  
-  },  
-  "refParkingSite": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:ParkingSite:santander:daoiz_velarde_1_5"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "A-13"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.80356167695194,  
-        43.46296641666926  
-      ]  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### ParkingSpot NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für einen ParkingSpot im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "category": [  
-    "onStreet"  
-  ],  
-  "id": "urn:ngsi-ld:ParkingSpot:santander:daoiz_velarde_1_5:3",  
-  "location": {  
-    "coordinates": [  
-      -3.80356167695194,  
-      43.46296641666926  
+    "id": "urn:ngsi-ld:ParkingSpot:santander:daoiz_velarde_1_5:3",  
+    "type": "ParkingSpot",  
+    "category": [  
+        "onStreet"  
     ],  
-    "type": "Point"  
-  },  
-  "name": "A-13",  
-  "refParkingSite": "urn:ngsi-ld:ParkingSite:santander:daoiz_velarde_1_5",  
-  "status": "free",  
-  "type": "ParkingSpot"  
+    "location": {  
+        "coordinates": [  
+            -3.80356167695194,  
+            43.46296641666926  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "A-13",  
+    "refParkingSite": "urn:ngsi-ld:ParkingSite:santander:daoiz_velarde_1_5",  
+    "status": "free",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
