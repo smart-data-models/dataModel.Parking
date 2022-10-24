@@ -1,17 +1,32 @@
-エンティティパーキングアクセス  
-===============  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティ駐車場アクセス  
+=============<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingAccess/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述です。**駐車場アクセス - TODO: 完全なスキーマを提供する**。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述です。**駐車場へのアクセス - TODO: 完全なスキーマを提供する**。  
+バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `category`: アクセスポイントのカテゴリー（入口、出口など）。許容される値DATEX II _AccessCategoryEnum_で指定されたもの、またはアプリケーションにとって意味のある他の値。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `features`: DATEX IIの_essEquipmentEnum_と_AccessibilityEnum_で指定されたもの、またはアプリケーションにとって意味のある他の値。  - `height`: アクセスポイントの高さ  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refOffStreetParking`: このアクセスポイントからアクセスできる路上駐車場です。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `slope`: アクセスポイントの傾き（相対的に）  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI エンティティタイプ。ParkingAccessである必要があります。  - `width`: アクセスポイントの幅    
-必須項目  
-- `id`  - `location`  - `type`    
-駐車場（通常は路上駐車）へのアクセスポイントを表します。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: アクセスポイントのカテゴリ（入口、出口など）。許容される値。DATEX II の _AccessCategoryEnum_ で指定されたもの、あるいはアプリケーションにとっ て意味のあるその他の値。  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `features[array]`: DATEX II の _essEquipmentEnum_ と _AccessibilityEnum_ で指定されたもの、 あるいはアプリケーションにとって意味のあるその他の値。  - `height[number]`: アクセスポイントの高さ  . Model: [https://schema.org/height](https://schema.org/height)- `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refOffStreetParking[*]`: このアクセスポイントからアクセスできる路外駐車場。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `slope[number]`: アクセスポイントの傾き(相対値)  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI エンティティタイプ。これはParkingAccessでなければなりません。  - `width[number]`: アクセスポイントの幅  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+駐車場（通常は路外駐車）へのアクセスポイントを表す。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 ParkingAccess:    
@@ -336,9 +351,14 @@ ParkingAccess:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### ParkingAccess NGSI-v2 key-valuesの例。  
-ここでは、ParkingAccessをkey-valuesとしてJSON-LD形式で表現した例を示します。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### ParkingAccess NGSI-v2 key-value の例。  
+ここでは、ParkingAccessをJSON-LD形式でkey-valuesとして記述した例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "accesspoint-trinidade-1",  
@@ -353,8 +373,10 @@ ParkingAccess:
   "features": ["barrier"]  
 }  
 ```  
+</details>  
 #### ParkingAccess NGSI-v2 正規化例  
-ここでは、正規化されたJSON-LD形式のParkingAccessの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+ParkingAccessをJSON-LD形式で正規化した例です。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "accesspoint-trinidade-1",  
@@ -381,75 +403,85 @@ ParkingAccess:
   }  
 }  
 ```  
-#### ParkingAccess NGSI-LDのキーバリューの例。  
-ここでは、ParkingAccessをkey-valuesとしてJSON-LD形式で記述した例を紹介します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### ParkingAccess NGSI-LD キー値の例  
+ParkingAccessをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:ParkingAccess:accesspoint-trinidade-1",  
-  "type": "ParkingAccess",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "vehicleEntrance"  
+    "id": "urn:ngsi-ld:ParkingAccess:accesspoint-trinidade-1",  
+    "type": "ParkingAccess",  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "vehicleEntrance"  
+        ]  
+    },  
+    "features": {  
+        "type": "Property",  
+        "value": [  
+            "barrier"  
+        ]  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -8.60961198807,  
+                41.150691773  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Trinidade main entrance"  
+    },  
+    "refOffStreetParking": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:OffStreetParking:porto-OffStreetParking-23889"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
     ]  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Trinidade main entrance"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -8.60961198807,  
-        41.150691773  
-      ]  
-    }  
-  },  
-  "refOffStreetParking": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:OffStreetParking:porto-OffStreetParking-23889"  
-  },  
-  "features": {  
-    "type": "Property",  
-    "value": [  
-      "barrier"  
-    ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-#### 駐車場アクセス NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のParkingAccessの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### ParkingAccess NGSI-LD 正規化例  
+ParkingAccessをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "category": [  
-    "vehicleEntrance"  
-  ],  
-  "features": [  
-    "barrier"  
-  ],  
-  "id": "urn:ngsi-ld:ParkingAccess:accesspoint-trinidade-1",  
-  "location": {  
-    "coordinates": [  
-      -8.60961198807,  
-      41.150691773  
+    "id": "urn:ngsi-ld:ParkingAccess:accesspoint-trinidade-1",  
+    "type": "ParkingAccess",  
+    "category": [  
+        "vehicleEntrance"  
     ],  
-    "type": "Point"  
-  },  
-  "name": "Trinidade main entrance",  
-  "refOffStreetParking": "urn:ngsi-ld:OffStreetParking:porto-OffStreetParking-23889",  
-  "type": "ParkingAccess"  
+    "features": [  
+        "barrier"  
+    ],  
+    "location": {  
+        "coordinates": [  
+            -8.60961198807,  
+            41.150691773  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Trinidade main entrance",  
+    "refOffStreetParking": "urn:ngsi-ld:OffStreetParking:porto-OffStreetParking-23889",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
+    ]  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
