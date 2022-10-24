@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entität: ParkingGroup  
-=====================  
+=====================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingGroup/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Globale Beschreibung: **Parken Gruppe **  
 Version: 0.1.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `allowedVehicleType`: Zulässiger Fahrzeugtyp (eine Parkgruppe lässt nur einen Fahrzeugtyp zu). Enum:'Fahrrad, Bus, Auto, Wohnwagen, Motorrad, Motorroller, LKW'  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areBordersMarked`: Gibt an, ob Parklücken abgegrenzt sind (mit Leerzeilen oder ähnlichem) oder nicht. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf der übergeordneten Ebene prüfen, wenn sie nicht definiert ist  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `availableSpotNumber`: Die Anzahl der verfügbaren Plätze in dieser Gruppe. Sie muss niedriger oder gleich sein als `totalSpotNumber`.  - `averageSpotLength`: Die durchschnittliche Länge von Parkplätzen. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  - `averageSpotWidth`: Die durchschnittliche Breite von Parkplätzen. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  - `category`: Die Kategorie der Parkgruppe. Enum:'adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermitPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'  - `chargeType`: Art der vom Parkplatz erhobenen Gebühr(en). Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maximumAllowedHeight`: Maximal zulässige Höhe für Fahrzeuge.  Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  - `maximumAllowedWidth`: Maximal zulässige Breite für Fahrzeuge. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  - `maximumParkingDuration`: Maximal zulässiger Aufenthalt, kodiert als ISO8601-Dauer. Wenn sie nicht vorhanden oder gleich der leeren Zeichenkette ist, bedeutet sie unbestimmt. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  - `name`: Der Name dieses Artikels.  - `occupancyDetectionType`: Erlaubte Werte: Die folgenden aus DATEX II Version 2.3 _OccupancyDetectionTypeEnum_. Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. Oder jede andere anwendungsspezifische  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `parkingMode`: Parkmodus(e). Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist. Erlaubte Werte: Die durch die Aufzählung _ParkingModeEnum_ von DATEX II Version 2.3 definierten Werte. Enum:'echelonParking, parallelParking, perpendicularParking'  - `permitActiveHours`: Mit diesem Attribut können Situationen erfasst werden, in denen eine Genehmigung nur zu bestimmten Stunden oder an bestimmten Wochentagen benötigt wird. Es ist ein strukturierter Wert, der für jede erforderliche Genehmigung eine Untereigenschaft enthalten muss, die angibt, wann die Genehmigung aktiv ist. Wenn für eine Genehmigung nichts angegeben wird, bedeutet dies, dass eine Genehmigung immer erforderlich ist. Ein leeres Objekt bedeutet immer aktiv. Die Syntax muss mit schema.org [opening hours specification] (https://schema.org/openingHours) konform sein. Zum Beispiel wird eine blaue Zone, die nur an Wochentagen aktiv ist, als "blueZonePermit" kodiert: "Mo,Di,We,Th,Fr,Sa 09:00-20:00". Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist  - `refParkingSite`: Parkplatz, zu dem diese Zone gehört. Eine Gruppe kann nicht verwaist sein. Eine Gruppe kann keine Untergruppen haben. Verweis auf einen OffStreetParking oder auf einen OnStreetParking  - `refParkingSpot`: Einzelne Stellplätze, die zu dieser Parkgruppe gehören.  - `requiredPermit`: Mit diesem Attribut wird erfasst, welche Genehmigung(en) zum Parken an diesem Standort erforderlich sein könnte(n). Die Semantik besagt, dass mindestens _eine_ dieser Genehmigungen zum Parken erforderlich ist. Wenn eine Genehmigung aus mehr als einem Element (und) besteht, können sie mit einem ',' kombiniert werden. So bedeutet z. B. 'residentPermit,disabledPermit', dass zum Parken sowohl eine Anwohner- als auch eine Behindertengenehmigung erforderlich ist. Wenn die Liste leer ist, ist keine Genehmigung erforderlich.  - `reservationType`: Bedingungen für die Reservierung. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist. Enum:'mandatory, notAvailable, optional, partly'.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `totalSpotNumber`: Die Gesamtzahl der Spots, die zu dieser Gruppe gehören. Erlaubte Werte: Jede positive ganze Zahl oder 0. Normative Verweise: DATEX 2 Version 2.3 Attribut _ParkingNumberOfSpaces_ der Klasse _ParkingRecord_.  - `type`: NGSI-Entitätstyp. Es muss ParkingGroup sein    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `allowedVehicleType[string]`: Zulässiger Fahrzeugtyp (eine Parkgruppe lässt nur einen Fahrzeugtyp zu). Enum:'Fahrrad, Bus, Auto, Wohnwagen, Motorrad, Motorroller, LKW'  . Model: [http://schema.org/Text](http://schema.org/Text)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areBordersMarked[boolean]`: Gibt an, ob Parklücken abgegrenzt sind (mit Leerzeilen oder ähnlichem) oder nicht. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf der übergeordneten Ebene prüfen, wenn sie nicht definiert ist  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableSpotNumber[integer]`: Die Anzahl der verfügbaren Plätze in dieser Gruppe. Sie muss niedriger oder gleich sein als `totalSpotNumber`.  . Model: [http://schema.org/Number](http://schema.org/Number)- `averageSpotLength[number]`: Die durchschnittliche Länge von Parkplätzen. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  . Model: [http://schema.org/length](http://schema.org/length)- `averageSpotWidth[number]`: Die durchschnittliche Breite von Parkplätzen. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  . Model: [http://schema.org/width](http://schema.org/width)- `category[array]`: Die Kategorie der Parkgruppe. Enum:'adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermitPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'  . Model: [http://schema.org/Text](http://schema.org/Text)- `chargeType[array]`: Art der vom Parkplatz erhobenen Gebühr(en). Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maximumAllowedHeight[number]`: Maximal zulässige Höhe für Fahrzeuge.  Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  . Model: [http://schema.org/heigth](http://schema.org/heigth)- `maximumAllowedWidth[number]`: Maximal zulässige Breite für Fahrzeuge. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  . Model: [http://schema.org/width](http://schema.org/width)- `maximumParkingDuration[string]`: Maximal zulässiger Aufenthalt, kodiert als ISO8601-Dauer. Wenn sie nicht vorhanden oder gleich der leeren Zeichenkette ist, bedeutet sie unbestimmt. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  - `name[string]`: Der Name dieses Artikels.  - `occupancyDetectionType[array]`: Erlaubte Werte: Die folgenden aus DATEX II Version 2.3 _OccupancyDetectionTypeEnum_. Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. Oder jede andere anwendungsspezifische  . Model: [http://schema.org/Text](http://schema.org/Text)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `parkingMode[array]`: Parkmodus(e). Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist. Erlaubte Werte: Die durch die Aufzählung _ParkingModeEnum_ von DATEX II Version 2.3 definierten Werte. Enum:'echelonParking, parallelParking, perpendicularParking'  . Model: [http://schema.org/Text](http://schema.org/Text)- `permitActiveHours[object]`: Mit diesem Attribut können Situationen erfasst werden, in denen eine Genehmigung nur zu bestimmten Stunden oder an bestimmten Wochentagen benötigt wird. Es ist ein strukturierter Wert, der für jede erforderliche Genehmigung eine Untereigenschaft enthalten muss, die angibt, wann die Genehmigung aktiv ist. Wenn für eine Genehmigung nichts angegeben wird, bedeutet dies, dass eine Genehmigung immer erforderlich ist. Ein leeres Objekt bedeutet immer aktiv. Die Syntax muss mit schema.org [opening hours specification] (https://schema.org/openingHours) konform sein. Zum Beispiel wird eine blaue Zone, die nur an Wochentagen aktiv ist, als "blueZonePermit" kodiert: "Mo,Di,We,Th,Fr,Sa 09:00-20:00". Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `refParkingSite[*]`: Parkplatz, zu dem diese Zone gehört. Eine Gruppe kann nicht verwaist sein. Eine Gruppe kann keine Untergruppen haben. Verweis auf einen OffStreetParking oder auf einen OnStreetParking  - `refParkingSpot[*]`: Einzelne Stellplätze, die zu dieser Parkgruppe gehören.  - `requiredPermit[array]`: Mit diesem Attribut wird erfasst, welche Genehmigung(en) zum Parken an diesem Standort erforderlich sein könnte(n). Die Semantik besagt, dass mindestens _eine_ dieser Genehmigungen zum Parken erforderlich ist. Wenn eine Genehmigung aus mehr als einem Element (und) besteht, können sie mit einem ',' kombiniert werden. So bedeutet z. B. 'residentPermit,disabledPermit', dass zum Parken sowohl eine Anwohner- als auch eine Behindertengenehmigung erforderlich ist. Wenn die Liste leer ist, ist keine Genehmigung erforderlich.  . Model: [http://schema.org/Text](http://schema.org/Text)- `reservationType[string]`: Bedingungen für die Reservierung. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist. Enum:'mandatory, notAvailable, optional, partly'.  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `totalSpotNumber[integer]`: Die Gesamtzahl der Spots, die zu dieser Gruppe gehören. Erlaubte Werte: Jede positive ganze Zahl oder 0. Normative Verweise: DATEX 2 Version 2.3 Attribut _ParkingNumberOfSpaces_ der Klasse _ParkingRecord_.  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSI-Entitätstyp. Es muss ParkingGroup sein  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `id`  - `refParkingSite`  - `type`    
+- `id`  - `refParkingSite`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Eine Gruppe von Parkplätzen. Die Gliederungstiefe kann variieren. Es kann sich um ein Stockwerk in einem Parkhaus handeln, um eine bestimmte Zone eines großen Parkplatzes oder einfach um eine Gruppe von Plätzen, die für das Parken eines bestimmten Fahrzeugtyps bestimmt sind oder bestimmten Einschränkungen unterliegen (Behinderte, Anwohner, ...). Der Einfachheit halber ist nur ein Fahrzeugtyp pro Parkgruppe zulässig. Ebenso ist nur eine erforderliche Genehmigung pro Gruppentyp erlaubt.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 ParkingGroup:    
@@ -514,9 +527,14 @@ ParkingGroup:
   x-version: 0.1.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### ParkingGroup NGSI-v2 key-values Beispiel  
 Hier ist ein Beispiel für eine ParkingGroup im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "daoiz-velarde-1-5-disabled",  
@@ -544,8 +562,10 @@ ParkingGroup:
   "permitActiveHours": {"Monday":"null"}  
 }  
 ```  
+</details>  
 #### ParkingGroup NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für eine ParkingGroup im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "daoiz-velarde-1-5-disabled",  
@@ -601,8 +621,10 @@ ParkingGroup:
   }  
 }  
 ```  
+</details>  
 #### ParkingGroup NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für eine ParkingGroup im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine ParkingGroup im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
@@ -686,8 +708,10 @@ ParkingGroup:
     ]  
 }  
 ```  
+</details>  
 #### ParkingGroup NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für eine ParkingGroup im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",  
@@ -739,8 +763,17 @@ ParkingGroup:
     ],  
     "totalSpotNumber": 2,  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
