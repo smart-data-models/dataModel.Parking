@@ -1,17 +1,32 @@
-エンティティパーキングスポット  
-===============  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティパーキングスポット  
+===============<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingSpot/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述です。**駐車場とは、1台の車を駐車することができる区画のことである。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述です。**駐車場は、1台の車両を駐車することができる区切りの良いエリアです。  
+バージョン: 0.1.0  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `annotations`: アイテムに関するアノテーション  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `category`: パーキングスポットのカテゴリーonStreet` : その駐車場はonStreet駐車場に属しています。offStreet` : 駐車場はoffStreetパーキングサイトに属します。  - `color`: 商品の色について  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `image`: アイテムのイメージ  - `length`: 駐車場の長さ  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refDevice`: この駐車場を監視するための物理的なセンサーを表すデバイスです。  - `refParkingGroup`: パーキングスポットが所属するグループ。モデルの簡略化のために、1つの駐車場につき1つのグループしか認められていません。  - `refParkingSite`: その駐車場が属する駐車場サイト。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `status`: 駐車場の占有状態を表す。Enum:'closed, free, occupied, unknown'.  - `timeInstant`: ペイロードのタイムスタンプ。本番環境では、属性タイプが `ISO8601` の文字列と同じである場合があります。その場合は、`DateTime` の同義語として考えなければなりません。この属性は、古いFIWAREリファレンスの実装との下位互換性のために残されています。  - `type`: NGSI エンティティタイプ。ParkingSpotである必要があります。  - `width`: 駐車場の幅    
-必須項目  
-- `category`  - `id`  - `location`  - `refParkingSite`  - `status`  - `type`    
-このエンティティタイプの目的は、パーキングスポットの状態を個別に監視することです。したがって、ParkingSpotタイプのエンティティは、(OnStreetParking, OffStreetParking)タイプのエンティティを含むことなく存在することはできません。パーキングスポットは、1つのグループに属するかもしれません。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `annotations[array]`: アイテムに関するアノテーション  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: 駐車場のカテゴリー（ies）。onStreet` : そのパーキングスポットはonStreetパーキングに属しています。offStreet` : そのパーキングスポットはOffStreetパーキングに属しています。  - `color[string]`: 製品の色  . Model: [https://schema.org/color](https://schema.org/color)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `image[string]`: アイテムの画像  . Model: [https://schema.org/URL](https://schema.org/URL)- `length[number]`: 駐車場の長さ。  . Model: [https://schema.org/length](https://schema.org/length)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refDevice[array]`: この駐車場を監視するために使用される物理的なセンサーを表すデバイス。  - `refParkingGroup[*]`: 駐車場が所属するグループ。モデルの簡略化のため、1つのパーキングスポットにつき1つのグループのみが許可されています。  - `refParkingSite[*]`: 駐車場が属する駐車場サイト。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `status[string]`: 駐車場の占有率から見た状態。Enum:'closed, free, occupied, unknown'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `timeInstant[string]`: ペイロードのタイムスタンプ。実運用環境では、属性の型が `ISO8601` 文字列と等しい場合もあり得る。その場合、`DateTime` のシノニムと考える必要がある。この属性は、古いFIWAREリファレンスの実装との後方互換性のために残されている。  . Model: [https://schema.org/Datetime](https://schema.org/Datetime)- `type[string]`: NGSI Entityタイプ。これはParkingSpotでなければならない。  - `width[number]`: 駐車場の幅。  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `category`  - `id`  - `location`  - `refParkingSite`  - `status`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+このエンティティタイプの目的は、駐車場のステータスを個別に監視することである。したがって、ParkingSpotタイプのエンティティは、(OnStreetParking, OffStreetParking)タイプのエンティティを含まないと存在できない。駐車場は、1つのグループに属するかもしれない。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 ParkingSpot:    
@@ -402,9 +417,14 @@ ParkingSpot:
   x-version: 0.1.0    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### ParkingSpot NGSI-v2 key-valuesの例。  
-ここでは、ParkingSpotをkey-valuesとしてJSON-LD形式で表現した例を紹介します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### ParkingSpot NGSI-v2 key-value の例。  
+ここではParkingSpotをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "santander:daoiz_velarde_1_5:3",  
@@ -419,8 +439,10 @@ ParkingSpot:
   "refParkingSite": "santander:daoiz_velarde_1_5"  
 }  
 ```  
+</details>  
 #### ParkingSpot NGSI-v2 正規化例  
-ここでは、正規化されたJSON-LD形式のParkingSpotの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+ParkingSpotをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "santander:daoiz_velarde_1_5:3",  
@@ -457,73 +479,86 @@ ParkingSpot:
   }  
 }  
 ```  
-#### ParkingSpot NGSI-LDのキーバリューの例。  
-ここでは、ParkingSpotをkey-valuesとしてJSON-LD形式で表現した例を紹介します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### ParkingSpot NGSI-LD キー値例  
+ここでは、ParkingSpotをJSON-LD形式でkey-valuesにした例を示します。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:ParkingSpot:santander:daoiz_velarde_1_5:3",  
-  "type": "ParkingSpot",  
-  "status": {  
-    "type": "Property",  
-    "value": "free",  
-    "observedAt": "2018-09-21T12:00:00Z",  
-    "parkingPermit": {  
-      "type": "Property",  
-      "value": "yes"  
-    }  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "onStreet"  
+    "id": "urn:ngsi-ld:ParkingSpot:santander:daoiz_velarde_1_5:3",  
+    "type": "ParkingSpot",  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "onStreet"  
+        ]  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.80356167695194,  
+                43.46296641666926  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "A-13"  
+    },  
+    "refParkingSite": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:ParkingSite:santander:daoiz_velarde_1_5"  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "free",  
+        "observedAt": "2018-09-21T12:00:00Z",  
+        "parkingPermit": {  
+            "type": "Property",  
+            "value": "yes"  
+        }  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
     ]  
-  },  
-  "refParkingSite": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:ParkingSite:santander:daoiz_velarde_1_5"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "A-13"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.80356167695194,  
-        43.46296641666926  
-      ]  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-#### ParkingSpot NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のParkingSpotの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### ParkingSpot NGSI-LD 正規化例  
+ParkingSpotをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "category": [  
-    "onStreet"  
-  ],  
-  "id": "urn:ngsi-ld:ParkingSpot:santander:daoiz_velarde_1_5:3",  
-  "location": {  
-    "coordinates": [  
-      -3.80356167695194,  
-      43.46296641666926  
+    "id": "urn:ngsi-ld:ParkingSpot:santander:daoiz_velarde_1_5:3",  
+    "type": "ParkingSpot",  
+    "category": [  
+        "onStreet"  
     ],  
-    "type": "Point"  
-  },  
-  "name": "A-13",  
-  "refParkingSite": "urn:ngsi-ld:ParkingSite:santander:daoiz_velarde_1_5",  
-  "status": "free",  
-  "type": "ParkingSpot"  
+    "location": {  
+        "coordinates": [  
+            -3.80356167695194,  
+            43.46296641666926  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "A-13",  
+    "refParkingSite": "urn:ngsi-ld:ParkingSite:santander:daoiz_velarde_1_5",  
+    "status": "free",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
