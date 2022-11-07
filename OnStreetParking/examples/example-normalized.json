@@ -113,7 +113,7 @@
   },
   "observationDateTime": {
     "type": "DateTime",
-    "value": "2021-03-11T15:51:02+05:30"
+    "value": "2021-03-11T15:51:02Z"
   },
   "fourWheelerSlots": {
     "type": "StructuredValue",

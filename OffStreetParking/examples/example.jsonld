@@ -53,7 +53,7 @@
         "wardNum": 4
     },
     "name": "Parque de estacionamento Trindade",
-    "observationDateTime": "2021-03-11T15:51:02+05:30",
+    "observationDateTime": "2021-03-11T15:51:02Z",
     "occupancy": 0.68,
     "occupancyModified": "2018-09-21T12:00:00Z",
     "occupiedSpotNumber": 282,

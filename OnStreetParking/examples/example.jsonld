@@ -61,7 +61,7 @@
     "zoneId": "2",
     "wardNum": 4
   },
-  "observationDateTime": "2021-03-11T15:51:02+05:30",
+  "observationDateTime": "2021-03-11T15:51:02Z",
   "occupiedSpotNumber": 3,
   "parkingSiteId": "P2",
   "permitActiveHours": {
