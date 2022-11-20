@@ -158,7 +158,6 @@
         "value": 12
     },
     "@context": [
-        "iudx:SmartParking",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"
     ]
 }
