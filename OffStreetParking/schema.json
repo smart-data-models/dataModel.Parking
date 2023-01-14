@@ -22,6 +22,24 @@
           ],
           "description": "Property. It has to be OffStreetParking"
         },
+        "stall": {
+          "type": "object",
+          "description": "Property. Parking stall distribution information. The purpose of this field is to allow knowing the proper configuration of the parking in case of bicycles providing information about the number of stalls and the number of spaces per stalls in order to complete the number of total spots",
+          "properties": {
+            "numberStalls": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Integer'. The number of stalls present in the parking area."
+            },
+            "numberSpacesPerStall": {
+              "type": "number",
+              "description": "Property. Model:'https://schema.org/Integer'. The number of available spaces per stall deployed in the parking area."
+            },
+            "artifactType": {
+              "type": "string",
+              "description": "Property. Model:'https://schema.org/Text'. The description of the stall type."
+            }
+          }
+        },
         "category": {
           "type": "array",
           "description": "Property. Parking site's category(ies). The purpose of this field is to allow to tag, generally speaking, off street parking entities",
@@ -91,6 +109,7 @@
               "motorcycle",
               "motorcycleWithSideCar",
               "motorscooter",
+              "shared (bicycles, motorcycles, and modeps)",
               "tanker",
               "trailer",
               "van"

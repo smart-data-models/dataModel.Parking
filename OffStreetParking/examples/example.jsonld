@@ -60,6 +60,11 @@
     "outOfServiceSlotNumber": 0,
     "parkingSiteId": "P2",
     "requiredPermit": [],
+    "stall": {
+        "numberStalls": 69,
+        "numberSpacesPerStall": 6,
+        "artifactType": "Verona _ Ambrogio"
+    },
     "totalSpotNumber": 414,
     "twoWheelerSlots": {
         "availableSpotNumber": 20,
