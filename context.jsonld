@@ -1,5 +1,10 @@
 {
     "@context": {
+        "OffStreetParking": "https://smartdatamodels.org/dataModel.Parking/OffStreetParking",
+        "OnStreetParking": "https://smartdatamodels.org/dataModel.Parking/OnStreetParking",
+        "ParkingAccess": "https://smartdatamodels.org/dataModel.Parking/ParkingAccess",
+        "ParkingGroup": "https://smartdatamodels.org/dataModel.Parking/ParkingGroup",
+        "ParkingSpot": "https://smartdatamodels.org/dataModel.Parking/ParkingSpot",
         "acceptedPaymentMethod": "https://smartdatamodels.org/dataModel.Parking/acceptedPaymentMethod",
         "accessModified": "https://smartdatamodels.org/dataModel.Parking/accessModified",
         "address": "https://smartdatamodels.org/address",
