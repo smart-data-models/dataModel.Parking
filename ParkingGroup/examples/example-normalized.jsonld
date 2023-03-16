@@ -1,54 +1,81 @@
 {
-    "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",
-    "type": "ParkingGroup",
-    "allowedVehicleType": "car",
-    "availableSpotNumber": 1,
-    "category": [
-        "onStreet",
-        "adjacentSpaces",
-        "onlyDisabled"
-    ],
-    "chargeType": [
-        "free"
-    ],
-    "description": "Two parking spots reserved for disabled people",
-    "location": {
-        "coordinates": [
-            [
-                [
-                    -3.80356167695194,
-                    43.46296641666926
-                ],
-                [
-                    -3.803161973253841,
-                    43.46301091092682
-                ],
-                [
-                    -3.803147082548618,
-                    43.462879859445884
-                ],
-                [
-                    -3.803536474744068,
-                    43.462838666196674
-                ],
-                [
-                    -3.80356167695194,
-                    43.46296641666926
-                ]
-            ]
-        ],
-        "type": "Polygon"
-    },
-    "permitActiveHours": {
-        "Monday": "null"
-    },
-    "refParkingSite": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5",
-    "requiredPermit": [
-        "disabledPermit"
-    ],
-    "totalSpotNumber": 2,
-    "@context": [
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"
+  "id": "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled",
+  "type": "ParkingGroup",
+  "allowedVehicleType": {
+    "type": "Property",
+    "value": "car"
+  },
+  "availableSpotNumber": {
+    "type": "Property",
+    "value": 1,
+    "observedAt": "2018-09-12T12:00:00Z"
+  },
+  "category": {
+    "type": "Property",
+    "value": [
+      "onstreet",
+      "adjacentSpaces",
+      "onlyDisabled"
     ]
+  },
+  "chargeType": {
+    "type": "Property",
+    "value": [
+      "free"
+    ]
+  },
+  "description": {
+    "type": "Property",
+    "value": "Two parking spots reserved for disabled people"
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -3.80356167695194,
+            43.46296641666926
+          ],
+          [
+            -3.803161973253841,
+            43.46301091092682
+          ],
+          [
+            -3.803147082548618,
+            43.462879859445884
+          ],
+          [
+            -3.803536474744068,
+            43.462838666196674
+          ],
+          [
+            -3.80356167695194,
+            43.46296641666926
+          ]
+        ]
+      ]
+    }
+  },
+  "permitActiveHours": {
+    "type": "Property",
+    "value": "null"
+  },
+  "refParkingSite": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:ParkingSite:daoiz-velarde-1-5"
+  },
+  "requiredPermit": {
+    "type": "Property",
+    "value": "disabledPermit"
+  },
+  "totalSpotNumber": {
+    "type": "Property",
+    "value": 2
+  },
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"
+  ]
 }

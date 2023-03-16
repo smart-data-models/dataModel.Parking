@@ -9,15 +9,19 @@
     "value": "daoiz-velarde-1-5"
   },
   "permitActiveHours": {
+    "type": "Text",
     "value": "null"
   },
   "requiredPermit": {
+    "type": "Text",
     "value": "disabledPermit"
   },
   "allowedVehicleType": {
+    "type": "Text",
     "value": "car"
   },
   "availableSpotNumber": {
+    "type": "Number",
     "value": 1,
     "metadata": {
       "timestamp": {
@@ -27,6 +31,7 @@
     }
   },
   "totalSpotNumber": {
+    "type": "Number",
     "value": 2
   },
   "location": {
@@ -45,9 +50,11 @@
     }
   },
   "chargeType": {
+    "type": "array",
     "value": ["free"]
   },
   "description": {
+    "type": "Text",
     "value": "Two parking spots reserved for disabled people"
   }
 }

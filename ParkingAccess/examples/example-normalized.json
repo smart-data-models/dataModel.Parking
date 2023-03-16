@@ -1,24 +1,34 @@
 {
-  "id": "accesspoint-trinidade-1",
+  "id": "urn:ngsi-ld:ParkingAccess:accesspoint-trinidade-1",
   "type": "ParkingAccess",
   "category": {
-    "value": ["vehicleEntrance"]
+    "type": "array",
+    "value": [
+      "vehicleEntrance"
+    ]
   },
-  "name": {
-    "value": "Trinidade main entrance"
+  "features": {
+    "type": "arrray",
+    "value": [
+      "barrier"
+    ]
   },
   "location": {
     "type": "geo:json",
     "value": {
       "type": "Point",
-      "coordinates": [-8.60961198807, 41.150691773]
+      "coordinates": [
+        -8.60961198807,
+        41.150691773
+      ]
     }
+  },
+  "name": {
+    "type": "Text",
+    "value": "Trinidade main entrance"
   },
   "refOffStreetParking": {
     "type": "Relationship",
-    "value": "porto-OffStreetParking-23889"
-  },
-  "features": {
-    "value": ["barrier"]
+    "value": "urn:ngsi-ld:OffStreetParking:porto-OffStreetParking-23889"
   }
 }
