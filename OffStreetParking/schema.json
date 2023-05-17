@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.1.2",
+  "$schemaVersion": "0.1.3",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/schema.json",
   "title": "Smart Data Models - Parking / Off Street Parking",
@@ -164,13 +164,13 @@
         "occupancyModified": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'http://schema.org/Number'. Relative value of occupied spots out of the total spots. Allowed values: 0 - 1"
+          "description": "Property. Model:'http://schema.org/DateTime'. Last time the occupancy values were modified. Allowed values: ISO 8601"
         },
         "occupancy": {
           "type": "number",
           "minimum": 0,
           "maximum": 1,
-          "description": "Property. Model:'http://schema.org/Number'. Relative value of occupied spots out of the total spots."
+          "description": "Property. Model:'http://schema.org/Number'. Relative value of occupied spots out of the total spots. Allowed values: 0 - 1"
         },
         "acceptedPaymentMethod": {
           "type": "array",
