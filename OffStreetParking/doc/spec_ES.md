@@ -7,33 +7,33 @@
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Descripción global: **Estacionamiento en la calle**  
+Descripción global: **Aparcamiento en la calle.  
 versión: 0.1.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
-- `acceptedPaymentMethod[array]`: Enum:'Transferencia bancaria por adelantado, Por factura, En efectivo, Cheque por adelantado, Contra reembolso, Débito directo, GoogleCheckout, PayPal, PaySwarm'. Método(s) de pago aceptado(s).  . Model: [https://schema.org/acceptedPaymentMethod](https://schema.org/acceptedPaymentMethod)- `accessModified[string]`: Marca de tiempo cuando se actualizó `vehicleEntranceCount` y `vehicleExitCount`. Valores permitidos: ISO8601  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `aggregateRating[object]`: Valoración agregada de este aparcamiento.  . Model: [https://schema.org/aggregateRating](https://schema.org/aggregateRating)- `allowedVehicleType[array]`:  Tipo(s) de vehículo permitido(s). El primer elemento de esta matriz _DEBE_ ser el tipo de vehículo principal permitido. Los números de plaza libre de otros tipos de vehículos permitidos pueden notificarse bajo el atributo `extraSpotNumber` y a través de entidades específicas de tipo _ParkingGroup_. Los siguientes valores definidos por _VehicleTypeEnum_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/downloads/modelv23.html). Enum:'agriculturalVehicle, anyVehicle, bicycle, bus, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van'  . Model: [http://schema.org/Text](http://schema.org/Text)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableSpotNumber[integer]`: El número de plazas disponibles (_incluyendo_ todos los tipos de vehículos o las plazas reservadas, como las de discapacitados, las de larga duración, etc.). Esto puede ser más difícil de estimar en aquellos aparcamientos en los que los límites de las plazas no están claramente marcados por líneas. Valores permitidos: Un número entero positivo, incluyendo el 0. Debe ser menor o igual que `totalSpotNumber`.  . Model: [http://schema.org/Number](http://schema.org/Number)- `averageSpotLength[number]`: La longitud media de las plazas de aparcamiento.  . Model: [http://schema.org/length](http://schema.org/length)- `averageSpotWidth[number]`: La anchura media de las plazas de aparcamiento.  . Model: [http://schema.org/width](http://schema.org/width)- `category[array]`: Categoría(s) del aparcamiento. El propósito de este campo es permitir etiquetar, en términos generales, las entidades de estacionamiento fuera de la calle  - `chargeType[array]`: Tipo(s) de carga realizado(s) por el aparcamiento. Valores permitidos: Algunos de los definidos por la enumeración DATEX II versión 2.3 _ ChargeTypeEnum_. Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, other, seasonTicket, temporaryPrice'. O cualquier otra aplicación específica  - `contactPoint[object]`: Punto de contacto del aparcamiento.  . Model: [https://schema.org/contactPoint](https://schema.org/contactPoint)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `extCategory[array]`: Categoría externa para complementar la categoría.  - `extraSpotNumber[integer]`: El número de plazas adicionales _disponibles_, es decir, libres. Este valor debe sumar las plazas libres de todos los grupos mencionados a continuación: A/ Las reservadas para fines especiales y que suelen requerir un permiso. Los detalles del permiso se encontrarán a nivel de grupo de aparcamiento (entidad de tipo `ParkingGroup`). B/ Las reservadas para otros tipos de vehículos diferentes al tipo de vehículo principal permitido. C/ Cualquier otro grupo de plazas de aparcamiento que no esté sujeto a las normas de condición general transmitidas por esta entidad.  . Model: [http://schema.org/Number](http://schema.org/Number)- `facilities[array]`: Valores permitidos: Los siguientes definidos por la enumeración _EquipmentTypeEnum_ de DATEX II versión 2.3. Enum:'bikeParking, cashMachine, copyMachineOrService, defibrillator, dumpingStation, electricChargingStation, elevator, faxMachineOrService, fireHose, fireExtinguisher, fireHydrant, firstAidEquipment, freshWater, andamio sin hielo, punto de información, internet inalámbrico, consigna de equipaje, mostrador de pago, máquina de pago, parque infantil, teléfono público, cubo de basura, caja fuerte, ducha, aseo, terminal de peaje, máquina expendedora, eliminación de residuos". Cualquier otra aplicación específica  . Model: []()- `firstAvailableFloor[integer]`: Número de la planta más cercana al suelo que tiene actualmente plazas de aparcamiento disponibles. Valores permitidos: Las plantas se numeran entre -n y n, siendo 0 la planta baja.  . Model: [http://schema.org/Number](http://schema.org/Number)- `fourWheelerSlots[object]`: Estado de disponibilidad de plazas de aparcamiento para vehículos de cuatro ruedas en el lugar de estacionamiento correspondiente a esta observación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `highestFloor[integer]`: En el caso de los aparcamientos con varias plantas, la planta más alta. Un número entero. El 0 es la planta baja. Las plantas superiores son números positivos. Las plantas inferiores son números negativos.  . Model: [http://schema.org/Number](http://schema.org/Number)- `id[*]`: Identificador único de la entidad  - `images[array]`: Una URL que contenga una foto de este aparcamiento  . Model: [https://schema.org/image](https://schema.org/image)- `layout[array]`: Disposición del aparcamiento. Da más detalles al atributo `categoría`. Valores permitidos: Según el _ParkingLayoutEnum_ de DATEX II versión 2.3. Enum:'automatedParkingGarage, carports, covered, field, garageBoxes, multiLevel, multiStorey, nested, openSpace, rooftop, sheds, singleLevel, surface, other'. Véase también [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking). O cualquier otro valor útil para la aplicación y que no esté contemplado anteriormente.  . Model: [http://schema.org/Text](http://schema.org/Text)- `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `lowestFloor[integer]`: En los aparcamientos con varias plantas, la planta más baja. Valores permitidos: Un número entero.  . Model: [http://schema.org/Number](http://schema.org/Number)- `maximumAllowedHeight[number]`: Altura máxima permitida para los vehículos. Si hay varias zonas, será la altura mínima de todas ellas.  . Model: [http://schema.org/heigth](http://schema.org/heigth)- `maximumAllowedWidth[number]`: Anchura máxima permitida para los vehículos. Si hay varias zonas, será la anchura mínima de todas ellas.  . Model: [http://schema.org/width](http://schema.org/width)- `maximumParkingDuration[string]`: La estancia máxima permitida en el sitio, de forma general, codificada como una duración ISO8601 o con cualquier otra cadena relevante para el estacionamiento.  Un valor vacío o no presente indica una duración indefinida  . Model: [http://schema.org/Text](http://schema.org/Text)- `measuresPeriod[number]`: El período de medidas relacionadas con availableSpotNumber y priceRatePerMinute.  . Model: [http://schema.org/Number](http://schema.org/Number)- `measuresPeriodUnit[string]`: La unidad de período de medidas relacionadas con availableSpotNumber y PriceRatePerMinute.  . Model: [http://schema.org/unitText](http://schema.org/unitText)- `municipalityInfo[object]`: Información del municipio correspondiente a esta observación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: El nombre de este artículo.  - `observationDateTime[string]`: Última hora de observación comunicada.  . Model: [https://schema.org/Text](https://schema.org/Text)- `occupancy[number]`: Valor relativo de las plazas ocupadas sobre el total de plazas.  . Model: [http://schema.org/Number](http://schema.org/Number)- `occupancyDetectionType[array]`: Método(s) de detección de la ocupación.  Valores permitidos: Los siguientes de DATEX II versión 2.3 _OccupancyDetectionTypeEnum_. Enum:'balanceo, manual, modelBased, none, singleSpaceDetection'. O cualquier otro específico de la aplicación  . Model: [http://schema.org/Text](http://schema.org/Text)- `occupancyModified[string]`: Valor relativo de los puntos ocupados sobre el total de puntos. Valores permitidos: 0 - 1  . Model: [http://schema.org/Number](http://schema.org/Number)- `occupiedSpotNumber[integer]`: Número de plazas totales ocupadas en el aparcamiento inteligente correspondiente a esta observación. Debe ser un número positivo inferior o igual al totalSpotNumber  . Model: [http://schema.org/Number](http://schema.org/Number)- `openingHours[string]`: Horario de apertura del aparcamiento.  . Model: [http://schema.org/openingHours](http://schema.org/openingHours)- `outOfServiceSlotNumber[number]`: El número de aparcabicicletas/plazas de estacionamiento de bicicletas o plazas de aparcamiento que están fuera de servicio y no pueden utilizarse para alquilar o aparcar una bicicleta en la estación de estacionamiento de bicicletas o en el lugar de estacionamiento correspondiente a esta observación.  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `parkingMode[array]`: Modo(s) de aparcamiento. Valores permitidos: Los definidos por la enumeración _ParkingModeEnum_ de DATEX II versión 2.3. Enum:'echelonParking, parallelParking, perpendicularParking'  . Model: [http://schema.org/Text](http://schema.org/Text)- `parkingSiteId[string]`: El ID único del aparcamiento o estacionamiento correspondiente a esta observación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `priceCurrency[string]`: Moneda de precio de la tarifa por minuto  . Model: [https://schema.org/priceCurrency](https://schema.org/priceCurrency)- `priceRatePerMinute[number]`: Precio por minuto.  . Model: [ https://schema.org/Number]( https://schema.org/Number)- `provider[object]`: Proveedor de servicios de aparcamiento  . Model: [https://schema.org/provider](https://schema.org/provider)- `refParkingAccess[*]`: Punto(s) de acceso al aparcamiento.  . Model: [http://schema.org/URL](http://schema.org/URL)- `refParkingGroup[*]`: Grupo(s) identificado(s) del sitio de estacionamiento. Un grupo puede corresponder a una zona, una planta completa, un grupo de plazas, etc.  . Model: [http://schema.org/URL](http://schema.org/URL)- `refParkingSpot[*]`: Plazas de aparcamiento individuales que pertenecen a este sitio de estacionamiento fuera de la calle.  - `requiredPermit[array]`: Este atributo captura qué permiso(s) puede(n) ser necesario(s) para aparcar en este sitio. La semántica es que al menos _uno de estos permisos es necesario para aparcar. Cuando un permiso está compuesto por más de un elemento (y) se pueden combinar con un ','. Por ejemplo, "permiso de residente, permiso de discapacitado" significa que se necesita al mismo tiempo un permiso de residente y un permiso de discapacitado para aparcar. Si la lista está vacía, no se necesita ningún permiso. Valores permitidos: Los siguientes, definidos por la enumeración _PermitTypeEnum_ de DATEX II versión 2.3. Enum:'employeePermit, fairPermit, governmentPermit, noPermitNeed, residentPermit, specificIdentifiedVehiclePermit, studentPermit, visitorPermit'. O cualquier otra aplicación específica  - `reservationType[array]`: a siguiente especificada por _ReservationTypeEnum_ de DATEX II versión 2.3. Enum:'obligatorio, no disponible, opcional, parcialmente'  . Model: [http://schema.org/Text](http://schema.org/Text)- `security[array]`: Aspectos de seguridad proporcionados por este aparcamiento. Valores permitidos: Los siguientes, algunos de ellos, definidos por _ParkingSecurityEnum_ de DATEX II versión 2.3. Enum:'areaSeparatedFromSurroundings, cctv, dog, externalSecurity, fences, floodLight, guard24hours, lighting, patrolled, securityStaff' . o cualquier otro específico de la aplicación  . Model: [http://schema.org/Text](http://schema.org/Text)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `specialLocation[array]`: Si el aparcamiento se encuentra en un lugar especial (aeropuerto, grandes almacenes, etc.) transmite cuál es ese lugar especial.  Valores permitidos: Los definidos por _ParkingSpecialLocationEnum_ de [DATEX II versión 2.3](http://www.datex2.eu/content/parking-publications-extension-v10a). Enum:'terminal de aeropuerto, estación de cable, camping, cine, estación de autocares, centro de convenciones, centro de exposiciones, terminal de ferry, hotel, mercado, estación de transporte público, centro religioso, centro comercial, ascensor, instalación específica, parque temático, estación de tren, terminal de vehículos sobre raíles, otros'.  . Model: [http://schema.org/Text](http://schema.org/Text)- `status[array]`: Estado del aparcamiento. Valores permitidos: Los siguientes definidos por las siguientes enumeraciones definidas por DATEX II versión 2.3. Enum:'casiLleno, cerrado, cerradoAnormal, lleno, llenoEnEntrada, abierto, aperturaTiempoEnFuerza, plazasDisponibles'. O cualquier otra aplicación específica  . Model: [http://schema.org/Text](http://schema.org/Text)- `totalSpotNumber[integer]`: El número total de plazas que ofrece este aparcamiento.  Este número puede ser difícil de obtener para aquellos aparcamientos en los que las plazas no están claramente marcadas con líneas. Valores permitidos: Cualquier número entero positivo o 0. Referencias normativas: Atributo _parkingNumberOfSpaces_ de la clase _ParkingRecord_ de DATEX 2 versión 2.3.  . Model: [http://schema.org/Number](http://schema.org/Number)- `twoWheelerSlots[object]`: Estado de disponibilidad de plazas de aparcamiento de dos ruedas en el lugar de estacionamiento correspondiente a esta observación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tiene que ser OffStreetParking  - `unclassifiedSlots[object]`: Estado de disponibilidad de plazas de aparcamiento de vehículos no clasificados u otros vehículos en el lugar de aparcamiento correspondiente a esta observación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `usageScenario[array]`: Escenario(s) de uso. Da más detalles al atributo `categoría`. Valores permitidos: Los definidos por la enumeración _ParkingUsageScenarioEnum_ de DATEX II versión 2.3. Enum: 'automaticParkingGuidance, carSharing, dropOffWithValet, dropOffMechanical, dropOff, eventParking, kissAndRide, liftShare, loadingBay, overnightParking, parkAndCycle, parkAndRide, parkAndWalk, restArea, serviceArea, staffGuidesToSpace, truckParking, vehicleLift, other'. O cualquier otro valor útil para la aplicación y que no esté contemplado anteriormente.  . Model: [http://schema.org/Text](http://schema.org/Text)- `vehicleEntranceCount[number]`: Número agregado de vehículos que entran en el aparcamiento en un periodo de tiempo.  . Model: [http://schema.org/Number](http://schema.org/Number)- `vehicleExitCount[number]`: Número agregado de vehículos que salen del aparcamiento en un periodo de tiempo.  . Model: [http://schema.org/Number](http://schema.org/Number)<!-- /30-PropertiesList -->  
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>.  
+- `acceptedPaymentMethod[array]`: Enum:'Transferencia bancaria por adelantado, Factura, Efectivo, Cheque por adelantado, Contra reembolso, Débito directo, GoogleCheckout, PayPal, PaySwarm'. Forma(s) de pago aceptada(s).  . Model: [https://schema.org/acceptedPaymentMethod](https://schema.org/acceptedPaymentMethod)- `accessModified[string]`: Timestamp cuando `vehicleEntranceCount` y `vehicleExitCount` fue actualizado. Valores permitidos: ISO8601  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `aggregateRating[object]`: Valoración agregada de este aparcamiento.  . Model: [https://schema.org/aggregateRating](https://schema.org/aggregateRating)- `allowedVehicleType[array]`:  Tipo(s) de vehículo(s) permitido(s). El primer elemento de esta matriz _DEBE_ ser el tipo de vehículo principal permitido. Los números de plaza libre de otros tipos de vehículos permitidos podrán indicarse en el atributo `extraSpotNumber` y a través de entidades específicas de tipo _ParkingGroup_. Los siguientes valores definidos por _VehicleTypeEnum_, [DATEX 2 versión 2.3](http://d2docs.ndwcloud.nu/downloads/modelv23.html). Enum:'vehículo agrícola, cualquier vehículo, bicicleta, autobús, coche, caravana, coche con caravana, coche con remolque, vehículo de construcción o mantenimiento, camión, ciclomotor, motocicleta, motocicleta con coche lateral, motocarro, camión cisterna, remolque, furgoneta'.  . Model: [http://schema.org/Text](http://schema.org/Text)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableSpotNumber[number]`: El número de plazas disponibles (_incluidos_ todos los tipos de vehículos o plazas reservadas, como las destinadas a minusválidos, estacionamientos de larga duración, etc.). Esto puede ser más difícil de estimar en aquellos aparcamientos en los que los límites de las plazas no están claramente marcados por líneas. Valores permitidos: Un número entero positivo, incluyendo 0. Debe ser menor o igual que `totalSpotNumber`.  . Model: [http://schema.org/Number](http://schema.org/Number)- `averageSpotLength[number]`: La longitud media de las plazas de aparcamiento.  . Model: [http://schema.org/length](http://schema.org/length)- `averageSpotWidth[number]`: La anchura media de las plazas de aparcamiento.  . Model: [http://schema.org/width](http://schema.org/width)- `category[array]`: Categoría(s) del aparcamiento. La finalidad de este campo es permitir etiquetar, en términos generales, las entidades de estacionamiento fuera de la vía pública  - `chargeType[array]`: Tipo(s) de cargo realizado(s) por el aparcamiento. Valores permitidos: Algunos de los definidos por la enumeración DATEX II versión 2.3 _ ChargeTypeEnum_. Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, other, seasonTicket, temporaryPrice'. O cualquier otra específica de la aplicación  - `contactPoint[object]`: Punto de contacto del aparcamiento.  . Model: [https://schema.org/contactPoint](https://schema.org/contactPoint)- `dataProvider[string]`: Secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Descripción de este artículo  - `extCategory[array]`: Categoría externa para complementar la categoría.  - `extraSpotNumber[number]`: El número de plazas extra _disponibles_, es decir, libres. Este valor debe sumar las plazas libres de todos los grupos mencionados a continuación: A/ Las reservadas para fines especiales y que suelen requerir un permiso. Los detalles del permiso se encontrarán a nivel de grupo de aparcamiento (entidad de tipo `ParkingGroup`). B/ Las reservadas para otros tipos de vehículos distintos del tipo de vehículo principal permitido. C/ Cualquier otro grupo de plazas de aparcamiento no sujeto a las normas de condiciones generales transmitidas por esta entidad.  . Model: [http://schema.org/Number](http://schema.org/Number)- `facilities[array]`: Valores permitidos: Los siguientes definidos por la enumeración _EquipmentTypeEnum_ de DATEX II versión 2.3. Enum:Aparcamiento de bicicletas, cajero automático, fotocopiadora o servicio de fotocopiadora, desfibrilador, estación de descarga, estación de carga eléctrica, ascensor, fax o servicio de fax, manguera contra incendios, extintor, boca de incendios, equipo de primeros auxilios, agua dulce, andamio sin hielo, punto de información, conexión inalámbrica a Internet, consigna de equipajes, mostrador de pago, máquina de pago, parque infantil, teléfono público, papelera, caja fuerte, ducha, aseo, terminal de peaje, máquina expendedora, eliminación de residuos". Cualquier otra aplicación específica  . Model: []()- `firstAvailableFloor[number]`: Número de la planta más cercana al suelo que tiene actualmente plazas de aparcamiento disponibles. Valores permitidos: Las plantas se numeran entre -n y n, siendo 0 la planta baja.  . Model: [http://schema.org/Number](http://schema.org/Number)- `fourWheelerSlots[object]`: Estado de disponibilidad de plazas de aparcamiento para vehículos de cuatro ruedas en el lugar de estacionamiento correspondiente a esta observación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `highestFloor[number]`: Para aparcamientos con varias plantas, la planta más alta. Número entero. 0 es la planta baja. Las plantas superiores son números positivos. Las plantas inferiores son negativas.  . Model: [http://schema.org/Number](http://schema.org/Number)- `id[*]`: Identificador único de la entidad  - `images[array]`: Una URL que contenga una foto de este aparcamiento  . Model: [https://schema.org/image](https://schema.org/image)- `layout[array]`: Disposición del aparcamiento. Da más detalles al atributo `category`. Valores permitidos: Según el _ParkingLayoutEnum_ de DATEX II versión 2.3. Enum:'automatedParkingGarage, carports, covered, field, garageBoxes, multiLevel, multiStorey, nested, openSpace, rooftop, sheds, singleLevel, surface, other'. Véase también [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking). O cualquier otro valor útil para la aplicación y no contemplado anteriormente.  . Model: [http://schema.org/Text](http://schema.org/Text)- `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon.  - `lowestFloor[number]`: Para aparcamientos con varias plantas, la planta más baja. Valores permitidos: Un número entero.  . Model: [http://schema.org/Number](http://schema.org/Number)- `maximumAllowedHeight[number]`: Altura máxima permitida para vehículos. Si hay varias zonas, será la altura mínima de todas ellas.  . Model: [http://schema.org/heigth](http://schema.org/heigth)- `maximumAllowedWidth[number]`: Anchura máxima permitida para vehículos. Si hay varias zonas, será la anchura mínima de todas ellas.  . Model: [http://schema.org/width](http://schema.org/width)- `maximumParkingDuration[string]`: Estancia máxima permitida en el lugar, con carácter general, codificada como duración ISO8601 o con cualquier otra cadena pertinente para el estacionamiento.  Un valor vacío o no presente indica una duración indefinida.  . Model: [http://schema.org/Text](http://schema.org/Text)- `measuresPeriod[number]`: El período de medidas relacionadas con availableSpotNumber y priceRatePerMinute.  . Model: [http://schema.org/Number](http://schema.org/Number)- `measuresPeriodUnit[string]`: La periodicidad de las medidas relacionadas con availableSpotNumber y PriceRatePerMinute.  . Model: [http://schema.org/unitText](http://schema.org/unitText)- `municipalityInfo[object]`: Información municipal correspondiente a esta observación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: El nombre de este artículo.  - `observationDateTime[string]`: Última hora de observación comunicada.  . Model: [https://schema.org/Text](https://schema.org/Text)- `occupancy[number]`: Valor relativo de los puntos ocupados sobre el total de puntos.  . Model: [http://schema.org/Number](http://schema.org/Number)- `occupancyDetectionType[array]`: Método(s) de detección de ocupación.  Valores permitidos: Los siguientes de DATEX II versión 2.3 _OccupancyDetectionTypeEnum_. Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. O cualquier otro específico de la aplicación  . Model: [http://schema.org/Text](http://schema.org/Text)- `occupancyModified[string]`: Valor relativo de plazas ocupadas sobre el total de plazas. Valores permitidos: 0 - 1  . Model: [http://schema.org/Number](http://schema.org/Number)- `occupiedSpotNumber[number]`: Número total de plazas de aparcamiento ocupadas en el aparcamiento inteligente correspondiente a esta observación. Debe ser un número positivo inferior o igual al totalSpotNumber.  . Model: [http://schema.org/Number](http://schema.org/Number)- `openingHours[string]`: Horario de apertura del aparcamiento.  . Model: [http://schema.org/openingHours](http://schema.org/openingHours)- `outOfServiceSlotNumber[number]`: El número de aparcabicicletas/plazas de aparcamiento o estacionamiento de bicicletas que están averiados y no se pueden utilizar para alquilar o aparcar una bicicleta en la estación de aparcamiento o estacionamiento de bicicletas correspondiente a esta observación.  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `parkingMode[array]`: Modo(s) de aparcamiento. Valores permitidos: Los definidos por la enumeración _ParkingModeEnum_ de la versión 2.3 de DATEX II. Enum:'echelonParking, parallelParking, perpendicularParking'  . Model: [http://schema.org/Text](http://schema.org/Text)- `parkingSiteId[string]`: El ID único del aparcamiento o estacionamiento correspondiente a esta observación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `priceCurrency[string]`: Divisa de la tarifa por minuto  . Model: [https://schema.org/priceCurrency](https://schema.org/priceCurrency)- `priceRatePerMinute[number]`: Precio por minuto.  . Model: [ https://schema.org/Number]( https://schema.org/Number)- `provider[object]`: Proveedor de servicios de aparcamiento  . Model: [https://schema.org/provider](https://schema.org/provider)- `refParkingAccess[*]`: Punto(s) de acceso al aparcamiento.  . Model: [http://schema.org/URL](http://schema.org/URL)- `refParkingGroup[*]`: Grupo(s) identificado(s) del aparcamiento. Un grupo puede corresponder a una zona, una planta completa, un grupo de plazas, etc.  . Model: [http://schema.org/URL](http://schema.org/URL)- `refParkingSpot[*]`: Plazas individuales pertenecientes a este aparcamiento offStreet.  - `requiredPermit[array]`: Este atributo indica qué permiso(s) puede(n) ser necesario(s) para aparcar en este lugar. La semántica es que se necesita al menos _uno_ de estos permisos para aparcar. Cuando un permiso está compuesto por más de un elemento (y) pueden combinarse con un ','. Por ejemplo, 'permisoresidente,permisodiscapacitados' significa que se necesita al mismo tiempo un permiso de residente y un permiso de discapacitado para aparcar. Si la lista está vacía, no se necesita ningún permiso. Valores permitidos: Los siguientes, definidos por la enumeración _PermitTypeEnum_ de DATEX II versión 2.3. Enum:'employeePermit, fairPermit, governmentPermit, noPermitNeeded, residentPermit, specificIdentifiedVehiclePermit, studentPermit, visitorPermit'. O cualquier otra aplicación específica  - `reservationType[array]`: l siguiente especificado por _ReservationTypeEnum_ de DATEX II versión 2.3. Enum:'obligatorio, noDisponible, opcional, parcialmente'  . Model: [http://schema.org/Text](http://schema.org/Text)- `security[array]`: Aspectos de seguridad proporcionados por este aparcamiento. Valores permitidos: Los siguientes, algunos de ellos, definidos por _ParkingSecurityEnum_ de DATEX II versión 2.3. Enum:'areaSeparatedFromSurroundings, cctv, dog, externalSecurity, fences, floodLight, guard24hours, lighting, patrolled, securityStaff' . o cualquier otro específico de la aplicación.  . Model: [http://schema.org/Text](http://schema.org/Text)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `specialLocation[array]`: Si el aparcamiento se encuentra en una ubicación especial (aeropuerto, grandes almacenes, etc.) transmite cuál es dicha ubicación especial.  Valores permitidos: Los definidos por _ParkingSpecialLocationEnum_ de [DATEX II versión 2.3](http://www.datex2.eu/content/parking-publications-extension-v10a). Enum:'terminal de aeropuerto, estación de teleférico, camping, cine, estación de autocares, centro de convenciones, centro de exposiciones, terminal de transbordador, hotel, mercado, estación de transporte público, centro religioso, centro comercial, ascensor, instalación específica, parque temático, estación de tren, terminal de vehículos sobre raíles, otros'.  . Model: [http://schema.org/Text](http://schema.org/Text)- `status[array]`: Estado del aparcamiento. Valores permitidos: Los siguientes definidos por las siguientes enumeraciones definidas por DATEX II versión 2.3. Enum:'almostFull, closed, closedAbnormal, full, fullAtEntrance, open, openingTimesInForce, spacesAvailable'. O cualquier otra específica de la aplicación  . Model: [http://schema.org/Text](http://schema.org/Text)- `totalSpotNumber[number]`: El número total de plazas que ofrece este aparcamiento.  Este número puede ser difícil de obtener para aquellos aparcamientos en los que las plazas no están claramente marcadas con líneas. Valores permitidos: Cualquier número entero positivo o 0. Referencias normativas: Atributo _parkingNumberOfSpaces_ de la clase _ParkingRecord_ de DATEX 2 versión 2.3.  . Model: [http://schema.org/Number](http://schema.org/Number)- `twoWheelerSlots[object]`: Estado de disponibilidad de plazas de aparcamiento para vehículos de dos ruedas en el lugar de estacionamiento correspondiente a esta observación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tiene que ser OffStreetParking  - `unclassifiedSlots[object]`: Estado de disponibilidad de plazas de estacionamiento de vehículos no clasificados u otros vehículos en el lugar de estacionamiento correspondiente a esta observación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `usageScenario[array]`: Escenario(s) de uso. Da más detalles al atributo `category`. Valores permitidos: Los definidos por la enumeración _ParkingUsageScenarioEnum_ de DATEX II versión 2.3. Enum:'automaticParkingGuidance, carSharing, dropOffWithValet, dropOffMechanical, dropOff, eventParking, kissAndRide, liftShare, loadingBay, overnightParking, parkAndCycle, parkAndRide, parkAndWalk, restArea, serviceArea, staffGuidesToSpace, truckParking, vehicleLift, other'. O cualquier otro valor útil para la aplicación y no contemplado anteriormente.  . Model: [http://schema.org/Text](http://schema.org/Text)- `vehicleEntranceCount[number]`: Número agregado de vehículos que entran en el aparcamiento en un periodo de tiempo.  . Model: [http://schema.org/Number](http://schema.org/Number)- `vehicleExitCount[number]`: Número agregado de vehículos que abandonan el aparcamiento en un periodo de tiempo.  . Model: [http://schema.org/Number](http://schema.org/Number)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
 - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Un sitio, fuera de la calle, destinado al estacionamiento de vehículos, gestionado de forma independiente y con puntos de acceso adecuados y claramente señalizados (entradas y salidas). Si es necesario, y con fines de gestión o para tratar sitios de estacionamiento con varias ubicaciones, puede dividirse en diferentes zonas modeladas por el tipo de entidad [ParkingGroup](../ParkingGroup/README.md) . En la terminología de DATEX 2 versión 2.3 corresponde a un _UrbanParkingSite_ de tipo _offStreetParking_. Un diccionario de datos para los términos de DATEX II puede encontrarse en [http://datexbrowser.tamtamresearch.com/](http://datexbrowser.tamtamresearch.com/).  
+Recinto, fuera de la vía pública, destinado al estacionamiento de vehículos, gestionado de forma independiente y con accesos (entradas y salidas) adecuados y claramente señalizados. En caso necesario, y a efectos de gestión o para hacer frente a aparcamientos con múltiples ubicaciones, puede dividirse en diferentes zonas modelizadas por el tipo de entidad [ParkingGroup](../ParkingGroup/README.md) . En la terminología de DATEX 2 versión 2.3 corresponde a un _UrbanParkingSite_ de tipo _offStreetParking_. En [http://datexbrowser.tamtamresearch.com/](http://datexbrowser.tamtamresearch.com/) se puede encontrar un diccionario de datos para los términos de DATEX II.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Descripción del modelo de datos de las propiedades  
-Ordenados alfabéticamente (haga clic para ver los detalles)  
+## Descripción de las propiedades del modelo de datos  
+Ordenados alfabéticamente (pulse para más detalles)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 OffStreetParking:    
-  description: 'Off street parking'    
+  description: Off street parking    
   properties:    
     acceptedPaymentMethod:    
-      description: 'Enum:''ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm''. Accepted payment method(s).'    
+      description: 'Property. Model:''https://schema.org/acceptedPaymentMethod''. Enum:''ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm''. Accepted payment method(s).'    
       items:    
         enum:    
           - ByBankTransferInAdvance    
@@ -53,13 +53,13 @@ OffStreetParking:
         model: https://schema.org/acceptedPaymentMethod    
         type: Property    
     accessModified:    
-      description: 'Timestamp when `vehicleEntranceCount` and `vehicleExitCount` was updated. Allowed values: ISO8601'    
+      description: 'Property. Model:''https://schema.org/DateTime''. Timestamp when `vehicleEntranceCount` and `vehicleExitCount` was updated. Allowed values: ISO8601'    
       type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
         type: Property    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
@@ -70,6 +70,9 @@ OffStreetParking:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          type: string    
         postOfficeBoxNumber:    
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
@@ -79,18 +82,21 @@ OffStreetParking:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
+        streetNr:    
+          description: Number identifying a specific property on a public street.    
+          type: string    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     aggregateRating:    
-      description: 'Aggregated rating for this parking site.'    
+      description: 'Property. Model:''https://schema.org/aggregateRating''. Aggregated rating for this parking site.'    
       type: object    
       x-ngsi:    
         model: https://schema.org/aggregateRating    
         type: Property    
     allowedVehicleType:    
-      description: ' Vehicle type(s) allowed. The first element of this array _MUST_ be the principal vehicle type allowed. Free spot numbers of other allowed vehicle types might be reported under the attribute `extraSpotNumber` and through specific entities of type _ParkingGroup_. The following values defined by _VehicleTypeEnum_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/downloads/modelv23.html). Enum:''agriculturalVehicle, anyVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van'''    
+      description: 'Property. Model:''http://schema.org/Text''.  Vehicle type(s) allowed. The first element of this array _MUST_ be the principal vehicle type allowed. Free spot numbers of other allowed vehicle types might be reported under the attribute `extraSpotNumber` and through specific entities of type _ParkingGroup_. The following values defined by _VehicleTypeEnum_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/downloads/modelv23.html). Enum:''agriculturalVehicle, anyVehicle, bicycle, bus, car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer, van'''    
       items:    
         enum:    
           - agriculturalVehicle    
@@ -118,25 +124,25 @@ OffStreetParking:
         model: http://schema.org/Text    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     availableSpotNumber:    
-      description: 'The number of spots available (_including_ all  vehicle types or reserved spaces, such as those for disabled people, long term parkers and so on). This might be harder to estimate at those parking locations on which spots borders are not clearly marked by lines. Allowed values: A positive integer number, including 0. It must lower or equal than `totalSpotNumber`.'    
+      description: 'Property. Model:''http://schema.org/Number''. The number of spots available (_including_ all  vehicle types or reserved spaces, such as those for disabled people, long term parkers and so on). This might be harder to estimate at those parking locations on which spots borders are not clearly marked by lines. Allowed values: A positive integer number, including 0. It must lower or equal than `totalSpotNumber`.'    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     averageSpotLength:    
-      description: 'The average length of parking spots.'    
+      description: 'Property. Model:''http://schema.org/length''. Units:''meters''. The average length of parking spots.'    
       exclusiveMinimum: true    
       minimum: 0    
       type: number    
@@ -145,7 +151,7 @@ OffStreetParking:
         type: Property    
         units: meters    
     averageSpotWidth:    
-      description: 'The average width of parking spots.'    
+      description: 'Property. Model:''http://schema.org/width''. Units:''meters''. The average width of parking spots.'    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -153,7 +159,7 @@ OffStreetParking:
         type: Property    
         units: meters    
     category:    
-      description: 'Parking site''s category(ies). The purpose of this field is to allow to tag, generally speaking, off street parking entities'    
+      description: 'Property. Parking site''s category(ies). The purpose of this field is to allow to tag, generally speaking, off street parking entities'    
       items:    
         enum:    
           - barrierAccess    
@@ -192,7 +198,7 @@ OffStreetParking:
       x-ngsi:    
         type: Property    
     chargeType:    
-      description: 'Type(s) of charge performed by the parking site. Allowed values: Some of those defined by the DATEX II version 2.3 _ ChargeTypeEnum_ enumeration. Enum:''additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, other, seasonTicket, temporaryPrice''. Or any other application-specific'    
+      description: 'Property. Type(s) of charge performed by the parking site. Allowed values: Some of those defined by the DATEX II version 2.3 _ ChargeTypeEnum_ enumeration. Enum:''additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, other, seasonTicket, temporaryPrice''. Or any other application-specific'    
       items:    
         enum:    
           - additionalIntervalPrice    
@@ -213,35 +219,35 @@ OffStreetParking:
       x-ngsi:    
         type: Property    
     contactPoint:    
-      description: 'Parking site contact point.'    
+      description: 'Property. Model:''https://schema.org/contactPoint''. Parking site contact point.'    
       type: object    
       x-ngsi:    
         model: https://schema.org/contactPoint    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity.    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     extCategory:    
-      description: 'External category to complement category.'    
+      description: Property. External category to complement category.    
       items:    
         type: string    
       minItems: 1    
@@ -250,14 +256,14 @@ OffStreetParking:
       x-ngsi:    
         type: Property    
     extraSpotNumber:    
-      description: 'The number of extra spots _available_, i.e. free. This value must aggregate free spots from all groups mentioned below: A/ Those reserved for special purposes and usually require a permit. Permit details will be found at parking group level (entity of type `ParkingGroup`). B/ Those reserved for other vehicle types different than the principal allowed vehicle type. C/ Any other group of parking spots not subject to the general condition rules conveyed by this entity.'    
+      description: 'Property. Model:''http://schema.org/Number''. The number of extra spots _available_, i.e. free. This value must aggregate free spots from all groups mentioned below: A/ Those reserved for special purposes and usually require a permit. Permit details will be found at parking group level (entity of type `ParkingGroup`). B/ Those reserved for other vehicle types different than the principal allowed vehicle type. C/ Any other group of parking spots not subject to the general condition rules conveyed by this entity.'    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     facilities:    
-      description: 'Allowed values: The following defined by the _EquipmentTypeEnum_ enumeration of DATEX II version 2.3. Enum:''bikeParking, cashMachine, copyMachineOrService, defibrillator, dumpingStation, electricChargingStation, elevator, faxMachineOrService, fireHose, fireExtinguisher, fireHydrant, firstAidEquipment, freshWater, iceFreeScaffold, informationPoint, internetWireless, luggageLocker, payDesk, paymentMachine, playground, publicPhone, refuseBin, safeDeposit, shower, toilet, tollTerminal, vendingMachine, wasteDisposal'' . Any other application-specific'    
+      description: 'Property. Model:''''. Allowed values: The following defined by the _EquipmentTypeEnum_ enumeration of DATEX II version 2.3. Enum:''bikeParking, cashMachine, copyMachineOrService, defibrillator, dumpingStation, electricChargingStation, elevator, faxMachineOrService, fireHose, fireExtinguisher, fireHydrant, firstAidEquipment, freshWater, iceFreeScaffold, informationPoint, internetWireless, luggageLocker, payDesk, paymentMachine, playground, publicPhone, refuseBin, safeDeposit, shower, toilet, tollTerminal, vendingMachine, wasteDisposal'' . Any other application-specific'    
       items:    
         enum:    
           - bikeParking    
@@ -296,13 +302,13 @@ OffStreetParking:
         model: ""    
         type: Property    
     firstAvailableFloor:    
-      description: 'Number of the floor closest to the ground which currently has available parking spots. Allowed values: Stories are numbered between -n and n, being 0 ground floor.'    
-      type: integer    
+      description: 'Property. Model:''http://schema.org/Number''. Number of the floor closest to the ground which currently has available parking spots. Allowed values: Stories are numbered between -n and n, being 0 ground floor.'    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     fourWheelerSlots:    
-      description: 'Four wheeler parking spot availability status in parking site corresponding to this observation.'    
+      description: 'Property. Model:''https://schema.org/Text. Four wheeler parking spot availability status in parking site corresponding to this observation.'    
       properties:    
         availableSlotNumber:    
           description: 'Property. Model:''https://schema.org/Number''. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positive number lower than or equal to the totalSpotNumber.'    
@@ -318,26 +324,26 @@ OffStreetParking:
         model: https://schema.org/Text    
         type: Property    
     highestFloor:    
-      description: 'For parking sites with multiple floor levels, highest floor. An integer number. 0 is ground level. Upper floors are positive numbers. Lower floors are negative ones.'    
-      type: integer    
+      description: 'Property. Model:''http://schema.org/Number''. For parking sites with multiple floor levels, highest floor. An integer number. 0 is ground level. Upper floors are positive numbers. Lower floors are negative ones.'    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     id:    
       anyOf: &offstreetparking_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     images:    
-      description: 'A URL containing a photo of this parking site'    
+      description: 'Property. Model:''https://schema.org/image''. A URL containing a photo of this parking site'    
       items:    
         format: uri    
         type: string    
@@ -346,7 +352,7 @@ OffStreetParking:
         model: https://schema.org/image    
         type: Property    
     layout:    
-      description: 'Parking layout. Gives more details to the `category` attribute. Allowed values: As per the _ParkingLayoutEnum_ of DATEX II version 2.3. Enum:''automatedParkingGarage, carports, covered, field, garageBoxes, multiLevel, multiStorey, nested, openSpace, rooftop, sheds, singleLevel, surface, other''. See also [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking). Or any other value useful for the application and not covered above.'    
+      description: 'Property. Model:''http://schema.org/Text''. Parking layout. Gives more details to the `category` attribute. Allowed values: As per the _ParkingLayoutEnum_ of DATEX II version 2.3. Enum:''automatedParkingGarage, carports, covered, field, garageBoxes, multiLevel, multiStorey, nested, openSpace, rooftop, sheds, singleLevel, surface, other''. See also [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking). Or any other value useful for the application and not covered above.'    
       items:    
         enum:    
           - automatedParkingGarage    
@@ -373,7 +379,7 @@ OffStreetParking:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: GeoProperty. Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -392,9 +398,9 @@ OffStreetParking:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+        - description: GeoProperty. Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -416,9 +422,9 @@ OffStreetParking:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+        - description: GeoProperty. Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -442,9 +448,9 @@ OffStreetParking:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+        - description: GeoProperty. Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -465,9 +471,9 @@ OffStreetParking:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -491,9 +497,9 @@ OffStreetParking:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -519,18 +525,18 @@ OffStreetParking:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
       x-ngsi:    
         type: GeoProperty    
     lowestFloor:    
-      description: 'For parking sites with multiple floor levels, lowest floor. Allowed values: An integer number.'    
-      type: integer    
+      description: 'Property. Model:''http://schema.org/Number''. For parking sites with multiple floor levels, lowest floor. Allowed values: An integer number.'    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     maximumAllowedHeight:    
-      description: 'Maximum allowed height for vehicles. If there are multiple zones, it will be the minimum height of all the zones.'    
+      description: 'Property. Model:''http://schema.org/heigth''. Units:''meters''. Maximum allowed height for vehicles. If there are multiple zones, it will be the minimum height of all the zones.'    
       exclusiveMinimum: true    
       minimum: 0    
       type: number    
@@ -539,7 +545,7 @@ OffStreetParking:
         type: Property    
         units: meters    
     maximumAllowedWidth:    
-      description: 'Maximum allowed width for vehicles. If there are multiple zones, it will be the minimum width of all the zones.'    
+      description: 'Property. Model:''http://schema.org/width''. Units:''Meters''. Maximum allowed width for vehicles. If there are multiple zones, it will be the minimum width of all the zones.'    
       exclusiveMinimum: true    
       minimum: 0    
       type: number    
@@ -548,25 +554,25 @@ OffStreetParking:
         type: Property    
         units: Meters    
     maximumParkingDuration:    
-      description: 'Maximum allowed stay at site, on a general basis, encoded as a ISO8601 duration or with any other string relevant for parking.  An empty value or when non present indicates an indefinite duration'    
+      description: 'Property. Model:''http://schema.org/Text''. Maximum allowed stay at site, on a general basis, encoded as a ISO8601 duration or with any other string relevant for parking.  An empty value or when non present indicates an indefinite duration'    
       type: string    
       x-ngsi:    
         model: http://schema.org/Text    
         type: Property    
     measuresPeriod:    
-      description: 'The measures period related to availableSpotNumber and priceRatePerMinute.'    
+      description: 'Property. Model:''http://schema.org/Number''. The measures period related to availableSpotNumber and priceRatePerMinute.'    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     measuresPeriodUnit:    
-      description: 'The measures period unit related to availableSpotNumber and PriceRatePerMinute.'    
+      description: 'Property. Model:''http://schema.org/unitText''. The measures period unit related to availableSpotNumber and PriceRatePerMinute.'    
       type: string    
       x-ngsi:    
         model: http://schema.org/unitText    
         type: Property    
     municipalityInfo:    
-      description: 'Municipality information corresponding to this observation.'    
+      description: 'Property. Model:''https://schema.org/Text. Municipality information corresponding to this observation.'    
       properties:    
         cityId:    
           description: 'Property. Model:''https://schema.org/Text''. City ID corresponding to this observation.'    
@@ -603,19 +609,19 @@ OffStreetParking:
         model: https://schema.org/Text    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item.    
       type: string    
       x-ngsi:    
         type: Property    
     observationDateTime:    
-      description: 'Last reported time of observation.'    
+      description: 'Property. Model:''https://schema.org/Text''. Last reported time of observation.'    
       format: date-time    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     occupancy:    
-      description: 'Relative value of occupied spots out of the total spots.'    
+      description: 'Property. Model:''http://schema.org/Number''. Relative value of occupied spots out of the total spots. Allowed values: 0 - 1'    
       maximum: 1    
       minimum: 0    
       type: number    
@@ -623,7 +629,7 @@ OffStreetParking:
         model: http://schema.org/Number    
         type: Property    
     occupancyDetectionType:    
-      description: 'Occupancy detection method(s).  Allowed values: The following from DATEX II version 2.3 _OccupancyDetectionTypeEnum_. Enum:''balancing, manual, modelBased, none, singleSpaceDetection''. Or any other application-specific'    
+      description: 'Property. Model:''http://schema.org/Text''. Occupancy detection method(s).  Allowed values: The following from DATEX II version 2.3 _OccupancyDetectionTypeEnum_. Enum:''balancing, manual, modelBased, none, singleSpaceDetection''. Or any other application-specific'    
       items:    
         enum:    
           - balancing    
@@ -639,41 +645,41 @@ OffStreetParking:
         model: http://schema.org/Text    
         type: Property    
     occupancyModified:    
-      description: 'Relative value of occupied spots out of the total spots. Allowed values: 0 - 1'    
+      description: 'Property. Model:''http://schema.org/DateTime''. Last time the occupancy values were modified. Allowed values: ISO 8601'    
       format: date-time    
       type: string    
       x-ngsi:    
-        model: http://schema.org/Number    
+        model: http://schema.org/DateTime    
         type: Property    
     occupiedSpotNumber:    
-      description: 'Number of total parking spots occupied in the smart parking site corresponding to this observation. This must a positive number lower than or equal to the totalSpotNumber'    
+      description: 'Property. Model:''http://schema.org/Number''. Number of total parking spots occupied in the smart parking site corresponding to this observation. This must a positive number lower than or equal to the totalSpotNumber'    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     openingHours:    
-      description: 'Opening hours of the parking site.'    
+      description: 'Property. Model:''http://schema.org/openingHours''. Opening hours of the parking site.'    
       type: string    
       x-ngsi:    
         model: http://schema.org/openingHours    
         type: Property    
     outOfServiceSlotNumber:    
-      description: 'The number of bike racks/bike-docking slots or parking slots that are out of order and cannot be used to hire or park a bike in the bike docking station or parking site corresponding to this observation.'    
+      description: 'Property. Model:''https://schema.org/Number''. The number of bike racks/bike-docking slots or parking slots that are out of order and cannot be used to hire or park a bike in the bike docking station or parking site corresponding to this observation.'    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *offstreetparking_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     parkingMode:    
-      description: 'Parking mode(s). Allowed values: Those defined by the DATEX II version 2.3 _ParkingModeEnum_ enumeration. Enum:''echelonParking, parallelParking, perpendicularParking'''    
+      description: 'Property. Model:''http://schema.org/Text''. Parking mode(s). Allowed values: Those defined by the DATEX II version 2.3 _ParkingModeEnum_ enumeration. Enum:''echelonParking, parallelParking, perpendicularParking'''    
       items:    
         enum:    
           - echelonParking    
@@ -687,25 +693,25 @@ OffStreetParking:
         model: http://schema.org/Text    
         type: Property    
     parkingSiteId:    
-      description: 'The unique ID of the parking site or parking lot corresponding to this observation.'    
+      description: 'Property. Model:''https://schema.org/Text''. The unique ID of the parking site or parking lot corresponding to this observation.'    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     priceCurrency:    
-      description: 'Price currency of price rate per minute'    
+      description: 'Property. Model:''https://schema.org/priceCurrency''. Price currency of price rate per minute'    
       type: string    
       x-ngsi:    
         model: https://schema.org/priceCurrency    
         type: Property    
     priceRatePerMinute:    
-      description: 'Price rate per minute.'    
+      description: 'Property. Model: ''https://schema.org/Number''. Price rate per minute.'    
       type: number    
       x-ngsi:    
         model: ' https://schema.org/Number'    
         type: Property    
     provider:    
-      description: 'Parking site service provider'    
+      description: 'Property. Parking site service provider. Model:''https://schema.org/provider'''    
       type: object    
       x-ngsi:    
         model: https://schema.org/provider    
@@ -718,7 +724,7 @@ OffStreetParking:
           type: string    
         - format: uri    
           type: string    
-      description: 'Parking site''s access point(s).'    
+      description: 'Relationship. Model:''http://schema.org/URL''. Parking site''s access point(s).'    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Relationship    
@@ -730,7 +736,7 @@ OffStreetParking:
           type: string    
         - format: uri    
           type: string    
-      description: 'Parking site identified group(s). A group can correspond to a zone, a complete storey, a group of spots, etc.'    
+      description: 'Relationship. Model:''http://schema.org/URL''. Parking site identified group(s). A group can correspond to a zone, a complete storey, a group of spots, etc.'    
       x-ngsi:    
         model: http://schema.org/URL    
         type: Relationship    
@@ -742,11 +748,11 @@ OffStreetParking:
           type: string    
         - format: uri    
           type: string    
-      description: 'Individual parking spots belonging to this offStreet parking site.'    
+      description: Relationship. Individual parking spots belonging to this offStreet parking site.    
       x-ngsi:    
         type: Relationship    
     requiredPermit:    
-      description: 'This attribute captures what permit(s) might be needed to park at this site. Semantics is that at least _one of_ these permits is needed to park. When a permit is composed by more than one item (and) they can be combined with a '',''. For instance ''residentPermit,disabledPermit'' stays that both, at the same time, a resident and a disabled permit are needed to park. If the list is empty no permit is needed. Allowed values: The following, defined by the _PermitTypeEnum_ enumeration of DATEX II version 2.3. Enum:''employeePermit, fairPermit, governmentPermit, noPermitNeeded, residentPermit, specificIdentifiedVehiclePermit, studentPermit, visitorPermit''. Or any other application-specific'    
+      description: 'Property. This attribute captures what permit(s) might be needed to park at this site. Semantics is that at least _one of_ these permits is needed to park. When a permit is composed by more than one item (and) they can be combined with a '',''. For instance ''residentPermit,disabledPermit'' stays that both, at the same time, a resident and a disabled permit are needed to park. If the list is empty no permit is needed. Allowed values: The following, defined by the _PermitTypeEnum_ enumeration of DATEX II version 2.3. Enum:''employeePermit, fairPermit, governmentPermit, noPermitNeeded, residentPermit, specificIdentifiedVehiclePermit, studentPermit, visitorPermit''. Or any other application-specific'    
       items:    
         enum:    
           - employeePermit    
@@ -764,7 +770,7 @@ OffStreetParking:
       x-ngsi:    
         type: Property    
     reservationType:    
-      description: 'he following specified by _ReservationTypeEnum_ of DATEX II version 2.3. Enum:''mandatory, notAvailable, optional, partly'''    
+      description: 'Property. Model:''http://schema.org/Text''. he following specified by _ReservationTypeEnum_ of DATEX II version 2.3. Enum:''mandatory, notAvailable, optional, partly'''    
       items:    
         enum:    
           - mandatory    
@@ -779,7 +785,7 @@ OffStreetParking:
         model: http://schema.org/Text    
         type: Property    
     security:    
-      description: 'Security aspects provided by this parking site. Allowed values: The following, some of them, defined by _ParkingSecurityEnum_ of DATEX II version 2.3. Enum:''areaSeparatedFromSurroundings, cctv, dog, externalSecurity, fences, floodLight, guard24hours, lighting, patrolled, securityStaff'' . or any other application-specific'    
+      description: 'Property. Model:''http://schema.org/Text''. Security aspects provided by this parking site. Allowed values: The following, some of them, defined by _ParkingSecurityEnum_ of DATEX II version 2.3. Enum:''areaSeparatedFromSurroundings, cctv, dog, externalSecurity, fences, floodLight, guard24hours, lighting, patrolled, securityStaff'' . or any other application-specific'    
       items:    
         enum:    
           - areaSeparatedFromSurroundings    
@@ -800,7 +806,7 @@ OffStreetParking:
         model: http://schema.org/Text    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -817,7 +823,7 @@ OffStreetParking:
       x-ngsi:    
         type: Property    
     specialLocation:    
-      description: 'If the parking site is at a special location (airport, department store, etc.) it conveys what is such special location.  Allowed values: Those defined by _ParkingSpecialLocationEnum_ of [DATEX II version 2.3](http://www.datex2.eu/content/parking-publications-extension-v10a). Enum:''airportTerminal, cableCarStation, campground, cinema, coachStation, conventionCentre, exhibitionCentre, ferryTerminal, hotel, market, publicTransportStation, religiousCentre, shoppingCentre, skilift, specificFacility, themePark, trainStation, vehicleOnRailTerminal, other'''    
+      description: 'Property. Model:''http://schema.org/Text''. If the parking site is at a special location (airport, department store, etc.) it conveys what is such special location.  Allowed values: Those defined by _ParkingSpecialLocationEnum_ of [DATEX II version 2.3](http://www.datex2.eu/content/parking-publications-extension-v10a). Enum:''airportTerminal, cableCarStation, campground, cinema, coachStation, conventionCentre, exhibitionCentre, ferryTerminal, hotel, market, publicTransportStation, religiousCentre, shoppingCentre, skilift, specificFacility, themePark, trainStation, vehicleOnRailTerminal, other'''    
       items:    
         enum:    
           - airportTerminal    
@@ -847,7 +853,7 @@ OffStreetParking:
         model: http://schema.org/Text    
         type: Property    
     status:    
-      description: 'Status of the parking site. Allowed values: The following defined by the following enumerations defined by DATEX II version 2.3. Enum:''almostFull, closed, closedAbnormal, full, fullAtEntrance, open, openingTimesInForce, spacesAvailable''. Or any other application-specific'    
+      description: 'Property. Model:''http://schema.org/Text''. Status of the parking site. Allowed values: The following defined by the following enumerations defined by DATEX II version 2.3. Enum:''almostFull, closed, closedAbnormal, full, fullAtEntrance, open, openingTimesInForce, spacesAvailable''. Or any other application-specific'    
       items:    
         enum:    
           - almostFull    
@@ -866,14 +872,14 @@ OffStreetParking:
         model: http://schema.org/Text    
         type: Property    
     totalSpotNumber:    
-      description: 'The total number of spots offered by this parking site.  This number can be difficult to be obtained for those parking locations on which spots are not clearly marked by lines. Allowed values: Any positive integer number or 0. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class.'    
+      description: 'Property. Model:''http://schema.org/Number''. The total number of spots offered by this parking site.  This number can be difficult to be obtained for those parking locations on which spots are not clearly marked by lines. Allowed values: Any positive integer number or 0. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class.'    
       minimum: 1    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     twoWheelerSlots:    
-      description: 'Two wheeler parking spot availability status in parking site corresponding to this observation.'    
+      description: 'Property. Model:''https://schema.org/Text. Two wheeler parking spot availability status in parking site corresponding to this observation.'    
       properties:    
         availableSpotNumber:    
           description: 'Property. Model:''https://schema.org/Number''. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'    
@@ -889,14 +895,14 @@ OffStreetParking:
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'It has to be OffStreetParking'    
+      description: Property. It has to be OffStreetParking    
       enum:    
         - OffStreetParking    
       type: string    
       x-ngsi:    
         type: Property    
     unclassifiedSlots:    
-      description: 'Unclassified vehicles or other vehicles parking spot availability status in parking site corresponding to this observation.'    
+      description: 'Property. Model:''https://schema.org/Text. Unclassified vehicles or other vehicles parking spot availability status in parking site corresponding to this observation.'    
       properties:    
         availableSpotNumber:    
           description: 'Property. Model:''https://schema.org/Number''. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'    
@@ -912,7 +918,7 @@ OffStreetParking:
         model: https://schema.org/Text    
         type: Property    
     usageScenario:    
-      description: 'Usage scenario(s). Gives more details to the `category` attribute. Allowed values: Those defined by the enumeration _ParkingUsageScenarioEnum_ of DATEX II version 2.3. Enum:''automaticParkingGuidance, carSharing, dropOffWithValet, dropOffMechanical, dropOff, eventParking, kissAndRide, liftShare, loadingBay, overnightParking, parkAndCycle, parkAndRide, parkAndWalk, restArea, serviceArea, staffGuidesToSpace, truckParking, vehicleLift, other''. Or any other value useful for the application and not covered above.'    
+      description: 'Property. Model:''http://schema.org/Text''. Usage scenario(s). Gives more details to the `category` attribute. Allowed values: Those defined by the enumeration _ParkingUsageScenarioEnum_ of DATEX II version 2.3. Enum:''automaticParkingGuidance, carSharing, dropOffWithValet, dropOffMechanical, dropOff, eventParking, kissAndRide, liftShare, loadingBay, overnightParking, parkAndCycle, parkAndRide, parkAndWalk, restArea, serviceArea, staffGuidesToSpace, truckParking, vehicleLift, other''. Or any other value useful for the application and not covered above.'    
       items:    
         enum:    
           - automaticParkingGuidance    
@@ -942,14 +948,14 @@ OffStreetParking:
         model: http://schema.org/Text    
         type: Property    
     vehicleEntranceCount:    
-      description: 'Aggregated number of vehicle that enter the parking site in a period of time.'    
+      description: 'Property. Model:''http://schema.org/Number''. Aggregated number of vehicle that enter the parking site in a period of time.'    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     vehicleExitCount:    
-      description: 'Aggregated number of vehicle that leave the parking site in a period of time.'    
+      description: 'Property. Model:''http://schema.org/Number''. Aggregated number of vehicle that leave the parking site in a period of time.'    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -965,7 +971,7 @@ OffStreetParking:
   x-license-url: https://github.com/smart-data-models/dataModel.Parking/blob/master/OffStreetParking/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Parking/OffStreetParking/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.1.2    
+  x-version: 0.1.3    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -974,7 +980,7 @@ OffStreetParking:
 <!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### OffStreetParking NGSI-v2 key-values Ejemplo  
-Aquí hay un ejemplo de un OffStreetParking en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de OffStreetParking en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1026,7 +1032,7 @@ OffStreetParking:
   "accessModified": "2018-09-21T12:00:00Z",  
   "outOfServiceSlotNumber": 0,  
   "parkingSiteId": "P2",  
-  "observationDateTime": "2021-03-11T15:51:02+05:30",  
+  "observationDateTime": "2021-03-11T15:51:02Z",  
   "fourWheelerSlots": {  
     "availableSpotNumber": 25,  
     "totalSpotNumber": 25,  
@@ -1058,7 +1064,7 @@ OffStreetParking:
 ```  
 </details>  
 #### OffStreetParking NGSI-v2 normalizado Ejemplo  
-Este es un ejemplo de OffStreetParking en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de OffStreetParking en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1173,7 +1179,7 @@ OffStreetParking:
   },  
   "observationDateTime": {  
     "type": "DateTime",  
-    "value": "2021-03-11T15:51:02+05:30"  
+    "value": "2021-03-11T15:51:02Z"  
   },  
   "fourWheelerSlots": {  
     "type": "StructuredValue",  
@@ -1218,7 +1224,7 @@ OffStreetParking:
 ```  
 </details>  
 #### OffStreetParking NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de un OffStreetParking en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de OffStreetParking en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1276,7 +1282,7 @@ OffStreetParking:
         "wardNum": 4  
     },  
     "name": "Parque de estacionamento Trindade",  
-    "observationDateTime": "2021-03-11T15:51:02+05:30",  
+    "observationDateTime": "2021-03-11T15:51:02Z",  
     "occupancy": 0.68,  
     "occupancyModified": "2018-09-21T12:00:00Z",  
     "occupiedSpotNumber": 282,  
@@ -1297,14 +1303,13 @@ OffStreetParking:
     "vehicleEntranceCount": 28,  
     "vehicleExitCount": 12,  
     "@context": [  
-        "iudx:SmartParking",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
     ]  
 }  
 ```  
 </details>  
 #### OffStreetParking NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de OffStreetParking en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de OffStreetParking en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1415,7 +1420,7 @@ OffStreetParking:
         "type": "Property",  
         "value": {  
             "@type": "DateTime",  
-            "@value": "2021-03-11T15:51:02+05:30"  
+            "@value": "2021-03-11T15:51:02Z"  
         }  
     },  
     "occupancy": {  
@@ -1467,7 +1472,6 @@ OffStreetParking:
         "value": 12  
     },  
     "@context": [  
-        "iudx:SmartParking",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"  
     ]  
 }  
@@ -1476,7 +1480,7 @@ OffStreetParking:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
