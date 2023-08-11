@@ -12,8 +12,8 @@
     ]
   },
   "extCategory": {
-    "type": "Text",
-    "value": "A"
+    "type": "array",
+    "value": ["A"]
   },
   "layout": {
     "type": "array",
