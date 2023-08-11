@@ -2,19 +2,19 @@
   "id": "daoiz-velarde-1-5-disabled",
   "type": "ParkingGroup",
   "category": {
-    "value": ["onstreet", "adjacentSpaces", "onlyDisabled"]
+    "value": ["onStreet", "adjacentSpaces", "onlyDisabled"]
   },
   "refParkingSite": {
     "type": "Relationship",
     "value": "daoiz-velarde-1-5"
   },
   "permitActiveHours": {
-    "type": "Text",
-    "value": "null"
+    "type": "StructuredValue",
+    "value": null
   },
   "requiredPermit": {
-    "type": "Text",
-    "value": "disabledPermit"
+    "type": "array",
+    "value": ["disabledPermit"]
   },
   "allowedVehicleType": {
     "type": "Text",
