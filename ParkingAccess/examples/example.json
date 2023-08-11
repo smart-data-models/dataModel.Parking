@@ -1,5 +1,5 @@
 {
-  "id": "accesspoint-trinidade-1",
+  "id": "urn:ngsi-ld:ParkingAccess:accesspoint-trinidade-1",
   "type": "ParkingAccess",
   "name": "Trinidade main entrance",
   "location": {
@@ -12,7 +12,7 @@
   "category": [
     "vehicleEntrance"
   ],
-  "refOffStreetParking": "porto-OffStreetParking-23889",
+  "refOffStreetParking": "urn:ngsi-ld:OffStreetParking:porto-OffStreetParking-23889",
   "features": [
     "barrier"
   ]
