@@ -38,15 +38,15 @@
                 "width": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/width'. Width of the parking spot."
+                    "description": "Property. Model:'https://schema.org/width'. Width of the parking spot"
                 },
                 "length": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/length'. Length of the parking spot."
+                    "description": "Property. Model:'https://schema.org/length'. Length of the parking spot"
                 },
                 "refParkingGroup": {
-                    "description": "Relationship. Group to which the parking spot belongs to. For model simplification purposes only one group is allowed per parking spot.",
+                    "description": "Relationship. Group to which the parking spot belongs to. For model simplification purposes only one group is allowed per parking spot",
                     "anyOf": [
                         {
                             "type": "string",
@@ -63,7 +63,7 @@
                     ]
                 },
                 "refParkingSite": {
-                    "description": "Relationship. Parking site to which the parking spot belongs to.",
+                    "description": "Relationship. Parking site to which the parking spot belongs to",
                     "anyOf": [
                         {
                             "type": "string",
@@ -81,7 +81,7 @@
                 },
                 "category": {
                     "type": "array",
-                    "description": "Property. Category(ies) of the parking spot. `onStreet` : The parking spot belongs to an onStreet parking site. `offStreet` : The parking spot belongs to an offStreet parking site.",
+                    "description": "Property. Category(ies) of the parking spot. `onStreet` : The parking spot belongs to an onStreet parking site. `offStreet` : The parking spot belongs to an offStreet parking site",
                     "minItems": 1,
                     "uniqueItems": true,
                     "items": {
@@ -112,7 +112,7 @@
                     },
                     "minItems": 1,
                     "uniqueItems": true,
-                    "description": "Relationship. The device representing the physical sensor used to monitor this parking spot."
+                    "description": "Relationship. The device representing the physical sensor used to monitor this parking spot"
                 },
                 "timeInstant": {
                     "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/timeInstant"
