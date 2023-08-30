@@ -24,7 +24,7 @@
                 },
                 "category": {
                     "type": "array",
-                    "description": "Property. Category of the access point (entrance, exit, etc.). Allowed values: Those specified by the DATEX II _AccessCategoryEnum_ or other values meaningful to the application.",
+                    "description": "Property. Category of the access point (entrance, exit, etc.). Allowed values: Those specified by the DATEX II _AccessCategoryEnum_ or other values meaningful to the application",
                     "items": {
                         "type": "string"
                     }
@@ -44,11 +44,11 @@
                             "description": "Property. Identifier format of any NGSI entity"
                         }
                     ],
-                    "description": "Relationship. The offstreet parking site this access point gives access to."
+                    "description": "Relationship. The offstreet parking site this access point gives access to"
                 },
                 "features": {
                     "type": "array",
-                    "description": "Property. Those specified by the DATEX II _essEquipmentEnum_ and by _AccessibilityEnum_ or other values meaningful to the application.",
+                    "description": "Property. Those specified by the DATEX II _essEquipmentEnum_ and by _AccessibilityEnum_ or other values meaningful to the application",
                     "items": {
                         "type": "string"
                     }
