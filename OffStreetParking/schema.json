@@ -557,15 +557,15 @@
                     "properties": {
                         "availableSlotNumber": {
                             "type": "number",
-                            "description": "Property. Model:'https://schema.org/Number'. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positive number lower than or equal to the totalSpotNumber."
+                            "description": "Property. Model:'https://schema.org/Number'. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positive number lower than or equal to the totalSpotNumber"
                         },
                         "totalSlotNumber": {
                             "type": "number",
-                            "description": "Property. Model:'https://schema.org/Number'. The total number of spots offered by the parking site corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Number'. The total number of spots offered by the parking site corresponding to this observation"
                         },
                         "occupiedSlotNumber": {
                             "type": "number",
-                            "description": "Property. Model:'https://schema.org/Number'. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber."
+                            "description": "Property. Model:'https://schema.org/Number'. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber"
                         }
                     }
                 },
@@ -575,15 +575,15 @@
                     "properties": {
                         "availableSpotNumber": {
                             "type": "number",
-                            "description": "Property. Model:'https://schema.org/Number'. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber."
+                            "description": "Property. Model:'https://schema.org/Number'. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber"
                         },
                         "totalSpotNumber": {
                             "type": "number",
-                            "description": "Property. Model:'https://schema.org/Number'. The total number of spots offered by the parking site corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Number'. The total number of spots offered by the parking site corresponding to this observation"
                         },
                         "occupiedSpotNumber": {
                             "type": "number",
-                            "description": "Property. Model:'https://schema.org/Number'. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber."
+                            "description": "Property. Model:'https://schema.org/Number'. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber"
                         }
                     }
                 },
@@ -593,15 +593,15 @@
                     "properties": {
                         "availableSpotNumber": {
                             "type": "number",
-                            "description": "Property. Model:'https://schema.org/Number'. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber."
+                            "description": "Property. Model:'https://schema.org/Number'. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber"
                         },
                         "totalSpotNumber": {
                             "type": "number",
-                            "description": "Property. Model:'https://schema.org/Number'. The total number of spots offered by the parking site corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Number'. The total number of spots offered by the parking site corresponding to this observation"
                         },
                         "occupiedSpotNumber": {
                             "type": "number",
-                            "description": "Property. Model:'https://schema.org/Number'. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber."
+                            "description": "Property. Model:'https://schema.org/Number'. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber"
                         }
                     }
                 },
@@ -611,23 +611,23 @@
                     "properties": {
                         "district": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. District name corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. District name corresponding to this observation"
                         },
                         "ulbName": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. Name of the Urban Local Body corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. Name of the Urban Local Body corresponding to this observation"
                         },
                         "cityId": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. City ID corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. City ID corresponding to this observation"
                         },
                         "wardId": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. Ward ID corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. Ward ID corresponding to this observation"
                         },
                         "stateName": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. Name of the state corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. Name of the state corresponding to this observation"
                         },
                         "cityName": {
                             "type": "string",
@@ -635,19 +635,19 @@
                         },
                         "zoneName": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. Zone name corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. Zone name corresponding to this observation"
                         },
                         "zoneId": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. Zone ID corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. Zone ID corresponding to this observation"
                         },
                         "wardName": {
                             "type": "string",
-                            "description": "Property. Model:'https://schema.org/Text'. Ward name corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Text'. Ward name corresponding to this observation"
                         },
                         "wardNum": {
                             "type": "number",
-                            "description": "Property. Model:'https://schema.org/Number'. Ward number corresponding to this observation."
+                            "description": "Property. Model:'https://schema.org/Number'. Ward number corresponding to this observation"
                         }
                     }
                 }
