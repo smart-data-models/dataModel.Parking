@@ -1,81 +1,64 @@
 ParkingSpot:
-
   description: A parking spot is an area well delimited where one vehicle can be parked.
-
   properties:
-
     address:
-
       description: The mailing address
-
       properties:
-
         addressCountry:
-          description: The country. For example, Spain
+          description: 'The country. For example, Spain'
           type: string
           x-ngsi:
             model: https://schema.org/addressCountry
             type: Property
-
         addressLocality:
-          description: The locality in which the street address is, and which is in the region
+          description: 'The locality in which the street address is, and which is in the region'
           type: string
           x-ngsi:
             model: https://schema.org/addressLocality
             type: Property
-
         addressRegion:
-          description: The region in which the locality is, and which is in the country
+          description: 'The region in which the locality is, and which is in the country'
           type: string
           x-ngsi:
             model: https://schema.org/addressRegion
             type: Property
-
         district:
-          description: A district is a type of administrative division that, in some countries, is managed by the local government
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
           type: string
           x-ngsi:
             type: Property
-
         postOfficeBoxNumber:
-          description: The post office box number for PO box addresses. For example, 03578
+          description: 'The post office box number for PO box addresses. For example, 03578'
           type: string
           x-ngsi:
             model: https://schema.org/postOfficeBoxNumber
             type: Property
-
         postalCode:
-          description: The postal code. For example, 24004
+          description: 'The postal code. For example, 24004'
           type: string
           x-ngsi:
             model: https://schema.org/https://schema.org/postalCode
             type: Property
-
         streetAddress:
           description: The street address
           type: string
           x-ngsi:
             model: https://schema.org/streetAddress
             type: Property
-
         streetNr:
           description: Number identifying a specific property on a public street
           type: string
           x-ngsi:
             type: Property
-
       type: object
-
       x-ngsi:
         model: https://schema.org/address
         type: Property
-
     alternateName:
       description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
-
     annotations:
       description: Annotations about the item
       items:
@@ -84,14 +67,12 @@ ParkingSpot:
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-
     areaServed:
       description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-
     category:
       description: 'Category(ies) of the parking spot. `onStreet` : The parking spot belongs to an onStreet parking site. `offStreet` : The parking spot belongs to an offStreet parking site'
       items:
@@ -101,43 +82,37 @@ ParkingSpot:
         type: string
       minItems: 1
       type: array
-      uniqueItems: yes
+      uniqueItems: true
       x-ngsi:
         type: Property
-
     color:
       description: The color of the product
       type: string
       x-ngsi:
         model: https://schema.org/color
         type: Property
-
     dataProvider:
       description: A sequence of characters identifying the provider of the harmonised data entity
       type: string
       x-ngsi:
         type: Property
-
     dateCreated:
       description: Entity creation timestamp. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     dateModified:
       description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     description:
       description: A description of this item
       type: string
       x-ngsi:
         type: Property
-
     id:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -155,7 +130,6 @@ ParkingSpot:
       description: Unique identifier of the entity
       x-ngsi:
         type: Property
-
     image:
       description: An image of the item
       format: uri
@@ -163,7 +137,6 @@ ParkingSpot:
       x-ngsi:
         model: https://schema.org/URL
         type: Property
-
     length:
       description: Length of the parking spot
       minimum: 0
@@ -171,13 +144,9 @@ ParkingSpot:
       x-ngsi:
         model: https://schema.org/length
         type: Property
-
     location:
-
-      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
-
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-
         - description: Geojson reference to the item. Point
           properties:
             bbox:
@@ -201,7 +170,6 @@ ParkingSpot:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. LineString
           properties:
             bbox:
@@ -228,7 +196,6 @@ ParkingSpot:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. Polygon
           properties:
             bbox:
@@ -257,7 +224,6 @@ ParkingSpot:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
@@ -283,7 +249,6 @@ ParkingSpot:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
@@ -312,7 +277,6 @@ ParkingSpot:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
@@ -343,16 +307,13 @@ ParkingSpot:
           type: object
           x-ngsi:
             type: GeoProperty
-
       x-ngsi:
         type: GeoProperty
-
     name:
       description: The name of this item
       type: string
       x-ngsi:
         type: Property
-
     owner:
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
@@ -375,7 +336,6 @@ ParkingSpot:
       type: array
       x-ngsi:
         type: Property
-
     refDevice:
       description: The device representing the physical sensor used to monitor this parking spot
       items:
@@ -394,10 +354,9 @@ ParkingSpot:
               type: Property
       minItems: 1
       type: array
-      uniqueItems: yes
+      uniqueItems: true
       x-ngsi:
         type: Relationship
-
     refParkingGroup:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -415,7 +374,6 @@ ParkingSpot:
       description: Group to which the parking spot belongs to. For model simplification purposes only one group is allowed per parking spot
       x-ngsi:
         type: Relationship
-
     refParkingSite:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -433,7 +391,6 @@ ParkingSpot:
       description: Parking site to which the parking spot belongs to
       x-ngsi:
         type: Relationship
-
     seeAlso:
       description: list of uri pointing to additional resources about the item
       oneOf:
@@ -446,15 +403,13 @@ ParkingSpot:
           type: string
       x-ngsi:
         type: Property
-
     source:
-      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
       type: string
       x-ngsi:
         type: Property
-
     status:
-      description: Status of the parking spot from the point of view of occupancy. Enum:'closed, free, occupied, unknown'
+      description: 'Status of the parking spot from the point of view of occupancy. Enum:''closed, free, occupied, unknown'''
       enum:
         - closed
         - free
@@ -464,15 +419,13 @@ ParkingSpot:
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-
     timeInstant:
-      description: Timestamp of the payload . There can be production environments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`. This attribute is kept for backwards compatibility with old FIWARE reference implementations
+      description: 'Timestamp of the payload . There can be production environments where the attribute type is equal to the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`. This attribute is kept for backwards compatibility with old FIWARE reference implementations'
       format: date-time
       type: string
       x-ngsi:
         model: https://schema.org/Datetime
         type: Property
-
     type:
       description: NGSI Entity type. It has to be ParkingSpot
       enum:
@@ -480,7 +433,6 @@ ParkingSpot:
       type: string
       x-ngsi:
         type: Property
-
     width:
       description: Width of the parking spot
       minimum: 0
@@ -488,7 +440,6 @@ ParkingSpot:
       x-ngsi:
         model: https://schema.org/width
         type: Property
-
   required:
     - id
     - location
@@ -496,17 +447,10 @@ ParkingSpot:
     - status
     - category
     - refParkingSite
-
   type: object
-
-  x-derived-from: ''
-
-  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program
-
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Parking/blob/master/ParkingSpot/LICENSE.md
-
   x-model-schema: https://smart-data-models.github.io/dataModel.Parking/ParkingSpot/schema.json
-
-  x-model-tags: ''
-
+  x-model-tags: ""
   x-version: 0.1.0
