@@ -14,8 +14,30 @@
 
 ## Liste der Eigenschaften  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
-- `acceptedPaymentMethod[string]`: Art der vom Parkplatz durchgeführten Abrechnung(en). Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'  - `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `allowedVehicleType[array]`: Erlaubte(r) Fahrzeugtyp(en). Das erste Element dieses Arrays _MUSS_ der wichtigste zulässige Fahrzeugtyp sein. Die folgenden Werte sind durch _VehicleTypeEnum_, [DATEX 2 Version 2.3](http://d2docs.ndwcloud.nu/downloads/modelv23.html). definiert. Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, Tankwagen, Dreiradfahrzeug, Anhänger, Straßenbahn, Zweiradfahrzeug, Lieferwagen, FahrzeugMitKatalysator, FahrzeugOhneKatalysator, FahrzeugMitWohnwagen, FahrzeugMitAnhänger, mitGeradeNummernKennzeichen, mitUngeradeNummernKennzeichen, Sonstiges'.  - `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areBordersMarked[boolean]`: Gibt an, ob Parkplätze abgegrenzt sind (mit Leerzeilen oder ähnlichem) oder nicht  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableSpotNumber[integer]`: Die Gesamtzahl der verfügbaren Plätze, einschließlich der reservierten Plätze, z. B. für Behinderte, Dauerparker usw. Bei Parkplätzen, deren Grenzen nicht eindeutig durch Linien gekennzeichnet sind, kann dies schwieriger zu schätzen sein  . Model: [http://schema.org/Number](http://schema.org/Number)- `averageSpotLength[number]`: Die durchschnittliche Länge von Parkplätzen  . Model: [https://schema.org/length](https://schema.org/length)- `averageSpotWidth[number]`: Die durchschnittliche Breite von Parkplätzen  . Model: [https://schema.org/width](https://schema.org/width)- `category[array]`: Kategorie der Straßenparkplätze. Enum:'blueZone, feeCharged, forDisabled, forElectricalCharging, forLoadUnload, forResidents, free, greenZone, mediumTerm, onlyWithPermitPermit, shortTerm, taxiStop'  - `chargeType[array]`: Art der vom Parkplatz erhobenen Gebühr(en). Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `extraSpotNumber[integer]`: Die Anzahl der verfügbaren, d.h. freien, zusätzlichen Plätze. Zusätzliche Plätze sind für besondere Zwecke reserviert und erfordern normalerweise eine Genehmigung. Einzelheiten zu den Genehmigungen finden sich auf der Ebene der Parkgruppen (Entität vom Typ `ParkingGroup`). Dieser Wert muss die freien Plätze aller Gruppen, die für besondere Parkbedingungen vorgesehen sind, zusammenfassen. Erlaubte Werte: Eine positive ganze Zahl, einschließlich 0. `extraSpotNumber` plus `availableSpotNumber` muss kleiner oder gleich sein als `totalSpotNumber  . Model: [http://schema.org/Number](http://schema.org/Number)- `fourWheelerSlots[object]`: Der Status der Verfügbarkeit von Parkplätzen für Vierradfahrzeuge auf dem Parkplatz entspricht dieser Beobachtung.  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Eindeutiger Bezeichner der Entität  - `layout[array]`: Allgemeine Klassifizierung der Anordnung des Parkplatzes  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maximumParkingDuration[string]`: Höchstzulässige Aufenthaltsdauer am Standort, kodiert als ISO8601-Dauer. Ein leerer Wert bedeutet eine unbestimmte Dauer.  - `municipalityInfo[object]`: Informationen der Gemeinde zu dieser Beobachtung.  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: Der Name dieses Artikels.  - `observationDateTime[string]`: Letzter gemeldeter Zeitpunkt der Beobachtung.  . Model: [https://schema.org/Text](https://schema.org/Text)- `occupancyDetectionType[array]`: Methode(n) der Belegungserkennung. Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. Das Folgende aus DATEX II Version 2.3 _OccupancyDetectionTypeEnum_  - `occupancyModified[string]`: Datum der letzten Änderung der Belegung des Parkplatzes  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `occupiedSpotNumber[number]`: Anzahl der insgesamt belegten Stellplätze auf dem Smart-Parkplatz, die dieser Beobachtung entsprechen. Dies muss eine positive Zahl sein, die kleiner oder gleich der totalSpotNumber ist.  . Model: [https://schema.org/Number](https://schema.org/Number)- `outOfServiceSlotNumber[number]`: Die Anzahl der Fahrradständer/Fahrradstellplätze oder Abstellplätze, die nicht in Ordnung sind und nicht zum Ausleihen oder Abstellen eines Fahrrads in der dieser Beobachtung entsprechenden Fahrradstation oder Abstellanlage genutzt werden können.  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `parkingMode[string]`: Parkmodus(e). Enum:'echelonParking, parallelParking, perpendicularParking'  - `parkingSiteId[string]`: Die eindeutige ID des Parkplatzes oder der Parkfläche, die dieser Beobachtung entspricht.  . Model: [https://schema.org/Text](https://schema.org/Text)- `permitActiveHours[object]`: Mit diesem Attribut können Situationen erfasst werden, in denen eine Genehmigung nur zu bestimmten Stunden oder an bestimmten Wochentagen benötigt wird. Es ist ein strukturierter Wert, der für jede erforderliche Genehmigung eine Untereigenschaft enthalten muss, die angibt, wann die Genehmigung aktiv ist. Wenn für eine Genehmigung nichts angegeben wird, bedeutet dies, dass eine Genehmigung immer erforderlich ist. Ein leeres JSON-Objekt bedeutet "immer aktiv". Die Syntax muss mit schema.org konform sein.  - `refParkingGroup[array]`: Verweis auf die Parkgruppe(n) (falls vorhanden), die zu dieser Straßenparkzone gehören.  - `refParkingSpot[array]`: Einzelne Stellplätze gehören zu diesem Straßenparkplatz.  - `requiredPermit[array]`: Mit diesem Attribut wird erfasst, welche Genehmigung(en) zum Parken an diesem Standort erforderlich sein könnte(n). Die Semantik besagt, dass mindestens _eine_ dieser Genehmigungen zum Parken erforderlich ist. Wenn eine Genehmigung aus mehr als einem Element (und) besteht, können sie mit einem ',' kombiniert werden. So bedeutet z. B. 'residentPermit,disabledPermit', dass zum Parken sowohl eine Anwohner- als auch eine Behindertengenehmigung erforderlich ist. Wenn die Liste leer ist, ist keine Genehmigung erforderlich.  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `totalSpotNumber[integer]`: Die Gesamtzahl der Plätze, die dieser Parkplatz bietet. Diese Zahl kann bei Parkplätzen, die nicht eindeutig durch Linien gekennzeichnet sind, schwer zu ermitteln sein. Normative Verweise: DATEX 2 Version 2.3 Attribut _parkingNumberOfSpaces_ der Klasse _ParkingRecord_.  . Model: [http://schema.org/Number](http://schema.org/Number)- `twoWheelerSlots[object]`: Die Verfügbarkeit von Parkplätzen für Zweiräder auf dem Parkplatz entspricht dieser Beobachtung.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Entitätstyp. Er muss gleich OnStreetParking sein.  - `unclassifiedSlots[object]`: Nicht klassifizierte Fahrzeuge oder andere Fahrzeuge, die auf dem Parkplatz verfügbar sind, der dieser Beobachtung entspricht.  . Model: [https://schema.org/Text](https://schema.org/Text)- `usageScenario[string]`: Art der Gebühr(en), die der Parkplatz erhebt. Enum:'carSharing, dropOff, kissAndRide, liftShare, loadingBay, overnightParking, parkAndRide, parkAndCycle, parkAndWalk, vehicleLift,'  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `acceptedPaymentMethod[string]`: Art der vom Parkplatz durchgeführten Abrechnung(en). Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'  - `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel, Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: Die Ortschaft, in der sich die Adresse befindet, und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Ein Bezirk ist eine Art von Verwaltungseinheit, die in einigen Ländern von der lokalen Regierung verwaltet wird.    
+	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `allowedVehicleType[array]`: Erlaubte(r) Fahrzeugtyp(en). Das erste Element dieses Arrays _MUSS_ der wichtigste zulässige Fahrzeugtyp sein. Die folgenden durch _VehicleTypeEnum_, [DATEX 2 Version 2.3](http://d2docs.ndwcloud.nu/downloads/modelv23.html). definierten Werte. Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, Tankwagen, Dreiradfahrzeug, Anhänger, Straßenbahn, Zweiradfahrzeug, Lieferwagen, FahrzeugMitKatalysator, FahrzeugOhneKatalysator, FahrzeugMitWohnwagen, FahrzeugMitAnhänger, mitGeradeNummernKennzeichen, mitUngeradeNummernKennzeichen, Sonstiges'.  - `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areBordersMarked[boolean]`: Gibt an, ob Parkplätze abgegrenzt sind (mit Leerzeilen oder ähnlichem) oder nicht  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableSpotNumber[number]`: Die Gesamtzahl der verfügbaren Plätze, einschließlich der reservierten Plätze, z. B. für Behinderte, Dauerparker usw. Bei Parkplätzen, deren Grenzen nicht eindeutig durch Linien gekennzeichnet sind, kann dies schwieriger zu schätzen sein  . Model: [http://schema.org/Number](http://schema.org/Number)- `averageSpotLength[number]`: Die durchschnittliche Länge von Parkplätzen  . Model: [https://schema.org/length](https://schema.org/length)- `averageSpotWidth[number]`: Die durchschnittliche Breite von Parkplätzen  . Model: [https://schema.org/width](https://schema.org/width)- `category[array]`: Kategorie der Straßenparkplätze. Enum:'blueZone, feeCharged, forDisabled, forElectricalCharging, forLoadUnload, forResidents, free, greenZone, mediumTerm, onlyWithPermitPermit, shortTerm, taxiStop'  - `chargeType[array]`: Art der vom Parkplatz erhobenen Gebühr(en). Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `extraSpotNumber[number]`: Die Anzahl der verfügbaren, d. h. freien, zusätzlichen Plätze. Zusätzliche Plätze sind für besondere Zwecke reserviert und erfordern normalerweise eine Genehmigung. Einzelheiten zu den Genehmigungen finden sich auf der Ebene der Parkgruppen (Entität vom Typ `ParkingGroup`). Dieser Wert muss die freien Plätze aller Gruppen, die für besondere Parkbedingungen vorgesehen sind, zusammenfassen. Erlaubte Werte: Eine positive ganze Zahl, einschließlich 0. `extraSpotNumber` plus `availableSpotNumber` muss kleiner oder gleich sein als `totalSpotNumber  . Model: [http://schema.org/Number](http://schema.org/Number)- `fourWheelerSlots[object]`: Status der Verfügbarkeit von Parkplätzen für Vierradfahrzeuge auf dem Parkplatz entsprechend dieser Beobachtung  . Model: [https://schema.org/Text](https://schema.org/Text)	- `availableSlotNumber[number]`: Anzahl der Parkplätze, die auf dem dieser Beobachtung entsprechenden Smart-Parkplatz zur Verfügung stehen. Dies muss eine positive Zahl sein, die kleiner oder gleich der totalSpotNumber ist.  . Model: [https://schema.org/Number](https://schema.org/Number)  
+	- `occupiedSlotNumber[number]`: Anzahl der belegten Parkplätze auf dem Smart-Parkplatz, die dieser Beobachtung entsprechen. Dies muss eine positive Zahl sein, die kleiner oder gleich der totalSpotNumber ist.  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `id[*]`: Eindeutiger Bezeichner der Entität  - `layout[array]`: Allgemeine Klassifizierung der Anordnung des Parkplatzes  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maximumParkingDuration[date-time]`: Höchstzulässige Aufenthaltsdauer am Standort, kodiert als ISO8601-Dauer. Ein leerer Wert bedeutet eine unbestimmte Dauer  - `municipalityInfo[object]`: Informationen der Gemeinde zu dieser Beobachtung  . Model: [https://schema.org/Text](https://schema.org/Text)	- `cityId[string]`: ID der Stadt, die dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `cityName[string]`: Name der Stadt, die dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `district[string]`: Name des Bezirks, der dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `stateName[string]`: Name des Staates, der dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `ulbName[string]`: Name der lokalen Gebietskörperschaft, die dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `wardId[string]`: Stations-ID, die dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `wardName[string]`: Name der Station, die dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `wardNum[number]`: Stationsnummer, die dieser Beobachtung entspricht  . Model: [https://schema.org/Number](https://schema.org/Number)  
+	- `zoneId[string]`: ID der Zone, die dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `name[string]`: Der Name dieses Artikels  - `observationDateTime[date-time]`: Letzter gemeldeter Zeitpunkt der Beobachtung  . Model: [https://schema.org/Text](https://schema.org/Text)- `occupancyDetectionType[array]`: Methode(n) der Belegungserkennung. Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. Das Folgende aus DATEX II Version 2.3 _OccupancyDetectionTypeEnum_  - `occupancyModified[date-time]`: Datum der letzten Änderung der Belegung des Parkplatzes  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `occupiedSpotNumber[number]`: Anzahl der insgesamt belegten Stellplätze auf dem Smart-Parkplatz, die dieser Beobachtung entsprechen. Dies muss eine positive Zahl sein, die kleiner oder gleich der totalSpotNumber ist.  . Model: [https://schema.org/Number](https://schema.org/Number)- `outOfServiceSlotNumber[number]`: Die Anzahl der Fahrradständer/Fahrradstellplätze oder Abstellplätze, die außer Betrieb sind und nicht zum Ausleihen oder Abstellen eines Fahrrads in der entsprechenden Fahrradstation oder auf dem entsprechenden Abstellplatz genutzt werden können  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `parkingMode[string]`: Parkmodus(e). Enum:'echelonParking, parallelParking, perpendicularParking'  - `parkingSiteId[string]`: Die eindeutige ID des Parkplatzes oder der Parkfläche, auf die sich diese Beobachtung bezieht  . Model: [https://schema.org/Text](https://schema.org/Text)- `permitActiveHours[object]`: Mit diesem Attribut können Situationen erfasst werden, in denen eine Genehmigung nur zu bestimmten Stunden oder an bestimmten Wochentagen benötigt wird. Es ist ein strukturierter Wert, der für jede erforderliche Genehmigung eine Untereigenschaft enthalten muss, die angibt, wann die Genehmigung aktiv ist. Wenn für eine Genehmigung nichts angegeben wird, bedeutet dies, dass eine Genehmigung immer erforderlich ist. Ein leeres JSON-Objekt bedeutet "immer aktiv". Die Syntax muss mit schema.org konform sein.  - `refParkingGroup[array]`: Hinweis auf die Parkgruppe(n) (falls vorhanden), die zu dieser Straßenparkzone gehören  - `refParkingSpot[array]`: Einzelne Stellplätze, die zu diesem Straßenparkplatz gehören  - `requiredPermit[array]`: Mit diesem Attribut wird erfasst, welche Genehmigung(en) zum Parken an diesem Standort erforderlich sein könnte(n). Die Semantik besagt, dass mindestens _eine_ dieser Genehmigungen zum Parken erforderlich ist. Wenn eine Genehmigung aus mehr als einem Element (und) besteht, können sie mit einem ',' kombiniert werden. So bedeutet z. B. 'residentPermit,disabledPermit', dass zum Parken sowohl eine Anwohner- als auch eine Behindertengenehmigung erforderlich ist. Wenn die Liste leer ist, ist keine Genehmigung erforderlich.  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `totalSpotNumber[number]`: Die Gesamtzahl der Plätze, die dieser Parkplatz bietet. Diese Zahl kann bei Parkplätzen, die nicht eindeutig durch Linien gekennzeichnet sind, schwer zu ermitteln sein. Normative Verweise: DATEX 2 Version 2.3 Attribut _parkingNumberOfSpaces_ der Klasse _ParkingRecord_.  . Model: [http://schema.org/Number](http://schema.org/Number)- `twoWheelerSlots[object]`: Status der Verfügbarkeit von Stellplätzen für Zweiräder auf dem Parkplatz entsprechend dieser Beobachtung  . Model: [https://schema.org/Text](https://schema.org/Text)	- `availableSpotNumber[number]`: Anzahl der Parkplätze, die auf dem dieser Beobachtung entsprechenden Smart-Parkplatz zur Verfügung stehen. Dies muss eine positive Zahl sein, die kleiner oder gleich der totalSpotNumber ist.  . Model: [https://schema.org/Number](https://schema.org/Number)  
+	- `occupiedSpotNumber[number]`: Anzahl der belegten Parkplätze auf dem Smart-Parkplatz, die dieser Beobachtung entsprechen. Dies muss eine positive Zahl sein, die kleiner oder gleich der totalSpotNumber ist.  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `type[string]`: Entitätstyp. Er muss gleich OnStreetParking sein.  - `unclassifiedSlots[object]`: Nicht klassifizierte Fahrzeuge oder andere Fahrzeuge, die auf dem Parkplatz verfügbar sind, der dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)	- `availableSpotNumber[number]`: Anzahl der Parkplätze, die auf dem dieser Beobachtung entsprechenden Smart-Parkplatz zur Verfügung stehen. Dies muss eine positive Zahl sein, die kleiner oder gleich der totalSpotNumber ist.  . Model: [https://schema.org/Number](https://schema.org/Number)  
+	- `occupiedSpotNumber[number]`: Anzahl der belegten Parkplätze auf dem Smart-Parkplatz, die dieser Beobachtung entsprechen. Dies muss eine positive Zahl sein, die kleiner oder gleich der totalSpotNumber ist.  . Model: [https://schema.org/Number](https://schema.org/Number)  
+- `usageScenario[string]`: Art der Gebühr(en), die der Parkplatz erhebt. Enum:'carSharing, dropOff, kissAndRide, liftShare, loadingBay, overnightParking, parkAndRide, parkAndCycle, parkAndWalk, vehicleLift,'  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
@@ -48,26 +70,54 @@ OnStreetParking:
       x-ngsi:    
         type: Property    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
@@ -112,18 +162,18 @@ OnStreetParking:
       x-ngsi:    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areBordersMarked:    
-      description: 'Denotes whether parking spots are delimited (with blank lines or similar) or not'    
+      description: Denotes whether parking spots are delimited (with blank lines or similar) or not    
       type: boolean    
       x-ngsi:    
         model: https://schema.org/Boolean    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -131,19 +181,19 @@ OnStreetParking:
     availableSpotNumber:    
       description: 'The number of spots available globally, including reserved spaces, such as those for disabled people, long term parkers and so on. This might be harder to estimate at those parking locations on which spots borders are not clearly marked by lines'    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     averageSpotLength:    
-      description: 'The average length of parking spots'    
+      description: The average length of parking spots    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/length    
         type: Property    
     averageSpotWidth:    
-      description: 'The average width of parking spots'    
+      description: The average width of parking spots    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -194,65 +244,78 @@ OnStreetParking:
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     extraSpotNumber:    
       description: 'The number of extra spots available, i.e. free. Extra    spots are those reserved for special purposes and usually require a permit. Permit details will be found at parking group level (entity of type `ParkingGroup`). This value must aggregate free spots from all groups devoted to special parking conditions. Allowed values: A positive integer number, including 0. `extraSpotNumber` plus `availableSpotNumber` must be lower than or equal to `totalSpotNumber'    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     fourWheelerSlots:    
-      description: 'Four wheeler parking spot availability status in parking site corresponding to this observation.'    
+      description: Four wheeler parking spot availability status in parking site corresponding to this observation    
       properties:    
         availableSlotNumber:    
-          description: 'Property. Model:''https://schema.org/Number''. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'    
+          description: Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber    
           type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
         occupiedSlotNumber:    
-          description: 'Property. Model:''https://schema.org/Number''. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'    
+          description: Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber    
           type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
         totalSlotNumber:    
-          description: 'Property. Model:''https://schema.org/Number''. The total number of spots offered by the parking site corresponding to this observation.'    
+          description: The total number of spots offered by the parking site corresponding to this observation    
           type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     id:    
-      anyOf: &onstreetparking_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     layout:    
-      description: 'Generic classification of the layout of the parking'    
+      description: Generic classification of the layout of the parking    
       items:    
         type: string    
       type: array    
@@ -261,7 +324,7 @@ OnStreetParking:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -280,9 +343,11 @@ OnStreetParking:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -304,9 +369,11 @@ OnStreetParking:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -330,9 +397,11 @@ OnStreetParking:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -353,9 +422,11 @@ OnStreetParking:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -379,9 +450,11 @@ OnStreetParking:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -407,60 +480,92 @@ OnStreetParking:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     maximumParkingDuration:    
-      description: 'Maximum allowed stay at site encoded as a ISO8601 duration. An empty value indicates an indefinite duration.'    
+      description: Maximum allowed stay at site encoded as a ISO8601 duration. An empty value indicates an indefinite duration    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     municipalityInfo:    
-      description: 'Municipality information corresponding to this observation.'    
+      description: Municipality information corresponding to this observation    
       properties:    
         cityId:    
-          description: 'Property. Model:''https://schema.org/Text''. City ID corresponding to this observation.'    
+          description: City ID corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         cityName:    
-          description: 'Property. Model:''https://schema.org/Text''. City name corresponding to this observation'    
+          description: City name corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         district:    
-          description: 'Property. Model:''https://schema.org/Text''. District name corresponding to this observation.'    
+          description: District name corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         stateName:    
-          description: 'Property. Model:''https://schema.org/Text''. Name of the state corresponding to this observation.'    
+          description: Name of the state corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         ulbName:    
-          description: 'Property. Model:''https://schema.org/Text''. Name of the Urban Local Body corresponding to this observation.'    
+          description: Name of the Urban Local Body corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         wardId:    
-          description: 'Property. Model:''https://schema.org/Text''. Ward ID corresponding to this observation.'    
+          description: Ward ID corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         wardName:    
-          description: 'Property. Model:''https://schema.org/Text''. Ward name corresponding to this observation.'    
+          description: Ward name corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         wardNum:    
-          description: 'Property. Model:''https://schema.org/Number''. Ward number corresponding to this observation.'    
+          description: Ward number corresponding to this observation    
           type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
         zoneId:    
-          description: 'Property. Model:''https://schema.org/Text''. Zone ID corresponding to this observation.'    
+          description: Zone ID corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         zoneName:    
-          description: 'Property. Model:''https://schema.org/Text''. Zone name corresponding to this observation.'    
+          description: Zone name corresponding to this observation    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     observationDateTime:    
-      description: 'Last reported time of observation.'    
+      description: Last reported time of observation    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -480,29 +585,43 @@ OnStreetParking:
       x-ngsi:    
         type: Property    
     occupancyModified:    
-      description: 'Date last time the occupancy of the parking has being modified'    
+      description: Date last time the occupancy of the parking has being modified    
       format: date-time    
       type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
         type: Property    
     occupiedSpotNumber:    
-      description: 'Number of total parking spots occupied in the smart parking site corresponding to this observation. This must a positive number lower than or equal to the totalSpotNumber.'    
+      description: Number of total parking spots occupied in the smart parking site corresponding to this observation. This must a positive number lower than or equal to the totalSpotNumber    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     outOfServiceSlotNumber:    
-      description: 'The number of bike racks/bike-docking slots or parking slots that are out of order and cannot be used to hire or park a bike in the bike docking station or parking site corresponding to this observation.'    
+      description: The number of bike racks/bike-docking slots or parking slots that are out of order and cannot be used to hire or park a bike in the bike docking station or parking site corresponding to this observation    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *onstreetparking_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -516,7 +635,7 @@ OnStreetParking:
       x-ngsi:    
         type: Property    
     parkingSiteId:    
-      description: 'The unique ID of the parking site or parking lot corresponding to this observation.'    
+      description: The unique ID of the parking site or parking lot corresponding to this observation    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -527,14 +646,14 @@ OnStreetParking:
       x-ngsi:    
         type: Property    
     refParkingGroup:    
-      description: 'Reference to the parking group(s) (if any) belonging to this onstreet parking zone.'    
+      description: Reference to the parking group(s) (if any) belonging to this onstreet parking zone    
       items:    
         type: string    
       type: array    
       x-ngsi:    
         type: Relationship    
     refParkingSpot:    
-      description: 'Individual parking spots belonging to this on street parking site.'    
+      description: Individual parking spots belonging to this on street parking site    
       items:    
         format: uri    
         type: string    
@@ -542,14 +661,14 @@ OnStreetParking:
       x-ngsi:    
         type: Relationship    
     requiredPermit:    
-      description: 'This attribute captures what permit(s) might be needed to park at this site. Semantics is that at least _one of_ these permits is needed to park. When a permit is composed by more than one item (and) they can be combined with a '',''. For instance ''residentPermit,disabledPermit'' stays that both, at the same time, a resident and a disabled permit are needed to park. If list is empty, no permit is needed.'    
+      description: 'This attribute captures what permit(s) might be needed to park at this site. Semantics is that at least _one of_ these permits is needed to park. When a permit is composed by more than one item (and) they can be combined with a '',''. For instance ''residentPermit,disabledPermit'' stays that both, at the same time, a resident and a disabled permit are needed to park. If list is empty, no permit is needed'    
       items:    
         type: string    
       type: array    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -561,52 +680,70 @@ OnStreetParking:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     totalSpotNumber:    
-      description: 'The total number of spots offered by this parking site. This number can be difficult to be obtained for those parking locations on which spots are not clearly marked by lines. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class.'    
+      description: 'The total number of spots offered by this parking site. This number can be difficult to be obtained for those parking locations on which spots are not clearly marked by lines. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class'    
       minimum: 0    
-      type: integer    
+      type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     twoWheelerSlots:    
-      description: 'Two wheeler parking spot availability status in parking site corresponding to this observation.'    
+      description: Two wheeler parking spot availability status in parking site corresponding to this observation    
       properties:    
         availableSpotNumber:    
-          description: 'Property. Model:''https://schema.org/Number''. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'    
+          description: Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber    
           type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
         occupiedSpotNumber:    
-          description: 'Property. Model:''https://schema.org/Number''. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'    
+          description: Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber    
           type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
         totalSpotNumber:    
-          description: 'Property. Model:''https://schema.org/Number''. The total number of spots offered by the parking site corresponding to this observation.'    
+          description: The total number of spots offered by the parking site corresponding to this observation    
           type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'Entity type. It must be equal to OnStreetParking'    
+      description: Entity type. It must be equal to OnStreetParking    
       enum:    
         - OnStreetParking    
       type: string    
       x-ngsi:    
         type: Property    
     unclassifiedSlots:    
-      description: 'Unclassified vehicles or other vehicles parking spot availability status in parking site corresponding to this observation.'    
+      description: Unclassified vehicles or other vehicles parking spot availability status in parking site corresponding to this observation    
       properties:    
         availableSpotNumber:    
-          description: 'Property. Model:''https://schema.org/Number''. Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'    
+          description: Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber    
           type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
         occupiedSpotNumber:    
-          description: 'Property. Model:''https://schema.org/Number''. Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.'    
+          description: Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber    
           type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
         totalSpotNumber:    
-          description: 'Property. Model:''https://schema.org/Number''. The total number of spots offered by the parking site corresponding to this observation.'    
+          description: The total number of spots offered by the parking site corresponding to this observation    
           type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -711,7 +848,7 @@ OnStreetParking:
   ],  
   "outOfServiceSlotNumber": 0,  
   "parkingSiteId": "P2",  
-  "observationDateTime": "2021-03-11T15:51:02+05:30",  
+  "observationDateTime": "2021-03-11T15:51:02Z",  
   "fourWheelerSlots": {  
     "availableSpotNumber": 25,  
     "totalSpotNumber": 25,  
@@ -861,7 +998,7 @@ OnStreetParking:
   },  
   "observationDateTime": {  
     "type": "DateTime",  
-    "value": "2021-03-11T15:51:02+05:30"  
+    "value": "2021-03-11T15:51:02Z"  
   },  
   "fourWheelerSlots": {  
     "type": "StructuredValue",  
@@ -972,7 +1109,7 @@ OnStreetParking:
     "zoneId": "2",  
     "wardNum": 4  
   },  
-  "observationDateTime": "2021-03-11T15:51:02+05:30",  
+  "observationDateTime": "2021-03-11T15:51:02Z",  
   "occupiedSpotNumber": 3,  
   "parkingSiteId": "P2",  
   "permitActiveHours": {  
