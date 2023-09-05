@@ -1,30 +1,37 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-实体。停车集团  
+实体：停车集团  
 =======<!-- /10-Header -->  
 <!-- 15-License -->  
 [开放许可](https://github.com/smart-data-models//dataModel.Parking/blob/master/ParkingGroup/LICENSE.md)  
 [文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-全球描述。**泊车组 **  
-版本：0.1.2  
+全球描述：**停车组**  
+版本： 0.1.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-##属性列表  
+## 属性列表  
 
-<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
-- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)- `allowedVehicleType[string]`: 允许的车辆类型（一个停车组只允许一种车辆类型）。枚举:'自行车、公共汽车、汽车、大篷车、摩托车、摩托车、卡车'  . Model: [http://schema.org/Text](http://schema.org/Text)- `alternateName[string]`: 这个项目的一个替代名称  - `areBordersMarked[boolean]`: 表示停车位是否被划定（用空行或类似的方式）。如果该属性未被定义，应用程序应在父级检查该属性的值。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `areaServed[string]`: 提供服务或提供项目的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableSpotNumber[number]`: 该组中可用的位置数。它必须低于或等于`totalSpotNumber`。  . Model: [http://schema.org/Number](http://schema.org/Number)- `averageSpotLength[number]`: 停车位的平均长度。如果该属性没有被定义，应用程序_应该在父级检查该属性的值。  . Model: [http://schema.org/length](http://schema.org/length)- `averageSpotWidth[number]`: 停车位的平均宽度。如果该属性未被定义，应用程序_应该在父级检查该属性的值。  . Model: [http://schema.org/width](http://schema.org/width)- `category[array]`: 停车组的类别。Enum:' adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermit, onStreet, particularConditionsSpaces, shortTermMediumLongTerm, statisticsOnly, vehicleTypeSpaces'  . Model: [http://schema.org/Text](http://schema.org/Text)- `chargeType[array]`: 停车点的收费类型。Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other' 。  - `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `description[string]`: 对这个项目的描述  - `id[*]`: 实体的唯一标识符  - `location[*]`: 对该项目的Geojson引用。它可以是点、线字符串、多边形、多点、多线字符串或多多边形。  - `maximumAllowedHeight[number]`: 车辆的最大允许高度。  如果没有定义，应用程序应该在父级检查这个属性的值。  . Model: [http://schema.org/heigth](http://schema.org/heigth)- `maximumAllowedWidth[number]`: 车辆的最大允许宽度。如果该属性未被定义，应用程序应在父级检查该属性的值。  . Model: [http://schema.org/width](http://schema.org/width)- `maximumParkingDuration[string]`: 允许的最大停留时间，以ISO8601的期限编码。当不存在或等于空字符串时，意味着无限期。如果该属性没有被定义，应用程序应该在父级检查该属性的值。  - `name[string]`: 这个项目的名称。  - `occupancyDetectionType[array]`: 允许的值。以下是DATEX II 2.3版的_OccupancyDetectionTypeEnum_。枚举：'平衡、手动、基于模型、无、单一空间检测'。或任何其他特定的应用  . Model: [http://schema.org/Text](http://schema.org/Text)- `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `parkingMode[array]`: 泊车模式(s)。如果没有定义，应用程序应该在父级检查这个属性的值。允许的值。那些由DATEX II 2.3版_ParkingModeEnum_枚举定义的值。枚举:'梯形停车，平行停车，垂直停车'。  . Model: [http://schema.org/Text](http://schema.org/Text)- `permitActiveHours[object]`: 这个属性可以捕捉到只有在一周的特定时间或日子里需要许可证的情况。它是一个结构化的值，必须包含每一个所需的许可证的子属性，表明该许可证何时有效。如果没有为一个许可证指定任何东西，这将意味着许可证总是需要的。空对象意味着始终处于活动状态。语法必须符合schema.org [开放时间规范](https://schema.org/openingHours)。例如，一个只在白天活动的蓝区将被编码为'blueZonePermit'：'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'。如果该属性未被定义，应用程序应在父级检查该属性的值。  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `refParkingSite[*]`: 本区所属的停车点。一个组不能是孤儿。一个群组不能有子群组。对路外停车位或路内停车位的引用  - `refParkingSpot[*]`: 属于该停车组的单个停车位。  - `requiredPermit[array]`: 这个属性反映了在这个地方停车可能需要什么许可证。语义是，至少需要这些许可证中的一个才能停车。当一个许可证由一个以上的项目（和）组成时，它们可以用','来组合。例如，'residentPermit,disabledPermit'表示同时需要一个居民和一个残疾人许可证来停车。如果列表为空，则不需要许可证  . Model: [http://schema.org/Text](http://schema.org/Text)- `reservationType[string]`: 保留的条件。如果该属性未被定义，应用程序应在父级检查该属性的值。Enum:'mandatory, notAvailable, optional, partly'.  - `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `source[string]`: 提供实体数据原始来源的一连串字符，作为一个URL。建议为源提供者的完全合格域名，或源对象的URL。  - `totalSpotNumber[number]`: 与该组有关的点的总数。允许的值。任何正整数或0。 规范性引用。DATEX 2版本2.3的_ParkingRecord_类的_ParkingNumberOfSpaces_属性。  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSI实体类型。它必须是ParkingGroup  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果属性中没有类型，是因为它可能有多个类型或不同的格式/模式</sub></sup>。  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国家。例如，西班牙  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 街道地址所在的地点，以及该地点所在的区域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 地点所在的地区，以及该地区位于哪个国家  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区是一种行政区划，在一些国家由地方政府管理    
+	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `allowedVehicleType[string]`: 允许的车辆类型（一个停车组只允许一种车辆类型）。枚举：'自行车、公共汽车、汽车、大篷车、摩托车、摩托车、卡车'。  . Model: [http://schema.org/Text](http://schema.org/Text)- `alternateName[string]`: 该项目的替代名称  - `areBordersMarked[boolean]`: 表示是否对停车位进行了分隔（用空行或类似方式）。如果没有定义该属性，应用程序_应_在父级检查该属性的值  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableSpotNumber[number]`: 该组中可用的位置数量。必须小于或等于`totalSpotNumber`。  . Model: [http://schema.org/Number](http://schema.org/Number)- `averageSpotLength[number]`: 停车位的平均长度。如果未定义该属性，应用程序应在父级检查该属性的值  . Model: [http://schema.org/length](http://schema.org/length)- `averageSpotWidth[number]`: 停车位的平均宽度。如果未定义该属性，应用程序应在父级检查该属性的值  . Model: [http://schema.org/width](http://schema.org/width)- `category[array]`: 停车组的类别。Enum:'adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'  . Model: [http://schema.org/Text](http://schema.org/Text)- `chargeType[array]`: 停车场的收费类型。枚举：'额外间隔价、年付、首次间隔价、统一、免费、最低、最高、月付、季票、临时费用、临时价格、未知、其他'。  - `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `id[*]`: 实体的唯一标识符  - `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `maximumAllowedHeight[number]`: 车辆允许的最大高度。  如果未定义该属性，应用程序应在父级检查该属性的值  . Model: [http://schema.org/heigth](http://schema.org/heigth)- `maximumAllowedWidth[number]`: 车辆允许的最大宽度。如果未定义该属性，应用程序应在父级检查该属性的值  . Model: [http://schema.org/width](http://schema.org/width)- `maximumParkingDuration[date-time]`: 以 ISO8601 时长编码的最长允许停留时间。如果不存在或等于空字符串，则表示不确定。如果未定义该属性，应用程序应在父级检查该属性的值  - `name[string]`: 该项目的名称  - `occupancyDetectionType[array]`: 允许值：以下是 DATEX II 2.3 版中的 _OccupancyDetectionTypeEnum_。枚举：'平衡、手动、基于模型、无、单空间检测'。或任何其他特定于应用程序的  . Model: [http://schema.org/Text](http://schema.org/Text)- `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `parkingMode[array]`: 停车模式。如果未定义该属性，应用程序应在父级检查该属性的值。允许值：DATEX II 2.3 版 _ParkingModeEnum_ 枚举定义的值。枚举：'echelonParking, parallelParking, perpendicularParking' （梯形泊车、平行泊车、垂直泊车  . Model: [http://schema.org/Text](http://schema.org/Text)- `permitActiveHours[object]`: 该属性可用于捕捉只在特定时间或星期几需要许可证的情况。它是一个结构值，必须包含每个所需许可证的一个子属性，表明许可证的激活时间。如果未指定许可证，则表示始终需要许可证。空对象表示始终处于活动状态。语法必须符合 schema.org [开放时间规范](https://schema.org/openingHours)。例如，只在周日活动的蓝区将编码为 "blueZonePermit"："Mo,Tu,We,Th,Fr,Sa 09:00-20:00"。如果未定义该属性，应用程序应在父级检查该属性的值  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `refParkingSite[*]`: 该区域所属的停车位。组不能是孤儿。组不能有子组。参考路外停车场或路内停车场  - `refParkingSpot[*]`: 属于该停车组的单个停车位  - `requiredPermit[array]`: 该属性记录了在该地点停车可能需要的许可证。其语义是至少需要其中_个许可证才能停车。当一个许可证由多个项目（和）组成时，可以用", "将它们组合起来。例如，"residentPermit,disabledPermit "表示同时需要居民许可证和残疾人许可证才能停车。如果列表为空，则不需要许可证  . Model: [http://schema.org/Text](http://schema.org/Text)- `reservationType[string]`: 保留条件。如果未定义该属性，应用程序应在父级检查该属性的值。枚举：'必须、不可用、可选、部分'。  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `totalSpotNumber[number]`: 与该组相关的点位总数。允许值任何正整数或 0。 规范性引用：DATEX 2 2.3 版 _ParkingRecord_ 类的属性 _parkingNumberOfSpaces_  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSI 实体类型。必须是 ParkingGroup  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `id`  - `refParkingSite`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-一组停车位。颗粒度可以不同。它可以是一个停车场的一个楼层，一个属于大型停车场的特定区域，或者只是一组用于停放某种类型的车辆或受某些限制（残疾人、居民...）的停车位。为了简单起见，每个停车组只允许一种车辆类型。同样，每个组别也只允许有一个必要的许可证。  
+一组停车位。详细程度可以不同。它可以是一个停车库的一个楼层，也可以是属于一个大型停车场的一个特定区域，或者只是一组用于停放特定类型车辆或受特定限制（残疾人、居民......）的停车位。为简单起见，每个停车组只允许停放一种车型。同样，每个停车组也只允许使用一张所需的许可证。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## 数据模型的属性描述  
-按字母顺序排列（点击查看详情）。  
+## 属性的数据模型描述  
+按字母顺序排列（点击查看详情）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -36,29 +43,51 @@ ParkingGroup:
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
         district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
           type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
         streetNr:    
-          description: Number identifying a specific property on a public street.    
+          description: Number identifying a specific property on a public street    
           type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
@@ -95,14 +124,14 @@ ParkingGroup:
         model: https://schema.org/Text    
         type: Property    
     availableSpotNumber:    
-      description: The number of spots available in this group. It must lower or equal than `totalSpotNumber`.    
+      description: The number of spots available in this group. It must lower or equal than `totalSpotNumber`    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     averageSpotLength:    
-      description: The average length of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.    
+      description: The average length of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
       exclusiveMinimum: true    
       minimum: 0    
       type: number    
@@ -111,7 +140,7 @@ ParkingGroup:
         type: Property    
         units: meters    
     averageSpotWidth:    
-      description: The average width of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.    
+      description: The average width of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
       exclusiveMinimum: true    
       minimum: 0    
       type: number    
@@ -168,18 +197,18 @@ ParkingGroup:
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -190,22 +219,26 @@ ParkingGroup:
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &parkinggroup_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: GeoProperty. Geojson reference to the item. Point    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -226,7 +259,9 @@ ParkingGroup:
             - coordinates    
           title: GeoJSON Point    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. LineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -250,7 +285,9 @@ ParkingGroup:
             - coordinates    
           title: GeoJSON LineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. Polygon    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -276,7 +313,9 @@ ParkingGroup:
             - coordinates    
           title: GeoJSON Polygon    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiPoint    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -299,7 +338,9 @@ ParkingGroup:
             - coordinates    
           title: GeoJSON MultiPoint    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -325,7 +366,9 @@ ParkingGroup:
             - coordinates    
           title: GeoJSON MultiLineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -353,10 +396,12 @@ ParkingGroup:
             - coordinates    
           title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     maximumAllowedHeight:    
-      description: Maximum allowed height for vehicles.  Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.    
+      description: Maximum allowed height for vehicles.  Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
       exclusiveMinimum: true    
       minimum: 0    
       type: number    
@@ -365,7 +410,7 @@ ParkingGroup:
         type: Property    
         units: meters    
     maximumAllowedWidth:    
-      description: Maximum allowed width for vehicles. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.    
+      description: Maximum allowed width for vehicles. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
       exclusiveMinimum: true    
       minimum: 0    
       type: number    
@@ -374,13 +419,13 @@ ParkingGroup:
         type: Property    
         units: Meters    
     maximumParkingDuration:    
-      description: Maximum allowed stay encoded as a ISO8601 duration. When non present or equals to the empty string it means indefinite. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.    
+      description: Maximum allowed stay encoded as a ISO8601 duration. When non present or equals to the empty string it means indefinite. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -403,8 +448,22 @@ ParkingGroup:
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *parkinggroup_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -430,14 +489,18 @@ ParkingGroup:
         type: Property    
     refParkingSite:    
       anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Parking site to which this zone belongs to. A group cannot be orphan. A group cannot have subgroups. Reference to an OffStreetParking or to an OnStreetParking    
       x-ngsi:    
         type: Relationship    
@@ -449,7 +512,7 @@ ParkingGroup:
           type: string    
         - format: uri    
           type: string    
-      description: Individual parking spots belonging to this parking group.    
+      description: Individual parking spots belonging to this parking group    
       x-ngsi:    
         type: Relationship    
     requiredPermit:    
@@ -480,7 +543,7 @@ ParkingGroup:
         model: http://schema.org/Text    
         type: Property    
     reservationType:    
-      description: 'Conditions for reservation. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined. Enum:''mandatory, notAvailable, optional, partly''.'    
+      description: 'Conditions for reservation. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined. Enum:''mandatory, notAvailable, optional, partly'''    
       enum:    
         - mandatory    
         - notAvailable    
@@ -502,12 +565,12 @@ ParkingGroup:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     totalSpotNumber:    
-      description: 'The total number of spots pertaining to this group. Allowed values: Any positive integer number or 0. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class.'    
+      description: 'The total number of spots pertaining to this group. Allowed values: Any positive integer number or 0. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class'    
       minimum: 1    
       type: number    
       x-ngsi:    
@@ -537,9 +600,9 @@ ParkingGroup:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## ＃＃＃＃有效载荷的例子  
-#### ParkingGroup NGSI-v2 key-values 示例  
-这里是一个以JSON-LD格式作为key-values的ParkingGroup的例子。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+## 有效载荷示例  
+#### 停车组 NGSI-v2 键值示例  
+下面是一个以 JSON-LD 格式作为键值的 ParkingGroup 示例。当使用 `options=keyValues` 时，这与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -594,27 +657,27 @@ ParkingGroup:
 }  
 ```  
 </details>  
-#### ParkingGroup NGSI-v2规范化示例  
-下面是一个规范化的JSON-LD格式的ParkingGroup的例子。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+#### 停车组 NGSI-v2 标准化示例  
+下面是一个规范化 JSON-LD 格式的 ParkingGroup 示例。在不使用选项的情况下，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "daoiz-velarde-1-5-disabled",  
   "type": "ParkingGroup",  
   "category": {  
-    "value": ["onstreet", "adjacentSpaces", "onlyDisabled"]  
+    "value": ["onStreet", "adjacentSpaces", "onlyDisabled"]  
   },  
   "refParkingSite": {  
     "type": "Relationship",  
     "value": "daoiz-velarde-1-5"  
   },  
   "permitActiveHours": {  
-    "type": "Text",  
-    "value": "null"  
+    "type": "StructuredValue",  
+    "value": null  
   },  
   "requiredPermit": {  
-    "type": "Text",  
-    "value": "disabledPermit"  
+    "type": "array",  
+    "value": ["disabledPermit"]  
   },  
   "allowedVehicleType": {  
     "type": "Text",  
@@ -660,8 +723,8 @@ ParkingGroup:
 }  
 ```  
 </details>  
-#### ParkingGroup NGSI-LD关键值示例  
-这里是一个以JSON-LD格式作为key-values的ParkingGroup的例子。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### 停车组 NGSI-LD 键值示例  
+下面是一个以 JSON-LD 格式作为键值的 ParkingGroup 示例。当使用 `options=keyValues` 时，这与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -720,8 +783,8 @@ ParkingGroup:
 }  
 ```  
 </details>  
-#### ParkingGroup NGSI-LD规范化示例  
-下面是一个规范化的JSON-LD格式的ParkingGroup的例子。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### 停车组 NGSI-LD 标准化示例  
+下面是一个规范化 JSON-LD 格式的 ParkingGroup 示例。在不使用选项时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -810,7 +873,7 @@ ParkingGroup:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
+请参阅 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)，获取如何处理幅度单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
