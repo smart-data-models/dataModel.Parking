@@ -15,7 +15,14 @@
 ## Liste der Eigenschaften  
 
 <sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
-- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `allowedVehicleType[string]`: Zulässiger Fahrzeugtyp (eine Parkgruppe lässt nur einen Fahrzeugtyp zu). Enum:'Fahrrad, Bus, Auto, Wohnwagen, Motorrad, Motorroller, LKW'  . Model: [http://schema.org/Text](http://schema.org/Text)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areBordersMarked[boolean]`: Gibt an, ob Parklücken abgegrenzt sind (mit Leerzeilen oder ähnlichem) oder nicht. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene prüfen, wenn sie nicht definiert ist  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableSpotNumber[number]`: Die Anzahl der verfügbaren Plätze in dieser Gruppe. Sie muss niedriger oder gleich sein als `totalSpotNumber`.  . Model: [http://schema.org/Number](http://schema.org/Number)- `averageSpotLength[number]`: Die durchschnittliche Länge von Parkplätzen. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  . Model: [http://schema.org/length](http://schema.org/length)- `averageSpotWidth[number]`: Die durchschnittliche Breite von Parkplätzen. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  . Model: [http://schema.org/width](http://schema.org/width)- `category[array]`: Die Kategorie der Parkgruppe. Enum:'adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermitPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'  . Model: [http://schema.org/Text](http://schema.org/Text)- `chargeType[array]`: Art der vom Parkplatz erhobenen Gebühr(en). Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maximumAllowedHeight[number]`: Maximal zulässige Höhe für Fahrzeuge.  Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  . Model: [http://schema.org/heigth](http://schema.org/heigth)- `maximumAllowedWidth[number]`: Maximal zulässige Breite für Fahrzeuge. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  . Model: [http://schema.org/width](http://schema.org/width)- `maximumParkingDuration[string]`: Maximal zulässiger Aufenthalt, kodiert als ISO8601-Dauer. Wenn sie nicht vorhanden oder gleich der leeren Zeichenkette ist, bedeutet sie unbestimmt. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist.  - `name[string]`: Der Name dieses Artikels.  - `occupancyDetectionType[array]`: Erlaubte Werte: Die folgenden aus DATEX II Version 2.3 _OccupancyDetectionTypeEnum_. Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. Oder jede andere anwendungsspezifische  . Model: [http://schema.org/Text](http://schema.org/Text)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `parkingMode[array]`: Parkmodus(e). Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist. Erlaubte Werte: Die durch die Aufzählung _ParkingModeEnum_ von DATEX II Version 2.3 definierten Werte. Enum:'echelonParking, parallelParking, perpendicularParking'  . Model: [http://schema.org/Text](http://schema.org/Text)- `permitActiveHours[object]`: Mit diesem Attribut können Situationen erfasst werden, in denen eine Genehmigung nur zu bestimmten Stunden oder an bestimmten Wochentagen benötigt wird. Es ist ein strukturierter Wert, der für jede erforderliche Genehmigung eine Untereigenschaft enthalten muss, die angibt, wann die Genehmigung aktiv ist. Wenn für eine Genehmigung nichts angegeben wird, bedeutet dies, dass eine Genehmigung immer erforderlich ist. Ein leeres Objekt bedeutet immer aktiv. Die Syntax muss mit schema.org [opening hours specification] (https://schema.org/openingHours) konform sein. Zum Beispiel wird eine blaue Zone, die nur an Wochentagen aktiv ist, als "blueZonePermit" kodiert: "Mo,Di,We,Th,Fr,Sa 09:00-20:00". Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `refParkingSite[*]`: Parkplatz, zu dem diese Zone gehört. Eine Gruppe kann nicht verwaist sein. Eine Gruppe kann keine Untergruppen haben. Verweis auf einen OffStreetParking oder auf einen OnStreetParking  - `refParkingSpot[*]`: Einzelne Stellplätze, die zu dieser Parkgruppe gehören.  - `requiredPermit[array]`: Mit diesem Attribut wird erfasst, welche Genehmigung(en) zum Parken an diesem Standort erforderlich sein könnte(n). Die Semantik besagt, dass mindestens _eine_ dieser Genehmigungen zum Parken erforderlich ist. Wenn eine Genehmigung aus mehr als einem Element (und) besteht, können sie mit einem ',' kombiniert werden. So bedeutet z. B. 'residentPermit,disabledPermit', dass zum Parken sowohl eine Anwohner- als auch eine Behindertengenehmigung erforderlich ist. Wenn die Liste leer ist, ist keine Genehmigung erforderlich.  . Model: [http://schema.org/Text](http://schema.org/Text)- `reservationType[string]`: Bedingungen für die Reservierung. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist. Enum:'mandatory, notAvailable, optional, partly'.  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `totalSpotNumber[number]`: Die Gesamtzahl der Spots, die zu dieser Gruppe gehören. Erlaubte Werte: Jede positive ganze Zahl oder 0. Normative Verweise: DATEX 2 Version 2.3 Attribut _ParkingNumberOfSpaces_ der Klasse _ParkingRecord_.  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSI-Entitätstyp. Es muss ParkingGroup sein  <!-- /30-PropertiesList -->  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel, Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: Die Ortschaft, in der sich die Adresse befindet, und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Ein Bezirk ist eine Art von Verwaltungseinheit, die in einigen Ländern von der lokalen Regierung verwaltet wird.    
+	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `allowedVehicleType[string]`: Zulässiger Fahrzeugtyp (eine Parkgruppe lässt nur einen Fahrzeugtyp zu). Enum:'Fahrrad, Bus, Auto, Wohnwagen, Motorrad, Motorroller, LKW'  . Model: [http://schema.org/Text](http://schema.org/Text)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areBordersMarked[boolean]`: Gibt an, ob Parklücken abgegrenzt sind (mit Leerzeilen oder ähnlichem) oder nicht. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf der übergeordneten Ebene prüfen, wenn sie nicht definiert ist  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableSpotNumber[number]`: Die Anzahl der verfügbaren Plätze in dieser Gruppe. Sie muss niedriger oder gleich sein als `totalSpotNumber`.  . Model: [http://schema.org/Number](http://schema.org/Number)- `averageSpotLength[number]`: Die durchschnittliche Länge von Parkplätzen. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist  . Model: [http://schema.org/length](http://schema.org/length)- `averageSpotWidth[number]`: Die durchschnittliche Breite von Parkplätzen. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist  . Model: [http://schema.org/width](http://schema.org/width)- `category[array]`: Die Kategorie der Parkgruppe. Enum:'adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermitPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'  . Model: [http://schema.org/Text](http://schema.org/Text)- `chargeType[array]`: Art der vom Parkplatz erhobenen Gebühr(en). Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maximumAllowedHeight[number]`: Maximal zulässige Höhe für Fahrzeuge.  Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist  . Model: [http://schema.org/heigth](http://schema.org/heigth)- `maximumAllowedWidth[number]`: Maximal zulässige Breite für Fahrzeuge. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist  . Model: [http://schema.org/width](http://schema.org/width)- `maximumParkingDuration[date-time]`: Maximal zulässiger Aufenthalt, kodiert als ISO8601-Dauer. Wenn sie nicht vorhanden oder gleich dem leeren String ist, bedeutet sie unbestimmt. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist  - `name[string]`: Der Name dieses Artikels  - `occupancyDetectionType[array]`: Erlaubte Werte: Die folgenden aus DATEX II Version 2.3 _OccupancyDetectionTypeEnum_. Enum:'balancing, manual, modelBased, none, singleSpaceDetection'. Oder jede andere anwendungsspezifische  . Model: [http://schema.org/Text](http://schema.org/Text)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `parkingMode[array]`: Parkmodus(e). Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist. Erlaubte Werte: Die durch die Aufzählung _ParkingModeEnum_ von DATEX II Version 2.3 definierten Werte. Enum:'echelonParking, parallelParking, perpendicularParking'  . Model: [http://schema.org/Text](http://schema.org/Text)- `permitActiveHours[object]`: Mit diesem Attribut können Situationen erfasst werden, in denen eine Genehmigung nur zu bestimmten Stunden oder an bestimmten Wochentagen benötigt wird. Es ist ein strukturierter Wert, der für jede erforderliche Genehmigung eine Untereigenschaft enthalten muss, die angibt, wann die Genehmigung aktiv ist. Wenn für eine Genehmigung nichts angegeben wird, bedeutet dies, dass eine Genehmigung immer erforderlich ist. Ein leeres Objekt bedeutet immer aktiv. Die Syntax muss mit schema.org [opening hours specification] (https://schema.org/openingHours) konform sein. Zum Beispiel wird eine blaue Zone, die nur an Wochentagen aktiv ist, als "blueZonePermit" kodiert: "Mo,Di,We,Th,Fr,Sa 09:00-20:00". Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `refParkingSite[*]`: Parkplatz, zu dem diese Zone gehört. Eine Gruppe kann nicht verwaist sein. Eine Gruppe kann keine Untergruppen haben. Verweis auf einen OffStreetParking oder auf einen OnStreetParking  - `refParkingSpot[*]`: Einzelne Stellplätze, die zu dieser Parkgruppe gehören  - `requiredPermit[array]`: Mit diesem Attribut wird erfasst, welche Genehmigung(en) zum Parken an diesem Standort erforderlich sein könnte(n). Die Semantik besagt, dass mindestens _eine_ dieser Genehmigungen zum Parken erforderlich ist. Wenn eine Genehmigung aus mehr als einem Element (und) besteht, können sie mit einem ',' kombiniert werden. So bedeutet z. B. 'residentPermit,disabledPermit', dass zum Parken sowohl eine Anwohner- als auch eine Behindertengenehmigung erforderlich ist. Wenn die Liste leer ist, ist keine Genehmigung erforderlich.  . Model: [http://schema.org/Text](http://schema.org/Text)- `reservationType[string]`: Bedingungen für die Reservierung. Anwendungen _SOLLTEN_ den Wert dieser Eigenschaft auf übergeordneter Ebene überprüfen, wenn sie nicht definiert ist. Enum:'mandatory, notAvailable, optional, partly'  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der vollständig qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `totalSpotNumber[number]`: Die Gesamtzahl der Spots, die zu dieser Gruppe gehören. Erlaubte Werte: Jede positive ganze Zahl oder 0. Normative Verweise: DATEX 2 Version 2.3 Attribut _ParkingNumberOfSpaces_ der Klasse _ParkingRecord_.  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSI-Entitätstyp. Es muss ParkingGroup sein  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `id`  - `refParkingSite`  - `type`  <!-- /35-RequiredProperties -->  
@@ -36,29 +43,51 @@ ParkingGroup:
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
         district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
           type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
         streetNr:    
-          description: Number identifying a specific property on a public street.    
+          description: Number identifying a specific property on a public street    
           type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
@@ -95,14 +124,14 @@ ParkingGroup:
         model: https://schema.org/Text    
         type: Property    
     availableSpotNumber:    
-      description: The number of spots available in this group. It must lower or equal than `totalSpotNumber`.    
+      description: The number of spots available in this group. It must lower or equal than `totalSpotNumber`    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
     averageSpotLength:    
-      description: The average length of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.    
+      description: The average length of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
       exclusiveMinimum: true    
       minimum: 0    
       type: number    
@@ -111,7 +140,7 @@ ParkingGroup:
         type: Property    
         units: meters    
     averageSpotWidth:    
-      description: The average width of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.    
+      description: The average width of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
       exclusiveMinimum: true    
       minimum: 0    
       type: number    
@@ -168,18 +197,18 @@ ParkingGroup:
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -190,22 +219,26 @@ ParkingGroup:
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &parkinggroup_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: GeoProperty. Geojson reference to the item. Point    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -226,7 +259,9 @@ ParkingGroup:
             - coordinates    
           title: GeoJSON Point    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. LineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -250,7 +285,9 @@ ParkingGroup:
             - coordinates    
           title: GeoJSON LineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. Polygon    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -276,7 +313,9 @@ ParkingGroup:
             - coordinates    
           title: GeoJSON Polygon    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiPoint    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -299,7 +338,9 @@ ParkingGroup:
             - coordinates    
           title: GeoJSON MultiPoint    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -325,7 +366,9 @@ ParkingGroup:
             - coordinates    
           title: GeoJSON MultiLineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -353,10 +396,12 @@ ParkingGroup:
             - coordinates    
           title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     maximumAllowedHeight:    
-      description: Maximum allowed height for vehicles.  Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.    
+      description: Maximum allowed height for vehicles.  Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
       exclusiveMinimum: true    
       minimum: 0    
       type: number    
@@ -365,7 +410,7 @@ ParkingGroup:
         type: Property    
         units: meters    
     maximumAllowedWidth:    
-      description: Maximum allowed width for vehicles. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.    
+      description: Maximum allowed width for vehicles. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
       exclusiveMinimum: true    
       minimum: 0    
       type: number    
@@ -374,13 +419,13 @@ ParkingGroup:
         type: Property    
         units: Meters    
     maximumParkingDuration:    
-      description: Maximum allowed stay encoded as a ISO8601 duration. When non present or equals to the empty string it means indefinite. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined.    
+      description: Maximum allowed stay encoded as a ISO8601 duration. When non present or equals to the empty string it means indefinite. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -403,8 +448,22 @@ ParkingGroup:
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *parkinggroup_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -430,14 +489,18 @@ ParkingGroup:
         type: Property    
     refParkingSite:    
       anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Parking site to which this zone belongs to. A group cannot be orphan. A group cannot have subgroups. Reference to an OffStreetParking or to an OnStreetParking    
       x-ngsi:    
         type: Relationship    
@@ -449,7 +512,7 @@ ParkingGroup:
           type: string    
         - format: uri    
           type: string    
-      description: Individual parking spots belonging to this parking group.    
+      description: Individual parking spots belonging to this parking group    
       x-ngsi:    
         type: Relationship    
     requiredPermit:    
@@ -480,7 +543,7 @@ ParkingGroup:
         model: http://schema.org/Text    
         type: Property    
     reservationType:    
-      description: 'Conditions for reservation. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined. Enum:''mandatory, notAvailable, optional, partly''.'    
+      description: 'Conditions for reservation. Applications _SHOULD_ inspect the value of this property at parent''s level if it is not defined. Enum:''mandatory, notAvailable, optional, partly'''    
       enum:    
         - mandatory    
         - notAvailable    
@@ -502,12 +565,12 @@ ParkingGroup:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     totalSpotNumber:    
-      description: 'The total number of spots pertaining to this group. Allowed values: Any positive integer number or 0. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class.'    
+      description: 'The total number of spots pertaining to this group. Allowed values: Any positive integer number or 0. Normative references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_ class'    
       minimum: 1    
       type: number    
       x-ngsi:    
@@ -602,19 +665,19 @@ ParkingGroup:
   "id": "daoiz-velarde-1-5-disabled",  
   "type": "ParkingGroup",  
   "category": {  
-    "value": ["onstreet", "adjacentSpaces", "onlyDisabled"]  
+    "value": ["onStreet", "adjacentSpaces", "onlyDisabled"]  
   },  
   "refParkingSite": {  
     "type": "Relationship",  
     "value": "daoiz-velarde-1-5"  
   },  
   "permitActiveHours": {  
-    "type": "Text",  
-    "value": "null"  
+    "type": "StructuredValue",  
+    "value": null  
   },  
   "requiredPermit": {  
-    "type": "Text",  
-    "value": "disabledPermit"  
+    "type": "array",  
+    "value": ["disabledPermit"]  
   },  
   "allowedVehicleType": {  
     "type": "Text",  
