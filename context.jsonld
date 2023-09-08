@@ -21,12 +21,20 @@
         "availableSpotNumber": "https://smartdatamodels.org/dataModel.Parking/availableSpotNumber",
         "averageSpotLength": "https://smartdatamodels.org/dataModel.Parking/averageSpotLength",
         "averageSpotWidth": "https://smartdatamodels.org/dataModel.Parking/averageSpotWidth",
+        "bbox": {
+            "@container": "@list",
+            "@id": "geojson:bbox"
+        },
         "category": "https://smartdatamodels.org/dataModel.Parking/category",
         "chargeType": "https://smartdatamodels.org/dataModel.Parking/chargeType",
         "cityId": "https://smartdatamodels.org/dataModel.Parking/cityId",
         "cityName": "https://smartdatamodels.org/dataModel.Parking/cityName",
         "color": "https://smartdatamodels.org/color",
         "contactPoint": "https://smartdatamodels.org/contactPoint",
+        "coordinates": {
+            "@container": "@list",
+            "@id": "geojson:coordinates"
+        },
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
         "dateModified": "https://smartdatamodels.org/dateModified",
