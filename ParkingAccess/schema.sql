@@ -1,3 +1,3 @@
-/* (Beta) Export of data model ParkingAccess of the subject dataModel.Parking for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model ParkingAccess of the subject dataModel.Parking for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE ParkingAccess_type AS ENUM ('ParkingAccess');
-CREATE TABLE ParkingAccess (address json, alternateName text, areaServed text, category json, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, features json, height text, id text, location json, name text, owner json, refOffStreetParking text, seeAlso json, slope text, source text, type ParkingAccess_type, width text);
+CREATE TABLE ParkingAccess (address JSON, alternateName TEXT, areaServed TEXT, category JSON, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, features JSON, height NUMERIC, name TEXT, owner JSON, slope NUMERIC, source TEXT, type ParkingAccess_type, width NUMERIC);
