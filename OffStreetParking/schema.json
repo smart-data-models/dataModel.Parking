@@ -452,19 +452,19 @@
                 "averageSpotLength": {
                     "type": "number",
                     "minimum": 0,
-                    "exclusiveMinimum": true,
+                    "exclusiveMinimum": 0,
                     "description": "Property. Model:'http://schema.org/length'. Units:'meters'. The average length of parking spots"
                 },
                 "maximumAllowedHeight": {
                     "type": "number",
                     "minimum": 0,
-                    "exclusiveMinimum": true,
+                    "exclusiveMinimum": 0,
                     "description": "Property. Model:'http://schema.org/heigth'. Units:'meters'. Maximum allowed height for vehicles. If there are multiple zones, it will be the minimum height of all the zones"
                 },
                 "maximumAllowedWidth": {
                     "type": "number",
                     "minimum": 0,
-                    "exclusiveMinimum": true,
+                    "exclusiveMinimum": 0,
                     "description": "Property. Model:'http://schema.org/width'. Units:'Meters'. Maximum allowed width for vehicles. If there are multiple zones, it will be the minimum width of all the zones"
                 },
                 "refParkingAccess": {
