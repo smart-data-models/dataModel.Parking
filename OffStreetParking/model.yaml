@@ -134,7 +134,7 @@ OffStreetParking:
         type: Property
     averageSpotLength:
       description: The average length of parking spots
-      exclusiveMinimum: true
+      exclusiveMinimum: 0
       minimum: 0
       type: number
       x-ngsi:
@@ -553,7 +553,7 @@ OffStreetParking:
         type: Property
     maximumAllowedHeight:
       description: 'Maximum allowed height for vehicles. If there are multiple zones, it will be the minimum height of all the zones'
-      exclusiveMinimum: true
+      exclusiveMinimum: 0
       minimum: 0
       type: number
       x-ngsi:
@@ -562,7 +562,7 @@ OffStreetParking:
         units: meters
     maximumAllowedWidth:
       description: 'Maximum allowed width for vehicles. If there are multiple zones, it will be the minimum width of all the zones'
-      exclusiveMinimum: true
+      exclusiveMinimum: 0
       minimum: 0
       type: number
       x-ngsi:
