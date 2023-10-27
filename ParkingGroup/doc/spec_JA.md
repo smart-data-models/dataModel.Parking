@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 公道上の特定の物件を特定する番号    
 - `allowedVehicleType[string]`: 許可される車種（駐車グループは1つの車種のみ許可する）。Enum:'自転車、バス、自動車、キャラバン、オートバイ、モータースクーター、トラック'  . Model: [http://schema.org/Text](http://schema.org/Text)- `alternateName[string]`: この項目の別名  - `areBordersMarked[boolean]`: 駐車スポットが（空白線などで）区切られているかどうかを示す。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査するべきである（SHOULD_）。  . Model: [https://schema.org/Boolean](https://schema.org/Boolean)- `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `availableSpotNumber[number]`: このグループで利用可能なスポットの数。totalSpotNumber`以下でなければならない。  . Model: [http://schema.org/Number](http://schema.org/Number)- `averageSpotLength[number]`: 駐車場の平均長さ。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査すべきである。  . Model: [http://schema.org/length](http://schema.org/length)- `averageSpotWidth[number]`: 駐車場の平均幅。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査すべきである。  . Model: [http://schema.org/width](http://schema.org/width)- `category[array]`: 駐車場グループのカテゴリー。Enum:'adjacentSpaces, blueZone, completeFloor, free, feeCharged, greenZone, loadUnloadZone, nonAdjacentSpaces, offStreet, onlyDisabled, onlyElectricalCharging, onlyResidents, onlyWithPermit, onStreet, particularConditionsSpaces, shortTermMediumTermLongTerm, statisticsOnly, vehicleTypeSpaces'.  . Model: [http://schema.org/Text](http://schema.org/Text)- `chargeType[array]`: 駐車場が行う料金の種類。Enum:'additionalIntervalPrice, annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment, seasonTicket, temporaryFee, temporaryPrice, unknown, other'.  - `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `id[*]`: エンティティの一意識別子  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `maximumAllowedHeight[number]`: 車両の最大許容高さ。  このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査するべきである。  . Model: [http://schema.org/heigth](http://schema.org/heigth)- `maximumAllowedWidth[number]`: 車両の最大許容幅。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査するべきである。  . Model: [http://schema.org/width](http://schema.org/width)- `maximumParkingDuration[date-time]`: ISO8601の期間としてエンコードされた最大滞在可能日数。存在しないか空文字列に等しい場合、それは無期限を意味する。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する必要があります。  - `name[string]`: このアイテムの名前  - `occupancyDetectionType[array]`: 許容される値：DATEX II バージョン2.3 _OcupancyDetectionTypeEnum_の以下のもの。Enum:'balancing、manual、modelBased、none、singleSpaceDetection'。またはその他のアプリケーション固有の  . Model: [http://schema.org/Text](http://schema.org/Text)- `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `parkingMode[array]`: 駐車モード。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査するべきである(_SHOULD_)。許可される値：DATEX II version 2.3 _ParkingModeEnum_列挙で定義されているもの。列挙:'echelonParking, parallelParking, perpendicularParking'.  . Model: [http://schema.org/Text](http://schema.org/Text)- `permitActiveHours[object]`: この属性により、特定の時間帯や曜日のみに許可が必要な状況を把握することができます。この属性は構造化された値であり、各許可ごとにサブプロパティを持たなければなりません。許可に何も指定されていない場合、許可は常に必要であることを意味します。空のオブジェクトは、常にアクティブであることを意味する。構文はschema.org [営業時間指定](https://schema.org/openingHours)に準拠しなければならない。例えば、平日のみ活動するブルーゾーンは、'blueZonePermit': 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'としてエンコードされる。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査する _SHOULD_。  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `refParkingSite[*]`: このゾーンが属する駐車場サイト。グループを孤児にすることはできません。グループはサブグループを持つことはできない。OffStreetParkingまたはOnStreetParkingへの参照。  - `refParkingSpot[*]`: この駐車場グループに属する個々の駐車場  - `requiredPermit[array]`: この属性は、このサイトで駐車するために必要な許可証をキャプチャする。意味的には、駐車するためには、これらの許可証の少なくとも一つが必要です。許可証が複数の項目（and）で構成されている場合、それらは','で結合することができます。例えば、「residentPermit,disabledPermit」は、駐車するために、居住者許可証と身体障害者許可証の両方が同時に必要であることを示す。リストが空の場合、許可証は必要ありません。  . Model: [http://schema.org/Text](http://schema.org/Text)- `reservationType[string]`: 予約の条件。このプロパティが定義されていない場合、アプリケーションは親のレベルでこのプロパティの値を検査_SHOULD_すべきである。Enum:'必須、notAvailable、任意、一部'  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `totalSpotNumber[number]`: このグループに関連するスポットの総数。許容される値：任意の正の整数値または0：DATEX 2 バージョン 2.3 _ParkingRecord_クラスの_parkingNumberOfSpaces_属性。  . Model: [http://schema.org/Number](http://schema.org/Number)- `type[string]`: NGSIエンティティタイプ。ParkingGroupでなければならない。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
@@ -132,7 +133,7 @@ ParkingGroup:
         type: Property    
     averageSpotLength:    
       description: The average length of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
-      exclusiveMinimum: true    
+      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -141,7 +142,7 @@ ParkingGroup:
         units: meters    
     averageSpotWidth:    
       description: The average width of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
-      exclusiveMinimum: true    
+      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -402,7 +403,7 @@ ParkingGroup:
         type: GeoProperty    
     maximumAllowedHeight:    
       description: Maximum allowed height for vehicles.  Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
-      exclusiveMinimum: true    
+      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -411,7 +412,7 @@ ParkingGroup:
         units: meters    
     maximumAllowedWidth:    
       description: Maximum allowed width for vehicles. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
-      exclusiveMinimum: true    
+      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
