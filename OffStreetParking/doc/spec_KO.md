@@ -40,7 +40,7 @@
 	- `occupiedSpotNumber[number]`: 이 관측에 해당하는 스마트 주차 사이트에 점유된 주차 공간의 수입니다. 이 값은 총 스팟 수보다 낮거나 같은 양수여야 합니다.  . Model: [https://schema.org/Number](https://schema.org/Number)  
 	- `totalSpotNumber[number]`: 이 관측에 해당하는 주차 사이트에서 제공하는 총 자리 수입니다.  . Model: [https://schema.org/Number](https://schema.org/Number)  
 - `type[string]`: 노외주차장이어야 합니다.  - `unclassifiedSlots[object]`: 이 관찰에 해당하는 주차장의 미분류 차량 또는 기타 차량 주차 공간 가용성 상태  . Model: [https://schema.org/Text](https://schema.org/Text)	- `availableSpotNumber[number]`: 이 관측에 해당하는 스마트 주차 사이트에서 사용할 수 있는 주차 공간 수입니다. 이 값은 총 스팟 수보다 작거나 같은 양수여야 합니다.  . Model: [https://schema.org/Number](https://schema.org/Number)  
-	- `occupiedSpotNumber[number]`: 이 관측에 해당하는 스마트 주차 사이트에 점유된 주차 공간의 수입니다. 이 값은 총 스팟 수보다 낮거나 같은 양수여야 합니다.  . Model: [https://schema.org/Number](https://schema.org/Number)  
+	- `occupiedSpotNumber[number]`: 이 관측에 해당하는 스마트 주차 사이트에 점유된 주차 공간의 수입니다. 이 값은 총 스팟 번호보다 낮거나 같은 양수여야 합니다.  . Model: [https://schema.org/Number](https://schema.org/Number)  
 	- `totalSpotNumber[number]`: 이 관측에 해당하는 주차 사이트에서 제공하는 총 자리 수입니다.  . Model: [https://schema.org/Number](https://schema.org/Number)  
 - `usageScenario[array]`: 사용 시나리오. 카테고리` 속성에 대한 자세한 정보를 제공합니다. 허용되는 값: DATEX II 버전 2.3의 열거형 _ParkingUsageScenarioEnum_에 정의된 값입니다. 열거형: '자동주차 안내, 카셰어링, 드롭오프위드발렛, 드롭오프메카니컬, 드롭오프, 이벤트주차, 키스앤라이드, 리프트쉐어, 로딩베이, 오버나이트파킹, 파크앤사이클, 파크앤라이드, 파크앤워크, 휴식공간, 서비스공간, 직원 가이드, 트럭파킹, 차량 리프트, 기타'. 또는 애플리케이션에 유용하고 위에서 다루지 않은 다른 값도 가능합니다.  . Model: [http://schema.org/Text](http://schema.org/Text)- `vehicleEntranceCount[number]`: 특정 기간 동안 주차장에 진입한 차량 수 집계  . Model: [http://schema.org/Number](http://schema.org/Number)- `vehicleExitCount[number]`: 일정 기간 동안 주차장을 떠난 차량의 집계된 수  . Model: [http://schema.org/Number](http://schema.org/Number)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
@@ -192,7 +192,7 @@ OffStreetParking:
         type: Property    
     averageSpotLength:    
       description: The average length of parking spots    
-      exclusiveMinimum: true    
+      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -611,7 +611,7 @@ OffStreetParking:
         type: Property    
     maximumAllowedHeight:    
       description: 'Maximum allowed height for vehicles. If there are multiple zones, it will be the minimum height of all the zones'    
-      exclusiveMinimum: true    
+      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -620,7 +620,7 @@ OffStreetParking:
         units: meters    
     maximumAllowedWidth:    
       description: 'Maximum allowed width for vehicles. If there are multiple zones, it will be the minimum width of all the zones'    
-      exclusiveMinimum: true    
+      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -1616,7 +1616,7 @@ OffStreetParking:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-[FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
+10](https://smartdatamodels.org/index.php/faqs/)를 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
