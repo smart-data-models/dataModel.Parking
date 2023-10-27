@@ -133,7 +133,7 @@ ParkingGroup:
         type: Property    
     averageSpotLength:    
       description: The average length of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
-      exclusiveMinimum: true    
+      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -142,7 +142,7 @@ ParkingGroup:
         units: meters    
     averageSpotWidth:    
       description: The average width of parking spots. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
-      exclusiveMinimum: true    
+      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -403,7 +403,7 @@ ParkingGroup:
         type: GeoProperty    
     maximumAllowedHeight:    
       description: Maximum allowed height for vehicles.  Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
-      exclusiveMinimum: true    
+      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -412,7 +412,7 @@ ParkingGroup:
         units: meters    
     maximumAllowedWidth:    
       description: Maximum allowed width for vehicles. Applications _SHOULD_ inspect the value of this property at parent's level if it is not defined    
-      exclusiveMinimum: true    
+      exclusiveMinimum: 0    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -874,7 +874,7 @@ ParkingGroup:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-[FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
+10](https://smartdatamodels.org/index.php/faqs/)를 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
