@@ -2,6 +2,7 @@
   "id": "santander:daoiz_velarde_1_5:3",
   "type": "ParkingSpot",
   "status": {
+    "type": "Text",
     "value": "free",
     "metadata": {
       "timestamp": {
@@ -9,19 +10,23 @@
         "value": "2018-09-21T12:00:00"
       },
       "parkingPermit": {
-        "type": "Property",
+        "type": "Text",
         "value": "yes"
       }
     }
   },
   "category": {
-    "value": ["onStreet"]
+    "type": "StructuredValue",
+    "value": [
+      "onStreet"
+    ]
   },
   "refParkingSite": {
-    "type": "Relationship",
+    "type": "Text",
     "object": "santander:daoiz_velarde_1_5"
   },
   "name": {
+    "type": "Text",
     "value": "A-13"
   },
   "location": {
