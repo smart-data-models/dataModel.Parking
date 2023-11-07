@@ -23,7 +23,7 @@
   },
   "refParkingSite": {
     "type": "Text",
-    "object": "santander:daoiz_velarde_1_5"
+    "value": "santander:daoiz_velarde_1_5"
   },
   "name": {
     "type": "Text",
