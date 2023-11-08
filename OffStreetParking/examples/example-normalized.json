@@ -94,6 +94,7 @@
     "value": "2018-09-21T12:00:05Z"
   },
   "description": {
+    "type": "Text",
     "value": "Municipal car park located near the Trindade metro station and the Town Hall"
   },
   "vehicleEntranceCount": {
