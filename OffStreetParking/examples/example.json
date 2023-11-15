@@ -36,7 +36,7 @@
   "occupancyModified": "2018-09-21T12:00:00Z",
   "occupancy": 0.68,
   "address": {
-    "streetAddress": "Rua de Fernandes Tomás",
+    "streetAddress": "Rua de Fernandes Tom\u00e1s",
     "addressLocality": "Porto",
     "addressCountry": "Portugal"
   },
