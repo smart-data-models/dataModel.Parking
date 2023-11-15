@@ -2,7 +2,7 @@
   "id": "porto-ParkingLot-23889",
   "type": "OffStreetParking",
   "category": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "underground",
       "public",
@@ -12,11 +12,13 @@
     ]
   },
   "extCategory": {
-    "type": "array",
-    "value": ["A"]
+    "type": "StructuredValue",
+    "value": [
+      "A"
+    ]
   },
   "layout": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "multiLevel"
     ]
@@ -26,11 +28,11 @@
     "value": "Parque de estacionamento Trindade"
   },
   "requiredPermit": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": []
   },
   "allowedVehicleType": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "car"
     ]
@@ -72,13 +74,13 @@
     }
   },
   "chargeType": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "temporaryPrice"
     ]
   },
   "address": {
-    "type": "PostalAddress",
+    "type": "StructuredValue",
     "value": {
       "addressLocality": "Porto",
       "addressCountry": "Portugal",
