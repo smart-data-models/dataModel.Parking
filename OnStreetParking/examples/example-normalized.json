@@ -2,7 +2,7 @@
   "id": "santander:daoiz_velarde_1_5",
   "type": "OnStreetParking",
   "category": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "blueZone",
       "shortTerm",
@@ -10,32 +10,32 @@
     ]
   },
   "permitActiveHours": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": {
       "blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"
     }
   },
   "requiredPermit": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "blueZonePermit",
       "disabledPermit"
     ]
   },
   "allowedVehicleType": {
-    "type": "Text",
+    "type": "StructuredValue",
     "value": [
       "car"
     ]
   },
   "chargeType": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "temporaryFee"
     ]
   },
   "refParkingGroup": {
-    "type": "Relationship",
+    "type": "StructuredValue",
     "value": [
       "daoiz-velarde-1-5-main",
       "daoiz-velarde-1-5-disabled"
