@@ -3,27 +3,35 @@
   "type": "ParkingGroup",
   "category": {
     "type": "StructuredValue",
-    "value": ["onStreet", "adjacentSpaces", "onlyDisabled"]
+    "value": [
+      "onStreet",
+      "adjacentSpaces",
+      "onlyDisabled"
+    ]
   },
   "refParkingSite": {
     "type": "Text",
     "value": "daoiz-velarde-1-5"
   },
   "permitActiveHours": {
-    "type": "None",
-    "value": null
+    "type": "StructuredValue",
+    "value": {
+      "Monday": "null"
+    }
   },
   "requiredPermit": {
     "type": "StructuredValue",
-    "value": ["disabledPermit"]
+    "value": [
+      "disabledPermit"
+    ]
   },
   "allowedVehicleType": {
     "type": "Text",
     "value": "car"
   },
   "availableSpotNumber": {
-    "type": "Number",
-    "value": 1,
+    "type": "Boolean",
+    "value": true,
     "metadata": {
       "timestamp": {
         "type": "DateTime",
@@ -41,18 +49,35 @@
       "type": "Polygon",
       "coordinates": [
         [
-          [-3.80356167695194, 43.46296641666926],
-          [-3.803161973253841, 43.46301091092682],
-          [-3.803147082548618, 43.462879859445884],
-          [-3.803536474744068, 43.462838666196674],
-          [-3.80356167695194, 43.46296641666926]
+          [
+            -3.80356167695194,
+            43.46296641666926
+          ],
+          [
+            -3.803161973253841,
+            43.46301091092682
+          ],
+          [
+            -3.803147082548618,
+            43.462879859445884
+          ],
+          [
+            -3.803536474744068,
+            43.462838666196674
+          ],
+          [
+            -3.80356167695194,
+            43.46296641666926
+          ]
         ]
       ]
     }
   },
   "chargeType": {
     "type": "StructuredValue",
-    "value": ["free"]
+    "value": [
+      "free"
+    ]
   },
   "description": {
     "type": "Text",
