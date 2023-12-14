@@ -30,8 +30,8 @@
     "value": "car"
   },
   "availableSpotNumber": {
-    "type": "Boolean",
-    "value": true,
+    "type": "Number",
+    "value": 1,
     "metadata": {
       "timestamp": {
         "type": "DateTime",
