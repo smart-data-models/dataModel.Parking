@@ -120,7 +120,7 @@
         "type": "Property",
         "value": 282
     },
-    "parkingSiteID": {
+    "parkingSiteId": {
         "type": "Property",
         "value": "P2"
     },
