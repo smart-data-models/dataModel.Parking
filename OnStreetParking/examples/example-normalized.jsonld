@@ -64,10 +64,6 @@
             ]
         }
     },
-    "maximumAllowedStay": {
-        "type": "Property",
-        "value": "PT2H"
-    },
     "occupiedSpotNumber": {
         "type": "Property",
         "value": 3,
