@@ -47,8 +47,6 @@
     ],
     "type": "Polygon"
   },
-  "maximumAllowedStay": "PT2H",
-  "modifiedAt": "2016-06-02T09:25:55.00Z",
   "municipalityInfo": {
     "district": "Bangalore Urban",
     "ulbName": "BMC",
