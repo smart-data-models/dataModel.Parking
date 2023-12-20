@@ -79,10 +79,6 @@
     "type": "Text",
     "value": "Zona Centro"
   },
-  "maximumAllowedStay": {
-    "type": "Text",
-    "value": "PT2H"
-  },
   "dateModified": {
     "type": "DateTime",
     "value": "2016-06-02T09:25:55.00Z"
