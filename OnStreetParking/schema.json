@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.1.3",
+    "$schemaVersion": "0.1.4",
     "modelTags": "IUDX",
     "$id": "https://smart-data-models.github.io/dataModel.Parking/OnStreetParking/schema.json",
     "title": "Smart Data Models/ On Street Parking",
@@ -96,6 +96,12 @@
                 "permitActiveHours": {
                     "type": "object",
                     "description": "Property. This attribute allows to capture situations when a permit is only needed at specific hours or days of week. It is a structured value which must contain a subproperty per each required permit, indicating when the permit is active. If nothing specified for a permit it will mean that a permit is always required. An empty JSON Object means always active. The syntax must be conformant with schema.org"
+                    "properties": {
+                        "blueZonePermit": {
+                            "type": "string"
+                            "description": "Property. Permission to park in a city's regulated area"
+                        }
+                    }
                 },
                 "maximumParkingDuration": {
                     "type": "string",
