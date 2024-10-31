@@ -23,7 +23,7 @@
         "averageSpotWidth": "https://smartdatamodels.org/dataModel.Parking/averageSpotWidth",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "category": "https://smartdatamodels.org/dataModel.Parking/category",
         "chargeType": "https://smartdatamodels.org/dataModel.Parking/chargeType",
@@ -33,7 +33,7 @@
         "contactPoint": "https://smartdatamodels.org/contactPoint",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
@@ -45,7 +45,7 @@
         "facilities": "https://smartdatamodels.org/dataModel.Parking/facilities",
         "features": {
             "@container": "@set",
-            "@id": "geojson:features"
+            "@id": "https://purl.org/geojson/vocab#features"
         },
         "firstAvailableFloor": "https://smartdatamodels.org/dataModel.Parking/firstAvailableFloor",
         "fourWheelerSlots": "https://smartdatamodels.org/dataModel.Parking/fourWheelerSlots",
@@ -56,7 +56,7 @@
         "images": "https://smartdatamodels.org/dataModel.Parking/images",
         "layout": "https://smartdatamodels.org/dataModel.Parking/layout",
         "length": "https://smartdatamodels.org/dataModel.Parking/length",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "lowestFloor": "https://smartdatamodels.org/dataModel.Parking/lowestFloor",
         "maximumAllowedHeight": "https://smartdatamodels.org/dataModel.Parking/maximumAllowedHeight",
         "maximumAllowedWidth": "https://smartdatamodels.org/dataModel.Parking/maximumAllowedWidth",
@@ -97,7 +97,7 @@
         "source": "https://smartdatamodels.org/source",
         "specialLocation": "https://smartdatamodels.org/dataModel.Parking/specialLocation",
         "stateName": "https://smartdatamodels.org/dataModel.Parking/stateName",
-        "status": "ngsi-ld:status",
+        "status": "https://uri.etsi.org/ngsi-ld/status",
         "streetAddress": "https://smartdatamodels.org/streetAddress",
         "streetNr": "https://smartdatamodels.org/streetNr",
         "timeInstant": "https://smartdatamodels.org/timeInstant",
