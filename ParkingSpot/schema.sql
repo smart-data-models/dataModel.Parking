@@ -1,5 +1,5 @@
 /* (Beta) Export of data model ParkingSpot of the subject dataModel.Parking for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE status_type AS ENUM ('closed', 'free', 'occupied', 'unknown');
+CREATE TYPE ParkingSpot_status_type AS ENUM ('closed', 'free', 'occupied', 'unknown');
 CREATE TYPE ParkingSpot_type AS ENUM ('ParkingSpot');
 CREATE TABLE ParkingSpot (
   "address" JSON,
@@ -23,7 +23,7 @@ CREATE TABLE ParkingSpot (
   "refParkingSite" JSON,
   "seeAlso" JSON,
   "source" TEXT,
-  "status" status_type,
+  "status" ParkingSpot_status_type,
   "timeInstant" TIMESTAMP,
   "type" ParkingSpot_type,
   "width" NUMERIC
