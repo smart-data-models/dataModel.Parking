@@ -1,10 +1,10 @@
 /* (Beta) Export of data model OnStreetParking of the subject dataModel.Parking for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE acceptedPaymentMethod_type AS ENUM ('ByBankTransferInAdvance', 'ByInvoice', 'Cash', 'CheckInAdvance', 'COD', 'DirectDebit', 'GoogleCheckout', 'PayPal', 'PaySwarm');
-CREATE TYPE parkingMode_type AS ENUM ('echelonParking', 'parallelParking', 'perpendicularParking');
+CREATE TYPE OnStreetParking_acceptedPaymentMethod_type AS ENUM ('ByBankTransferInAdvance', 'ByInvoice', 'Cash', 'CheckInAdvance', 'COD', 'DirectDebit', 'GoogleCheckout', 'PayPal', 'PaySwarm');
+CREATE TYPE OnStreetParking_parkingMode_type AS ENUM ('echelonParking', 'parallelParking', 'perpendicularParking');
 CREATE TYPE OnStreetParking_type AS ENUM ('OnStreetParking');
-CREATE TYPE usageScenario_type AS ENUM ('carSharing', 'dropOff', 'kissAndRide', 'liftShare', 'loadingBay', 'overnightParking', 'parkAndRide', 'parkAndCycle', 'parkAndWalk', 'vehicleLift', 'other');
+CREATE TYPE OnStreetParking_usageScenario_type AS ENUM ('carSharing', 'dropOff', 'kissAndRide', 'liftShare', 'loadingBay', 'overnightParking', 'parkAndRide', 'parkAndCycle', 'parkAndWalk', 'vehicleLift', 'other');
 CREATE TABLE OnStreetParking (
-  "acceptedPaymentMethod" acceptedPaymentMethod_type,
+  "acceptedPaymentMethod" OnStreetParking_acceptedPaymentMethod_type,
   "address" JSON,
   "allowedVehicleType" JSON,
   "alternateName" TEXT,
@@ -33,7 +33,7 @@ CREATE TABLE OnStreetParking (
   "occupiedSpotNumber" NUMERIC,
   "outOfServiceSlotNumber" NUMERIC,
   "owner" JSON,
-  "parkingMode" parkingMode_type,
+  "parkingMode" OnStreetParking_parkingMode_type,
   "parkingSiteId" TEXT,
   "permitActiveHours" JSON,
   "refParkingGroup" JSON,
@@ -45,5 +45,5 @@ CREATE TABLE OnStreetParking (
   "twoWheelerSlots" JSON,
   "type" OnStreetParking_type,
   "unclassifiedSlots" JSON,
-  "usageScenario" usageScenario_type
+  "usageScenario" OnStreetParking_usageScenario_type
 );
