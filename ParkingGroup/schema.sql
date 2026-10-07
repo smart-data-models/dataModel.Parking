@@ -1,10 +1,10 @@
 /* (Beta) Export of data model ParkingGroup of the subject dataModel.Parking for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE allowedVehicleType_type AS ENUM ('bicycle', 'bus', 'car', 'caravan', 'motorcycle', 'motorscooter', 'truck');
-CREATE TYPE reservationType_type AS ENUM ('mandatory', 'notAvailable', 'optional', 'partly');
+CREATE TYPE ParkingGroup_allowedVehicleType_type AS ENUM ('bicycle', 'bus', 'car', 'caravan', 'motorcycle', 'motorscooter', 'truck');
+CREATE TYPE ParkingGroup_reservationType_type AS ENUM ('mandatory', 'notAvailable', 'optional', 'partly');
 CREATE TYPE ParkingGroup_type AS ENUM ('ParkingGroup');
 CREATE TABLE ParkingGroup (
   "address" JSON,
-  "allowedVehicleType" allowedVehicleType_type,
+  "allowedVehicleType" ParkingGroup_allowedVehicleType_type,
   "alternateName" TEXT,
   "areBordersMarked" BOOLEAN,
   "areaServed" TEXT,
@@ -30,7 +30,7 @@ CREATE TABLE ParkingGroup (
   "refParkingSite" JSON,
   "refParkingSpot" JSON,
   "requiredPermit" JSON,
-  "reservationType" reservationType_type,
+  "reservationType" ParkingGroup_reservationType_type,
   "seeAlso" JSON,
   "source" TEXT,
   "totalSpotNumber" NUMERIC,
